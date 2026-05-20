@@ -2,6 +2,10 @@
 
 Static HTML/CSS/SVG mockups for the three Nebor service pages. Built as a reference for the production designer.
 
+## Just want the workflow cards?
+
+The three hero workflow cards from each service page are extracted into standalone files under [`workflow/`](workflow/). Open [`workflow/index.html`](workflow/index.html) to see all three previews and pick one. Each standalone file contains only the workflow markup, with the rest of the page (nav, hero copy, marquee, problem section, etc.) stripped out.
+
 ## For the designer — start here
 
 The **workflow section** is the row of three cards under each page's hero copy. It uses the class `.hero-elements` and contains three `.hero-el` cards, each composed of:

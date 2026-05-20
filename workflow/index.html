@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Workflow Cards · Nebor service pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Serif:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FBFAF8;
+    --text: #172a2d;
+    --muted: rgba(23,42,45,0.55);
+    --border: rgba(23,42,45,0.10);
+    --revenue: #86A789;
+    --revenue-strong: #4F6B52;
+    --demand: #F4D77F;
+    --demand-strong: #8A6A2A;
+    --revops: #B8A8D4;
+    --revops-strong: #5C4A82;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 80px 24px;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--revenue);
+  }
+  h1 {
+    margin: 14px 0 12px;
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .lede {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 620px;
+    margin: 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 48px;
+  }
+  .card {
+    display: block;
+    padding: 28px 26px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -22px rgba(23,42,45,0.18);
+  }
+  .card .tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .card.revenue { border-color: color-mix(in srgb, var(--revenue) 40%, var(--border)); }
+  .card.revenue .tag { background: color-mix(in srgb, var(--revenue) 22%, white); color: var(--revenue-strong); }
+  .card.revenue:hover { border-color: var(--revenue); }
+  .card.demand { border-color: color-mix(in srgb, var(--demand) 60%, var(--border)); }
+  .card.demand .tag { background: color-mix(in srgb, var(--demand) 38%, white); color: var(--demand-strong); }
+  .card.demand:hover { border-color: var(--demand-strong); }
+  .card.revops { border-color: color-mix(in srgb, var(--revops) 50%, var(--border)); }
+  .card.revops .tag { background: color-mix(in srgb, var(--revops) 30%, white); color: var(--revops-strong); }
+  .card.revops:hover { border-color: var(--revops-strong); }
+  .card h2 {
+    margin: 16px 0 6px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .card .arrow {
+    margin-top: 22px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .meta {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .meta a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .meta code {
+    background: rgba(23,42,45,0.06);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 12.5px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Nebor · service pages</span>
+  <h1>Workflow cards · isolated</h1>
+  <p class="lede">Standalone previews of the three hero workflow cards on each service page. Each link below opens the cards on their own — no nav, no marquee, no problem section — so the code is easy to read and the rendering is easy to compare.</p>
+
+  <div class="grid">
+    <a class="card revenue" href="revenue-engine.html">
+      <span class="tag">Tier 01 · Outbound</span>
+      <h2>Sales Engine &amp; GTM</h2>
+      <p>TAM mapping · Deliverability · AI workflows</p>
+      <div class="arrow">View cards →</div>
+    </a>
+    <a class="card demand" href="demand-gen.html">
+      <span class="tag">Tier 02 · Demand</span>
+      <h2>Demand Gen &amp; ABM</h2>
+      <p>ABM operating model · Funnel workflows · Audience → channels</p>
+      <div class="arrow">View cards →</div>
+    </a>
+    <a class="card revops" href="crm-revops.html">
+      <span class="tag">Tier 03 · RevOps</span>
+      <h2>CRM &amp; RevOps</h2>
+      <p>CRM hygiene · Revenue ops · Forecasting</p>
+      <div class="arrow">View cards →</div>
+    </a>
+  </div>
+
+  <div class="meta">
+    The card markup lives in the <code>&lt;div class="hero-elements-wrap"&gt;</code> block of each page in this folder. Styling is shared across all three via <a href="../styles/system.css"><code>styles/system.css</code></a>, with per-tier color tokens (<code>--page-accent</code>, <code>--page-accent-strong</code>, <code>--page-accent-soft</code>) swapped by the body class <code>tier-revenue</code>, <code>tier-demand</code>, or <code>tier-revops</code>.
+    <br><br>
+    Full pages with hero copy, navigation, and the rest of the site are in the repo root: <a href="../revenue-engine.html">revenue-engine.html</a>, <a href="../demand-gen.html">demand-gen.html</a>, <a href="../crm-revops.html">crm-revops.html</a>.
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Workflow Cards · Sales Engine & GTM · Nebor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Serif:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles/system.css" />
+<link rel="stylesheet" href="../styles/workflow.css" />
+<link rel="stylesheet" href="../styles/page-revenue.css" />
+<style>
+  /* Standalone wrapper · framing only, no design changes to the cards */
+  body {
+    padding: 56px 0 80px;
+    min-height: 100vh;
+    background:
+      radial-gradient(1200px 600px at 50% -10%, color-mix(in srgb, var(--page-accent, #ddd) 14%, transparent), transparent 70%),
+      var(--color-base, #FBFAF8);
+  }
+  .wf-standalone-header {
+    max-width: 1500px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .wf-standalone-header .wf-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--page-accent-strong, #555);
+  }
+  .wf-standalone-header .wf-eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--page-accent, #ccc);
+  }
+  .wf-standalone-header h1 {
+    margin: 8px 0 0;
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text, #172a2d);
+  }
+  .wf-standalone-header p {
+    margin: 6px 0 0;
+    color: rgba(23,42,45,0.55);
+    font-size: 14px;
+    max-width: 540px;
+  }
+  .wf-standalone-nav {
+    display: flex;
+    gap: 6px;
+    background: rgba(255,255,255,0.7);
+    padding: 6px;
+    border-radius: 999px;
+    border: 1px solid rgba(23,42,45,0.08);
+  }
+  .wf-standalone-nav a {
+    padding: 8px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: rgba(23,42,45,0.55);
+    transition: background 0.18s ease, color 0.18s ease;
+  }
+  .wf-standalone-nav a:hover {
+    color: var(--color-text, #172a2d);
+  }
+  .wf-standalone-nav a.active {
+    background: var(--page-accent, #f0f0f0);
+    color: var(--page-accent-strong, #222);
+  }
+  /* Remove top spacing the hero-elements-wrap normally inherits from the hero */
+  .hero-elements-wrap {
+    margin-top: 0 !important;
+  }
+  /* Hide the bottom "See the entire flywheel" CTA in the standalone view */
+  .hero-elements-cta { display: none; }
+</style>
+</head>
+<body class="tier-revenue">
+
+<header class="wf-standalone-header">
+  <div>
+    <span class="wf-eyebrow">Tier 01 · Outbound</span>
+    <h1>Workflow cards · Sales Engine & GTM</h1>
+    <p>Standalone preview of the three hero workflow cards. View source for the workflow code only.</p>
+  </div>
+  <nav class="wf-standalone-nav" aria-label="Switch service page">
+    <a href="revenue-engine.html" class="active">Sales Engine</a>
+    <a href="demand-gen.html">Demand Gen</a>
+    <a href="crm-revops.html">RevOps</a>
+  </nav>
+</header>
+
+<div class="hero-elements-wrap">
+    <div class="hero-elements">
+
+      <!-- Card 1 · TAM · Clay-centered tool stack with surrounding TAM data tools -->
+      <a href="#workflow" class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 380" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+            <!-- subtle background dots · TAM density -->
+            <g fill="rgba(23,42,45,0.12)">
+              <circle cx="30" cy="60" r="1.2"/>
+              <circle cx="60" cy="36" r="1.2"/>
+              <circle cx="370" cy="60" r="1.2"/>
+              <circle cx="340" cy="40" r="1.2"/>
+              <circle cx="40" cy="300" r="1.2"/>
+              <circle cx="380" cy="320" r="1.2"/>
+              <circle cx="20" cy="180" r="1.2"/>
+              <circle cx="384" cy="200" r="1.2"/>
+              <circle cx="200" cy="40" r="1.2"/>
+              <circle cx="380" cy="100" r="1.2"/>
+            </g>
+
+            <!-- top header pill · TAM count -->
+            <rect x="14" y="14" width="190" height="28" rx="8" fill="var(--card-header)"/>
+            <circle cx="28" cy="28" r="4" fill="var(--page-accent)" class="heroviz-pulse"/>
+            <text x="38" y="33" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="#FFFFFF">1,247 accounts mapped</text>
+
+            <!-- score dist mini bar chart -->
+            <rect x="216" y="14" width="170" height="28" rx="8" fill="rgba(255,255,255,0.65)" stroke="rgba(23,42,45,0.08)"/>
+            <text x="228" y="32" class="heroviz-text-mute" style="font-size:9px;">SCORE DIST</text>
+            <rect x="290" y="22" width="3" height="12" rx="1" fill="var(--page-accent-soft)"/>
+            <rect x="296" y="18" width="3" height="16" rx="1" fill="var(--page-accent)"/>
+            <rect x="302" y="20" width="3" height="14" rx="1" fill="var(--page-accent)"/>
+            <rect x="308" y="14" width="3" height="20" rx="1" fill="var(--page-accent-strong)"/>
+            <rect x="314" y="16" width="3" height="18" rx="1" fill="var(--page-accent-strong)"/>
+            <rect x="320" y="20" width="3" height="14" rx="1" fill="var(--page-accent)"/>
+            <rect x="326" y="24" width="3" height="10" rx="1" fill="var(--page-accent-soft)"/>
+            <rect x="332" y="26" width="3" height="8" rx="1" fill="var(--page-accent-soft)"/>
+            <text x="348" y="32" class="heroviz-text-mute" style="font-size:9px;">A+ 38</text>
+
+            <!-- DOTTED CONNECTORS from each tool chip into Clay center · "data flowing into Clay" -->
+            <line x1="200" y1="75"  x2="200" y2="170" class="heroviz-line"/>
+            <line x1="272" y1="104" x2="200" y2="170" class="heroviz-line"/>
+            <line x1="300" y1="175" x2="200" y2="170" class="heroviz-line"/>
+            <line x1="272" y1="246" x2="200" y2="170" class="heroviz-line"/>
+            <line x1="200" y1="270" x2="200" y2="170" class="heroviz-line"/>
+            <line x1="128" y1="246" x2="200" y2="170" class="heroviz-line"/>
+            <line x1="100" y1="175" x2="200" y2="170" class="heroviz-line"/>
+            <line x1="128" y1="104" x2="200" y2="170" class="heroviz-line"/>
+
+            <!-- CLAY + HUBSPOT CENTER HUB · two favicons joined by a + sign -->
+            <ellipse cx="200" cy="170" rx="64" ry="44" fill="color-mix(in srgb, var(--page-accent) 18%, white)" opacity="0.5"/>
+            <rect x="145" y="138" width="110" height="68" rx="14" fill="#FFFFFF" stroke="var(--page-accent-strong)" stroke-width="1.5" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.12))"/>
+            <image href="https://www.google.com/s2/favicons?domain=clay.com&sz=128" x="158" y="150" width="26" height="26" class="heroviz-favicon"/>
+            <text x="200" y="173" text-anchor="middle" font-family="var(--font-sans)" font-size="20" font-weight="700" fill="var(--page-accent-strong)">+</text>
+            <image href="https://www.google.com/s2/favicons?domain=hubspot.com&sz=128" x="216" y="150" width="26" height="26" class="heroviz-favicon"/>
+            <text x="200" y="198" text-anchor="middle" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">Clay + HubSpot</text>
+
+            <!-- 8 TAM tool chips arranged in a circle around Clay -->
+            <!-- TOP (0°) · Clearbit -->
+            <g>
+              <rect x="158" y="61" width="84" height="28" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+              <image href="https://www.google.com/s2/favicons?domain=clearbit.com&sz=64" x="168" y="67" width="16" height="16" class="heroviz-favicon"/>
+              <text x="190" y="79" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">Clearbit</text>
+            </g>
+            <!-- NE (45°) · Apollo -->
+            <g>
+              <rect x="230" y="90" width="84" height="28" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+              <image href="https://www.google.com/s2/favicons?domain=apollo.io&sz=64" x="240" y="96" width="16" height="16" class="heroviz-favicon"/>
+              <text x="262" y="108" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">Apollo</text>
+            </g>
+            <!-- E (90°) · ZoomInfo -->
+            <g>
+              <rect x="258" y="161" width="92" height="28" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+              <image href="https://www.google.com/s2/favicons?domain=zoominfo.com&sz=64" x="268" y="167" width="16" height="16" class="heroviz-favicon"/>
+              <text x="290" y="179" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">ZoomInfo</text>
+            </g>
+            <!-- SE (135°) · ocean.io -->
+            <g>
+              <rect x="230" y="232" width="84" height="28" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+              <image href="https://www.google.com/s2/favicons?domain=ocean.io&sz=64" x="240" y="238" width="16" height="16" class="heroviz-favicon"/>
+              <text x="262" y="250" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">Ocean.io</text>
+            </g>
+            <!-- S (180°) · LinkedIn -->
+            <g>
+              <rect x="158" y="256" width="84" height="28" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+              <image href="https://www.google.com/s2/favicons?domain=linkedin.com&sz=64" x="168" y="262" width="16" height="16" class="heroviz-favicon"/>
+              <text x="190" y="274" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">LinkedIn</text>
+            </g>
+            <!-- SW (225°) · Crunchbase -->
+            <g>
+              <rect x="84" y="232" width="92" height="28" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+              <image href="https://www.google.com/s2/favicons?domain=crunchbase.com&sz=64" x="94" y="238" width="16" height="16" class="heroviz-favicon"/>
+              <text x="116" y="250" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">Crunchbase</text>
+            </g>
+            <!-- W (270°) · Cognism (data source) -->
+            <g>
+              <rect x="56" y="161" width="86" height="28" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+              <image href="https://www.google.com/s2/favicons?domain=cognism.com&sz=64" x="66" y="167" width="16" height="16" class="heroviz-favicon"/>
+              <text x="88" y="179" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">Cognism</text>
+            </g>
+            <!-- NW (315°) · Discolike -->
+            <g>
+              <rect x="84" y="90" width="86" height="28" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+              <image href="https://www.google.com/s2/favicons?domain=discolike.com&sz=64" x="94" y="96" width="16" height="16" class="heroviz-favicon"/>
+              <text x="116" y="108" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">Discolike</text>
+            </g>
+
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">TAM mapping &amp; multi-channel outreach</span>
+          <h3 class="hero-el-title">Map your TAM and reach every account the moment they're ready to buy.</h3>
+          <p class="hero-el-body">TAM mapping, ICP scoring, and live signals route each account into the right play automatically.</p>
+        </div>
+      </a>
+
+      <!-- Card 2 · Deliverability (inbox mockup + infrastructure panel) -->
+      <a href="#workflow" class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 380" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+            <!-- Top status bar -->
+            <rect x="14" y="14" width="372" height="32" rx="8" fill="var(--card-header)"/>
+            <circle cx="30" cy="30" r="4" fill="#22C55E" class="heroviz-pulse"/>
+            <text x="40" y="35" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="#FFFFFF">Deliverability healthy</text>
+            <text x="200" y="35" font-family="var(--font-sans)" font-size="10" fill="rgba(255,255,255,0.6)">24 domains · 96 inboxes</text>
+            <rect x="334" y="22" width="44" height="16" rx="8" fill="var(--page-accent)"/>
+            <text x="356" y="33" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="var(--color-text)">A+ Rep</text>
+
+            <!-- LEFT: Inbox UI mockup -->
+            <rect x="18" y="62" width="232" height="244" rx="12" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.08))"/>
+            <rect x="18" y="62" width="232" height="36" rx="12" fill="#F4F5F7"/>
+            <text x="32" y="84" font-family="var(--font-sans)" font-size="12" font-weight="700" fill="var(--color-text)">Inbox</text>
+            <rect x="208" y="74" width="32" height="14" rx="7" fill="var(--page-accent-strong)"/>
+            <text x="224" y="84" text-anchor="middle" font-family="var(--font-sans)" font-size="8.5" fill="#FFFFFF" font-weight="700">24</text>
+
+            <!-- Email row 1 (unread / highlighted) -->
+            <rect x="22" y="104" width="224" height="46" rx="7" fill="color-mix(in srgb, var(--page-accent) 14%, white)"/>
+            <circle cx="40" cy="127" r="12" fill="var(--page-accent-strong)"/>
+            <text x="40" y="131" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="#FFFFFF">SC</text>
+            <text x="58" y="121" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">Sarah Chen</text>
+            <text x="222" y="121" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.55)">2m</text>
+            <text x="58" y="138" font-family="var(--font-sans)" font-size="9.5" fill="rgba(23,42,45,0.72)">Re: Q4 pipeline review</text>
+            <circle cx="234" cy="140" r="3" fill="var(--page-accent-strong)"/>
+
+            <!-- Email row 2 -->
+            <line x1="22" y1="158" x2="246" y2="158" stroke="rgba(23,42,45,0.06)"/>
+            <circle cx="40" cy="178" r="12" fill="#A78BFA"/>
+            <text x="40" y="182" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="#FFFFFF">MK</text>
+            <text x="58" y="172" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">Marcus Kim</text>
+            <text x="222" y="172" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.55)">8m</text>
+            <text x="58" y="186" font-family="var(--font-sans)" font-size="9.5" fill="rgba(23,42,45,0.58)">Updated proposal attached</text>
+
+            <!-- Email row 3 -->
+            <line x1="22" y1="202" x2="246" y2="202" stroke="rgba(23,42,45,0.06)"/>
+            <circle cx="40" cy="222" r="12" fill="#34D399"/>
+            <text x="40" y="226" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="#FFFFFF">AT</text>
+            <text x="58" y="216" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">Anna Torres</text>
+            <text x="222" y="216" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.55)">23m</text>
+            <text x="58" y="230" font-family="var(--font-sans)" font-size="9.5" fill="rgba(23,42,45,0.58)">Demo confirmed Thursday 2pm</text>
+
+            <!-- Email row 4 -->
+            <line x1="22" y1="246" x2="246" y2="246" stroke="rgba(23,42,45,0.06)"/>
+            <circle cx="40" cy="266" r="12" fill="#FBBF24"/>
+            <text x="40" y="270" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="#FFFFFF">JL</text>
+            <text x="58" y="260" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-text)">Jamie Lee</text>
+            <text x="222" y="260" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.55)">1h</text>
+            <text x="58" y="274" font-family="var(--font-sans)" font-size="9.5" fill="rgba(23,42,45,0.58)">Quick question about pricing</text>
+
+            <!-- Inbox placement footer -->
+            <rect x="22" y="286" width="224" height="16" rx="4" fill="#F4F5F7"/>
+            <text x="30" y="298" font-family="var(--font-sans)" font-size="8.5" font-weight="600" fill="rgba(23,42,45,0.6)">Inbox placement</text>
+            <text x="232" y="298" text-anchor="end" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="#10B981">98%</text>
+
+            <!-- RIGHT: Infrastructure status panel -->
+            <rect x="262" y="62" width="124" height="244" rx="12" fill="#FFFFFF" stroke="rgba(23,42,45,0.10)" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.08))"/>
+            <text x="276" y="82" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">Infrastructure</text>
+            <line x1="272" y1="92" x2="376" y2="92" stroke="rgba(23,42,45,0.06)"/>
+
+            <!-- Auth checks -->
+            <circle cx="282" cy="110" r="6" fill="#22C55E"/>
+            <path d="M279 110 L281.5 112.5 L285 108.5" stroke="#FFFFFF" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="294" y="113" font-family="var(--font-sans)" font-size="10" font-weight="500" fill="var(--color-text)">SPF</text>
+            <text x="376" y="113" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.5)" font-weight="600">PASS</text>
+
+            <circle cx="282" cy="138" r="6" fill="#22C55E"/>
+            <path d="M279 138 L281.5 140.5 L285 136.5" stroke="#FFFFFF" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="294" y="141" font-family="var(--font-sans)" font-size="10" font-weight="500" fill="var(--color-text)">DKIM</text>
+            <text x="376" y="141" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.5)" font-weight="600">PASS</text>
+
+            <circle cx="282" cy="166" r="6" fill="#22C55E"/>
+            <path d="M279 166 L281.5 168.5 L285 164.5" stroke="#FFFFFF" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="294" y="169" font-family="var(--font-sans)" font-size="10" font-weight="500" fill="var(--color-text)">DMARC</text>
+            <text x="376" y="169" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.5)" font-weight="600">PASS</text>
+
+            <circle cx="282" cy="194" r="6" fill="#22C55E"/>
+            <path d="M279 194 L281.5 196.5 L285 192.5" stroke="#FFFFFF" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="294" y="197" font-family="var(--font-sans)" font-size="10" font-weight="500" fill="var(--color-text)">MX</text>
+            <text x="376" y="197" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.5)" font-weight="600">LIVE</text>
+
+            <!-- divider -->
+            <line x1="272" y1="216" x2="376" y2="216" stroke="rgba(23,42,45,0.06)"/>
+
+            <!-- Warm-up progress -->
+            <text x="276" y="234" font-family="var(--font-sans)" font-size="9" font-weight="500" fill="var(--color-text)">Warm-up</text>
+            <text x="376" y="234" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.5)" font-weight="600">Day 14/21</text>
+            <rect x="276" y="240" width="100" height="6" rx="3" fill="rgba(23,42,45,0.08)"/>
+            <rect x="276" y="240" width="66" height="6" rx="3" fill="var(--page-accent-strong)"/>
+
+            <!-- Volume -->
+            <text x="276" y="264" font-family="var(--font-sans)" font-size="9" font-weight="500" fill="var(--color-text)">Volume</text>
+            <text x="376" y="264" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.5)" font-weight="600">2,340/d</text>
+            <rect x="276" y="270" width="100" height="6" rx="3" fill="rgba(23,42,45,0.08)"/>
+            <rect x="276" y="270" width="80" height="6" rx="3" fill="var(--page-accent-strong)"/>
+
+            <!-- Rep score -->
+            <text x="276" y="294" font-family="var(--font-sans)" font-size="9" font-weight="500" fill="var(--color-text)">Reputation</text>
+            <text x="376" y="294" text-anchor="end" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">98</text>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">Email infrastructure &amp; deliverability</span>
+          <h3 class="hero-el-title">Build the deliverability foundation that lets every email actually land.</h3>
+          <p class="hero-el-body">Domains, inboxes, warm-up, and reputation run as one compounding system.</p>
+        </div>
+      </a>
+
+      <!-- Card 3 · AI workflows -->
+      <a href="#workflow" class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 380" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+            <!-- top header -->
+            <rect x="14" y="14" width="372" height="30" rx="8" fill="var(--card-header)"/>
+            <text x="28" y="34" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="#FFFFFF">12 workflows running</text>
+            <text x="200" y="34" font-family="var(--font-sans)" font-size="10" fill="rgba(255,255,255,0.6)">1,284 tasks · 24 reps</text>
+            <rect x="332" y="20" width="46" height="18" rx="9" fill="#22C55E"/>
+            <text x="355" y="33" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="#FFFFFF">Active</text>
+
+            <!-- Column triggers (left) · icons + sparklines + trend pills -->
+            <text x="22" y="68" class="heroviz-text-mute" style="font-size:9px;">TRIGGERS</text>
+            <!-- New lead -->
+            <g>
+              <rect x="20" y="76" width="120" height="40" rx="9" class="heroviz-chip"/>
+              <!-- icon: person -->
+              <g transform="translate(28, 92)">
+                <circle cx="6" cy="-3" r="2.8" fill="var(--page-accent-strong)"/>
+                <path d="M0 7 Q6 0 12 7" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.5" stroke-linecap="round"/>
+              </g>
+              <text x="46" y="91" class="heroviz-text" style="font-size:10px; font-weight:600;">New lead</text>
+              <text x="46" y="105" class="heroviz-text-mute" style="font-size:8.5px;">+24 today</text>
+              <!-- mini sparkline -->
+              <polyline points="100,108 105,106 110,107 115,103 120,104 125,100 130,102 134,98" fill="none" stroke="var(--page-accent-strong)" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+            </g>
+            <!-- Intent signal -->
+            <g>
+              <rect x="20" y="124" width="120" height="40" rx="9" class="heroviz-chip"/>
+              <!-- icon: signal/radio waves -->
+              <g transform="translate(28, 140)">
+                <circle cx="6" cy="4" r="1.5" fill="var(--page-accent-strong)"/>
+                <path d="M2 1 Q6 -3 10 1" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linecap="round"/>
+                <path d="M-1 -2 Q6 -8 13 -2" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/>
+              </g>
+              <text x="46" y="139" class="heroviz-text" style="font-size:10px; font-weight:600;">Intent signal</text>
+              <text x="46" y="153" class="heroviz-text-mute" style="font-size:8.5px;">+12 today</text>
+              <polyline points="100,156 105,154 110,156 115,151 120,153 125,148 130,150 134,146" fill="none" stroke="var(--page-accent-strong)" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+            </g>
+            <!-- Meeting booked -->
+            <g>
+              <rect x="20" y="172" width="120" height="40" rx="9" class="heroviz-chip"/>
+              <!-- icon: calendar -->
+              <g transform="translate(28, 188)">
+                <rect x="0" y="-2" width="12" height="10" rx="1.5" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3"/>
+                <line x1="0" y1="1" x2="12" y2="1" stroke="var(--page-accent-strong)" stroke-width="1.3"/>
+                <line x1="3" y1="-4" x2="3" y2="-1" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linecap="round"/>
+                <line x1="9" y1="-4" x2="9" y2="-1" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linecap="round"/>
+              </g>
+              <text x="46" y="187" class="heroviz-text" style="font-size:10px; font-weight:600;">Meeting booked</text>
+              <text x="46" y="201" class="heroviz-text-mute" style="font-size:8.5px;">+6 today</text>
+              <polyline points="100,204 105,202 110,203 115,200 120,200 125,198 130,197 134,196" fill="none" stroke="var(--page-accent-strong)" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+            </g>
+            <!-- Deal stage -->
+            <g>
+              <rect x="20" y="220" width="120" height="40" rx="9" class="heroviz-chip"/>
+              <!-- icon: kanban columns -->
+              <g transform="translate(28, 236)">
+                <rect x="0" y="-3" width="3" height="9" rx="0.5" fill="var(--page-accent-strong)" opacity="0.4"/>
+                <rect x="4.5" y="-5" width="3" height="11" rx="0.5" fill="var(--page-accent-strong)" opacity="0.7"/>
+                <rect x="9" y="-2" width="3" height="8" rx="0.5" fill="var(--page-accent-strong)"/>
+              </g>
+              <text x="46" y="235" class="heroviz-text" style="font-size:10px; font-weight:600;">Deal stage</text>
+              <text x="46" y="249" class="heroviz-text-mute" style="font-size:8.5px;">+18 today</text>
+              <polyline points="100,252 105,249 110,251 115,247 120,249 125,244 130,247 134,242" fill="none" stroke="var(--page-accent-strong)" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+            </g>
+            <!-- Job change -->
+            <g>
+              <rect x="20" y="268" width="120" height="40" rx="9" class="heroviz-chip"/>
+              <!-- icon: briefcase -->
+              <g transform="translate(28, 284)">
+                <rect x="0" y="-1" width="12" height="9" rx="1.5" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3"/>
+                <path d="M4 -1 L4 -4 Q4 -5 5 -5 L7 -5 Q8 -5 8 -4 L8 -1" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linejoin="round"/>
+                <line x1="0" y1="3" x2="12" y2="3" stroke="var(--page-accent-strong)" stroke-width="1.3" opacity="0.5"/>
+              </g>
+              <text x="46" y="283" class="heroviz-text" style="font-size:10px; font-weight:600;">Job change</text>
+              <text x="46" y="297" class="heroviz-text-mute" style="font-size:8.5px;">+4 today</text>
+              <polyline points="100,300 105,298 110,300 115,297 120,298 125,296 130,295 134,294" fill="none" stroke="var(--page-accent-strong)" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+            </g>
+
+            <!-- Center: AI core box · richer visualization -->
+            <text x="174" y="68" class="heroviz-text-mute" style="font-size:9px;">AI CORE</text>
+            <rect x="158" y="110" width="104" height="174" rx="16" fill="var(--card-header)" filter="drop-shadow(0 8px 20px rgba(23,42,45,0.18))"/>
+            <!-- pulsing orb · the one point that should pulse -->
+            <circle cx="210" cy="146" r="14" fill="none" stroke="var(--page-accent)" stroke-width="1.4" opacity="0.5" class="heroviz-pulse-ring"/>
+            <circle cx="210" cy="146" r="9" fill="var(--page-accent)" class="heroviz-pulse-on"/>
+            <text x="210" y="178" text-anchor="middle" font-family="var(--font-sans)" font-size="13" font-weight="700" fill="#FFFFFF">Orchestrate</text>
+            <text x="210" y="190" text-anchor="middle" font-family="var(--font-sans)" font-size="8.5" fill="rgba(255,255,255,0.55)">28 active threads</text>
+
+            <!-- mini bars inside core -->
+            <rect x="172" y="208" width="4" height="14" rx="1.5" fill="var(--page-accent)" opacity="0.5"/>
+            <rect x="180" y="200" width="4" height="22" rx="1.5" fill="var(--page-accent)" opacity="0.7"/>
+            <rect x="188" y="205" width="4" height="17" rx="1.5" fill="var(--page-accent)"/>
+            <rect x="196" y="194" width="4" height="28" rx="1.5" fill="var(--page-accent)"/>
+            <rect x="204" y="198" width="4" height="24" rx="1.5" fill="var(--page-accent)" opacity="0.85"/>
+            <rect x="212" y="202" width="4" height="20" rx="1.5" fill="var(--page-accent)"/>
+            <rect x="220" y="196" width="4" height="26" rx="1.5" fill="var(--page-accent)" opacity="0.85"/>
+            <rect x="228" y="200" width="4" height="22" rx="1.5" fill="var(--page-accent)" opacity="0.7"/>
+            <rect x="236" y="206" width="4" height="16" rx="1.5" fill="var(--page-accent)" opacity="0.55"/>
+            <rect x="244" y="210" width="4" height="12" rx="1.5" fill="var(--page-accent)" opacity="0.45"/>
+
+            <!-- Health/throughput meter -->
+            <text x="168" y="240" font-family="var(--font-sans)" font-size="7.5" fill="rgba(255,255,255,0.5)" letter-spacing="0.06em">THROUGHPUT</text>
+            <rect x="168" y="245" width="84" height="5" rx="2.5" fill="rgba(255,255,255,0.12)"/>
+            <rect x="168" y="245" width="68" height="5" rx="2.5" fill="var(--page-accent)"/>
+            <text x="252" y="250" text-anchor="end" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="#FFFFFF">82%</text>
+
+            <text x="168" y="266" font-family="var(--font-sans)" font-size="7.5" fill="rgba(255,255,255,0.5)" letter-spacing="0.06em">QUEUE</text>
+            <rect x="168" y="271" width="84" height="5" rx="2.5" fill="rgba(255,255,255,0.12)"/>
+            <rect x="168" y="271" width="36" height="5" rx="2.5" fill="#22C55E"/>
+            <text x="252" y="276" text-anchor="end" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="#FFFFFF">42</text>
+
+            <!-- Connectors triggers → core (updated for wider core box at x=158) -->
+            <path d="M140 96  C 150 96,  150 160, 158 160" class="heroviz-line"/>
+            <path d="M140 144 C 150 144, 150 170, 158 170" class="heroviz-line"/>
+            <path d="M140 192 L 158 192"                    class="heroviz-line"/>
+            <path d="M140 240 C 150 240, 150 210, 158 210"  class="heroviz-line"/>
+            <path d="M140 288 C 150 288, 150 220, 158 220"  class="heroviz-line"/>
+
+            <!-- Connectors core → actions (core ends at x=262) -->
+            <path d="M262 150 C 274 150, 274 90,  286 90"   class="heroviz-line"/>
+            <path d="M262 165 C 274 165, 274 136, 286 136"  class="heroviz-line"/>
+            <path d="M262 180 L 286 182"                     class="heroviz-line"/>
+            <path d="M262 195 C 274 195, 274 228, 286 228"  class="heroviz-line"/>
+            <path d="M262 210 C 274 210, 274 274, 286 274"  class="heroviz-line"/>
+
+            <!-- Right column: AI actions · with icons + status indicators -->
+            <text x="294" y="68" class="heroviz-text-mute" style="font-size:9px;">ACTIONS</text>
+            <!-- Research -->
+            <g>
+              <rect x="284" y="74" width="102" height="36" rx="9" class="heroviz-chip"/>
+              <!-- icon: magnifier -->
+              <g transform="translate(294, 92)">
+                <circle cx="3.5" cy="-0.5" r="3.5" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3"/>
+                <line x1="6" y1="2" x2="9" y2="5" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linecap="round"/>
+              </g>
+              <text x="310" y="89" class="heroviz-text" style="font-size:10px; font-weight:600;">Research</text>
+              <text x="310" y="102" class="heroviz-text-mute" style="font-size:8px;">avg 2.4s</text>
+            </g>
+            <!-- Personalize -->
+            <g>
+              <rect x="284" y="120" width="102" height="36" rx="9" class="heroviz-chip"/>
+              <!-- icon: sparkle/AI -->
+              <g transform="translate(294, 138)">
+                <path d="M6 -5 L7 -1 L11 0 L7 1 L6 5 L5 1 L1 0 L5 -1 Z" fill="var(--page-accent-strong)"/>
+              </g>
+              <text x="310" y="135" class="heroviz-text" style="font-size:10px; font-weight:600;">Personalize</text>
+              <text x="310" y="148" class="heroviz-text-mute" style="font-size:8px;">12 variants</text>
+            </g>
+            <!-- Reach out -->
+            <g>
+              <rect x="284" y="166" width="102" height="36" rx="9" class="heroviz-chip"/>
+              <!-- icon: paper airplane -->
+              <g transform="translate(294, 184)">
+                <path d="M0 0 L11 -4 L7 6 L5 1 Z" fill="var(--page-accent-strong)"/>
+              </g>
+              <text x="310" y="181" class="heroviz-text" style="font-size:10px; font-weight:600;">Reach out</text>
+              <text x="310" y="194" class="heroviz-text-mute" style="font-size:8px;">3 channels</text>
+            </g>
+            <!-- Hand off -->
+            <g>
+              <rect x="284" y="212" width="102" height="36" rx="9" class="heroviz-chip"/>
+              <!-- icon: arrows handing -->
+              <g transform="translate(294, 230)">
+                <path d="M0 -1 L7 -1 M5 -3 L7 -1 L5 1" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 3 L4 3 M6 1 L4 3 L6 5" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <text x="310" y="227" class="heroviz-text" style="font-size:10px; font-weight:600;">Hand off</text>
+              <text x="310" y="240" class="heroviz-text-mute" style="font-size:8px;">to rep</text>
+            </g>
+            <!-- Meeting prep -->
+            <g>
+              <rect x="284" y="258" width="102" height="36" rx="9" class="heroviz-chip"/>
+              <!-- icon: document/notes -->
+              <g transform="translate(294, 276)">
+                <rect x="0" y="-4" width="9" height="11" rx="1.2" fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3"/>
+                <line x1="2" y1="-1" x2="7" y2="-1" stroke="var(--page-accent-strong)" stroke-width="1.2"/>
+                <line x1="2" y1="2" x2="7" y2="2" stroke="var(--page-accent-strong)" stroke-width="1.2"/>
+                <line x1="2" y1="5" x2="5" y2="5" stroke="var(--page-accent-strong)" stroke-width="1.2"/>
+              </g>
+              <text x="310" y="273" class="heroviz-text" style="font-size:10px; font-weight:600;">Meeting prep</text>
+              <text x="310" y="286" class="heroviz-text-mute" style="font-size:8px;">brief auto-sent</text>
+            </g>
+
+            <!-- Bottom timeline strip · smooth area sparkline (last 24h activity) -->
+            <rect x="14" y="326" width="372" height="40" rx="10" fill="rgba(255,255,255,0.7)" stroke="rgba(23,42,45,0.08)"/>
+            <text x="24" y="343" class="heroviz-text-mute" style="font-size:9px;">LIVE QUEUE · last 24h</text>
+            <text x="376" y="343" text-anchor="end" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="var(--page-accent-strong)">1,284 tasks</text>
+            <!-- subtle baseline -->
+            <line x1="24" y1="360" x2="376" y2="360" stroke="rgba(23,42,45,0.06)" stroke-width="1"/>
+            <!-- Filled area showing activity wave -->
+            <path d="M24,358 C 50,357 70,353 96,354 C 122,355 142,350 168,348 C 194,346 218,352 244,350 C 268,348 290,355 314,352 C 338,349 358,346 376,348 L376,360 L24,360 Z"
+              fill="color-mix(in srgb, var(--page-accent) 28%, white)" opacity="0.55"/>
+            <!-- Stroke line on top of area -->
+            <path d="M24,358 C 50,357 70,353 96,354 C 122,355 142,350 168,348 C 194,346 218,352 244,350 C 268,348 290,355 314,352 C 338,349 358,346 376,348"
+              fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">AI workflows for every funnel stage</span>
+          <h3 class="hero-el-title">Run AI workflows alongside every rep so pipeline stops dying in the gaps.</h3>
+          <p class="hero-el-body">Research, routing, follow-up, handoff, and meeting prep all happen automatically.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="hero-elements-cta">
+      <a href="#workflow" class="btn btn-primary">See the entire flywheel <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO MARQUEE -->
+<section class="section-pad-sm">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 8px;">
+      <span class="eyebrow">Trusted by GTM teams scaling inside their stack</span>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track" id="logo-marquee"></div>
+    </div>
+  </div>
+
+</body>
+</html>

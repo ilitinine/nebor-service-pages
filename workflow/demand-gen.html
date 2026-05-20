@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Workflow Cards · Demand Gen & ABM · Nebor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Serif:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles/system.css" />
+<link rel="stylesheet" href="../styles/workflow.css" />
+<link rel="stylesheet" href="../styles/page-demand.css" />
+<style>
+  /* Standalone wrapper · framing only, no design changes to the cards */
+  body {
+    padding: 56px 0 80px;
+    min-height: 100vh;
+    background:
+      radial-gradient(1200px 600px at 50% -10%, color-mix(in srgb, var(--page-accent, #ddd) 14%, transparent), transparent 70%),
+      var(--color-base, #FBFAF8);
+  }
+  .wf-standalone-header {
+    max-width: 1500px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .wf-standalone-header .wf-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--page-accent-strong, #555);
+  }
+  .wf-standalone-header .wf-eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--page-accent, #ccc);
+  }
+  .wf-standalone-header h1 {
+    margin: 8px 0 0;
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text, #172a2d);
+  }
+  .wf-standalone-header p {
+    margin: 6px 0 0;
+    color: rgba(23,42,45,0.55);
+    font-size: 14px;
+    max-width: 540px;
+  }
+  .wf-standalone-nav {
+    display: flex;
+    gap: 6px;
+    background: rgba(255,255,255,0.7);
+    padding: 6px;
+    border-radius: 999px;
+    border: 1px solid rgba(23,42,45,0.08);
+  }
+  .wf-standalone-nav a {
+    padding: 8px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: rgba(23,42,45,0.55);
+    transition: background 0.18s ease, color 0.18s ease;
+  }
+  .wf-standalone-nav a:hover {
+    color: var(--color-text, #172a2d);
+  }
+  .wf-standalone-nav a.active {
+    background: var(--page-accent, #f0f0f0);
+    color: var(--page-accent-strong, #222);
+  }
+  /* Remove top spacing the hero-elements-wrap normally inherits from the hero */
+  .hero-elements-wrap {
+    margin-top: 0 !important;
+  }
+  /* Hide the bottom "See the entire flywheel" CTA in the standalone view */
+  .hero-elements-cta { display: none; }
+</style>
+</head>
+<body class="tier-demand">
+
+<header class="wf-standalone-header">
+  <div>
+    <span class="wf-eyebrow">Tier 02 · Demand</span>
+    <h1>Workflow cards · Demand Gen & ABM</h1>
+    <p>Standalone preview of the three hero workflow cards. View source for the workflow code only.</p>
+  </div>
+  <nav class="wf-standalone-nav" aria-label="Switch service page">
+    <a href="revenue-engine.html">Sales Engine</a>
+    <a href="demand-gen.html" class="active">Demand Gen</a>
+    <a href="crm-revops.html">RevOps</a>
+  </nav>
+</header>
+
+<div class="hero-elements-wrap">
+    <div class="hero-elements">
+
+      <!-- Card 1 · ABM tier rings -->
+      <a href="#workflow" class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 380" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+            <!-- Top header -->
+            <rect x="14" y="14" width="372" height="30" rx="8" fill="var(--card-header)"/>
+            <circle cx="28" cy="29" r="4" fill="var(--page-accent)" class="heroviz-pulse"/>
+            <text x="38" y="34" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="#FFFFFF">ABM operating model</text>
+            <text x="220" y="34" font-family="var(--font-sans)" font-size="10" fill="rgba(255,255,255,0.6)">347 accounts · 8 plays</text>
+
+            <!-- Left tier panel -->
+            <text x="14" y="68" class="heroviz-text-mute" style="font-size:9px;">TIER BREAKDOWN</text>
+            <g>
+              <rect x="14" y="76" width="86" height="42" rx="8" fill="var(--page-accent-strong)" opacity="0.95"/>
+              <text x="22" y="92" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="#FFFFFF">TIER 1 · 1:1</text>
+              <text x="22" y="108" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="#FFFFFF">24</text>
+              <text x="56" y="108" font-family="var(--font-sans)" font-size="9" fill="rgba(255,255,255,0.6)">accounts</text>
+            </g>
+            <g>
+              <rect x="14" y="126" width="86" height="42" rx="8" fill="var(--page-accent)"/>
+              <text x="22" y="142" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="var(--color-text)">TIER 2 · 1:few</text>
+              <text x="22" y="158" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="var(--color-text)">86</text>
+              <text x="56" y="158" font-family="var(--font-sans)" font-size="9" fill="var(--color-text)" opacity="0.55">accounts</text>
+            </g>
+            <g>
+              <rect x="14" y="176" width="86" height="42" rx="8" fill="var(--page-accent-soft)"/>
+              <text x="22" y="192" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="var(--page-accent-strong)">TIER 3 · 1:many</text>
+              <text x="22" y="208" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="var(--color-text)">237</text>
+              <text x="62" y="208" font-family="var(--font-sans)" font-size="9" fill="var(--page-accent-strong)" opacity="0.55">accounts</text>
+            </g>
+            <!-- engagement strip -->
+            <rect x="14" y="228" width="86" height="56" rx="8" fill="rgba(255,255,255,0.8)" stroke="rgba(23,42,45,0.08)"/>
+            <text x="22" y="244" class="heroviz-text-mute" style="font-size:8.5px;">ENGAGED</text>
+            <text x="22" y="262" font-family="var(--font-sans)" font-size="15" font-weight="700" fill="var(--color-text)">64%</text>
+            <!-- mini progress -->
+            <rect x="22" y="270" width="70" height="4" rx="2" fill="var(--color-blue-50)"/>
+            <rect x="22" y="270" width="46" height="4" rx="2" fill="var(--page-accent-strong)"/>
+
+            <!-- center: concentric tier rings with accounts -->
+            <circle cx="250" cy="200" r="120" class="heroviz-ring" stroke-dasharray="3 5" stroke-width="1.3" opacity="0.4"/>
+            <circle cx="250" cy="200" r="84"  class="heroviz-ring" stroke-dasharray="3 5" stroke-width="1.3" opacity="0.55"/>
+            <circle cx="250" cy="200" r="48"  class="heroviz-ring" stroke-width="1.4" opacity="0.85"/>
+
+            <!-- center ICP pill -->
+            <rect x="220" y="184" width="60" height="32" rx="16" fill="var(--color-text)"/>
+            <text x="250" y="204" text-anchor="middle" font-family="var(--font-sans)" font-size="13" font-weight="700" fill="#FFFFFF">ICP</text>
+
+            <!-- Tier 1 (inner) - small chips with logos only -->
+            <g>
+              <rect x="240" y="138" width="68" height="24" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=stripe.com&sz=64" x="246" y="144" width="14" height="14" class="heroviz-favicon"/>
+              <text x="264" y="155" class="heroviz-text" style="font-size:10px;">Stripe</text>
+            </g>
+            <g>
+              <rect x="218" y="222" width="64" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=hubspot.com&sz=64" x="224" y="227" width="13" height="13" class="heroviz-favicon"/>
+              <text x="241" y="237" class="heroviz-text" style="font-size:10px;">HubSpot</text>
+            </g>
+
+            <!-- Tier 2 (middle) -->
+            <g>
+              <rect x="298" y="170" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=linear.app&sz=64" x="304" y="175" width="13" height="13" class="heroviz-favicon"/>
+              <text x="321" y="185" class="heroviz-text" style="font-size:9.5px;">Linear</text>
+            </g>
+            <g>
+              <rect x="130" y="172" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=figma.com&sz=64" x="136" y="177" width="13" height="13" class="heroviz-favicon"/>
+              <text x="153" y="187" class="heroviz-text" style="font-size:9.5px;">Figma</text>
+            </g>
+            <g>
+              <rect x="298" y="232" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=notion.so&sz=64" x="304" y="237" width="13" height="13" class="heroviz-favicon"/>
+              <text x="321" y="247" class="heroviz-text" style="font-size:9.5px;">Notion</text>
+            </g>
+            <g>
+              <rect x="170" y="248" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=slack.com&sz=64" x="176" y="253" width="13" height="13" class="heroviz-favicon"/>
+              <text x="193" y="263" class="heroviz-text" style="font-size:9.5px;">Slack</text>
+            </g>
+
+            <!-- Tier 3 (outer) -->
+            <g>
+              <rect x="260" y="84" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=asana.com&sz=64" x="266" y="89" width="13" height="13" class="heroviz-favicon"/>
+              <text x="283" y="99" class="heroviz-text" style="font-size:9.5px;">Asana</text>
+            </g>
+            <g>
+              <rect x="148" y="106" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=shopify.com&sz=64" x="154" y="111" width="13" height="13" class="heroviz-favicon"/>
+              <text x="171" y="121" class="heroviz-text" style="font-size:9.5px;">Shopify</text>
+            </g>
+            <g>
+              <rect x="330" y="128" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=vercel.com&sz=64" x="336" y="133" width="13" height="13" class="heroviz-favicon"/>
+              <text x="353" y="143" class="heroviz-text" style="font-size:9.5px;">Vercel</text>
+            </g>
+            <g>
+              <rect x="108" y="218" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=intercom.com&sz=64" x="114" y="223" width="13" height="13" class="heroviz-favicon"/>
+              <text x="131" y="233" class="heroviz-text" style="font-size:9.5px;">Intercom</text>
+            </g>
+            <g>
+              <rect x="266" y="282" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=monday.com&sz=64" x="272" y="287" width="13" height="13" class="heroviz-favicon"/>
+              <text x="289" y="297" class="heroviz-text" style="font-size:9.5px;">Monday</text>
+            </g>
+            <g>
+              <rect x="146" y="298" width="62" height="22" rx="6" class="heroviz-chip"/>
+              <image href="https://www.google.com/s2/favicons?domain=airtable.com&sz=64" x="152" y="303" width="13" height="13" class="heroviz-favicon"/>
+              <text x="169" y="313" class="heroviz-text" style="font-size:9.5px;">Airtable</text>
+            </g>
+
+            <!-- Bottom: campaign type chips -->
+            <rect x="14" y="330" width="372" height="38" rx="10" fill="rgba(255,255,255,0.75)" stroke="rgba(23,42,45,0.08)"/>
+            <text x="24" y="346" class="heroviz-text-mute" style="font-size:9px;">CAMPAIGNS</text>
+            <rect x="84" y="338" width="60" height="22" rx="11" fill="var(--page-accent-strong)"/>
+            <text x="114" y="353" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="600" fill="#FFFFFF">1:1 plays</text>
+            <rect x="152" y="338" width="74" height="22" rx="11" fill="var(--page-accent)"/>
+            <text x="189" y="353" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="600" fill="var(--color-text)">1:few cohorts</text>
+            <rect x="234" y="338" width="82" height="22" rx="11" fill="var(--page-accent-soft)" stroke="var(--page-accent-strong)" stroke-width="0.8"/>
+            <text x="275" y="353" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="600" fill="var(--page-accent-strong)">1:many nurture</text>
+            <text x="328" y="353" class="heroviz-text-mute" style="font-size:9px;">+5 active</text>
+
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">Account tiering &amp; ABM orchestration</span>
+          <h3 class="hero-el-title">Operate ABM as the model behind every play across every channel.</h3>
+          <p class="hero-el-body">Run 1:1 for top accounts, 1:few for cohorts, and 1:many for the long tail, all coordinated.</p>
+        </div>
+      </a>
+
+      <!-- Card 2 · Funnel workflows -->
+      <a href="#workflow" class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 380" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+            <!-- Top header -->
+            <rect x="14" y="14" width="372" height="30" rx="8" fill="var(--card-header)"/>
+            <circle cx="28" cy="29" r="4" fill="var(--page-accent)" class="heroviz-pulse"/>
+            <text x="38" y="34" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="#FFFFFF">Funnel workflows · live</text>
+            <text x="230" y="34" font-family="var(--font-sans)" font-size="10" fill="rgba(255,255,255,0.6)">18,492 in motion</text>
+
+            <!-- Gradient defs for modern funnel stages -->
+            <defs>
+              <linearGradient id="funnelStage1" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="color-mix(in srgb, var(--page-accent) 55%, white)"/>
+                <stop offset="1" stop-color="color-mix(in srgb, var(--page-accent) 30%, white)"/>
+              </linearGradient>
+              <linearGradient id="funnelStage2" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="color-mix(in srgb, var(--page-accent) 80%, white)"/>
+                <stop offset="1" stop-color="color-mix(in srgb, var(--page-accent) 55%, white)"/>
+              </linearGradient>
+              <linearGradient id="funnelStage3" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="color-mix(in srgb, var(--page-accent-strong) 38%, var(--page-accent))"/>
+                <stop offset="1" stop-color="color-mix(in srgb, var(--page-accent-strong) 60%, var(--page-accent))"/>
+              </linearGradient>
+              <linearGradient id="funnelStage4" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="var(--page-accent-strong)"/>
+                <stop offset="1" stop-color="color-mix(in srgb, var(--page-accent-strong) 80%, black)"/>
+              </linearGradient>
+            </defs>
+
+            <!-- MODERN CENTERED HORIZONTAL FUNNEL · spans full canvas width -->
+            <!-- Subhead -->
+            <text x="200" y="62" text-anchor="middle" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="rgba(23,42,45,0.45)" letter-spacing="0.1em">CONVERSION · LAST 30D</text>
+
+            <!-- Stage 1 · AWARENESS · width 316, centered (x=42→358) -->
+            <rect x="42" y="68" width="316" height="38" rx="11" fill="url(#funnelStage1)" stroke="rgba(23,42,45,0.06)" stroke-width="0.6" filter="drop-shadow(0 3px 8px rgba(138,106,42,0.10))"/>
+            <text x="58" y="84" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="var(--page-accent-strong)" letter-spacing="0.12em" opacity="0.85">AWARENESS</text>
+            <text x="58" y="100" font-family="var(--font-sans)" font-size="15" font-weight="700" fill="var(--color-text)">12,400</text>
+            <text x="342" y="100" text-anchor="end" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="var(--page-accent-strong)" opacity="0.6">100%</text>
+
+            <!-- Connector 1→2 · tapered trapezoid from 316 to 204 -->
+            <path d="M42,106 L358,106 L302,118 L98,118 Z" fill="color-mix(in srgb, var(--page-accent) 20%, white)" opacity="0.55"/>
+            <text x="200" y="115.5" text-anchor="middle" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="var(--page-accent-strong)">17.6% retained · 10.2k lost</text>
+
+            <!-- Stage 2 · MQL · width 204, centered (x=98→302) -->
+            <rect x="98" y="120" width="204" height="38" rx="11" fill="url(#funnelStage2)" stroke="rgba(23,42,45,0.06)" stroke-width="0.6" filter="drop-shadow(0 3px 8px rgba(138,106,42,0.12))"/>
+            <text x="114" y="136" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="var(--page-accent-strong)" letter-spacing="0.12em" opacity="0.85">MQL</text>
+            <text x="114" y="152" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="var(--color-text)">2,180</text>
+            <text x="286" y="152" text-anchor="end" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="var(--page-accent-strong)" opacity="0.6">17.6%</text>
+
+            <!-- Connector 2→3 · tapered from 204 to 112 -->
+            <path d="M98,158 L302,158 L256,170 L144,170 Z" fill="color-mix(in srgb, var(--page-accent) 32%, white)" opacity="0.55"/>
+            <text x="200" y="167.5" text-anchor="middle" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="var(--page-accent-strong)">19.3% retained · 1.8k lost</text>
+
+            <!-- Stage 3 · SQL · width 112, centered (x=144→256) -->
+            <rect x="144" y="172" width="112" height="38" rx="11" fill="url(#funnelStage3)" stroke="rgba(23,42,45,0.06)" stroke-width="0.6" filter="drop-shadow(0 3px 8px rgba(138,106,42,0.14))"/>
+            <text x="156" y="188" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.12em" opacity="0.85">SQL</text>
+            <text x="156" y="204" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="#FFFFFF">420</text>
+            <text x="244" y="204" text-anchor="end" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="#FFFFFF" opacity="0.75">3.4%</text>
+
+            <!-- Connector 3→4 · tapered from 112 to 60 -->
+            <path d="M144,210 L256,210 L230,222 L170,222 Z" fill="color-mix(in srgb, var(--page-accent-strong) 28%, white)" opacity="0.6"/>
+            <text x="200" y="219.5" text-anchor="middle" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="var(--page-accent-strong)">9.0% retained · 382 lost</text>
+
+            <!-- Stage 4 · WON · width 60, centered (x=170→230) -->
+            <rect x="170" y="224" width="60" height="38" rx="11" fill="url(#funnelStage4)" filter="drop-shadow(0 4px 10px rgba(138,106,42,0.22))"/>
+            <text x="200" y="240" text-anchor="middle" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.12em" opacity="0.9">WON</text>
+            <text x="200" y="256" text-anchor="middle" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="#FFFFFF">38</text>
+
+            <!-- Anchor dots on WON sides -->
+            <circle cx="170" cy="243" r="2" fill="color-mix(in srgb, var(--page-accent) 70%, white)" opacity="0.9"/>
+            <circle cx="230" cy="243" r="2" fill="color-mix(in srgb, var(--page-accent) 70%, white)" opacity="0.9"/>
+
+            <!-- Below funnel · full-width strip with closed value + velocity side-by-side -->
+            <rect x="22" y="290" width="356" height="40" rx="11" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.04))"/>
+
+            <!-- LEFT half · CLOSED VALUE -->
+            <g transform="translate(40, 310)">
+              <circle cx="0" cy="0" r="8" fill="var(--page-accent-strong)"/>
+              <path d="M-3 0 L-1 2 L3 -2.5" stroke="#FFFFFF" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <text x="58" y="306" font-family="var(--font-sans)" font-size="7.5" font-weight="600" fill="rgba(23,42,45,0.5)" letter-spacing="0.06em">CLOSED VALUE</text>
+            <text x="58" y="322" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="var(--color-text)">$420k</text>
+            <text x="108" y="322" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="#16A34A">↑ 18%</text>
+
+            <!-- Divider -->
+            <line x1="200" y1="298" x2="200" y2="322" stroke="rgba(23,42,45,0.10)"/>
+
+            <!-- RIGHT half · VELOCITY with sparkline -->
+            <g transform="translate(214, 310)">
+              <circle cx="0" cy="0" r="8" fill="color-mix(in srgb, var(--page-accent-strong) 18%, white)" stroke="var(--page-accent-strong)" stroke-width="1"/>
+              <path d="M-3 -2 L-3 2 M0 -3 L0 2 M3 -1 L3 2" stroke="var(--page-accent-strong)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+            </g>
+            <text x="232" y="306" font-family="var(--font-sans)" font-size="7.5" font-weight="600" fill="rgba(23,42,45,0.5)" letter-spacing="0.06em">VELOCITY</text>
+            <text x="232" y="322" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="var(--color-text)">18</text>
+            <text x="252" y="322" font-family="var(--font-sans)" font-size="9.5" font-weight="600" fill="rgba(23,42,45,0.55)">days</text>
+            <!-- Velocity sparkline (declining = faster cycle) -->
+            <polyline points="288,320 296,317 304,318 312,315 320,316 328,313 336,314 344,310 352,312 360,308 366,309" fill="none" stroke="#16A34A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="366" cy="309" r="2" fill="#16A34A"/>
+
+            <!-- Automation chips · centered across full width, 4 chips -->
+            <text x="22" y="350" font-family="var(--font-sans)" font-size="7.5" font-weight="600" fill="rgba(23,42,45,0.45)" letter-spacing="0.06em">AUTOMATIONS</text>
+            <text x="378" y="350" text-anchor="end" font-family="var(--font-sans)" font-size="7.5" font-weight="600" fill="rgba(23,42,45,0.45)" letter-spacing="0.06em">5 active</text>
+            <rect x="22" y="356" width="74" height="14" rx="7" fill="color-mix(in srgb, var(--page-accent) 28%, white)"/>
+            <text x="59" y="366" text-anchor="middle" font-family="var(--font-sans)" font-size="8" fill="var(--page-accent-strong)" font-weight="600">nurture</text>
+            <rect x="104" y="356" width="74" height="14" rx="7" fill="color-mix(in srgb, var(--page-accent) 48%, white)"/>
+            <text x="141" y="366" text-anchor="middle" font-family="var(--font-sans)" font-size="8" fill="var(--page-accent-strong)" font-weight="600">qualify</text>
+            <rect x="186" y="356" width="74" height="14" rx="7" fill="color-mix(in srgb, var(--page-accent) 68%, white)"/>
+            <text x="223" y="366" text-anchor="middle" font-family="var(--font-sans)" font-size="8" fill="var(--page-accent-strong)" font-weight="600">handoff</text>
+            <rect x="268" y="356" width="74" height="14" rx="7" fill="var(--page-accent-strong)"/>
+            <text x="305" y="366" text-anchor="middle" font-family="var(--font-sans)" font-size="8" fill="#FFFFFF" font-weight="600">close</text>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">Funnel automation &amp; nurture flows</span>
+          <h3 class="hero-el-title">Trigger the right workflow at every funnel stage from real-time signals.</h3>
+          <p class="hero-el-body">Awareness, consideration, conversion, and re-engagement all fire on signal, not memory.</p>
+        </div>
+      </a>
+
+      <!-- Card 3 · Dynamic audiences across every channel -->
+      <a href="#workflow" class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 380" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+            <!-- Top header -->
+            <rect x="14" y="14" width="372" height="30" rx="8" fill="var(--card-header)"/>
+            <circle cx="28" cy="29" r="4" fill="#22C55E" class="heroviz-pulse"/>
+            <text x="38" y="34" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="#FFFFFF">Audiences syncing live</text>
+            <text x="220" y="34" font-family="var(--font-sans)" font-size="10" fill="rgba(255,255,255,0.6)">updated 2m ago</text>
+            <rect x="332" y="20" width="46" height="18" rx="9" fill="var(--page-accent)"/>
+            <text x="355" y="33" text-anchor="middle" font-family="var(--font-sans)" font-size="9" font-weight="700" fill="var(--color-text)">7 ads</text>
+            <!-- LEFT: CRM table card with 6 favicon rows -->
+            <rect x="14" y="56" width="174" height="308" rx="11" class="heroviz-chip"/>
+            <rect x="14" y="56" width="174" height="34" rx="11" fill="var(--color-text)"/>
+            <text x="26" y="78" font-family="var(--font-sans)" font-size="12" font-weight="600" fill="#FFFFFF">CRM accounts</text>
+            <circle cx="170" cy="73" r="4" fill="var(--page-accent)" class="heroviz-pulse"/>
+
+            <!-- row headers -->
+            <text x="26" y="106" class="heroviz-text-mute" style="font-size:8px;">ACCOUNT</text>
+            <text x="142" y="106" class="heroviz-text-mute" style="font-size:8px;">TIER</text>
+            <line x1="26" y1="112" x2="178" y2="112" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>
+
+            <!-- row 1 · Stripe T1 -->
+            <image href="https://www.google.com/s2/favicons?domain=stripe.com&sz=64" x="26" y="120" width="18" height="18" class="heroviz-favicon"/>
+            <text x="50" y="133" class="heroviz-text">Stripe</text>
+            <rect x="138" y="124" width="38" height="14" rx="7" fill="var(--page-accent-strong)"/>
+            <text x="157" y="134" text-anchor="middle" font-family="var(--font-sans)" font-size="8.5" font-weight="700" fill="#FFFFFF">T1</text>
+            <line x1="26" y1="146" x2="178" y2="146" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>
+
+            <!-- row 2 · Linear T2 -->
+            <image href="https://www.google.com/s2/favicons?domain=linear.app&sz=64" x="26" y="154" width="18" height="18" class="heroviz-favicon"/>
+            <text x="50" y="167" class="heroviz-text">Linear</text>
+            <rect x="138" y="158" width="38" height="14" rx="7" fill="var(--page-accent)"/>
+            <text x="157" y="168" text-anchor="middle" font-family="var(--font-sans)" font-size="8.5" font-weight="700" fill="var(--color-text)">T2</text>
+            <line x1="26" y1="180" x2="178" y2="180" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>
+
+            <!-- row 3 · Notion T1 -->
+            <image href="https://www.google.com/s2/favicons?domain=notion.so&sz=64" x="26" y="188" width="18" height="18" class="heroviz-favicon"/>
+            <text x="50" y="201" class="heroviz-text">Notion</text>
+            <rect x="138" y="192" width="38" height="14" rx="7" fill="var(--page-accent-strong)"/>
+            <text x="157" y="202" text-anchor="middle" font-family="var(--font-sans)" font-size="8.5" font-weight="700" fill="#FFFFFF">T1</text>
+            <line x1="26" y1="214" x2="178" y2="214" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>
+
+            <!-- row 4 · Figma T2 -->
+            <image href="https://www.google.com/s2/favicons?domain=figma.com&sz=64" x="26" y="222" width="18" height="18" class="heroviz-favicon"/>
+            <text x="50" y="235" class="heroviz-text">Figma</text>
+            <rect x="138" y="226" width="38" height="14" rx="7" fill="var(--page-accent)"/>
+            <text x="157" y="236" text-anchor="middle" font-family="var(--font-sans)" font-size="8.5" font-weight="700" fill="var(--color-text)">T2</text>
+            <line x1="26" y1="248" x2="178" y2="248" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>
+
+            <!-- row 5 · Asana T3 -->
+            <image href="https://www.google.com/s2/favicons?domain=asana.com&sz=64" x="26" y="256" width="18" height="18" class="heroviz-favicon"/>
+            <text x="50" y="269" class="heroviz-text">Asana</text>
+            <rect x="138" y="260" width="38" height="14" rx="7" fill="var(--page-accent-soft)" stroke="var(--page-accent-strong)" stroke-width="0.8"/>
+            <text x="157" y="270" text-anchor="middle" font-family="var(--font-sans)" font-size="8.5" font-weight="700" fill="var(--page-accent-strong)">T3</text>
+            <line x1="26" y1="282" x2="178" y2="282" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>
+
+            <!-- row 6 · Slack T2 -->
+            <image href="https://www.google.com/s2/favicons?domain=slack.com&sz=64" x="26" y="290" width="18" height="18" class="heroviz-favicon"/>
+            <text x="50" y="303" class="heroviz-text">Slack</text>
+            <rect x="138" y="294" width="38" height="14" rx="7" fill="var(--page-accent)"/>
+            <text x="157" y="304" text-anchor="middle" font-family="var(--font-sans)" font-size="8.5" font-weight="700" fill="var(--color-text)">T2</text>
+            <line x1="26" y1="316" x2="178" y2="316" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>
+
+            <!-- row 7 · Shopify T1 -->
+            <image href="https://www.google.com/s2/favicons?domain=shopify.com&sz=64" x="26" y="324" width="18" height="18" class="heroviz-favicon"/>
+            <text x="50" y="337" class="heroviz-text">Shopify</text>
+            <rect x="138" y="328" width="38" height="14" rx="7" fill="var(--page-accent-strong)"/>
+            <text x="157" y="338" text-anchor="middle" font-family="var(--font-sans)" font-size="8.5" font-weight="700" fill="#FFFFFF">T1</text>
+
+            <!-- table footer hint -->
+            <text x="26" y="358" class="heroviz-text-mute" style="font-size:8.5px;">+ 340 more accounts</text>
+
+            <!-- MIDDLE: sync indicator -->
+            <line x1="194" y1="208" x2="222" y2="208" class="heroviz-line"/>
+            <circle cx="208" cy="208" r="22" fill="var(--color-text)"/>
+            <path d="M198 200 L218 200 M213 196 L218 200 L213 204 M218 216 L198 216 M203 212 L198 216 L203 220"
+                  stroke="#FFFFFF" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <text x="208" y="248" text-anchor="middle" class="heroviz-text-mute" style="font-size:8.5px;">live sync</text>
+
+            <!-- RIGHT: AUDIENCE → CHANNELS · live performance visualization -->
+
+            <!-- Header row -->
+            <text x="234" y="74" class="heroviz-text-mute" style="font-size:9px;">AUDIENCE → CHANNELS</text>
+            <g>
+              <rect x="346" y="64" width="40" height="14" rx="7" fill="color-mix(in srgb, var(--page-accent) 22%, white)"/>
+              <circle cx="354" cy="71" r="2.2" fill="#22C55E"/>
+              <text x="378" y="74" text-anchor="end" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="var(--page-accent-strong)">live</text>
+            </g>
+
+            <!-- Total reach summary -->
+            <text x="234" y="92" font-family="var(--font-sans)" font-size="17" font-weight="700" fill="var(--color-text)">347</text>
+            <text x="262" y="92" font-family="var(--font-sans)" font-size="9" font-weight="600" fill="rgba(23,42,45,0.55)">accounts reached</text>
+            <text x="234" y="103" font-family="var(--font-sans)" font-size="7.5" font-weight="600" fill="rgba(23,42,45,0.45)">$24k/mo · 5 channels active</text>
+
+            <!-- Distribution bar · proportional audience split across channels -->
+            <rect x="234" y="112" width="152" height="10" rx="5" fill="color-mix(in srgb, var(--page-accent) 14%, white)"/>
+            <!-- LinkedIn (24/347 = 7%) -->
+            <rect x="234" y="112" width="10.5" height="10" fill="var(--page-accent-strong)"/>
+            <!-- Google (86/347 = 25%) · sits at x=245 -->
+            <rect x="244.5" y="112" width="37.7" height="10" fill="color-mix(in srgb, var(--page-accent-strong) 70%, var(--page-accent))"/>
+            <!-- Meta (237/347 = 68%) · sits at x=282 -->
+            <rect x="282.2" y="112" width="103.8" height="10" rx="5" fill="var(--page-accent)"/>
+            <rect x="234" y="112" width="152" height="10" rx="5" fill="none" stroke="rgba(23,42,45,0.08)"/>
+            <!-- Distribution segment dividers (subtle) -->
+            <line x1="244.5" y1="112" x2="244.5" y2="122" stroke="#FFFFFF" stroke-width="0.8" opacity="0.9"/>
+            <line x1="282.2" y1="112" x2="282.2" y2="122" stroke="#FFFFFF" stroke-width="0.8" opacity="0.9"/>
+
+            <!-- Channel cards · each with sparkline + tier indicator -->
+
+            <!-- LinkedIn · y=130-202 (72 tall) -->
+            <g>
+              <rect x="232" y="130" width="154" height="72" rx="11" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)" filter="drop-shadow(0 3px 8px rgba(23,42,45,0.04))"/>
+              <!-- Header: logo + name + live dot -->
+              <image href="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" x="242" y="140" width="18" height="18" class="heroviz-favicon"/>
+              <text x="266" y="153" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">LinkedIn</text>
+              <circle cx="376" cy="148" r="2.2" fill="#22C55E"/>
+              <!-- Tier badge inline (top right) -->
+              <rect x="332" y="142" width="34" height="11" rx="5.5" fill="var(--page-accent-strong)"/>
+              <text x="349" y="150" text-anchor="middle" font-family="var(--font-sans)" font-size="7" fill="#FFFFFF" font-weight="700" letter-spacing="0.05em">T1</text>
+              <!-- Sparkline filled area · impressions trending up -->
+              <path d="M242,180 L252,176 L262,178 L272,172 L282,170 L292,166 L302,164 L312,160 L322,162 L332,156 L342,154 L352,150 L362,146 L374,142 L376,142 L376,182 L242,182 Z"
+                fill="color-mix(in srgb, var(--page-accent) 25%, white)" opacity="0.55"/>
+              <polyline points="242,180 252,176 262,178 272,172 282,170 292,166 302,164 312,160 322,162 332,156 342,154 352,150 362,146 376,142"
+                fill="none" stroke="var(--page-accent-strong)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="376" cy="142" r="2" fill="var(--page-accent-strong)"/>
+              <!-- Bottom stats -->
+              <text x="242" y="196" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">24</text>
+              <text x="258" y="196" font-family="var(--font-sans)" font-size="7.5" fill="rgba(23,42,45,0.55)">accts</text>
+              <text x="376" y="196" text-anchor="end" font-family="var(--font-sans)" font-size="8" font-weight="600" fill="rgba(23,42,45,0.65)">$12k/mo</text>
+            </g>
+
+            <!-- Google Ads · y=208-280 -->
+            <g>
+              <rect x="232" y="208" width="154" height="72" rx="11" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)" filter="drop-shadow(0 3px 8px rgba(23,42,45,0.04))"/>
+              <image href="https://www.google.com/s2/favicons?domain=ads.google.com&sz=128" x="242" y="218" width="18" height="18" class="heroviz-favicon"/>
+              <text x="266" y="231" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">Google Ads</text>
+              <circle cx="376" cy="226" r="2.2" fill="#22C55E"/>
+              <rect x="332" y="220" width="34" height="11" rx="5.5" fill="color-mix(in srgb, var(--page-accent-strong) 70%, var(--page-accent))"/>
+              <text x="349" y="228" text-anchor="middle" font-family="var(--font-sans)" font-size="7" fill="#FFFFFF" font-weight="700" letter-spacing="0.05em">T2</text>
+              <!-- Sparkline · steady oscillating -->
+              <path d="M242,258 L252,256 L262,254 L272,256 L282,252 L292,253 L302,250 L312,251 L322,248 L332,250 L342,246 L352,247 L362,244 L376,246 L376,260 L242,260 Z"
+                fill="color-mix(in srgb, var(--page-accent) 32%, white)" opacity="0.5"/>
+              <polyline points="242,258 252,256 262,254 272,256 282,252 292,253 302,250 312,251 322,248 332,250 342,246 352,247 362,244 376,246"
+                fill="none" stroke="color-mix(in srgb, var(--page-accent-strong) 70%, var(--page-accent))" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="376" cy="246" r="2" fill="color-mix(in srgb, var(--page-accent-strong) 70%, var(--page-accent))"/>
+              <text x="242" y="274" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">86</text>
+              <text x="258" y="274" font-family="var(--font-sans)" font-size="7.5" fill="rgba(23,42,45,0.55)">accts</text>
+              <text x="376" y="274" text-anchor="end" font-family="var(--font-sans)" font-size="8" font-weight="600" fill="rgba(23,42,45,0.65)">$8k/mo</text>
+            </g>
+
+            <!-- Meta · Instagram · y=286-358 -->
+            <g>
+              <rect x="232" y="286" width="154" height="72" rx="11" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)" filter="drop-shadow(0 3px 8px rgba(23,42,45,0.04))"/>
+              <image href="https://www.google.com/s2/favicons?domain=instagram.com&sz=128" x="242" y="296" width="18" height="18" class="heroviz-favicon"/>
+              <text x="266" y="309" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">Meta · IG</text>
+              <circle cx="376" cy="304" r="2.2" fill="#22C55E"/>
+              <rect x="332" y="298" width="34" height="11" rx="5.5" fill="var(--page-accent)" stroke="var(--page-accent-strong)" stroke-width="0.8"/>
+              <text x="349" y="306" text-anchor="middle" font-family="var(--font-sans)" font-size="7" fill="var(--page-accent-strong)" font-weight="700" letter-spacing="0.05em">T3</text>
+              <!-- Sparkline · gradually rising (high-volume awareness channel) -->
+              <path d="M242,336 L252,335 L262,333 L272,331 L282,332 L292,329 L302,328 L312,326 L322,327 L332,324 L342,322 L352,321 L362,319 L376,318 L376,340 L242,340 Z"
+                fill="color-mix(in srgb, var(--page-accent) 36%, white)" opacity="0.5"/>
+              <polyline points="242,336 252,335 262,333 272,331 282,332 292,329 302,328 312,326 322,327 332,324 342,322 352,321 362,319 376,318"
+                fill="none" stroke="var(--page-accent)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="376" cy="318" r="2" fill="var(--page-accent-strong)"/>
+              <text x="242" y="352" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--color-text)">237</text>
+              <text x="262" y="352" font-family="var(--font-sans)" font-size="7.5" fill="rgba(23,42,45,0.55)">accts</text>
+              <text x="376" y="352" text-anchor="end" font-family="var(--font-sans)" font-size="8" font-weight="600" fill="rgba(23,42,45,0.65)">$4k/mo</text>
+            </g>
+
+            <!-- Footer · more channels chip -->
+            <rect x="232" y="362" width="154" height="14" rx="7" fill="rgba(255,255,255,0.7)" stroke="rgba(23,42,45,0.08)"/>
+            <text x="309" y="372" text-anchor="middle" class="heroviz-text-mute" style="font-size:8px;">+ YouTube · Reddit · X · display</text>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">Live audience sync to every ad channel</span>
+          <h3 class="hero-el-title">Activate live audiences across LinkedIn, Google, and every channel your ICP lives on.</h3>
+          <p class="hero-el-body">CRM, intent data, and account scoring sync into every campaign so lists never go stale.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="hero-elements-cta">
+      <a href="#workflow" class="btn btn-primary">See the entire flywheel <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO MARQUEE -->
+<section class="section-pad-sm">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 8px;">
+      <span class="eyebrow">Marketing teams scaling demand inside their stack</span>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track" id="logo-marquee"></div>
+    </div>
+  </div>
+
+</body>
+</html>
