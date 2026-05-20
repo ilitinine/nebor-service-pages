@@ -2,9 +2,9 @@
 
 Static HTML/CSS/SVG mockups for the three Nebor service pages. Built as a reference for the production designer.
 
-## Just want the workflow cards?
+## Just want the Living Workflow section?
 
-The three hero workflow cards from each service page are extracted into standalone files under [`workflow/`](workflow/). Open [`workflow/index.html`](workflow/index.html) to see all three previews and pick one. Each standalone file contains only the workflow markup, with the rest of the page (nav, hero copy, marquee, problem section, etc.) stripped out.
+The Living Workflow (horizontal stepper: Identify → Enrich → Personalize → Send → Qualify → Book, plus the cumulative tree-flowchart that renders below it) is extracted into standalone files under [`workflow/`](workflow/). Open [`workflow/index.html`](workflow/index.html) to see all three previews and pick one. Each standalone file contains the workflow section markup, its `window.NEBOR_WORKFLOW` data, and the scripts that render it — everything else (nav, hero copy, cards, marquee, problem section) is stripped out.
 
 ## For the designer — start here
 
