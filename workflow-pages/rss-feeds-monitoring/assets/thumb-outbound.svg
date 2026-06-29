@@ -1,0 +1,31 @@
+      <svg viewBox="20 70 440 290" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="sdSh" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="13"/>
+          </filter>
+        </defs>
+        <!-- soft contact shadow -->
+        <ellipse cx="238" cy="332" rx="108" ry="16" fill="#11233F" opacity="0.20" filter="url(#sdSh)"/>
+        <!-- mount post + base (3D) -->
+        <rect x="226" y="200" width="15" height="108" fill="#AEB6C6"/>
+        <rect x="241" y="200" width="9"  height="108" fill="#7E889B"/>
+        <polygon points="196,306 280,306 292,316 184,316" fill="#C3CAD8"/>
+        <polygon points="184,316 292,316 286,330 190,330" fill="#7E889B"/>
+        <!-- dish (extruded bowl) -->
+        <g transform="rotate(-26 238 182)">
+          <g fill="#1A4E84">
+            <ellipse cx="238" cy="198" rx="96" ry="70"/><ellipse cx="238" cy="196" rx="96" ry="70"/>
+            <ellipse cx="238" cy="194" rx="96" ry="70"/><ellipse cx="238" cy="192" rx="96" ry="70"/>
+            <ellipse cx="238" cy="190" rx="96" ry="70"/><ellipse cx="238" cy="188" rx="96" ry="70"/>
+            <ellipse cx="238" cy="186" rx="96" ry="70"/><ellipse cx="238" cy="184" rx="96" ry="70"/>
+          </g>
+          <ellipse cx="238" cy="182" rx="96" ry="70" fill="#2E7BCF"/>
+          <ellipse cx="238" cy="182" rx="80" ry="57" fill="#9ED2F2"/>
+          <ellipse cx="238" cy="182" rx="44" ry="31" fill="#4A93DA"/>
+          <circle cx="238" cy="182" r="8" fill="#1A4E84"/>
+        </g>
+        <!-- feed arm + receiver -->
+        <line x1="238" y1="182" x2="308" y2="120" stroke="#AEB6C6" stroke-width="8" stroke-linecap="round"/>
+        <rect x="296" y="110" width="30" height="30" rx="8" fill="#C99B07"/>
+        <rect x="296" y="104" width="30" height="30" rx="8" fill="#F2B400"/>
+      </svg>
