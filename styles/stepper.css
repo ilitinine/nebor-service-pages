@@ -24,7 +24,7 @@
 
 /* This page's workflow uses the warm lavender/amber palette, not the default sage-green
    "Sales" tier. Re-tint the section's ambient wash (the color behind + above the canvas)
-   and its glow to match. Scoped here because stepper.css loads only on revenue-engine-v2. */
+   and its glow to match. Scoped here because stepper.css loads only on the revenue-engine page. */
 .workflow.tier-revenue {
   --tier-a: #CEC0F0;                       /* top-left wash · soft lavender (echoes the FIND slab) */
   --tier-b: #F1DBA0;                       /* bottom-right wash · soft amber (brand warmth) */
