@@ -1,0 +1,283 @@
+/* ===========================================================================
+   Living workflow · the playbook flywheel (pre-"technical" build).
+   Header stepper drives it; the 9 step cards build up around the ring, the
+   active step's data flow shows in the centre, and a bold 5-stage GTM gauge
+   wheel (FIND/REACH/QUALIFY/BOOK/LEARN) with the Clay + n8n hub sits behind.
+   Cream cards + white cut-out borders; plain canvas.
+   =========================================================================== */
+.pw-canvas, .pw, .pw-center, .fc2-tooltip {
+  --font-sans: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-body: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --ink: #172A2D;
+  --cream: #F9F1DE; --cream-hi: #F5E7C4; --cream-lo: #FDF9F1;
+  --find: #B47F1F; --reach: #157C8E; --run: #2F9E6F;
+}
+
+.pw-canvas {
+  position: relative; margin-top: 30px;
+  background: radial-gradient(130% 120% at 50% -12%, #FEFCF7 0%, #FAF5EC 56%, #F5EFE1 100%);
+  border: 1px solid rgba(23,42,45,0.09); border-radius: 28px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 44px 90px -52px rgba(23,42,45,0.42);
+  padding: 24px 28px 36px; overflow: hidden;
+}
+
+/* This page's workflow uses the warm lavender/amber palette, not the default sage-green
+   "Sales" tier. Re-tint the section's ambient wash (the color behind + above the canvas)
+   and its glow to match. Scoped here because stepper.css loads only on revenue-engine-v2. */
+.workflow.tier-revenue {
+  --tier-a: #CEC0F0;                       /* top-left wash · soft lavender (echoes the FIND slab) */
+  --tier-b: #F1DBA0;                       /* bottom-right wash · soft amber (brand warmth) */
+  --tier-c: #ECE5F6;                       /* center wash · pale lavender */
+  --tier-glow: rgba(159, 134, 236, 0.26);  /* ambient glow · lavender, was green */
+}
+.pw-canvas-cap { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 4px 4px 0; }
+.pw-canvas-eyebrow { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(23,42,45,0.5); }
+.pw-canvas-hint { font-family: var(--font-mono); font-size: 10.5px; color: rgba(23,42,45,0.38); }
+
+.pw { position: relative; width: min(1100px, 100%); margin: 10px auto 0; aspect-ratio: 1 / 1; }
+
+/* wrapper holding the wheel graphic (flywheel + its glow). On desktop it fills .pw exactly
+   as before; on mobile it becomes an in-flow square so the detail card can stack beneath it. */
+.pw-wheel { position: absolute; inset: 0; }
+
+/* the 5-stage gauge wheel · design untouched, only scaled down to leave room for the ring cards */
+.pw-flywheel { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; z-index: 0; pointer-events: none; transform: scale(0.78); transform-origin: center; }
+
+/* active-stage glow · additive layer on top of the slabs (matches the wheel's scale) */
+.pw-glow { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; z-index: 0; pointer-events: none; transform: scale(0.78); transform-origin: center; }
+/* the glow flashes in fast (14%) so it fires in lock-step with the card, then settles */
+.pw-glow-face { mix-blend-mode: screen; opacity: 0; animation: pwGlowFace .6s ease both; }
+.pw-glow-halo { opacity: 0; animation: pwGlowHalo 2.4s ease-in-out infinite; }
+.pw-glow-lbl { font-family: var(--font-sans); font-weight: 800; font-size: 16px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0; animation: pwGlowLbl .4s ease both; filter: drop-shadow(0 0 6px rgba(255,255,255,0.95)); }
+@keyframes pwGlowFace { 0% { opacity: 0; } 14% { opacity: 0.72; } 100% { opacity: 0.55; } }
+@keyframes pwGlowLbl  { 0% { opacity: 0; } 30% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes pwGlowHalo { 0% { opacity: 0; } 15% { opacity: 0.55; } 60% { opacity: 0.32; } 100% { opacity: 0.44; } }
+
+/* active stage's icon comes alive · radar ping rings emanate + the disc breathes */
+.pw-glow-ping { transform-box: fill-box; transform-origin: center; animation: pwPing 1.9s ease-out infinite; }
+.pw-glow-ping.p2 { animation-delay: .95s; }
+@keyframes pwPing { 0% { transform: scale(1); opacity: 0.5; } 70% { opacity: 0; } 100% { transform: scale(2.4); opacity: 0; } }
+/* badge springs in on the SAME curve+duration as the ring card, so wheel and card move as one */
+.pw-glow-disc { transform-box: fill-box; transform-origin: center; animation: pwBadgePop .5s cubic-bezier(0.34,1.5,0.4,1) both, pwBadgePulse 1.9s ease-in-out .5s infinite; }
+@keyframes pwBadgePop { 0% { transform: scale(0.5); } 100% { transform: scale(1); } }
+@keyframes pwBadgePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
+/* the glyph draws itself on, then gives a little wiggle to settle */
+.pw-glow-glyph > * { stroke-dasharray: 1; stroke-dashoffset: 1; animation: pwDraw .5s ease .06s both; }
+@keyframes pwDraw { to { stroke-dashoffset: 0; } }
+.pw-glow-glyph { transform-box: fill-box; transform-origin: center; animation: pwGlyphWiggle .5s ease .5s both; }
+@keyframes pwGlyphWiggle { 0% { transform: rotate(0); } 28% { transform: rotate(-8deg); } 62% { transform: rotate(5deg); } 100% { transform: rotate(0); } }
+
+/* light up the path · the handoff pill pops as the spark lands on it */
+.pw-handoff.hit { animation: pwHandoffHit .8s ease .38s both; }
+@keyframes pwHandoffHit { 0% { transform: scale(1); } 35% { transform: scale(1.2); background: #FFF3D6; box-shadow: 0 8px 22px -5px rgba(225,150,46,0.55); } 100% { transform: scale(1); } }
+
+/* live center table · data pills light up one after another, top to bottom */
+.pw-fl-live { animation: pwDataLive .7s ease both; }
+@keyframes pwDataLive { 0% { transform: scale(1); } 30% { transform: scale(1.16); box-shadow: 0 0 0 3px rgba(225,150,46,0.22); } 100% { transform: scale(1); } }
+.pw-fl-arwlive { animation: pwArwLive .7s ease both; }
+@keyframes pwArwLive { 0%, 100% { opacity: 0.42; } 30% { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .pw-glow-face { opacity: 0.42 !important; animation: none !important; }
+  .pw-glow-halo { opacity: 0.28 !important; animation: none !important; }
+  .pw-glow-lbl { opacity: 1 !important; animation: none !important; }
+  .pw-glow-ping { opacity: 0 !important; animation: none !important; }
+  .pw-glow-disc { transform: none !important; animation: none !important; }
+  .pw-glow-glyph { transform: none !important; animation: none !important; }
+  .pw-glow-glyph > * { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; animation: none !important; }
+  .pw-handoff.hit, .pw-fl-live, .pw-fl-arwlive { animation: none !important; }
+}
+.pw-fw-label { font-family: var(--font-sans); font-weight: 800; font-size: 16px; letter-spacing: 0.14em; text-transform: uppercase; }
+/* the Clay + n8n hub badge */
+.pw-clay {
+  position: absolute; left: 50%; top: 28.5%; transform: translate(-50%, -50%); z-index: 6;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; border: 1.5px solid #fff; border-radius: 999px; padding: 5px 15px 5px 5px;
+  box-shadow: 0 8px 18px -8px rgba(23,42,45,0.35);
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.03em; color: rgba(23,42,45,0.55);
+}
+.pw-clay b { color: var(--ink); font-weight: 700; }
+.pw-clay-mk { width: 25px; height: 25px; border-radius: 8px; background: #fff; border: 1px solid rgba(23,42,45,0.08); display: grid; place-items: center; overflow: hidden; }
+
+/* handoff wires + pills */
+.pw-wires { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; z-index: 1; }
+.pw-wire { fill: none; stroke-width: 3.4; stroke-linecap: round; }
+.pw-wire.ghost { stroke: rgba(23,42,45,0.13); stroke-width: 2; stroke-dasharray: 1 12; }
+.pw-wire.built { stroke-dasharray: 4 14; opacity: 0.95; animation: pwFlow 2.4s linear infinite; }
+.pw-wire.built.close { stroke-width: 4.2; stroke-dasharray: 11 13; opacity: 1; }
+@keyframes pwFlow { to { stroke-dashoffset: -180; } }
+.pw-handoff {
+  display: flex; align-items: center; justify-content: center; height: 24px;
+  font-family: var(--font-mono); font-size: 9px; font-weight: 600; letter-spacing: 0.03em;
+  color: rgba(23,42,45,0.6); background: #FFFFFF;
+  border: 1.5px solid #fff; border-radius: 999px; padding: 0 11px; white-space: nowrap;
+  box-shadow: 0 4px 12px -6px rgba(23,42,45,0.28);
+}
+.pw-handoff.close { color: #8A5410; background: #F6E7C6; font-weight: 700; }
+
+/* ring step cards · cream + white cut-out border, centred content */
+.pw-node {
+  position: absolute; transform: translate(-50%, -50%);
+  width: 210px; box-sizing: border-box; z-index: 3; text-align: center;
+  background: var(--cream); border: 2px solid #FFFFFF; border-radius: 20px;
+  box-shadow: 0 16px 34px -22px rgba(23,42,45,0.3);
+  padding: 14px 18px 16px; cursor: pointer;
+  transition: transform .5s cubic-bezier(0.34,1.5,0.4,1), box-shadow .28s ease, background .3s ease, opacity .35s ease, width .3s ease, padding .3s ease;
+}
+.pw-node-step { display: block; font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(23,42,45,0.42); }
+.pw-node-name { font-size: 17px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; line-height: 1.05; margin-top: 3px; }
+.pw-node-tag { font-size: 11px; color: rgba(23,42,45,0.5); margin-top: 4px; }
+.pw-node-desc {
+  font-size: 11.5px; line-height: 1.42; color: rgba(23,42,45,0.62); margin: 9px 0 0;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.pw-node-logos { display: flex; align-items: center; justify-content: center; margin-top: 12px; }
+.pw-node-logo {
+  width: 27px; height: 27px; border-radius: 50%; background: #fff;
+  border: 2px solid #fff; box-shadow: 0 1px 5px rgba(23,42,45,0.18);
+  display: grid; place-items: center; overflow: hidden; margin-left: -7px; cursor: help; flex: 0 0 auto;
+  transition: transform .14s ease;
+}
+.pw-node-logo:first-child { margin-left: 0; }
+.pw-node-logo:hover { transform: translateY(-3px); position: relative; z-index: 2; }
+/* ghost = not opened yet: compact, faint, name only, still resting on the wheel */
+.pw-node.ghost { width: 162px; padding: 11px 16px; background: var(--cream-lo); box-shadow: none; opacity: 0.5; }
+.pw-node.ghost .pw-node-name { color: rgba(23,42,45,0.42); }
+.pw-node.ghost .pw-node-step { color: rgba(23,42,45,0.32); }
+.pw-node.ghost .pw-node-tag, .pw-node.ghost .pw-node-desc, .pw-node.ghost .pw-node-logos { display: none; }
+/* built/active = folded out: expanded, popped further outward to sit clear of the wheel */
+.pw-node.built { transform: translate(-50%, -50%) translate(calc(var(--ox) * 59px), calc(var(--oy) * 59px)); }
+.pw-node.active {
+  background: var(--cream); z-index: 5; box-shadow: 0 26px 48px -18px rgba(23,42,45,0.32);
+  transform: translate(-50%, -50%) translate(calc(var(--ox) * 59px), calc(var(--oy) * 59px)) scale(1.05);
+}
+/* hover: ring cards are clickable — nudge toward the cursor */
+.pw-node.ghost:hover { opacity: 0.82; box-shadow: 0 14px 26px -18px rgba(23,42,45,0.34);
+  transform: translate(-50%, -50%) translate(calc(var(--ox) * 8px), calc(var(--oy) * 8px)); }
+.pw-node.built:not(.active):hover { box-shadow: 0 24px 42px -20px rgba(23,42,45,0.36);
+  transform: translate(-50%, -50%) translate(calc(var(--ox) * 66px), calc(var(--oy) * 66px)); }
+
+/* the centre detail card · round, seated in the wheel's hub */
+.pw-center {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: min(508px, 47.4%); aspect-ratio: 1 / 1; border-radius: 50%;
+  box-sizing: border-box; z-index: 4; text-align: center;
+  background: var(--cream); border: 2px solid #FFFFFF;
+  box-shadow: 0 30px 60px -30px rgba(23,42,45,0.3), 0 0 0 1px rgba(23,42,45,0.04);
+  padding: 46px 52px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.pw-center > * { width: 300px; max-width: 100%; }
+/* content cascades in when the active step changes */
+.pw-center > * { animation: pwCIn 0.42s both cubic-bezier(0.2, 0.7, 0.3, 1); }
+.pw-center > *:nth-child(2) { animation-delay: 0.05s; }
+.pw-center > *:nth-child(3) { animation-delay: 0.10s; }
+.pw-center > *:nth-child(4) { animation-delay: 0.15s; }
+.pw-center > *:nth-child(5) { animation-delay: 0.20s; }
+@keyframes pwCIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .pw-node, .pw-center > *, .pw-wire.built { animation: none !important; transition: none !important; }
+}
+.pw-c-head { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.pw-c-name { font-family: var(--font-sans); font-size: 27px; font-weight: 700; letter-spacing: -0.025em; color: var(--ink); margin: 0; line-height: 1; }
+.pw-c-desc { font-size: 13px; line-height: 1.5; color: rgba(23,42,45,0.62); margin: 12px auto 0; max-width: 40ch; }
+.pw-c-k { margin: 16px 0 11px; display: flex; flex-direction: column; gap: 3px; align-items: center; }
+.pw-c-k b { font-family: var(--font-sans); font-size: 13.5px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+.pw-c-k span { font-size: 11px; color: rgba(23,42,45,0.48); max-width: 40ch; line-height: 1.4; }
+
+/* aligned 3-column handoff table: [ from ]  ── data ──▸  [ to ] */
+.pw-flows { display: grid; grid-template-columns: auto minmax(70px, 1fr) auto; column-gap: 10px; row-gap: 10px; align-items: center; text-align: left; }
+.pw-fl { display: contents; }
+.pw-fl-tool {
+  display: inline-flex; align-items: center; gap: 7px; justify-self: start;
+  background: #FFFFFF; border: 1.5px solid #FFFFFF; border-radius: 11px;
+  box-shadow: 0 2px 8px -3px rgba(23,42,45,0.16);
+  padding: 4px 12px 4px 4px; font-size: 11.5px; font-weight: 600; color: var(--ink); cursor: help; white-space: nowrap;
+}
+.pw-fl-mk { width: 24px; height: 24px; border-radius: 7px; background: #fff; border: 1px solid rgba(23,42,45,0.06); display: grid; place-items: center; overflow: hidden; flex: 0 0 auto; }
+.pw-fl-pipe { position: relative; align-self: center; height: 24px; display: flex; align-items: center; justify-content: center; }
+.pw-fl-pipe::before { content: ""; position: absolute; left: 0; right: 7px; top: 50%; border-top: 1.5px solid rgba(23,42,45,0.18); }
+.pw-fl-arw { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 7px solid rgba(23,42,45,0.42); border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; }
+.pw-fl-data {
+  position: relative; z-index: 1; font-size: 10px; font-weight: 600;
+  color: #7A5410; background: #FBEFD4; border: 1px solid rgba(225,150,46,0.28);
+  border-radius: 999px; padding: 2px 9px; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis;
+}
+.pw-c-out {
+  display: inline-flex; align-items: center; gap: 11px; margin-top: 18px;
+  font-family: var(--font-mono); font-size: 10px; line-height: 1.45; color: #206E4E;
+  background: #EDF6EF; border: 1.5px solid #fff; border-radius: 12px; padding: 10px 15px;
+  box-shadow: 0 3px 10px -5px rgba(23,42,45,0.12); text-align: left;
+}
+.pw-c-out-k { font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 8.5px; color: #2F9E6F; border-right: 1px solid rgba(47,158,111,0.3); padding-right: 11px; flex: 0 0 auto; }
+
+@media (max-width: 1120px) {
+  .pw { width: 100%; }
+}
+
+/* ---- mobile / narrow: the circular ring layout can't fit, so stack it ----
+   Wheel becomes a square graphic on top (still glows through the stages), the
+   active step's detail drops below it as a full-width readable card. The ring
+   cards + wires are hidden (the header stepper handles step navigation). */
+@media (max-width: 900px) {
+  .pw-canvas { padding: 16px 12px 22px; }
+  .pw { aspect-ratio: auto; height: auto; display: block; }
+  .pw-wheel {
+    position: relative; inset: auto;
+    width: 100%; max-width: 460px; margin: 0 auto; aspect-ratio: 1 / 1;
+  }
+  /* no ring cards crowding the wheel now, so let it fill its box a little more */
+  .pw-flywheel, .pw-glow { transform: scale(0.9); }
+  .pw-wires, .pw-clay, .pw-nodes { display: none; }
+
+  .pw-center {
+    position: static; transform: none; left: auto; top: auto;
+    width: 100%; max-width: 460px; margin: 16px auto 0;
+    aspect-ratio: auto; height: auto; border-radius: 22px;
+    padding: 24px 20px; overflow: visible;
+  }
+  .pw-center > * { width: 100%; }
+  .pw-c-name { font-size: 22px; }
+  .pw-c-desc { font-size: 12.5px; }
+
+  /* the 3-column handoff table is too wide for a phone → stack each handoff:
+     from-tool on top, the data it passes, then the to-tool, as one grouped chip. */
+  .pw-flows { display: flex; flex-direction: column; gap: 9px; }
+  .pw-fl {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+    padding: 10px 12px; border-left: 2px solid rgba(225,150,46,0.4);
+    background: #FDF8EC; border-radius: 10px;
+  }
+  .pw-fl-tool { justify-self: auto; width: auto; max-width: 100%; font-size: 11px; padding: 4px 11px 4px 4px; }
+  .pw-fl-mk { width: 22px; height: 22px; }
+  .pw-fl-pipe { height: auto; width: auto; justify-content: flex-start; padding-left: 8px; }
+  .pw-fl-pipe::before { display: none; }
+  .pw-fl-arw { display: none; }
+  .pw-fl-data { font-size: 9.5px; padding: 2px 8px; }
+}
+
+/* ===========================================================================
+   Dark tool hover card (shared)
+   =========================================================================== */
+.fc2-tooltip {
+  position: fixed; z-index: 9999; transform: translate(-50%, -100%);
+  background: var(--ink); color: #fff; padding: 12px 15px; border-radius: 12px;
+  font: 400 12.5px/1.5 var(--font-body); max-width: 296px; text-align: left;
+  box-shadow: 0 16px 38px -12px rgba(0,0,0,0.5);
+  pointer-events: none; opacity: 0; transition: opacity 0.12s ease;
+}
+.fc2-tooltip.show { opacity: 1; pointer-events: auto; }
+.fc2-tooltip .tt-name { display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: 13.5px; margin-bottom: 5px; }
+.fc2-tooltip .tt-name .t-logo { width: 20px; height: 20px; border-radius: 6px; }
+.fc2-tooltip .tt-what { color: rgba(255,255,255,0.74); }
+.fc2-tooltip .tt-role { margin-top: 7px; padding-top: 7px; border-top: 1px solid rgba(255,255,255,0.16); }
+.fc2-tooltip .tt-role b { color: #C9F95E; font-weight: 600; }
+.fc2-tooltip .tt-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 11px; font: 600 12px/1 var(--font-body); color: #fff; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 7px 12px; text-decoration: none; transition: background 0.15s ease, border-color 0.15s ease; }
+.fc2-tooltip .tt-more:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.34); }
+.fc2-tooltip .tt-arw { font-weight: 700; }
+.fc2-tooltip::after { content: ""; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: var(--ink); }
+.fc2-tooltip.below { transform: translate(-50%, 0); }
+.fc2-tooltip.below::after { top: auto; bottom: 100%; border-top-color: transparent; border-bottom-color: var(--ink); }

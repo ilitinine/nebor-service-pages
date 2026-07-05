@@ -1,0 +1,37 @@
+/* ============================================================================
+   Page FX · additive polish only — hover life, nav reaction, hero greet-on-load.
+   (The scroll reveal is driven by inline styles in page-fx.js so it can't be
+   overridden by other CSS.) NOTHING here changes layout: every element ends up
+   in the exact spot it already occupies. Remove the <link> + <script> to revert.
+   ============================================================================ */
+
+/* --- hero: a gentle greet on load (flash-free, plays once) --- */
+.b-hero .b-eyebrow  { animation: pfxUp .7s .05s both cubic-bezier(.2, .7, .3, 1); }
+.b-hero .b-h1       { animation: pfxUp .8s .13s both cubic-bezier(.2, .7, .3, 1); }
+.b-hero .b-lede     { animation: pfxUp .8s .24s both cubic-bezier(.2, .7, .3, 1); }
+.b-hero .b-hero-ctas{ animation: pfxUp .8s .34s both cubic-bezier(.2, .7, .3, 1); }
+.hero-elements-wrap { animation: pfxFade 1.1s .28s both ease; }
+@keyframes pfxUp   { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+@keyframes pfxFade { from { opacity: 0; } to { opacity: 1; } }
+
+/* --- buttons feel alive: lift + a trailing glyph nudge on hover --- */
+.bbtn { transition: transform .22s cubic-bezier(.2, .7, .3, 1), box-shadow .22s ease, background-color .22s ease, color .22s ease; }
+.bbtn:hover { transform: translateY(-2px); }
+.bbtn > svg, .bbtn .arrow, .bbtn-arrow { transition: transform .22s ease; }
+.bbtn:hover > svg, .bbtn:hover .arrow, .bbtn:hover .bbtn-arrow { transform: translateX(3px); }
+
+/* --- cards lift softly on hover --- */
+.b-metric, .b-step, .b-tool, .b-testi-card { transition: transform .28s cubic-bezier(.2, .7, .3, 1), box-shadow .28s ease; }
+.b-metric:hover, .b-step:hover, .b-tool:hover, .b-testi-card:hover { transform: translateY(-4px); }
+
+/* --- top nav reacts once you start scrolling (soft separation) --- */
+.b-nav-wrap { transition: filter .3s ease; }
+.b-nav-wrap.pfx-scrolled { filter: drop-shadow(0 10px 26px rgba(23, 42, 45, 0.18)); }
+
+/* --- respect reduced-motion: rest everything in place, no motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .b-hero .b-eyebrow, .b-hero .b-h1, .b-hero .b-lede, .b-hero .b-hero-ctas, .hero-elements-wrap {
+    opacity: 1 !important; transform: none !important; animation: none !important;
+  }
+  .bbtn, .b-metric, .b-step, .b-tool, .b-testi-card, .b-nav-wrap { transition: none !important; }
+}
