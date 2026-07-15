@@ -50,9 +50,10 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     slack:     { name: 'Slack',      what: 'Team messaging where reps get real-time alerts and pre-meeting briefs.' },
     chilipiper:{ name: 'Chili Piper',what: 'A scheduling tool that routes and books meetings in real time.' }
   };
-  const PHASE = { Find: 'find', Reach: 'reach', Run: 'run' };
-  const TAG = ['win/loss to ICP', 'TAM to matched', 'intent, scored', 'replies, routed', 'accounts to people', 'signal to message', 'email + LinkedIn', 'meeting, stamped', 'wins to next ICP'];
-  const HANDOFF = ['market map', 'matched accounts', 'scored set', 'the committee', 'the message', 'live sends', 'qualified reply', 'booked & stamped', 'wins, next run'];
+  // Per-page config: each page can supply its own phases/wheel via window globals; defaults = Sales Engine.
+  const PHASE = window.NEBOR_PHASE || { Find: 'find', Reach: 'reach', Run: 'run' };
+  const TAG = window.NEBOR_TAG || ['win/loss to ICP', 'TAM to matched', 'intent, scored', 'replies, routed', 'accounts to people', 'signal to message', 'email + LinkedIn', 'meeting, stamped', 'wins to next ICP'];
+  const HANDOFF = window.NEBOR_HANDOFF || ['market map', 'matched accounts', 'scored set', 'the committee', 'the message', 'live sends', 'qualified reply', 'booked & stamped', 'wins, next run'];
   const PLAIN = {
     'won-lost.records': 'win/loss records', 'icp.doc': 'the ICP', 'closed-won.seeds': 'closed-won seeds', 'lookalike.expand': 'lookalikes',
     'firmo.page[n]': 'firmographics', 'orgs.filtered': 'matching orgs', 'stack.lookup': 'tech stack', 'tech.confirm': 'stack signals',
@@ -96,7 +97,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
   const arc = (r, a0, a1) => { const s = pt(a0, r), e = pt(a1, r); const large = Math.abs(a1 - a0) > Math.PI ? 1 : 0; return 'M ' + s.x + ' ' + s.y + ' A ' + r + ' ' + r + ' 0 ' + large + ' 1 ' + e.x + ' ' + e.y; };
 
   // ---- the 5-stage GTM wheel · machine-plate build (ref shapes) + vivid clay palette (ref colors) ----
-  const STAGES = [
+  const STAGES = window.NEBOR_STAGES || [
     { k: 'Find', c: '#9F86EC', ic: 'search' },   // lavender (ATTRACT)
     { k: 'Qualify', c: '#6FA6E9', ic: 'filter' },// blue slab, now reads Qualify (label+icon swapped, color unchanged)
     { k: 'Reach', c: '#3FCDAD', ic: 'send' },    // mint slab, now reads Reach (label+icon swapped, color unchanged)
@@ -129,7 +130,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
   // which of the 5 wheel slabs each step lights. Slab order clockwise is now
   // Find(0), Qualify(1), Reach(2), Book(3), Learn(4) — Qualify/Reach labels swapped on the wheel.
   // Define/Identify/Signal→Find, Qualify→Qualify(1), Enrich/Personalize/Send→Reach(2), Book, Learn.
-  const STEP_STAGE = [0, 0, 0, 1, 2, 2, 2, 3, 4];
+  const STEP_STAGE = window.NEBOR_STEP_STAGE || [0, 0, 0, 1, 2, 2, 2, 3, 4];
   function stageOf(i) { return STEP_STAGE[i] != null ? STEP_STAGE[i] : 0; }
   function glowStage(k) {
     if (!glowEl || !stageInfo || !stageInfo[k]) return;
@@ -224,7 +225,9 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     }
 
     const clay = document.getElementById('pw-clay');
-    if (clay) clay.innerHTML = '<span class="pw-clay-mk">' + window.neborLogo('clay', 18) + '</span><span class="pw-clay-mk">' + window.neborLogo('n8n', 18) + '</span><span class="pw-clay-tx">built on <b>Clay</b> + <b>n8n</b></span>';
+    // hub chip is page-configurable: sales default is Clay + n8n, demand runs Clay alone
+    const HUB = window.NEBOR_HUB || [{ sl: 'clay', name: 'Clay' }, { sl: 'n8n', name: 'n8n' }];
+    if (clay) clay.innerHTML = HUB.map(h => '<span class="pw-clay-mk">' + window.neborLogo(h.sl, 18) + '</span>').join('') + '<span class="pw-clay-tx">built on ' + HUB.map(h => '<b>' + h.name + '</b>').join(' + ') + '</span>';
   }
 
   // ---- the ring step cards (compact tiles, built progressively) ----

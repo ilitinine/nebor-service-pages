@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Revenue capabilities · proof sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet" />
+<style>
+  :root { --font-sans: "Bricolage Grotesque", sans-serif; }
+  body { background: #F7F4EF; margin: 0; font-family: var(--font-sans); }
+  .sheet { max-width: 1100px; margin: 0 auto; padding: 20px 20px 80px; }
+  .proof { margin: 26px 0; }
+  .proof h2 { font-size: 14px; color: #172A2D; margin: 0 0 8px; }
+  .proof .rec-viz { background: #FFFFFF; border-radius: 20px; padding: 18px; box-shadow: 0 10px 30px rgba(23,42,45,0.08); }
+  .proof svg { display: block; width: 100%; height: auto; }
+  .cap-layer, .cap-flow { animation: none !important; }
+</style>
+</head>
+<body>
+<div class="sheet"><div id="out"></div></div>
+<div style="display:none"><div id="rec-rail"></div><div id="rec-body"></div></div>
+<script>
+window.NEBOR_RE_CAPS = [
+  { id: "icp", title: "01" }, { id: "workflows", title: "02" }, { id: "scoring", title: "03" },
+  { id: "channels", title: "04" }, { id: "signals", title: "05" }, { id: "sequences", title: "06" },
+  { id: "inbound", title: "07" }, { id: "meetings", title: "08" }, { id: "attribution", title: "09" }
+];
+</script>
+<script src="scripts/tools.js?v=3"></script>
+<script src="scripts/re-console-v2.js?v=41"></script>
+<script>
+  const out = document.getElementById('out');
+  Object.keys(window.NEBOR_RE_VIEWS2 || {}).forEach(id => {
+    const d = document.createElement('div');
+    d.className = 'proof'; d.id = 'p-' + id;
+    d.innerHTML = '<h2>' + id + '</h2>' + window.NEBOR_RE_VIEWS2[id]();
+    out.appendChild(d);
+  });
+</script>
+</body>
+</html>
