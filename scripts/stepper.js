@@ -122,6 +122,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     if (ic === 'filter') return '<path d="M -10 -8 L 10 -8 L 2.5 1 L 2.5 9 L -2.5 6 L -2.5 1 Z" ' + a + '/>';
     if (ic === 'cal') return '<rect x="-9.5" y="-8" width="19" height="17" rx="2.5" ' + a + '/><line x1="-9.5" y1="-2.5" x2="9.5" y2="-2.5" ' + a + '/><line x1="-4.5" y1="-11" x2="-4.5" y2="-5.5" ' + a + '/><line x1="4.5" y1="-11" x2="4.5" y2="-5.5" ' + a + '/>';
     if (ic === 'loop') return '<path d="M 9 -3.5 A 9 9 0 1 0 9 3.5" ' + a + '/><path d="M 9 -9.5 L 9 -2.5 L 2.3 -3.6" ' + a + '/>';
+    if (ic === 'grid') return '<rect x="-9.5" y="-9.5" width="8" height="8" rx="1.6" ' + a + '/><rect x="1.5" y="-9.5" width="8" height="8" rx="1.6" ' + a + '/><rect x="-9.5" y="1.5" width="8" height="8" rx="1.6" ' + a + '/><rect x="1.5" y="1.5" width="8" height="8" rx="1.6" ' + a + '/>';
     return '';
   }
 
@@ -208,6 +209,8 @@ window.neborLogo = window.neborLogo || function (slug, size) {
       const ap = pt(am, rMid);
       P.push('<g transform="translate(' + ap.x.toFixed(1) + ',' + (ap.y - 25).toFixed(1) + ')"><circle r="24" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>' + glyph(s.ic, col[i]) + '</g>');
       P.push('<text class="pw-fw-label" x="' + ap.x.toFixed(1) + '" y="' + (ap.y + 25).toFixed(1) + '" text-anchor="middle" dominant-baseline="central" fill="#202B33">' + s.k + '</text>');
+      // optional sub-label under a slab: the CRM build uses it to say the Architect arc happens once
+      if (s.sub) P.push('<text class="pw-fw-sub" x="' + ap.x.toFixed(1) + '" y="' + (ap.y + 41).toFixed(1) + '" text-anchor="middle" dominant-baseline="central" fill="rgba(32,43,51,0.55)">' + s.sub + '</text>');
     });
     svg.innerHTML = P.join('');
 
@@ -227,7 +230,8 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     const clay = document.getElementById('pw-clay');
     // hub chip is page-configurable: sales default is Clay + n8n, demand runs Clay alone
     const HUB = window.NEBOR_HUB || [{ sl: 'clay', name: 'Clay' }, { sl: 'n8n', name: 'n8n' }];
-    if (clay) clay.innerHTML = HUB.map(h => '<span class="pw-clay-mk">' + window.neborLogo(h.sl, 18) + '</span>').join('') + '<span class="pw-clay-tx">built on ' + HUB.map(h => '<b>' + h.name + '</b>').join(' + ') + '</span>';
+    const HUB_TX = window.NEBOR_HUB_TEXT || ('built on ' + HUB.map(h => '<b>' + h.name + '</b>').join(' + '));
+    if (clay) clay.innerHTML = HUB.map(h => '<span class="pw-clay-mk">' + window.neborLogo(h.sl, 18) + '</span>').join('') + '<span class="pw-clay-tx">' + HUB_TX + '</span>';
   }
 
   // ---- the ring step cards (compact tiles, built progressively) ----
@@ -271,8 +275,8 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     pwCenter.innerHTML =
       '<div class="pw-c-head"><h4 class="pw-c-name">' + esc(d.step) + '</h4></div>' +
       '<p class="pw-c-desc">' + esc(d.desc) + '</p>' +
-      '<div class="pw-c-k"><b>How the data moves</b><span>each row is one handoff: a tool passes data to the next</span></div>' +
-      '<div class="pw-flows">' + flows + '</div>' +
+      (flows ? '<div class="pw-c-k"><b>How the data moves</b><span>each row is one handoff: a tool passes data to the next</span></div>' +
+        '<div class="pw-flows">' + flows + '</div>' : '') +
       (d.output ? '<div class="pw-c-out"><span class="pw-c-out-k">Produces</span>' + esc(d.output) + '</div>' : '');
   }
 

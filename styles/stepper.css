@@ -302,3 +302,19 @@
 .fc2-tooltip.below { transform: translate(-50%, 0); }
 .fc2-tooltip.below::after { top: auto; bottom: 100%; border-top-color: transparent; border-bottom-color: var(--ink); }
 
+
+
+/* optional slab sub-label · only rendered when a page sets STAGES[i].sub (CRM build) */
+.pw-fw-sub { font-family: var(--font-mono); font-size: 13px; font-weight: 600; letter-spacing: 0.06em; }
+
+/* the forward spur · the foundation opens forward into the two demand engines (CRM build) */
+.pw-spur {
+  position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); z-index: 7;
+  display: inline-flex; align-items: center; gap: 9px; white-space: nowrap;
+  background: #fff; border: 1.5px solid #fff; border-radius: 999px; padding: 7px 16px;
+  box-shadow: 0 10px 22px -10px rgba(23,42,45,0.4);
+  font-size: 12px; color: rgba(23,42,45,0.62);
+}
+.pw-spur b { color: var(--ink); font-weight: 700; }
+.pw-spur-tick { width: 7px; height: 7px; border-radius: 50%; background: #3FCDAD; }
+@media (max-width: 900px) { .pw-spur { position: static; transform: none; margin: 14px auto 0; display: flex; width: fit-content; } }
