@@ -1,1 +1,18 @@
-/   /revenue-engine.html   302
+# Old links keep working; they land on the current page instead.
+# 302 (not 301) on purpose: browsers cache 301s forever, and these files could
+# come back. Temporary keeps us free to change our mind.
+# First match wins, so specific rules go above the wildcard.
+
+# The standalone workflow previews (removed Jul 16 2026) -> the real pages.
+/workflow/revenue-engine.html   /revenue-engine.html   302
+/workflow/demand-gen.html       /demand-gen.html       302
+/workflow/crm-revops.html       /crm-revops.html       302
+/workflow/index.html            /revenue-engine.html   302
+/workflow/*                     /revenue-engine.html   302
+/workflow                       /revenue-engine.html   302
+
+# Canvas color exploration for the demand page (removed Jul 16 2026).
+/color-options.html             /demand-gen.html       302
+
+# Root.
+/                               /revenue-engine.html   302
