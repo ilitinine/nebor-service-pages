@@ -1,31 +1,27 @@
 # Nebor — Service Pages (Design Reference)
 
-Static HTML/CSS/SVG mockups for the three Nebor service pages. Built as a reference for the production designer.
+Static HTML/CSS/SVG mockups for the three Nebor service pages. Built as a reference for the
+production designer; production itself is Framer, where the wireframes are fixed and only the
+content changes.
 
-## Just want the Living Workflow section?
+## The three pages
 
-The Living Workflow (horizontal stepper: Identify → Enrich → Personalize → Send → Qualify → Book, plus the cumulative tree-flowchart that renders below it) is extracted into standalone files under [`workflow/`](workflow/). Open [`workflow/index.html`](workflow/index.html) to see all three previews and pick one. Each standalone file contains the workflow section markup, its `window.NEBOR_WORKFLOW` data, and the scripts that render it — everything else (nav, hero copy, cards, marquee, problem section) is stripped out.
+| Page | Service |
+| --- | --- |
+| [`revenue-engine.html`](revenue-engine.html) | Sales Engine & GTM Execution |
+| [`demand-gen.html`](demand-gen.html) | Demand Generation & ABM |
+| [`crm-revops.html`](crm-revops.html) | CRM & RevOps |
 
-## For the designer — start here
+Every page carries a sticky switcher pill at the bottom of the viewport, so you can move between
+the three without going back to an index. Opening any one of them is enough.
 
-The **workflow section** is the row of three cards under each page's hero copy. It uses the class `.hero-elements` and contains three `.hero-el` cards, each composed of:
-
-- An inline SVG illustration (`.hero-el-canvas`)
-- A frosted-glass content overlay at the bottom (`.hero-el-content`) — tag, title, body
-
-The three service pages and their workflow cards:
-
-| Page | Theme color | Card 1 | Card 2 | Card 3 |
-| --- | --- | --- | --- | --- |
-| `revenue-engine.html` | Sage green | TAM mapping (Clay + HubSpot hub + 8 data tools) | Deliverability (inbox + infrastructure panel) | AI workflows (triggers → orchestrate orb → actions) |
-| `demand-gen.html` | Pure yellow | ABM operating model (tier breakdown + ICP orbit) | Funnel workflows (centered conversion funnel + velocity) | Audience → channels (live distribution + sparklines) |
-| `crm-revops.html` | Whitish lavender | (see file) | (see file) | (see file) |
-
-The cards live between approximately lines 60 and 500 of each HTML file. Search for `<!-- Card 1`, `<!-- Card 2`, `<!-- Card 3` to jump to each one.
+All three share one palette (cream, amber, gold, ink) and one chassis: nav, hero cards, problem
+section, nine capabilities, living workflow, FAQ, footer. They differentiate by content, not by
+color.
 
 ## Running locally
 
-The site is plain static HTML — no build step. From the project root:
+Plain static HTML, no build step. From the project root:
 
 ```bash
 python3 -m http.server 8000
@@ -33,32 +29,60 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000/revenue-engine.html>.
 
-The pages collapse to a single column under 980px wide. View at desktop width (1100px+) to see the three-card layout.
+The pages collapse to a single column under 980px. View at 1100px+ for the full layout.
 
 ## File layout
 
 ```
-revenue-engine.html   · Sales Engine & GTM (Tier 01)
-demand-gen.html       · Demand Gen & ABM   (Tier 02)
-crm-revops.html       · CRM & RevOps       (Tier 03)
-styles/system.css     · all shared styles, animations, breakpoints
-scripts/              · small JS modules for marquees and interactive demos
-assets/, uploads/     · logos and other static media
-screenshots/          · reference screenshots from earlier iterations
+revenue-engine.html    · Sales Engine & GTM
+demand-gen.html        · Demand Gen & ABM
+crm-revops.html        · CRM & RevOps
+index.html             · redirects to revenue-engine.html
+
+styles/system.css      · shared chrome: nav, type, grid, footer, switcher
+styles/brand.css       · nebor.ai brand primitives
+styles/page-revenue.css · hero + section layout shared by all three pages
+styles/stepper.css     · living workflow (rail, canvas, flywheel, popover)
+styles/workflow.css    · older workflow styles still referenced by the pages
+styles/page-fx.css     · page-level ambient animation
+
+scripts/stepper.js     · renders the living workflow from window.NEBOR_* config
+scripts/re-console-v2.js    · the nine capability views · revenue-engine
+scripts/re-console-demand.js · the nine capability views · demand-gen
+scripts/re-console-crm.js    · the nine capability views · crm-revops
+scripts/tools.js       · tool registry (names, favicons, roles)
+scripts/page-fx.js     · page-level ambient animation
+
+caps-proof.html        · capability-view proof sheet · demand-gen
+caps-proof-re.html     · capability-view proof sheet · revenue-engine
+caps-proof-crm.html    · capability-view proof sheet · crm-revops
+hero-proof-crm.html    · hero-card proof sheet · crm-revops
+
+assets/, uploads/      · logos and static media
+screenshots/           · reference screenshots from earlier iterations
+FEEDBACK-*.md          · the delivery-team feedback each page was built to
 ```
 
-## Theme tokens
+The proof sheets render one page's visuals in isolation on a bare canvas. They are a verification
+tool, not part of the site.
 
-Each page sets a tier class on `<body>` (`tier-revenue`, `tier-demand`, `tier-revops`) which swaps three CSS custom properties:
+## The living workflow
 
-- `--page-accent` · base accent color
-- `--page-accent-strong` · dark variant for text and emphasis
-- `--page-accent-soft` · light wash for backgrounds
+`stepper.js` renders it from globals each page defines inline near the bottom of its HTML:
 
-All other styling — type, spacing, card composition, grid, animations — is shared in `styles/system.css`.
+- `NEBOR_STAGES` · the pillars (key, color, icon, optional sub-label)
+- `NEBOR_WORKFLOW` · the steps (phase, step, desc, brief, tools, roles, flow, output)
+- `NEBOR_STEP_STAGE` · maps each step to its pillar
+- `NEBOR_TAG` / `NEBOR_HANDOFF` · the line above and below each step
+- `NEBOR_HUB` / `NEBOR_HUB_TEXT` · the tools at the center of the wheel
+
+Change the config, not the renderer: it is shared by all three pages.
 
 ## Notes for production
 
-- Logos in the illustrations are pulled live from `https://www.google.com/s2/favicons?domain=X&sz=128`. Replace with vector logos for the production build.
-- Only one element animates: the Orchestrate orb on the AI workflows card (`.heroviz-pulse-on` / `.heroviz-pulse-ring`). Everything else is static.
-- Card SVGs use `viewBox="0 0 400 380"` with `preserveAspectRatio="xMidYMin meet"` so they scale cleanly with the card width.
+- Tool logos are pulled live from `https://www.google.com/s2/favicons?domain=X&sz=128`. Replace
+  with vector logos for the production build. (simple-icons dropped brand logos, so favicons are
+  the fallback.)
+- All illustration animation is SMIL, which survives a Framer export. Content arrives finished and
+  readable at t=0; story beats play once and freeze; only ambient motion loops.
+- Copy rules: US English, no em dashes.
