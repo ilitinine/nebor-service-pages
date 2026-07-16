@@ -58,8 +58,7 @@ caps-proof-re.html     · capability-view proof sheet · revenue-engine
 caps-proof-crm.html    · capability-view proof sheet · crm-revops
 hero-proof-crm.html    · hero-card proof sheet · crm-revops
 
-assets/, uploads/      · logos and static media
-screenshots/           · reference screenshots from earlier iterations
+assets/                · logos and static media
 FEEDBACK-*.md          · the delivery-team feedback each page was built to
 ```
 
