@@ -31,8 +31,19 @@
         <g class="cap-layer">
           <rect x="24" y="20" width="652" height="338" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 16px 34px rgba(23,42,45,0.13)) drop-shadow(0 4px 9px rgba(23,42,45,0.07))"/>
           <text x="46" y="48" font-size="15" font-weight="800" fill="#172A2D">Every channel your buyers could be on, graded</text>
-          <rect x="46" y="60" width="266" height="19" rx="9.5" fill="#FAC064"/>
-          <text x="58" y="73" font-size="8.5" font-weight="700" fill="#172A2D">straight from your closed-won data and buyer interviews</text>
+          <text x="520" y="38" font-size="7.5" font-weight="800" letter-spacing="0.1em" fill="#8A5410">GRADED FROM</text>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.25s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 -6;0 0" dur="0.5s" begin="0.25s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
+          <rect x="520" y="44" width="134" height="22" rx="11" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.09))"/>
+          <g transform="translate(529,48)"><path d="M3.5 1 h7 v3.2 a3.5 3.5 0 0 1 -7 0 Z" fill="none" stroke="#8A5410" stroke-width="1.3"/><path d="M3.5 2.2 H1.6 a2.3 2.3 0 0 0 2.5 2.6 M10.5 2.2 h1.9 a2.3 2.3 0 0 1 -2.5 2.6" fill="none" stroke="#8A5410" stroke-width="1.1"/><line x1="7" y1="7.7" x2="7" y2="9.8" stroke="#8A5410" stroke-width="1.3"/><path d="M4.6 11.3 h4.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/></g>
+          <text x="548" y="58.5" font-size="8.5" font-weight="700" fill="#172A2D">your closed-won deals</text>
+          </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 -6;0 0" dur="0.5s" begin="0.4s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
+          <rect x="520" y="72" width="134" height="22" rx="11" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.09))"/>
+          <g transform="translate(529,76)"><rect x="5" y="0.6" width="4" height="7" rx="2" fill="none" stroke="#8A5410" stroke-width="1.3"/><path d="M2.8 5.4 a4.2 4.2 0 0 0 8.4 0" fill="none" stroke="#8A5410" stroke-width="1.2"/><path d="M7 9.6 v2 M5.2 11.8 h3.6" fill="none" stroke="#8A5410" stroke-width="1.2" stroke-linecap="round"/></g>
+          <text x="548" y="86.5" font-size="8.5" font-weight="700" fill="#172A2D">buyer interviews</text>
+          </g>
+          <path d="M516 88 C 494 98, 476 104, 462 110" fill="none" stroke="rgba(178,111,20,0.45)" stroke-width="1.3" stroke-dasharray="3 4"/>
+          <path d="M468 105 L459 111 L469 113 Z" fill="rgba(178,111,20,0.6)"/>
           <path d="M70 146 A 960 960 0 0 1 660 135" fill="none" stroke="rgba(23,42,45,0.09)" stroke-width="1.4" stroke-dasharray="2 5"/>
           <path d="M84 237 A 870 870 0 0 1 655 228" fill="none" stroke="rgba(23,42,45,0.10)" stroke-width="1.4"/>
           <path d="M112 333 A 770 770 0 0 1 652 333" fill="none" stroke="rgba(225,150,46,0.35)" stroke-width="1.4"/>
