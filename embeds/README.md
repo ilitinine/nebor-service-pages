@@ -13,7 +13,7 @@ inside; images load from the Netlify preview site.
 ## crm-hero.html · CRM & RevOps hero cards (3)
 | Framer breakpoint | Embed height |
 | --- | --- |
-| Desktop (1200+)   | 620 |
+| Desktop (1200+)   | 540 |
 | Tablet (810-1199) | 890 |
 | Phone (0-809)     | 1330 |
 
