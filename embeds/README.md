@@ -20,3 +20,24 @@ inside; images load from the Netlify preview site.
 Cards float, hover-lift and reveal their body text; all card animations play
 on their own. The "See the full workflow" button is NOT in the embed: keep it
 as a native Framer button under the section.
+
+## crm-caps.html · CRM nine-capability console (interactive)
+Includes the "Nine capabilities, one foundation" heading. Click a capability
+in the rail and the view swaps: that all works inside the embed.
+| Framer breakpoint | Embed height |
+| --- | --- |
+| Desktop (1200+)   | 1210 |
+| Tablet (810-1199) | 1070 |
+| Phone (0-809)     | 900 |
+
+## crm-workflow.html · CRM living workflow (interactive flywheel)
+The full section 04: header copy, step rail, flywheel canvas, why-note, spur.
+Step clicks, popovers and the wheel all run inside the embed.
+| Framer breakpoint | Embed height |
+| --- | --- |
+| Desktop (1200+)   | 1930 |
+| Tablet (810-1199) | 2040 |
+| Phone (0-809)     | 2130 |
+
+Heights are measured at the breakpoint edges; if a strip of blank space shows
+at some width, adjust the frame height, the content is height-stable per width.
