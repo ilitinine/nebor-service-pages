@@ -5963,13 +5963,12 @@ window.NEBOR_WORKFLOW = [
     roles: {
       hubspot: "Where the workflows live, and where every run gets logged and can be undone",
       salesforce: "The same workflows run when Salesforce is home, logged and reversible there too",
-      anthropic: "Claude reads the thread and decides what should happen next, by the rules you set",
-      openai: "Writes the summary a human would have written, onto the record, in your words"
+      anthropic: "Reads the thread, decides what happens next by your rules, and writes the update. Claude or ChatGPT: same job, whichever fits the play",
+      openai: "Same job here: either model reads, decides and writes by the same rules, and we swap them without rewiring anything"
     },
     flow: [
       { from: "hubspot", to: "anthropic", proto: "event", label: "context.sent" },
-      { from: "anthropic", to: "openai", proto: "api", label: "what.happens.next" },
-      { from: "openai", to: "hubspot", proto: "api", label: "summary.written" }
+      { from: "openai", to: "hubspot", proto: "api", label: "update.written" }
     ],
     output: "The follow-up already exists \u00b7 nobody had to remember it"
   },
