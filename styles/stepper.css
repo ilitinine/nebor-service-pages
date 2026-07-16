@@ -22,21 +22,24 @@
   padding: 24px 28px 36px; overflow: hidden;
 }
 
-/* Re-tint each service page's workflow ambient wash (the color behind + above the canvas)
-   and its glow to the page's own palette, instead of the default sage-green "Sales" tier. */
+/* Each living workflow wears its own header wash (Ibrahim, Jul 16: distinct color
+   and feel per page). Only the ambient wash + glow + serif accent differ; the
+   console below keeps the shared cream canvas on all three pages.
+   The bottom-right amber stays the same everywhere: the shared brand warmth. */
 .workflow.tier-revenue {
-  --tier-a: #CEC0F0;                       /* top-left wash · soft lavender (echoes the FIND slab) */
+  --tier-a: #C4DCC6;                       /* top-left wash · soft sage */
   --tier-b: #F1DBA0;                       /* bottom-right wash · soft amber (brand warmth) */
-  --tier-c: #ECE5F6;                       /* center wash · pale lavender */
-  --tier-glow: rgba(159, 134, 236, 0.26);  /* ambient glow · lavender, was green */
+  --tier-c: #E4EFE1;                       /* center wash · pale sage */
+  --tier-glow: rgba(79, 142, 88, 0.24);    /* ambient glow · green */
 }
+.workflow.tier-revenue .b-h2 .serif { color: #3E8E58; }
 .workflow.tier-demand {
-  /* same wash as the revenue engine (Ibrahim, Jul 9: one palette, copied from tier-revenue) */
-  --tier-a: #CEC0F0;
+  --tier-a: #F3CD9E;                       /* top-left wash · soft apricot */
   --tier-b: #F1DBA0;
-  --tier-c: #ECE5F6;
-  --tier-glow: rgba(159, 134, 236, 0.26);
+  --tier-c: #F8E8D2;                       /* center wash · pale peach */
+  --tier-glow: rgba(225, 150, 46, 0.24);   /* ambient glow · orange */
 }
+.workflow.tier-demand .b-h2 .serif { color: #B26F14; }
 /* Demand console inherits the SAME base console styling as the revenue page:
    the yellow-era .tier-demand accent/console overrides were deleted (Ibrahim, Jul 9). */
 /* Demand hero wears the SAME palette as the revenue engine (Ibrahim's call, 2026-07-06):
@@ -320,8 +323,14 @@
 @media (max-width: 900px) { .pw-spur { position: static; transform: none; margin: 14px auto 0; display: flex; width: fit-content; } }
 
 /* ── CRM & RevOps workflow extras · scoped to .wf-revops, other pages untouched ── */
-/* its own header accent (the other pages' workflow serif stays lavender) */
-.wf-revops .b-h2 .serif { color: #2FA093; }
+/* its own header wash + accent: teal (beats the tier-demand orange it also carries) */
+.workflow.wf-revops {
+  --tier-a: #B7DBD4;                       /* top-left wash · soft teal */
+  --tier-b: #F1DBA0;
+  --tier-c: #DFEEEA;                       /* center wash · pale teal */
+  --tier-glow: rgba(47, 160, 147, 0.24);   /* ambient glow · teal */
+}
+.workflow.wf-revops .b-h2 .serif { color: #2FA093; }
 /* air under the wheel: deeper canvas floor, spur pushed below the wheel square */
 .wf-revops .pw-canvas { padding-bottom: 78px; }
 .wf-revops .pw-spur { bottom: -44px; }
