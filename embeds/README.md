@@ -26,9 +26,9 @@ Includes the "Nine capabilities, one foundation" heading. Click a capability
 in the rail and the view swaps: that all works inside the embed.
 | Framer breakpoint | Embed height |
 | --- | --- |
-| Desktop (1200+)   | 1210 |
-| Tablet (810-1199) | 1070 |
-| Phone (0-809)     | 900 |
+| Desktop (1200+)   | 960 |
+| Tablet (810-1199) | 990 |
+| Phone (0-809)     | 895 |
 
 ## crm-workflow.html · CRM living workflow (interactive flywheel)
 The full section 04: header copy, step rail, flywheel canvas, why-note, spur.
