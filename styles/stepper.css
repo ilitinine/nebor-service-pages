@@ -318,3 +318,26 @@
 .pw-spur b { color: var(--ink); font-weight: 700; }
 .pw-spur-tick { width: 7px; height: 7px; border-radius: 50%; background: #3FCDAD; }
 @media (max-width: 900px) { .pw-spur { position: static; transform: none; margin: 14px auto 0; display: flex; width: fit-content; } }
+
+/* ── CRM & RevOps workflow extras · scoped to .wf-revops, other pages untouched ── */
+/* its own header accent (the other pages' workflow serif stays lavender) */
+.wf-revops .b-h2 .serif { color: #2FA093; }
+/* air under the wheel: deeper canvas floor, spur pushed below the wheel square */
+.wf-revops .pw-canvas { padding-bottom: 78px; }
+.wf-revops .pw-spur { bottom: -44px; }
+/* ring cards carry what each step produces (opt-in via NEBOR_RING_OUTPUT) */
+.pw-node-out { font-size: 10px; font-weight: 600; line-height: 1.35; color: #106B60; margin-top: 7px; }
+.pw-node.ghost .pw-node-out { display: none; }
+/* the why-note: answers "why a wheel, if it is built once" in the canvas corner */
+.pw-why {
+  position: absolute; left: 16px; top: 12px; z-index: 7; max-width: 232px;
+  background: #fff; border: 1.5px solid #fff; border-radius: 16px; padding: 12px 15px;
+  box-shadow: 0 10px 22px -12px rgba(23,42,45,0.35);
+}
+.pw-why-k {
+  display: block; font-family: var(--font-mono); font-size: 9px; font-weight: 700;
+  letter-spacing: 0.13em; text-transform: uppercase; color: #106B60; margin-bottom: 6px;
+}
+.pw-why-t { display: block; font-size: 11.5px; line-height: 1.5; color: rgba(23,42,45,0.62); }
+@media (max-width: 1150px) { .pw-why { position: static; margin: 0 auto 14px; max-width: 460px; } }
+@media (max-width: 900px) { .wf-revops .pw-canvas { padding-bottom: 36px; } .wf-revops .pw-spur { bottom: auto; } }

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="styles/workflow.css" />
 <link rel="stylesheet" href="styles/page-revenue.css" />
 <link rel="stylesheet" href="styles/brand.css?v=20260705b" />
-<link rel="stylesheet" href="styles/stepper.css?v=112" />
+<link rel="stylesheet" href="styles/stepper.css?v=113" />
 <link rel="stylesheet" href="styles/page-fx.css?v=2" />
 </head>
 <body class="tier-demand brand">
@@ -835,7 +835,7 @@
 <!-- ============ LIVING WORKFLOW · the shipped canvas (steps + white stage) ============ -->
 <section class="section" id="workflow" data-screen-label="04 Living workflow">
   <div class="container-wide">
-    <div class="workflow tier-demand">
+    <div class="workflow tier-demand wf-revops">
       <div class="workflow-head">
         <div>
           <span class="b-eyebrow" style="display:block; margin-bottom:12px;">The living workflow</span>
@@ -863,6 +863,7 @@
             <div class="pw-center" id="pw-center"></div>
             <div class="pw-nodes" id="pw-nodes"></div>
             <div class="pw-spur"><span class="pw-spur-tick"></span><span>your <b>Sales Engine</b> and <b>Demand Gen</b> spin on top of this</span></div>
+            <div class="pw-why"><span class="pw-why-k">Why a wheel, if it is built once?</span><span class="pw-why-t">The build stands still. What turns is your data: structured on arrival, kept clean, put to work, and every pass leaves the model sharper. The two engines spin on top; this is the axle.</span></div>
           </div>
         </div>
       </div>
@@ -1094,6 +1095,7 @@ window.NEBOR_TAG = ['structure first', 'nothing lost', 'the repair', 'clean on w
 window.NEBOR_HANDOFF = ['the blueprint', 'everything moved', 'a system that holds', 'one clean record', 'a record that lives', 'one source of truth', 'the system acting', 'the right owner', 'the model, sharper'];
 window.NEBOR_PHASE = { Architect: 'find', Unify: 'reach', Activate: 'run' };
 window.NEBOR_HUB = [{ sl: 'hubspot', name: 'HubSpot' }, { sl: 'salesforce', name: 'Salesforce' }];
+window.NEBOR_RING_OUTPUT = true;
 window.NEBOR_HUB_TEXT = 'built in <b>your CRM</b>';
 
 window.NEBOR_WORKFLOW = [
@@ -1123,9 +1125,10 @@ window.NEBOR_WORKFLOW = [
     phase: "Architect", step: "Tune",
     desc: "The rules that contradict each other, the automations firing twice, the fields nobody fills: all of it surfaced, graded, and rebuilt into one clean path with one owner per lead.",
     brief: "The tangle, rebuilt into one clean path.",
-    tools: ["hubspot"],
+    tools: ["hubspot", "salesforce"],
     roles: {
-      hubspot: "We read what is live today, then rebuild it into one chain your team can name"
+      hubspot: "We read what is live today, then rebuild it into one chain your team can name",
+      salesforce: "The same audit and rebuild when Salesforce is your system: one chain, one owner per lead"
     },
     output: "One rule set your team can name · and rely on again"
   },
@@ -1133,10 +1136,11 @@ window.NEBOR_WORKFLOW = [
     phase: "Unify", step: "Clean",
     desc: "Dedupe, normalize and validate on every write, so one company means one record and the next import cannot quietly undo the cleanup you just paid for.",
     brief: "One company, one record, on every write.",
-    tools: ["clay", "hubspot"],
+    tools: ["clay", "hubspot", "salesforce"],
     roles: {
       clay: "Checks each record on the way in, against the rules we write with you",
-      hubspot: "Only clean, deduped, normalized records ever land here"
+      hubspot: "Only clean, deduped, normalized records ever land here",
+      salesforce: "The same gate holds when Salesforce is your system: nothing lands dirty there either"
     },
     flow: [
       { from: "clay", to: "hubspot", proto: "api", label: "record.validated" }
@@ -1147,14 +1151,15 @@ window.NEBOR_WORKFLOW = [
     phase: "Unify", step: "Enrich",
     desc: "Job moves, promotions, funding rounds and tech shifts land on the record on their own, so what your rep opens on Thursday is true on Thursday.",
     brief: "The record keeps itself current.",
-    tools: ["clay", "clearbit", "builtwith", "zoominfo", "anthropic", "hubspot"],
+    tools: ["clay", "clearbit", "builtwith", "zoominfo", "anthropic", "hubspot", "salesforce"],
     roles: {
       clay: "Orchestrates it: which source to ask, in what order, and when to go back and re-check",
       clearbit: "Firmographics: size, industry, location, kept current instead of typed once",
       builtwith: "What they run, so you hear about it when your fit changes",
       zoominfo: "The people: who moved, who got promoted, who just joined",
       anthropic: "Claude reads what no vendor returns: their site, their posts, their hiring, and writes the tier and the reason for it",
-      hubspot: "The fresh fields land on the record your reps already have open"
+      hubspot: "The fresh fields land on the record your reps already have open",
+      salesforce: "The refreshed fields write to Salesforce the same way, ready when a rep opens the record"
     },
     flow: [
       { from: "clearbit", to: "clay", proto: "api", label: "firmographics" },
@@ -1179,9 +1184,10 @@ window.NEBOR_WORKFLOW = [
     phase: "Activate", step: "Automate",
     desc: "Something happens, the system checks, the system acts. Field updates, held deals, tasks and notifications fire off real CRM events instead of waiting for someone to remember.",
     brief: "The manual work, done by the system.",
-    tools: ["hubspot", "anthropic", "openai"],
+    tools: ["hubspot", "salesforce", "anthropic", "openai"],
     roles: {
       hubspot: "Where the workflows live, and where every run gets logged and can be undone",
+      salesforce: "The same workflows run when Salesforce is home, logged and reversible there too",
       anthropic: "Claude reads the thread and decides what should happen next, by the rules you set",
       openai: "Writes the summary a human would have written, onto the record, in your words"
     },
@@ -1196,10 +1202,11 @@ window.NEBOR_WORKFLOW = [
     phase: "Activate", step: "Route",
     desc: "Leads are scored on fit and intent, then handed to the right rep by the rule that matches, in seconds. The same lead gets the same outcome on a Tuesday morning or a Friday night.",
     brief: "Scored, then routed by rule, every time.",
-    tools: ["clay", "hubspot", "chilipiper"],
+    tools: ["clay", "hubspot", "salesforce", "chilipiper"],
     roles: {
       clay: "Supplies the fit data the score is built on, kept fresh",
       hubspot: "Scores the lead and enforces the rule that assigns it, every time",
+      salesforce: "Scoring and assignment enforce the same way in Salesforce, in seconds",
       chilipiper: "Hands the meeting straight to the rep who owns it, with no email tennis"
     },
     flow: [
@@ -1223,7 +1230,7 @@ window.NEBOR_WORKFLOW = [
 </script>
 <script src="scripts/tools.js?v=3"></script>
 <script src="scripts/re-console-crm.js?v=10"></script>
-<script src="scripts/stepper.js?v=102"></script>
+<script src="scripts/stepper.js?v=103"></script>
 <script src="scripts/page-fx.js?v=3"></script>
 
 
