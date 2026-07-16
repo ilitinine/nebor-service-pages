@@ -20,7 +20,7 @@
   const BLUE = "#5A87A8", BLUEBG = "#E3EDF4", BLUET = "#3D6480";
   const GREEN = "#3E8E58", GREENBG = "#E7F2E9";
   const RED = "#B0563A", REDBG = "#FBE9E4";
-  const AMB = "#E1962E", AMBBG = "#F3E7CC", AMBD = "#8A5410", GOLD = "#F3D06A";
+  const AMB = "#E1962E", AMBBG = "#F3E7CC", AMBD = "#8A5410", GOLD = "#FAC064";
   const TEAL = "#2FA093";
   const SLATE = "#8C9AA3";
 
