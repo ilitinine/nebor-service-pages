@@ -92,72 +92,67 @@
         ${STRIP('We map where demand shows, so you never guess where to show up', { w: 92, t: 'the map' })}
       </svg></div>`,
 
-    // 02 · AI-Powered Demand Workflows & Plays · THE SHELF: compact playbook cards, print-grade (anchor)
+    // 02 · AI-Powered Demand Workflows & Plays · THE SHELF: playbook-library folder cards (anchor)
     workflows: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
         <text x="36" y="40" font-size="15" font-weight="800" fill="#172A2D">The plays we install</text>
         <text x="222" y="40" font-size="9" fill="rgba(23,42,45,0.55)">spot the buying moment, answer it in minutes · AI writes, your voice stays</text>
-        <rect x="50" y="69" width="196" height="100" rx="7" fill="#EFE6D4"/>
-        <rect x="46" y="64" width="196" height="100" rx="7" fill="#FBF7EF" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 10px 20px rgba(23,42,45,0.13)) drop-shadow(0 2px 5px rgba(23,42,45,0.08))"/>
-        <path d="M46 71 a7 7 0 0 1 7 -7 h182 a7 7 0 0 1 7 7 v5 h-196 Z" fill="#E1962E"/>
-        <rect x="54" y="82" width="180" height="76" rx="4" fill="none" stroke="rgba(23,42,45,0.07)"/>
-        <text x="62" y="98" font-size="7" font-weight="700" letter-spacing="0.16em" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.4)">PLAY 01</text>
-        <line x1="112" y1="95" x2="226" y2="95" stroke="rgba(23,42,45,0.2)" stroke-width="1" stroke-dasharray="1 4"/>
-        <text x="62" y="120" font-size="13" font-weight="800" letter-spacing="-0.01em" fill="#172A2D">Pricing-page play</text>
-        <text x="62" y="138" font-size="8.5" fill="rgba(23,42,45,0.65)">pricing read again, twice</text>
-        <text x="62" y="151" font-size="8.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> a personal note, within the hour</text>
-        <path d="M228 164 L242 164 L242 150 Z" fill="#EFE6D4"/>
-        <path d="M228 164 L242 150" stroke="rgba(23,42,45,0.13)" stroke-width="1"/>
-        <rect x="256" y="69" width="196" height="100" rx="7" fill="#EFE6D4"/>
-        <rect x="252" y="64" width="196" height="100" rx="7" fill="#FBF7EF" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 10px 20px rgba(23,42,45,0.13)) drop-shadow(0 2px 5px rgba(23,42,45,0.08))"/>
-        <path d="M252 71 a7 7 0 0 1 7 -7 h182 a7 7 0 0 1 7 7 v5 h-196 Z" fill="#F0B45A"/>
-        <rect x="260" y="82" width="180" height="76" rx="4" fill="none" stroke="rgba(23,42,45,0.07)"/>
-        <text x="268" y="98" font-size="7" font-weight="700" letter-spacing="0.16em" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.4)">PLAY 02</text>
-        <line x1="318" y1="95" x2="432" y2="95" stroke="rgba(23,42,45,0.2)" stroke-width="1" stroke-dasharray="1 4"/>
-        <text x="268" y="120" font-size="13" font-weight="800" letter-spacing="-0.01em" fill="#172A2D">Competitor play</text>
-        <text x="268" y="138" font-size="8.5" fill="rgba(23,42,45,0.65)">they go rival-shopping</text>
-        <text x="268" y="151" font-size="8.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> your point of view, mid-decision</text>
-        <path d="M434 164 L448 164 L448 150 Z" fill="#EFE6D4"/>
-        <path d="M434 164 L448 150" stroke="rgba(23,42,45,0.13)" stroke-width="1"/>
-        <rect x="462" y="69" width="196" height="100" rx="7" fill="#EFE6D4"/>
-        <rect x="458" y="64" width="196" height="100" rx="7" fill="#FBF7EF" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 10px 20px rgba(23,42,45,0.13)) drop-shadow(0 2px 5px rgba(23,42,45,0.08))"/>
-        <path d="M458 71 a7 7 0 0 1 7 -7 h182 a7 7 0 0 1 7 7 v5 h-196 Z" fill="#E8B44C"/>
-        <rect x="466" y="82" width="180" height="76" rx="4" fill="none" stroke="rgba(23,42,45,0.07)"/>
-        <text x="474" y="98" font-size="7" font-weight="700" letter-spacing="0.16em" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.4)">PLAY 03</text>
-        <line x1="524" y1="95" x2="638" y2="95" stroke="rgba(23,42,45,0.2)" stroke-width="1" stroke-dasharray="1 4"/>
-        <text x="474" y="120" font-size="13" font-weight="800" letter-spacing="-0.01em" fill="#172A2D">Event follow-up</text>
-        <text x="474" y="138" font-size="8.5" fill="rgba(23,42,45,0.65)">a badge scans at your booth</text>
-        <text x="474" y="151" font-size="8.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> lands before their flight does</text>
-        <path d="M640 164 L654 164 L654 150 Z" fill="#EFE6D4"/>
-        <path d="M640 164 L654 150" stroke="rgba(23,42,45,0.13)" stroke-width="1"/>
-        <rect x="50" y="193" width="196" height="100" rx="7" fill="#EFE6D4"/>
-        <rect x="46" y="188" width="196" height="100" rx="7" fill="#FBF7EF" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 10px 20px rgba(23,42,45,0.13)) drop-shadow(0 2px 5px rgba(23,42,45,0.08))"/>
-        <path d="M46 195 a7 7 0 0 1 7 -7 h182 a7 7 0 0 1 7 7 v5 h-196 Z" fill="#E8B44C"/>
-        <rect x="54" y="206" width="180" height="76" rx="4" fill="none" stroke="rgba(23,42,45,0.07)"/>
-        <text x="62" y="222" font-size="7" font-weight="700" letter-spacing="0.16em" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.4)">PLAY 04</text>
-        <line x1="112" y1="219" x2="226" y2="219" stroke="rgba(23,42,45,0.2)" stroke-width="1" stroke-dasharray="1 4"/>
-        <text x="62" y="244" font-size="13" font-weight="800" letter-spacing="-0.01em" fill="#172A2D">New-leader play</text>
-        <text x="62" y="262" font-size="8.5" fill="rgba(23,42,45,0.65)">a target hires a new CRO</text>
-        <text x="62" y="275" font-size="8.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> a week-one hello worth a reply</text>
-        <path d="M228 288 L242 288 L242 274 Z" fill="#EFE6D4"/>
-        <path d="M228 288 L242 274" stroke="rgba(23,42,45,0.13)" stroke-width="1"/>
-        <rect x="256" y="193" width="196" height="100" rx="7" fill="#EFE6D4"/>
-        <rect x="252" y="188" width="196" height="100" rx="7" fill="#FBF7EF" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 10px 20px rgba(23,42,45,0.13)) drop-shadow(0 2px 5px rgba(23,42,45,0.08))"/>
-        <path d="M252 195 a7 7 0 0 1 7 -7 h182 a7 7 0 0 1 7 7 v5 h-196 Z" fill="#E1962E"/>
-        <rect x="260" y="206" width="180" height="76" rx="4" fill="none" stroke="rgba(23,42,45,0.07)"/>
-        <text x="268" y="222" font-size="7" font-weight="700" letter-spacing="0.16em" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.4)">PLAY 05</text>
-        <line x1="318" y1="219" x2="432" y2="219" stroke="rgba(23,42,45,0.2)" stroke-width="1" stroke-dasharray="1 4"/>
-        <text x="268" y="244" font-size="13" font-weight="800" letter-spacing="-0.01em" fill="#172A2D">Funding play</text>
-        <text x="268" y="262" font-size="8.5" fill="rgba(23,42,45,0.65)">a target announces a raise</text>
-        <text x="268" y="275" font-size="8.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> congrats + the scaling angle</text>
-        <path d="M434 288 L448 288 L448 274 Z" fill="#EFE6D4"/>
-        <path d="M434 288 L448 274" stroke="rgba(23,42,45,0.13)" stroke-width="1"/>
-        <rect x="458" y="188" width="196" height="100" rx="7" fill="none" stroke="rgba(178,111,20,0.4)" stroke-width="1.6" stroke-dasharray="6 5"/>
-        <text x="474" y="218" font-size="13" font-weight="800" fill="#8A5410">Yours: №6, 7, 8…</text>
-        <text x="474" y="238" font-size="8.5" fill="rgba(138,84,16,0.85)">written around your motion in week one:</text>
-        <text x="474" y="251" font-size="8.5" fill="rgba(138,84,16,0.85)">your triggers, your voice, your rules</text>
-        <text x="350" y="330" text-anchor="middle" font-size="10.5" font-style="italic" fill="rgba(23,42,45,0.5)">one engine runs the whole shelf. a play only fires when its moment actually happens.</text>
+        <g class="cap-layer" style="animation-delay:0.00s">
+        <path d="M24 52 h64 q8 0 12 6 l6 8 h-82 z" fill="#E3F1EF"/>
+        <rect x="14" y="64" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
+        <rect x="34" y="80" width="42" height="42" rx="12" fill="#E3F1EF"/>
+        <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.15s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.15s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="1.0s" repeatCount="indefinite"/><g transform="translate(43,88)"><path d="M0 2 h15 v20 h-15 Z" fill="#2FA093"/><path d="M0 2 l1.6 -1.6 h15 l-1.6 1.6 Z" fill="#8ED2C9"/><path d="M15 2 l1.6 -1.6 v20 l-1.6 1.6 Z" fill="#106B60"/><circle cx="7.5" cy="8.5" r="3" fill="#FFFFFF"/><path d="M4.5 15.5 h6 M4.5 18.5 h4" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></g></g></g>
+        <text x="34" y="146" font-size="14.5" font-weight="700" fill="#172A2D">Pricing-page play</text>
+        <text x="34" y="162" font-size="9.5" fill="rgba(23,42,45,0.55)">pricing read again, twice</text>
+        <text x="34" y="175" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> a personal note, within the hour</text>
+        </g>
+        <g class="cap-layer" style="animation-delay:0.06s">
+        <path d="M254 52 h64 q8 0 12 6 l6 8 h-82 z" fill="#E8F0F8"/>
+        <rect x="244" y="64" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
+        <rect x="264" y="80" width="42" height="42" rx="12" fill="#E8F0F8"/>
+        <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.29000000000000004s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.29000000000000004s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="1.5s" repeatCount="indefinite"/><g transform="translate(273,88)"><path d="M6 0 h13 v15 h-13 Z" fill="#A9C6E4"/><path d="M19 0 l1.6 1.6 v15 l-1.6 -1.6 Z" fill="#2D5684"/><path d="M0 6 h13 v15 h-13 Z" fill="#4A7EB5"/><path d="M13 6 l1.6 1.6 v15 l-1.6 -1.6 Z" fill="#2D5684"/><path d="M3 11 h7 M3 14.5 h7 M3 18 h4.5" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round"/></g></g></g>
+        <text x="264" y="146" font-size="14.5" font-weight="700" fill="#172A2D">Competitor play</text>
+        <text x="264" y="162" font-size="9.5" fill="rgba(23,42,45,0.55)">they go rival-shopping</text>
+        <text x="264" y="175" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> your point of view, mid-decision</text>
+        </g>
+        <g class="cap-layer" style="animation-delay:0.12s">
+        <path d="M484 52 h64 q8 0 12 6 l6 8 h-82 z" fill="#FBF0DC"/>
+        <rect x="474" y="64" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
+        <rect x="494" y="80" width="42" height="42" rx="12" fill="#FBF0DC"/>
+        <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.43000000000000005s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.43000000000000005s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="2.0s" repeatCount="indefinite"/><g transform="translate(503,88)"><rect x="3" y="3" width="15" height="20" rx="2.5" fill="#E8A93C"/><path d="M3 3 l1.6 -1.6 h15 l-1.6 1.6 Z" fill="#F8D48A"/><path d="M18 3 l1.6 -1.6 v20 l-1.6 1.6 Z" fill="#B26F14"/><rect x="8.5" y="6" width="4" height="2.2" rx="1.1" fill="#FFFFFF"/><circle cx="10.5" cy="13" r="2.8" fill="#FFFFFF"/><path d="M6.5 19.5 h8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></g></g></g>
+        <text x="494" y="146" font-size="14.5" font-weight="700" fill="#172A2D">Event follow-up</text>
+        <text x="494" y="162" font-size="9.5" fill="rgba(23,42,45,0.55)">a badge scans at your booth</text>
+        <text x="494" y="175" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> lands before their flight does</text>
+        </g>
+        <g class="cap-layer" style="animation-delay:0.18s">
+        <path d="M24 204 h64 q8 0 12 6 l6 8 h-82 z" fill="#F9E7E3"/>
+        <rect x="14" y="216" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
+        <rect x="34" y="232" width="42" height="42" rx="12" fill="#F9E7E3"/>
+        <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.5700000000000001s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.5700000000000001s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="2.5s" repeatCount="indefinite"/><g transform="translate(43,240)"><circle cx="9" cy="6.5" r="4.6" fill="#C05B4D"/><path d="M9 1.9 a4.6 4.6 0 0 1 0 9.2 Z" fill="#8E3A2E"/><path d="M1 23 a8 8 0 0 1 16 0 Z" fill="#C05B4D"/><path d="M9 15 a8 8 0 0 1 8 8 h-8 Z" fill="#8E3A2E"/><path d="M18 1 l0.9 2.3 2.3 0.9 -2.3 0.9 -0.9 2.3 -0.9 -2.3 -2.3 -0.9 2.3 -0.9 Z" fill="#E8A79C"/></g></g></g>
+        <text x="34" y="298" font-size="14.5" font-weight="700" fill="#172A2D">New-leader play</text>
+        <text x="34" y="314" font-size="9.5" fill="rgba(23,42,45,0.55)">a target hires a new CRO</text>
+        <text x="34" y="327" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> a week-one hello worth a reply</text>
+        </g>
+        <g class="cap-layer" style="animation-delay:0.24s">
+        <path d="M254 204 h64 q8 0 12 6 l6 8 h-82 z" fill="#E7F2E9"/>
+        <rect x="244" y="216" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
+        <rect x="264" y="232" width="42" height="42" rx="12" fill="#E7F2E9"/>
+        <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.7100000000000001s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.7100000000000001s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="3.0s" repeatCount="indefinite"/><g transform="translate(273,240)"><ellipse cx="10" cy="19.5" rx="9" ry="3.4" fill="#2C6B41"/><rect x="1" y="13.5" width="18" height="6" fill="#4A9E64"/><ellipse cx="10" cy="13.5" rx="9" ry="3.4" fill="#A9D4B4"/><ellipse cx="10" cy="10.5" rx="6.5" ry="2.6" fill="#2C6B41"/><rect x="3.5" y="5.5" width="13" height="5" fill="#4A9E64"/><ellipse cx="10" cy="5.5" rx="6.5" ry="2.6" fill="#A9D4B4"/><path d="M7.5 5.5 h5" stroke="#2C6B41" stroke-width="1.3" stroke-linecap="round"/></g></g></g>
+        <text x="264" y="298" font-size="14.5" font-weight="700" fill="#172A2D">Funding play</text>
+        <text x="264" y="314" font-size="9.5" fill="rgba(23,42,45,0.55)">a target announces a raise</text>
+        <text x="264" y="327" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> congrats + the scaling angle</text>
+        </g>
+        <g class="cap-layer" style="animation-delay:0.30s">
+        <path d="M484 204 h64 q8 0 12 6 l6 8 h-82 z" fill="none" stroke="rgba(178,111,20,0.35)" stroke-dasharray="5 4" stroke-width="1.4"/>
+        <rect x="474" y="216" width="214" height="118" rx="14" fill="none" stroke="rgba(178,111,20,0.4)" stroke-width="1.6" stroke-dasharray="6 5"/>
+        <rect x="494" y="232" width="42" height="42" rx="12" fill="none" stroke="rgba(178,111,20,0.4)" stroke-dasharray="5 4" stroke-width="1.4"/>
+        <path d="M515 246 v14 M508 253 h14" stroke="#B26F14" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="494" y="298" font-size="14.5" font-weight="700" fill="#8A5410">Yours: №6, 7, 8…</text>
+        <text x="494" y="314" font-size="9.5" fill="rgba(138,84,16,0.85)">written around your motion in week one:</text>
+        <text x="494" y="327" font-size="9.5" fill="rgba(138,84,16,0.85)">your triggers, your voice, your rules</text>
+        </g>
+        <text x="350" y="354" text-anchor="middle" font-size="10.5" font-style="italic" fill="rgba(23,42,45,0.5)">one engine runs the whole shelf. a play only fires when its moment actually happens.</text>
         ${STRIP('The same engine that runs your outbound, now bringing demand in', { w: 78, t: 'always on' })}
       </svg></div>`,
 
