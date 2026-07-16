@@ -20,69 +20,103 @@
   const fav = (d, x, y, s) => `<image href="https://www.google.com/s2/favicons?domain=${d}&sz=64" x="${x}" y="${y}" width="${s || 15}" height="${s || 15}" class="heroviz-favicon"/>`;
 
   const views = {
-    // 01 · Demand Strategy & Channel Mapping · THE CHANNEL MAP: every channel, graded (no fake numbers)
+    // 01 · Demand Strategy & Channel Mapping · THE RADAR: your buyer at the base, channels orbit by grade
     strategy: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <defs><linearGradient id="swp" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="rgba(225,150,46,0)"/><stop offset="1" stop-color="rgba(225,150,46,0.5)"/></linearGradient>
+        <clipPath id="chmapAva1"><circle cx="12" cy="12" r="12"/></clipPath></defs>
         <g class="cap-layer">
-          <rect x="24" y="18" width="652" height="306" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 16px 34px rgba(23,42,45,0.13)) drop-shadow(0 4px 9px rgba(23,42,45,0.06))"/>
+          <rect x="24" y="18" width="652" height="306" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 16px 34px rgba(23,42,45,0.13)) drop-shadow(0 4px 9px rgba(23,42,45,0.07))"/>
           <path d="M24 32 a14 14 0 0 1 14 -14 h624 a14 14 0 0 1 14 14 v16 h-652 Z" fill="#EFEAE3"/>
           <circle cx="42" cy="33" r="3.5" fill="#E0776A"/><circle cx="55" cy="33" r="3.5" fill="#F2CE60"/><circle cx="68" cy="33" r="3.5" fill="#3FCDAD"/>
-          <text x="88" y="37" font-size="9" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.55)">your channel map · week 2 deliverable</text>
+          <text x="88" y="37" font-size="9" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.55)">your channel map</text>
           <text x="46" y="74" font-size="15" font-weight="800" fill="#172A2D">Every channel your buyers could be on, graded</text>
           <text x="46" y="90" font-size="9" fill="rgba(23,42,45,0.55)">straight from your closed-won data and buyer interviews</text>
-          <rect x="46" y="104" width="196" height="24" rx="8" fill="#F5F1EA"/>
-          <text x="58" y="120" font-size="9.5" font-weight="800" letter-spacing="0.05em" fill="#8A5410">GO HARD</text>
-          <text x="234" y="120" text-anchor="end" font-size="8" fill="rgba(138,84,16,0.7)">where they are</text>
-          <rect x="46" y="136" width="196" height="44" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
-          <rect x="56" y="146" width="24" height="24" rx="7" fill="#FFFFFF"/>${fav('linkedin.com', 60, 150, 16)}
-          <text x="90" y="156" font-size="10.5" font-weight="700" fill="#172A2D">LinkedIn</text>
-          <text x="90" y="169" font-size="7.5" fill="rgba(23,42,45,0.55)">your committee scrolls it daily</text>
-          <rect x="46" y="186" width="196" height="44" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
-          <rect x="56" y="196" width="24" height="24" rx="7" fill="#FFFFFF"/><g transform="translate(61,202)"><rect x="0" y="1.8" width="14" height="11.2" rx="2" fill="none" stroke="#8A5410" stroke-width="1.4"/><line x1="0" y1="5.8" x2="14" y2="5.8" stroke="#8A5410" stroke-width="1.4"/><line x1="3.6" y1="0" x2="3.6" y2="2.6" stroke="#8A5410" stroke-width="1.4"/><line x1="10.4" y1="0" x2="10.4" y2="2.6" stroke="#8A5410" stroke-width="1.4"/></g>
-          <text x="90" y="206" font-size="10.5" font-weight="700" fill="#172A2D">Industry events</text>
-          <text x="90" y="219" font-size="7.5" fill="rgba(23,42,45,0.55)">where the big deals shake hands</text>
-          <rect x="46" y="236" width="196" height="44" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
-          <rect x="56" y="246" width="24" height="24" rx="7" fill="#FFFFFF"/>${fav('google.com', 60, 250, 16)}
-          <text x="90" y="256" font-size="10.5" font-weight="700" fill="#172A2D">Search</text>
-          <text x="90" y="269" font-size="7.5" fill="rgba(23,42,45,0.55)">already typing the problem in</text>
-          <rect x="252" y="104" width="194" height="24" rx="8" fill="#F0E9DD"/>
-          <text x="264" y="120" font-size="9.5" font-weight="800" letter-spacing="0.05em" fill="rgba(23,42,45,0.6)">SUPPORT</text>
-          <text x="434" y="120" text-anchor="end" font-size="8" fill="rgba(23,42,45,0.45)">keeps you warm</text>
-          <rect x="252" y="136" width="194" height="32" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.4"/>
-          <rect x="260" y="141" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)"/><g transform="translate(265,146)"><circle cx="7" cy="7" r="6.8" fill="none" stroke="#8A5410" stroke-width="1.6"/><path d="M5.3 4.2 L10.3 7 L5.3 9.8 Z" fill="#8A5410"/></g>
-          <text x="292" y="152" font-size="9.5" font-weight="700" fill="#172A2D">Webinars</text><text x="292" y="162" font-size="7" fill="rgba(23,42,45,0.5)">warm the committee up</text>
-          <rect x="252" y="174" width="194" height="32" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.4"/>
-          <rect x="260" y="179" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)"/><g transform="translate(265,185)"><path d="M1 1 h13 v8.5 h-7.5 l-3.2 3.2 v-3.2 h-2.3 Z" fill="none" stroke="#8A5410" stroke-width="1.6" stroke-linejoin="round"/></g>
-          <text x="292" y="190" font-size="9.5" font-weight="700" fill="#172A2D">Communities</text><text x="292" y="200" font-size="7" fill="rgba(23,42,45,0.5)">where ops people ask for help</text>
-          <rect x="252" y="212" width="194" height="32" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.4"/>
-          <rect x="260" y="217" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)"/><g transform="translate(265,223)"><rect x="0.7" y="1" width="13.6" height="10.5" rx="1.8" fill="none" stroke="#8A5410" stroke-width="1.6"/><path d="M0.7 2.2 L7.5 7 L14.3 2.2" fill="none" stroke="#8A5410" stroke-width="1.5"/></g>
-          <text x="292" y="228" font-size="9.5" font-weight="700" fill="#172A2D">Newsletters</text><text x="292" y="238" font-size="7" fill="rgba(23,42,45,0.5)">stay in mind between cycles</text>
-          <rect x="252" y="250" width="194" height="32" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.4"/>
-          <rect x="260" y="255" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)"/><g transform="translate(265,261)"><path d="M4.5 8 a3.6 3.6 0 0 1 3.6 -3.6 h2.4 M10.5 8 a3.6 3.6 0 0 1 -3.6 3.6 h-2.4" fill="none" stroke="#8A5410" stroke-width="1.7" stroke-linecap="round"/></g>
-          <text x="292" y="266" font-size="9.5" font-weight="700" fill="#172A2D">Partnerships</text><text x="292" y="276" font-size="7" fill="rgba(23,42,45,0.5)">borrowed trust from tools you sit beside</text>
-          <rect x="458" y="104" width="194" height="24" rx="8" fill="none" stroke="rgba(23,42,45,0.12)"/>
-          <text x="470" y="120" font-size="9.5" font-weight="800" letter-spacing="0.05em" fill="rgba(23,42,45,0.45)">SKIP</text>
-          <text x="640" y="120" text-anchor="end" font-size="8" font-style="italic" fill="rgba(23,42,45,0.45)">your buyers ignore these</text>
-          <g opacity="0.5">
-            <rect x="458" y="136" width="194" height="32" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.1)" stroke-width="1.2" stroke-dasharray="4 3"/>
-            <rect x="466" y="140" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.12)"/><g transform="translate(472,146)"><path d="M2.4 0.8 C 1.1 0.8 0.7 1.6 0.7 2.7 C 0.7 7.4 5 11.7 9.7 11.7 C 10.8 11.7 11.6 11.3 11.6 10 L11.6 8.6 L8.9 7.4 L7.7 8.6 C 6.3 7.9 4.6 6.2 3.9 4.8 L5.1 3.6 L3.9 0.8 Z" fill="none" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/></g>
-            <text x="494" y="152" font-size="9.5" font-weight="700" fill="rgba(23,42,45,0.6)">Cold calls</text><text x="494" y="162" font-size="7" fill="rgba(23,42,45,0.45)">a committee buys, nobody picks up</text>
-            <rect x="458" y="174" width="194" height="32" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.1)" stroke-width="1.2" stroke-dasharray="4 3"/>
-            <rect x="466" y="178" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.12)"/><g transform="translate(471,184)"><rect x="0.7" y="0.8" width="13" height="8" rx="1.2" fill="none" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/><line x1="4" y1="9.2" x2="4" y2="13" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/><line x1="10.4" y1="9.2" x2="10.4" y2="13" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/></g>
-            <text x="494" y="190" font-size="9.5" font-weight="700" fill="rgba(23,42,45,0.6)">Broad display</text><text x="494" y="200" font-size="7" fill="rgba(23,42,45,0.45)">eyeballs without buyers</text>
-            <rect x="458" y="212" width="194" height="32" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.1)" stroke-width="1.2" stroke-dasharray="4 3"/>
-            <rect x="466" y="216" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.12)"/><g transform="translate(471,222)"><rect x="0.7" y="1" width="13.6" height="10.2" rx="1.6" fill="none" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/><path d="M0.7 2.1 L7.5 7 L14.3 2.1" fill="none" stroke="rgba(23,42,45,0.65)" stroke-width="1.4"/><line x1="2.2" y1="13.5" x2="13" y2="1" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/></g>
-            <text x="494" y="228" font-size="9.5" font-weight="700" fill="rgba(23,42,45,0.6)">Mass email blasts</text><text x="494" y="238" font-size="7" fill="rgba(23,42,45,0.45)">straight to the spam folder</text>
-            <rect x="458" y="250" width="194" height="32" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.1)" stroke-width="1.2" stroke-dasharray="4 3"/>
-            <rect x="466" y="254" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.12)"/><g transform="translate(473,260)"><rect x="0.7" y="0.7" width="10" height="12.6" rx="1.2" fill="none" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/><line x1="3" y1="4" x2="8.4" y2="4" stroke="rgba(23,42,45,0.65)" stroke-width="1.2"/><line x1="3" y1="6.8" x2="8.4" y2="6.8" stroke="rgba(23,42,45,0.65)" stroke-width="1.2"/></g>
-            <text x="494" y="266" font-size="9.5" font-weight="700" fill="rgba(23,42,45,0.6)">Trade print</text><text x="494" y="276" font-size="7" fill="rgba(23,42,45,0.45)">nobody's reading it anymore</text>
-          </g>
-          <line x1="46" y1="292" x2="654" y2="292" stroke="rgba(23,42,45,0.08)"/>
-          <text x="46" y="310" font-size="9" fill="rgba(23,42,45,0.55)">graded for <tspan font-weight="700" fill="#172A2D">your</tspan> buyer: Series B to C · 4,212 companies fit · 312 in market now</text>
-          <circle cx="646" cy="306" r="4" fill="#E1962E"></circle>
+          <path d="M 270 312 A 80 80 0 0 1 430 312" fill="none" stroke="rgba(225,150,46,0.35)" stroke-width="1.4"/>
+        <path d="M 200 312 A 150 150 0 0 1 500 312" fill="none" stroke="rgba(23,42,45,0.09)" stroke-width="1.4"/>
+        <path d="M 135 312 A 215 215 0 0 1 565 312" fill="none" stroke="rgba(23,42,45,0.08)" stroke-width="1.4" stroke-dasharray="2 5"/>
+        <line x1="90" y1="312" x2="610" y2="312" stroke="rgba(23,42,45,0.08)"/>
+          <g opacity="0.55"><animateTransform attributeName="transform" type="rotate" values="0 350 312;180 350 312" dur="9s" repeatCount="indefinite"/>
+          <line x1="350" y1="312" x2="118" y2="312" stroke="url(#swp)" stroke-width="2"/>
+          <circle cx="118" cy="312" r="3.2" fill="#E1962E" opacity="0.7"/>
+        </g>
+          <text x="46" y="124" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="rgba(23,42,45,0.4)">SKIP</text><text x="46" y="135" font-size="6.8" fill="rgba(23,42,45,0.45)">they ignore these</text>
+          <text x="46" y="182" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="rgba(23,42,45,0.55)">SUPPORT</text><text x="46" y="193" font-size="6.8" fill="rgba(23,42,45,0.45)">keeps you warm</text>
+          <text x="46" y="249" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="#8A5410">GO HARD</text><text x="46" y="260" font-size="6.8" fill="rgba(23,42,45,0.45)">where they are</text>
+        </g>
+        <g class="cap-layer" style="animation-delay:0.06s">
+          <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.55s" fill="freeze"/>
+          <rect x="102" y="106" width="96" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <g transform="translate(111,113)"><rect x="3.6" y="0.8" width="6.8" height="12.4" rx="1.8" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="6" y1="11" x2="8" y2="11" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" stroke-linecap="round"/></g>
+          <text x="131" y="124" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Cold calls</text>
+        </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.63s" fill="freeze"/>
+          <rect x="235" y="106" width="96" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <g transform="translate(244,113)"><rect x="0.7" y="1.4" width="12.6" height="8.6" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="4.5" y1="12.8" x2="9.5" y2="12.8" stroke="rgba(23,42,45,0.45)" stroke-width="1.4" stroke-linecap="round"/></g>
+          <text x="264" y="124" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Broad display</text>
+        </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.7100000000000001s" fill="freeze"/>
+          <rect x="369" y="106" width="96" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <g transform="translate(378,113)"><rect x="0.7" y="3.4" width="9.6" height="7.6" rx="1.3" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><path d="M1 4.2 L5.5 7.6 L10 4.2" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.2"/><path d="M3.6 1 h9.6 M13.4 2.2 v6.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" opacity="0.6"/></g>
+          <text x="398" y="124" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Email blasts</text>
+        </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.79s" fill="freeze"/>
+          <rect x="502" y="106" width="96" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <g transform="translate(511,113)"><rect x="0.7" y="1" width="12.6" height="12" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="3.2" y1="4.4" x2="10.8" y2="4.4" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><line x1="3.2" y1="7" x2="10.8" y2="7" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/><line x1="3.2" y1="9.6" x2="7.5" y2="9.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/></g>
+          <text x="531" y="124" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Trade print</text>
+        </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.3s" fill="freeze"/>
+          <rect x="142" y="164" width="96" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(151,171)"><circle cx="7" cy="7" r="6.4" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4"/><path d="M5.6 4.6 L9.8 7 L5.6 9.4 Z" fill="rgba(23,42,45,0.72)"/></g>
+          <text x="171" y="182" font-size="8.6" font-weight="700" fill="#172A2D">Webinars</text>
+        </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.38s" fill="freeze"/>
+          <rect x="249" y="164" width="96" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(258,171)"><path d="M1 1.5 h12 v8 h-6.5 l-3 3 v-3 H1 Z" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4" stroke-linejoin="round"/></g>
+          <text x="278" y="182" font-size="8.6" font-weight="700" fill="#172A2D">Communities</text>
+        </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.45999999999999996s" fill="freeze"/>
+          <rect x="355" y="164" width="96" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(364,171)"><rect x="0.7" y="2" width="12.6" height="10" rx="1.6" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4"/><path d="M1 3 L7 8 L13 3" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4" stroke-linejoin="round"/></g>
+          <text x="384" y="182" font-size="8.6" font-weight="700" fill="#172A2D">Newsletters</text>
+        </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.54s" fill="freeze"/>
+          <rect x="462" y="164" width="96" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(471,171)"><path d="M5.2 8.6 a3.4 3.4 0 0 1 0 -4.8 l1.8 -1.8 a3.4 3.4 0 0 1 4.8 4.8 l-1 1" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.5" stroke-linecap="round"/><path d="M8.8 5.4 a3.4 3.4 0 0 1 0 4.8 l-1.8 1.8 a3.4 3.4 0 0 1 -4.8 -4.8 l1 -1" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.5" stroke-linecap="round"/></g>
+          <text x="491" y="182" font-size="8.6" font-weight="700" fill="#172A2D">Partnerships</text>
+        </g>
+        </g>
+        <g class="cap-layer" style="animation-delay:0.12s">
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.15s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 0" dur="0.5s" begin="0.15s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
+          <rect x="157" y="224" width="118" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
+          <rect x="166" y="233" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/>${fav('linkedin.com', 166, 235, 16)}
+          <text x="198" y="242" font-size="10" font-weight="700" fill="#172A2D">LinkedIn</text>
+          <text x="198" y="255" font-size="6.8" fill="rgba(23,42,45,0.55)">your committee scrolls it daily</text>
+          <circle cx="267" cy="233" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="0.0s" repeatCount="indefinite"/></circle>
+        </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.27s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 0" dur="0.5s" begin="0.27s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
+          <rect x="291" y="224" width="118" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
+          <rect x="300" y="233" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/><g transform="translate(296,234)"><rect x="0.5" y="2" width="13" height="11" rx="2" fill="none" stroke="#8A5410" stroke-width="1.4"/><line x1="0.5" y1="5.4" x2="13.5" y2="5.4" stroke="#8A5410" stroke-width="1.4"/><line x1="3.6" y1="0.4" x2="3.6" y2="2.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/><line x1="10.4" y1="0.4" x2="10.4" y2="2.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/></g>
+          <text x="332" y="242" font-size="10" font-weight="700" fill="#172A2D">Industry events</text>
+          <text x="332" y="255" font-size="6.8" fill="rgba(23,42,45,0.55)">where the big deals shake hands</text>
+          <circle cx="401" cy="233" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="0.6s" repeatCount="indefinite"/></circle>
+        </g>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.39s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 0" dur="0.5s" begin="0.39s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
+          <rect x="425" y="224" width="118" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
+          <rect x="434" y="233" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/>${fav('google.com', 434, 235, 16)}
+          <text x="466" y="242" font-size="10" font-weight="700" fill="#172A2D">Search</text>
+          <text x="466" y="255" font-size="6.8" fill="rgba(23,42,45,0.55)">already typing the problem in</text>
+          <circle cx="535" cy="233" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="1.2s" repeatCount="indefinite"/></circle>
+        </g>
         </g>
         <g class="cap-layer" style="animation-delay:0.2s">
+          <rect x="286" y="290" width="128" height="30" rx="15" fill="#172A2D" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.3))"/>
+          <circle cx="306" cy="305" r="10" fill="#EFE9DC"/><image href="assets/brand/wouter.png" x="296" y="295" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice" transform="translate(0,0)"/>
+          <circle cx="320" cy="305" r="10" fill="#EAEFF2" stroke="#172A2D" stroke-width="1.5"/><image href="assets/brand/almaz.png" x="310" y="295" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
+          <text x="340" y="309" font-size="9" font-weight="700" fill="#FFFFFF">your buyers</text>
+        </g>
+        <g class="cap-layer" style="animation-delay:0.3s">
           <g transform="rotate(-2 120 348)">
             <rect x="34" y="332" width="180" height="30" rx="5" fill="#F5F1EA" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.12))"/>
             <text x="48" y="345" font-size="8.5" font-weight="600" fill="#8A5410">re-graded monthly · a channel that</text>
