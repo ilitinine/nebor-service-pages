@@ -31,18 +31,18 @@
           <text x="88" y="37" font-size="9" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.55)">your channel map · week 2 deliverable</text>
           <text x="46" y="74" font-size="15" font-weight="800" fill="#172A2D">Every channel your buyers could be on, graded</text>
           <text x="46" y="90" font-size="9" fill="rgba(23,42,45,0.55)">straight from your closed-won data and buyer interviews</text>
-          <rect x="46" y="104" width="196" height="24" rx="8" fill="#F3E7CC"/>
+          <rect x="46" y="104" width="196" height="24" rx="8" fill="#F5F1EA"/>
           <text x="58" y="120" font-size="9.5" font-weight="800" letter-spacing="0.05em" fill="#8A5410">GO HARD</text>
           <text x="234" y="120" text-anchor="end" font-size="8" fill="rgba(138,84,16,0.7)">where they are</text>
-          <rect x="46" y="136" width="196" height="44" rx="10" fill="#FBF0DC" stroke="#FFFFFF" stroke-width="1.6"/>
+          <rect x="46" y="136" width="196" height="44" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
           <rect x="56" y="146" width="24" height="24" rx="7" fill="#FFFFFF"/>${fav('linkedin.com', 60, 150, 16)}
           <text x="90" y="156" font-size="10.5" font-weight="700" fill="#172A2D">LinkedIn</text>
           <text x="90" y="169" font-size="7.5" fill="rgba(23,42,45,0.55)">your committee scrolls it daily</text>
-          <rect x="46" y="186" width="196" height="44" rx="10" fill="#FBF0DC" stroke="#FFFFFF" stroke-width="1.6"/>
+          <rect x="46" y="186" width="196" height="44" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
           <rect x="56" y="196" width="24" height="24" rx="7" fill="#FFFFFF"/><g transform="translate(61,202)"><rect x="0" y="1.8" width="14" height="11.2" rx="2" fill="none" stroke="#8A5410" stroke-width="1.4"/><line x1="0" y1="5.8" x2="14" y2="5.8" stroke="#8A5410" stroke-width="1.4"/><line x1="3.6" y1="0" x2="3.6" y2="2.6" stroke="#8A5410" stroke-width="1.4"/><line x1="10.4" y1="0" x2="10.4" y2="2.6" stroke="#8A5410" stroke-width="1.4"/></g>
           <text x="90" y="206" font-size="10.5" font-weight="700" fill="#172A2D">Industry events</text>
           <text x="90" y="219" font-size="7.5" fill="rgba(23,42,45,0.55)">where the big deals shake hands</text>
-          <rect x="46" y="236" width="196" height="44" rx="10" fill="#FBF0DC" stroke="#FFFFFF" stroke-width="1.6"/>
+          <rect x="46" y="236" width="196" height="44" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
           <rect x="56" y="246" width="24" height="24" rx="7" fill="#FFFFFF"/>${fav('google.com', 60, 250, 16)}
           <text x="90" y="256" font-size="10.5" font-weight="700" fill="#172A2D">Search</text>
           <text x="90" y="269" font-size="7.5" fill="rgba(23,42,45,0.55)">already typing the problem in</text>
@@ -84,7 +84,7 @@
         </g>
         <g class="cap-layer" style="animation-delay:0.2s">
           <g transform="rotate(-2 120 348)">
-            <rect x="34" y="332" width="180" height="30" rx="5" fill="#FBF0DC" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.12))"/>
+            <rect x="34" y="332" width="180" height="30" rx="5" fill="#F5F1EA" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.12))"/>
             <text x="48" y="345" font-size="8.5" font-weight="600" fill="#8A5410">re-graded monthly · a channel that</text>
             <text x="48" y="356" font-size="8.5" font-weight="600" fill="#8A5410">stops earning its column moves</text>
           </g>
@@ -103,56 +103,49 @@
         <rect x="14" y="64" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
         <rect x="34" y="80" width="42" height="42" rx="12" fill="#E3F1EF"/>
         <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.15s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.15s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="1.0s" repeatCount="indefinite"/><g transform="translate(43,88)"><path d="M0 2 h15 v20 h-15 Z" fill="#2FA093"/><path d="M0 2 l1.6 -1.6 h15 l-1.6 1.6 Z" fill="#8ED2C9"/><path d="M15 2 l1.6 -1.6 v20 l-1.6 1.6 Z" fill="#106B60"/><circle cx="7.5" cy="8.5" r="3" fill="#FFFFFF"/><path d="M4.5 15.5 h6 M4.5 18.5 h4" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></g></g></g>
-        <text x="34" y="146" font-size="14.5" font-weight="700" fill="#172A2D">Pricing-page play</text>
-        <text x="34" y="162" font-size="9.5" fill="rgba(23,42,45,0.55)">pricing read again, twice</text>
-        <text x="34" y="175" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> a personal note, within the hour</text>
+        <text x="34" y="148" font-size="14.5" font-weight="700" fill="#172A2D">Pricing-page play</text>
+        <text x="34" y="167" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> a personal note, within the hour</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.06s">
         <path d="M254 52 h64 q8 0 12 6 l6 8 h-82 z" fill="#E8F0F8"/>
         <rect x="244" y="64" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
         <rect x="264" y="80" width="42" height="42" rx="12" fill="#E8F0F8"/>
         <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.29000000000000004s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.29000000000000004s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="1.5s" repeatCount="indefinite"/><g transform="translate(273,88)"><path d="M6 0 h13 v15 h-13 Z" fill="#A9C6E4"/><path d="M19 0 l1.6 1.6 v15 l-1.6 -1.6 Z" fill="#2D5684"/><path d="M0 6 h13 v15 h-13 Z" fill="#4A7EB5"/><path d="M13 6 l1.6 1.6 v15 l-1.6 -1.6 Z" fill="#2D5684"/><path d="M3 11 h7 M3 14.5 h7 M3 18 h4.5" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round"/></g></g></g>
-        <text x="264" y="146" font-size="14.5" font-weight="700" fill="#172A2D">Competitor play</text>
-        <text x="264" y="162" font-size="9.5" fill="rgba(23,42,45,0.55)">they go rival-shopping</text>
-        <text x="264" y="175" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> your point of view, mid-decision</text>
+        <text x="264" y="148" font-size="14.5" font-weight="700" fill="#172A2D">Competitor play</text>
+        <text x="264" y="167" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> your point of view, mid-decision</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.12s">
         <path d="M484 52 h64 q8 0 12 6 l6 8 h-82 z" fill="#FBF0DC"/>
         <rect x="474" y="64" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
         <rect x="494" y="80" width="42" height="42" rx="12" fill="#FBF0DC"/>
         <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.43000000000000005s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.43000000000000005s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="2.0s" repeatCount="indefinite"/><g transform="translate(503,88)"><rect x="3" y="3" width="15" height="20" rx="2.5" fill="#E8A93C"/><path d="M3 3 l1.6 -1.6 h15 l-1.6 1.6 Z" fill="#F8D48A"/><path d="M18 3 l1.6 -1.6 v20 l-1.6 1.6 Z" fill="#B26F14"/><rect x="8.5" y="6" width="4" height="2.2" rx="1.1" fill="#FFFFFF"/><circle cx="10.5" cy="13" r="2.8" fill="#FFFFFF"/><path d="M6.5 19.5 h8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></g></g></g>
-        <text x="494" y="146" font-size="14.5" font-weight="700" fill="#172A2D">Event follow-up</text>
-        <text x="494" y="162" font-size="9.5" fill="rgba(23,42,45,0.55)">a badge scans at your booth</text>
-        <text x="494" y="175" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> lands before their flight does</text>
+        <text x="494" y="148" font-size="14.5" font-weight="700" fill="#172A2D">Event follow-up</text>
+        <text x="494" y="167" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> lands before their flight does</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.18s">
         <path d="M24 204 h64 q8 0 12 6 l6 8 h-82 z" fill="#F9E7E3"/>
         <rect x="14" y="216" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
         <rect x="34" y="232" width="42" height="42" rx="12" fill="#F9E7E3"/>
         <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.5700000000000001s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.5700000000000001s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="2.5s" repeatCount="indefinite"/><g transform="translate(43,240)"><circle cx="9" cy="6.5" r="4.6" fill="#C05B4D"/><path d="M9 1.9 a4.6 4.6 0 0 1 0 9.2 Z" fill="#8E3A2E"/><path d="M1 23 a8 8 0 0 1 16 0 Z" fill="#C05B4D"/><path d="M9 15 a8 8 0 0 1 8 8 h-8 Z" fill="#8E3A2E"/><path d="M18 1 l0.9 2.3 2.3 0.9 -2.3 0.9 -0.9 2.3 -0.9 -2.3 -2.3 -0.9 2.3 -0.9 Z" fill="#E8A79C"/></g></g></g>
-        <text x="34" y="298" font-size="14.5" font-weight="700" fill="#172A2D">New-leader play</text>
-        <text x="34" y="314" font-size="9.5" fill="rgba(23,42,45,0.55)">a target hires a new CRO</text>
-        <text x="34" y="327" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> a week-one hello worth a reply</text>
+        <text x="34" y="300" font-size="14.5" font-weight="700" fill="#172A2D">New-leader play</text>
+        <text x="34" y="319" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> a week-one hello worth a reply</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.24s">
         <path d="M254 204 h64 q8 0 12 6 l6 8 h-82 z" fill="#E7F2E9"/>
         <rect x="244" y="216" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
         <rect x="264" y="232" width="42" height="42" rx="12" fill="#E7F2E9"/>
         <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.7100000000000001s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="0.6s" begin="0.7100000000000001s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.2s" begin="3.0s" repeatCount="indefinite"/><g transform="translate(273,240)"><ellipse cx="10" cy="19.5" rx="9" ry="3.4" fill="#2C6B41"/><rect x="1" y="13.5" width="18" height="6" fill="#4A9E64"/><ellipse cx="10" cy="13.5" rx="9" ry="3.4" fill="#A9D4B4"/><ellipse cx="10" cy="10.5" rx="6.5" ry="2.6" fill="#2C6B41"/><rect x="3.5" y="5.5" width="13" height="5" fill="#4A9E64"/><ellipse cx="10" cy="5.5" rx="6.5" ry="2.6" fill="#A9D4B4"/><path d="M7.5 5.5 h5" stroke="#2C6B41" stroke-width="1.3" stroke-linecap="round"/></g></g></g>
-        <text x="264" y="298" font-size="14.5" font-weight="700" fill="#172A2D">Funding play</text>
-        <text x="264" y="314" font-size="9.5" fill="rgba(23,42,45,0.55)">a target announces a raise</text>
-        <text x="264" y="327" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> congrats + the scaling angle</text>
+        <text x="264" y="300" font-size="14.5" font-weight="700" fill="#172A2D">Funding play</text>
+        <text x="264" y="319" font-size="9.5" fill="rgba(23,42,45,0.75)"><tspan font-weight="800" fill="#B26F14">→</tspan> congrats + the scaling angle</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.30s">
         <path d="M484 204 h64 q8 0 12 6 l6 8 h-82 z" fill="none" stroke="rgba(178,111,20,0.35)" stroke-dasharray="5 4" stroke-width="1.4"/>
         <rect x="474" y="216" width="214" height="118" rx="14" fill="none" stroke="rgba(178,111,20,0.4)" stroke-width="1.6" stroke-dasharray="6 5"/>
         <rect x="494" y="232" width="42" height="42" rx="12" fill="none" stroke="rgba(178,111,20,0.4)" stroke-dasharray="5 4" stroke-width="1.4"/>
         <path d="M515 246 v14 M508 253 h14" stroke="#B26F14" stroke-width="2.4" stroke-linecap="round"/>
-        <text x="494" y="298" font-size="14.5" font-weight="700" fill="#8A5410">Yours: №6, 7, 8…</text>
-        <text x="494" y="314" font-size="9.5" fill="rgba(138,84,16,0.85)">written around your motion in week one:</text>
-        <text x="494" y="327" font-size="9.5" fill="rgba(138,84,16,0.85)">your triggers, your voice, your rules</text>
+        <text x="494" y="300" font-size="14.5" font-weight="700" fill="#8A5410">Yours: №6, 7, 8…</text>
+        <text x="494" y="319" font-size="9.5" fill="rgba(138,84,16,0.85)">your triggers, your voice, your rules</text>
         </g>
-        <text x="350" y="354" text-anchor="middle" font-size="10.5" font-style="italic" fill="rgba(23,42,45,0.5)">one engine runs the whole shelf. a play only fires when its moment actually happens.</text>
         ${STRIP('The same engine that runs your outbound, now bringing demand in', { w: 78, t: 'always on' })}
       </svg></div>`,
 
@@ -165,7 +158,7 @@
           <circle cx="64" cy="78" r="11" fill="#FAC064"/><text x="64" y="82" text-anchor="middle" font-size="10" font-weight="800" fill="#172A2D">1</text>
           <text x="84" y="75" font-size="13" font-weight="800" fill="#172A2D">The audience</text>
           <text x="84" y="89" font-size="8" fill="rgba(23,42,45,0.55)">companies like your closed-won</text>
-          <rect x="52" y="104" width="160" height="30" rx="9" fill="#FBF0DC"/>
+          <rect x="52" y="104" width="160" height="30" rx="9" fill="#F5F1EA"/>
           <rect x="60" y="110" width="18" height="18" rx="5" fill="#FFFFFF"/>${fav('figma.com', 63, 113, 12)}
           <text x="86" y="123" font-size="9.5" font-weight="700" fill="#172A2D">Figma</text>
           <rect x="52" y="140" width="160" height="30" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.06)"/>
@@ -192,7 +185,7 @@
           <text x="318" y="118" font-size="8.5" font-weight="700" fill="#172A2D">Your company</text>
           <text x="318" y="128" font-size="7" fill="rgba(23,42,45,0.5)">Sponsored</text>
           ${fav('linkedin.com', 424, 110, 12)}
-          <rect x="292" y="138" width="144" height="60" rx="8" fill="#FBF0DC"/>
+          <rect x="292" y="138" width="144" height="60" rx="8" fill="#F5F1EA"/>
           <text x="302" y="160" font-size="9.5" font-weight="700" fill="#6B420D">Speaks to the problem</text>
           <text x="302" y="173" font-size="9.5" font-weight="700" fill="#6B420D">their week already has,</text>
           <text x="302" y="186" font-size="9.5" font-weight="700" fill="#6B420D">not a generic pitch</text>
@@ -208,7 +201,7 @@
           <circle cx="528" cy="78" r="11" fill="#FAC064"/><text x="528" y="82" text-anchor="middle" font-size="10" font-weight="800" fill="#172A2D">3</text>
           <text x="548" y="75" font-size="13" font-weight="800" fill="#172A2D">The proof you get</text>
           <text x="548" y="89" font-size="8" fill="rgba(23,42,45,0.55)">deals, with receipts</text>
-          <rect x="516" y="104" width="154" height="44" rx="9" fill="#FBF0DC"/>
+          <rect x="516" y="104" width="154" height="44" rx="9" fill="#F5F1EA"/>
           <rect x="524" y="112" width="16" height="16" rx="5" fill="#FFFFFF"/>${fav('figma.com', 526, 114, 12)}
           <text x="548" y="121" font-size="9" font-weight="700" fill="#172A2D">Figma · deal open</text>
           <text x="548" y="136" font-size="7" font-family="ui-monospace, Menlo, monospace" fill="#8A5410">source: LinkedIn ABM ad ✓</text>
@@ -223,7 +216,7 @@
           <text x="516" y="280" font-size="7.5" font-style="italic" fill="rgba(23,42,45,0.45)">loses its budget. simple.</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.36s">
-          <rect x="36" y="300" width="650" height="44" rx="14" fill="#F3E7CC" stroke="#FFFFFF" stroke-width="1.6"/>
+          <rect x="36" y="300" width="650" height="44" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
           <text x="56" y="319" font-size="11" font-weight="700" fill="#8A5410">Spend follows companies that look like your best customers.</text>
           <text x="56" y="334" font-size="9" fill="rgba(138,84,16,0.85)">and comes back as traceable deals, so budget decisions stop being arguments.</text>
           <circle cx="662" cy="322" r="4" fill="#E1962E"></circle>
@@ -270,7 +263,7 @@
           <text x="466" y="110" font-size="10.5" font-weight="700" fill="#172A2D">Demand Engine</text>
           <rect x="552" y="101" width="30" height="13" rx="4" fill="#EFEAE3"/><text x="567" y="111" text-anchor="middle" font-size="7.5" font-weight="700" fill="rgba(23,42,45,0.55)">APP</text>
           <text x="466" y="124" font-size="8.5" fill="rgba(23,42,45,0.5)">today, 09:40</text>
-          <rect x="434" y="136" width="236" height="104" rx="10" fill="#FBF0DC"/>
+          <rect x="434" y="136" width="236" height="104" rx="10" fill="#F5F1EA"/>
           <text x="448" y="158" font-size="10.5" font-weight="700" fill="#172A2D">Figma is expanding into DACH.</text>
           <text x="448" y="176" font-size="9.5" fill="rgba(23,42,45,0.7)">Angle: new market, new pipeline target.</text>
           <text x="448" y="190" font-size="9.5" fill="rgba(23,42,45,0.7)">Their team will need to build coverage.</text>
@@ -279,7 +272,7 @@
           <text x="434" y="264" font-size="9" fill="rgba(23,42,45,0.5)">🔥 2   👀 3</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.4s">
-          <rect x="416" y="298" width="270" height="40" rx="13" fill="#F3E7CC" stroke="#FFFFFF" stroke-width="1.6"/>
+          <rect x="416" y="298" width="270" height="40" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
           <text x="434" y="322" font-size="10.5" font-weight="700" fill="#8A5410">Your team just acts. The watching is done.</text>
         </g>
         ${STRIP('Catch a target account the moment it complains or shops a rival', null)}
@@ -326,14 +319,14 @@
           <path d="M376 42 a14 14 0 0 1 14 -14 h282 a14 14 0 0 1 14 14 v16 h-310 Z" fill="#EFEAE3"/>
           <circle cx="394" cy="43" r="3.5" fill="#E0776A"/><circle cx="407" cy="43" r="3.5" fill="#F2CE60"/><circle cx="420" cy="43" r="3.5" fill="#3FCDAD"/>
           <rect x="434" y="35" width="236" height="16" rx="8" fill="#FCFAF7"/><text x="444" y="46" font-size="8" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.55)">yoursite.com/pricing</text>
-          <rect x="400" y="66" width="118" height="22" rx="11" fill="#F3E7CC"/>
+          <rect x="400" y="66" width="118" height="22" rx="11" fill="#F5F1EA"/>
           <rect x="408" y="70" width="13" height="13" rx="4" fill="#FFFFFF"/>${fav('figma.com', 410, 72, 9)}
           <text x="426" y="81" font-size="9" font-weight="700" fill="#8A5410">Built for Figma</text>
           <text x="400" y="112" font-size="14" font-weight="700" fill="#172A2D">Pricing for design</text>
           <text x="400" y="129" font-size="14" font-weight="700" fill="#172A2D">platforms like yours</text>
           <rect x="400" y="144" width="254" height="6" rx="3" fill="#EFEAE3"/>
           <rect x="400" y="156" width="212" height="6" rx="3" fill="#EFEAE3"/>
-          <rect x="400" y="176" width="254" height="26" rx="9" fill="#FBF0DC"/>
+          <rect x="400" y="176" width="254" height="26" rx="9" fill="#F5F1EA"/>
           <text x="412" y="193" font-size="8.5" font-weight="600" fill="#8A5410">case study: how a design platform traced its pipeline</text>
           <rect x="400" y="212" width="96" height="22" rx="11" fill="#172A2D"/>
           <text x="448" y="227" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF">Talk to us</text>
@@ -368,7 +361,7 @@
     abm: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
-        <rect x="36" y="24" width="196" height="26" rx="13" fill="#F3E7CC" stroke="#FFFFFF" stroke-width="1.4"/>
+        <rect x="36" y="24" width="196" height="26" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.4"/>
         ${fav('figma.com', 48, 30, 13)}<text x="68" y="41" font-size="9.5" font-weight="700" fill="#8A5410">Figma · a Tier 1 account</text>
         <text x="244" y="41" font-size="9.5" fill="rgba(23,42,45,0.55)">four fronts, one week, one story</text>
         <text x="36" y="72" font-size="8.5" font-weight="700" letter-spacing="0.1em" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.45)">WHAT FIGMA SEES</text>
@@ -378,9 +371,9 @@
           <text x="72" y="102" font-size="8" font-weight="700" fill="#172A2D">Your company</text>
           <text x="72" y="111" font-size="6.5" fill="rgba(23,42,45,0.5)">Sponsored</text>
           ${fav('linkedin.com', 234, 94, 11)}
-          <rect x="50" y="122" width="194" height="46" rx="8" fill="#FBF0DC"/>
-          <text x="62" y="141" font-size="10" font-weight="700" fill="#6B420D">"Pipeline you can trace,</text>
-          <text x="62" y="154" font-size="10" font-weight="700" fill="#6B420D">not spray you can't."</text>
+          <rect x="50" y="122" width="194" height="46" rx="8" fill="#F5F1EA"/>
+          <text x="62" y="141" font-size="10" font-weight="700" fill="#6B420D">"Every euro of pipeline,</text>
+          <text x="62" y="154" font-size="10" font-weight="700" fill="#6B420D">traced to its source."</text>
           <rect x="50" y="178" width="62" height="16" rx="8" fill="#172A2D"/><text x="81" y="189.5" text-anchor="middle" font-size="7" font-weight="700" fill="#FFFFFF">Learn more</text>
           <text x="120" y="190" font-size="7.5" fill="rgba(23,42,45,0.5)">Monday · in the committee's feed</text>
         </g>
@@ -391,8 +384,8 @@
           <text x="312" y="114" font-size="9" font-weight="700" fill="#172A2D">About your Q3 pipeline goal</text>
           <line x1="284" y1="124" x2="478" y2="124" stroke="rgba(23,42,45,0.08)"/>
           <text x="284" y="142" font-size="8.5" fill="rgba(23,42,45,0.7)">Hi Wouter, saw the DACH plans.</text>
-          <rect x="284" y="150" width="194" height="20" rx="6" fill="#FBF0DC"/>
-          <text x="292" y="163.5" font-size="8.5" font-weight="700" fill="#6B420D">Pipeline you can trace: here's how.</text>
+          <rect x="284" y="150" width="194" height="20" rx="6" fill="#F5F1EA"/>
+          <text x="292" y="163.5" font-size="8.5" font-weight="700" fill="#6B420D">A pipeline plan you can trace end to end.</text>
           <text x="284" y="190" font-size="7.5" fill="rgba(23,42,45,0.5)">Wednesday · written to his goal, same story</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.2s">
@@ -400,10 +393,10 @@
           <path d="M36 232 a12 12 0 0 1 12 -12 h198 a12 12 0 0 1 12 12 v10 h-222 Z" fill="#EFEAE3"/>
           <circle cx="52" cy="231" r="2.8" fill="#E0776A"/><circle cx="62" cy="231" r="2.8" fill="#F2CE60"/><circle cx="72" cy="231" r="2.8" fill="#3FCDAD"/>
           <rect x="82" y="225" width="164" height="12" rx="6" fill="#FCFAF7"/><text x="90" y="234" font-size="6.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.55)">yoursite.com/for-design-teams</text>
-          <rect x="50" y="252" width="92" height="18" rx="9" fill="#F3E7CC"/>
+          <rect x="50" y="252" width="92" height="18" rx="9" fill="#F5F1EA"/>
           <rect x="56" y="255" width="11" height="11" rx="3" fill="#FFFFFF"/>${fav('figma.com', 58, 257, 8)}
           <text x="72" y="264.5" font-size="7.5" font-weight="700" fill="#8A5410">Built for Figma</text>
-          <text x="50" y="290" font-size="10" font-weight="700" fill="#172A2D">Pipeline you can trace,</text>
+          <text x="50" y="290" font-size="10" font-weight="700" fill="#172A2D">Traceable pipeline,</text>
           <text x="50" y="303" font-size="10" font-weight="700" fill="#172A2D">for design platforms</text>
           <text x="50" y="326" font-size="7.5" fill="rgba(23,42,45,0.5)">always on · rebuilt for whoever visits</text>
         </g>
@@ -433,7 +426,6 @@
           <text x="526" y="290" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">the accounts that can</text>
           <text x="526" y="304" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">change your year</text>
         </g>
-        <text x="350" y="358" text-anchor="middle" font-size="10.5" font-style="italic" fill="rgba(23,42,45,0.5)">the same phrase, in the ad, the email and the page. that repetition is the strategy.</text>
         ${STRIP('The accounts that matter get a coordinated push of their own', { w: 84, t: 'in lockstep' })}
       </svg></div>`,
 
@@ -456,7 +448,7 @@
           ${fav('figma.com', 66, 153, 11)}<text x="82" y="163" font-size="8.5" font-weight="700" fill="#172A2D">Figma</text>
           <line x1="44" y1="182" x2="150" y2="182" stroke="rgba(23,42,45,0.08)"/>
           <text x="44" y="200" font-size="7" font-weight="700" letter-spacing="0.06em" fill="rgba(23,42,45,0.4)">STAGE</text>
-          <rect x="44" y="206" width="72" height="16" rx="8" fill="#F3E7CC"/><text x="80" y="217.5" text-anchor="middle" font-size="7.5" font-weight="700" fill="#8A5410">warm lead</text>
+          <rect x="44" y="206" width="72" height="16" rx="8" fill="#F5F1EA"/><text x="80" y="217.5" text-anchor="middle" font-size="7.5" font-weight="700" fill="#8A5410">warm lead</text>
           <text x="44" y="244" font-size="7" font-weight="700" letter-spacing="0.06em" fill="rgba(23,42,45,0.4)">HER JOURNEY</text>
           <line x1="48" y1="254" x2="48" y2="316" stroke="rgba(23,42,45,0.12)"/>
           <circle cx="48" cy="258" r="3.5" fill="#FCFAF7" stroke="rgba(23,42,45,0.3)" stroke-width="1.2"/>
@@ -477,14 +469,14 @@
           <text x="222" y="110" font-size="9.5" font-weight="700" fill="#172A2D">Opened the pricing email</text>
           <text x="640" y="110" text-anchor="end" font-size="7.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.45)">Mar 02 · 2 opens, 1 click</text>
           <line x1="188" y1="122" x2="654" y2="122" stroke="rgba(23,42,45,0.05)"/>
-          <rect x="188" y="128" width="466" height="30" rx="8" fill="#FBF0DC"/>
+          <rect x="188" y="128" width="466" height="30" rx="8" fill="#F5F1EA"/>
           <rect x="198" y="135" width="42" height="16" rx="8" fill="#FAC064"/><text x="219" y="146.5" text-anchor="middle" font-size="6.5" font-weight="800" fill="#172A2D">ENGINE</text>
           <text x="250" y="147" font-size="9.5" font-weight="700" fill="#8A5410">Answered with the ROI breakdown she was circling</text>
           <text x="640" y="147" text-anchor="end" font-size="7.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(138,84,16,0.7)">same day</text>
           <line x1="196" y1="176" x2="646" y2="176" stroke="rgba(23,42,45,0.12)" stroke-dasharray="3 5"/>
           <rect x="314" y="166" width="214" height="20" rx="10" fill="#F7F4EE"/>
           <text x="421" y="179.5" text-anchor="middle" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.55)">quiet for 14 days · the engine waits</text>
-          <rect x="188" y="196" width="466" height="30" rx="8" fill="#FBF0DC"/>
+          <rect x="188" y="196" width="466" height="30" rx="8" fill="#F5F1EA"/>
           <rect x="198" y="203" width="42" height="16" rx="8" fill="#FAC064"/><text x="219" y="214.5" text-anchor="middle" font-size="6.5" font-weight="800" fill="#172A2D">ENGINE</text>
           <text x="250" y="215" font-size="9.5" font-weight="700" fill="#8A5410">Came back with a new angle: her team's DACH launch</text>
           <text x="640" y="215" text-anchor="end" font-size="7.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(138,84,16,0.7)">Mar 18</text>
@@ -501,7 +493,6 @@
           <text x="250" y="326" font-size="9.5" font-weight="700" fill="#FFFFFF">Handed to a human, the whole story attached</text>
           <text x="640" y="326" text-anchor="end" font-size="7.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(255,255,255,0.6)">today</text>
         </g>
-        <text x="350" y="360" text-anchor="middle" font-size="10.5" font-style="italic" fill="rgba(23,42,45,0.5)">her move, then ours. never the calendar's.</text>
         ${STRIP('Nobody who was interested slips through the cracks', { w: 108, t: 'branches on behavior' })}
       </svg></div>`,
 
@@ -511,7 +502,7 @@
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
         <text x="36" y="30" font-size="10" font-weight="700" letter-spacing="0.07em" fill="rgba(23,42,45,0.45)">ANY REAL SIGN OF INTEREST CAN OPEN IT</text>
         <g class="cap-layer">
-          <rect x="36" y="40" width="152" height="48" rx="12" fill="#FBF0DC" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.09))"/>
+          <rect x="36" y="40" width="152" height="48" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.09))"/>
           <rect x="48" y="52" width="22" height="22" rx="7" fill="#FFFFFF"/>${fav('figma.com', 52, 56, 14)}
           <text x="78" y="60" font-size="8.5" font-weight="700" fill="#172A2D">pricing ×3 this week</text>
           <text x="78" y="73" font-size="7" font-weight="700" fill="#8A5410">just fired · 14:02</text>
@@ -529,7 +520,7 @@
           <text x="558" y="71" font-size="8.5" font-weight="700" fill="#172A2D">the guide</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.12s">
-          <rect x="36" y="100" width="632" height="30" rx="15" fill="#FAC064" filter="drop-shadow(0 6px 14px rgba(225,150,46,0.35))"/>
+          <rect x="36" y="100" width="632" height="30" rx="15" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.09))"/>
           <text x="352" y="120" text-anchor="middle" font-size="10.5" font-weight="800" fill="#172A2D">one of them just crossed the line → the sequence opens itself, while the interest is real</text>
         </g>
         <path d="M292 132 L292 144" stroke="rgba(178,111,20,0.6)" stroke-width="2" stroke-dasharray="3 4"/>
@@ -556,7 +547,7 @@
           <rect x="428" y="288" width="66" height="18" rx="9" fill="none" stroke="rgba(23,42,45,0.25)"/><text x="461" y="300.5" text-anchor="middle" font-size="8" font-weight="700" fill="rgba(23,42,45,0.55)">QUEUED</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.4s">
-          <rect x="528" y="148" width="120" height="180" rx="14" fill="#F3E7CC" stroke="#FFFFFF" stroke-width="1.6"/>
+          <rect x="528" y="148" width="120" height="180" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
           <text x="544" y="172" font-size="8" font-weight="700" letter-spacing="0.06em" fill="rgba(138,84,16,0.75)">HANDOFF</text>
           <text x="544" y="192" font-size="9.5" font-weight="700" fill="#8A5410">your engine</text>
           <text x="544" y="205" font-size="9.5" font-weight="700" fill="#8A5410">picks it up</text>
@@ -567,7 +558,6 @@
           <text x="544" y="284" font-size="8" font-style="italic" fill="rgba(138,84,16,0.8)">never need step 3.</text>
           <text x="544" y="296" font-size="8" font-style="italic" fill="rgba(138,84,16,0.8)">the reply comes first.</text>
         </g>
-        <text x="350" y="352" text-anchor="middle" font-size="10.5" font-style="italic" fill="rgba(23,42,45,0.5)">the whole sequence exists because of one visit. it opens while the interest is still hot.</text>
         ${STRIP('Reach out while interest is still hot, instead of losing the moment', null)}
       </svg></div>`,
 
@@ -611,7 +601,7 @@
           ${fav('slack.com', 396, 63, 13)}<text x="416" y="74" font-size="11" font-weight="700" fill="#172A2D"># wins</text>
           <text x="668" y="74" text-anchor="end" font-size="8" fill="rgba(23,42,45,0.4)">3 new</text>
           <line x1="380" y1="86" x2="686" y2="86" stroke="rgba(23,42,45,0.07)"/>
-          <rect x="396" y="100" width="34" height="34" rx="9" fill="#FBF0DC"/>${fav('clay.com', 403, 107, 20)}
+          <rect x="396" y="100" width="34" height="34" rx="9" fill="#F5F1EA"/>${fav('clay.com', 403, 107, 20)}
           <text x="442" y="112" font-size="11" font-weight="800" fill="#172A2D">Demand Engine</text>
           <rect x="534" y="103" width="28" height="13" rx="3" fill="#EFEAE3"/><text x="548" y="113" text-anchor="middle" font-size="7.5" font-weight="700" fill="rgba(23,42,45,0.55)">APP</text>
           <text x="570" y="112" font-size="8.5" fill="rgba(23,42,45,0.45)">16:04</text>
@@ -623,8 +613,8 @@
           <text x="510" y="170" font-size="9.5" font-weight="600" fill="#172A2D">pricing ×3 → note → AE call</text>
           <text x="456" y="186" font-size="8" font-weight="700" letter-spacing="0.06em" fill="rgba(23,42,45,0.45)">VALUE</text>
           <text x="510" y="186" font-size="9.5" font-weight="800" fill="#8A5410">€180k</text>
-          <rect x="442" y="208" width="40" height="18" rx="9" fill="#F3E7CC" stroke="rgba(225,150,46,0.4)"/><text x="462" y="220.5" text-anchor="middle" font-size="8.5" fill="#8A5410">🔥 3</text>
-          <rect x="488" y="208" width="40" height="18" rx="9" fill="#F3E7CC" stroke="rgba(225,150,46,0.4)"/><text x="508" y="220.5" text-anchor="middle" font-size="8.5" fill="#8A5410">🙌 2</text>
+          <rect x="442" y="208" width="40" height="18" rx="9" fill="#F5F1EA" stroke="rgba(225,150,46,0.4)"/><text x="462" y="220.5" text-anchor="middle" font-size="8.5" fill="#8A5410">🔥 3</text>
+          <rect x="488" y="208" width="40" height="18" rx="9" fill="#F5F1EA" stroke="rgba(225,150,46,0.4)"/><text x="508" y="220.5" text-anchor="middle" font-size="8.5" fill="#8A5410">🙌 2</text>
           <rect x="534" y="208" width="30" height="18" rx="9" fill="none" stroke="rgba(23,42,45,0.15)"/><text x="549" y="220.5" text-anchor="middle" font-size="9" fill="rgba(23,42,45,0.45)">+</text>
           <text x="442" y="240" font-size="8.5" font-weight="600" fill="#B26F14">↳ 1 reply</text>
           <line x1="396" y1="246" x2="670" y2="246" stroke="rgba(23,42,45,0.06)"/>
@@ -636,7 +626,6 @@
         <defs><clipPath id="atPtr"><circle cx="413" cy="266" r="14"/></clipPath></defs>
         <g class="cap-layer" style="animation-delay:0.3s">
           <rect x="380" y="352" width="0" height="0" fill="none"/>
-          <text x="380" y="358" font-size="10" font-style="italic" fill="rgba(23,42,45,0.5)">ask any deal where it came from. it answers.</text>
         </g>
         ${STRIP('Real pipeline and revenue, traced to the campaign that made them', { w: 118, t: 'full attribution' })}
       </svg></div>`
