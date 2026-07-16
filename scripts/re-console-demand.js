@@ -20,111 +20,112 @@
   const fav = (d, x, y, s) => `<image href="https://www.google.com/s2/favicons?domain=${d}&sz=64" x="${x}" y="${y}" width="${s || 15}" height="${s || 15}" class="heroviz-favicon"/>`;
 
   const views = {
-    // 01 · Demand Strategy & Channel Mapping · THE FAN: buyers at the base, channels orbit by grade,
-    //      a re-graded channel shown mid-move (the map is alive, no window chrome)
+    // 01 · Demand Strategy & Channel Mapping · THE FAN, framed: buyers at the base of one big panel,
+    //      channels orbit by grade, a re-graded channel shown mid-move. No window chrome.
     strategy: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
         <defs><linearGradient id="swp" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="rgba(225,150,46,0)"/><stop offset="1" stop-color="rgba(225,150,46,0.45)"/></linearGradient></defs>
         <g class="cap-layer">
-          <text x="36" y="40" font-size="15" font-weight="800" fill="#172A2D">Every channel your buyers could be on, graded</text>
-          <text x="36" y="56" font-size="9" fill="rgba(23,42,45,0.55)">straight from your closed-won data and buyer interviews</text>
-          <path d="M70 161 A 670 670 0 0 1 630 161" fill="none" stroke="rgba(23,42,45,0.09)" stroke-width="1.4" stroke-dasharray="2 5"/>
-          <path d="M100 258 A 570 570 0 0 1 600 258" fill="none" stroke="rgba(23,42,45,0.10)" stroke-width="1.4"/>
-          <path d="M150 345 A 470 470 0 0 1 550 345" fill="none" stroke="rgba(225,150,46,0.35)" stroke-width="1.4"/>
-          <g opacity="0.5"><animateTransform attributeName="transform" type="rotate" values="-64 350 350;64 350 350;-64 350 350" dur="11s" repeatCount="indefinite"/>
-            <line x1="350" y1="350" x2="350" y2="104" stroke="url(#swp)" stroke-width="2"/>
-            <circle cx="350" cy="104" r="3" fill="#E1962E" opacity="0.7"/>
+          <rect x="24" y="20" width="652" height="338" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 16px 34px rgba(23,42,45,0.13)) drop-shadow(0 4px 9px rgba(23,42,45,0.07))"/>
+          <text x="46" y="48" font-size="15" font-weight="800" fill="#172A2D">Every channel your buyers could be on, graded</text>
+          <text x="46" y="64" font-size="9" fill="rgba(23,42,45,0.55)">straight from your closed-won data and buyer interviews</text>
+          <path d="M70 147 A 670 670 0 0 1 630 147" fill="none" stroke="rgba(23,42,45,0.09)" stroke-width="1.4" stroke-dasharray="2 5"/>
+          <path d="M100 244 A 570 570 0 0 1 600 244" fill="none" stroke="rgba(23,42,45,0.10)" stroke-width="1.4"/>
+          <path d="M150 331 A 470 470 0 0 1 550 331" fill="none" stroke="rgba(225,150,46,0.35)" stroke-width="1.4"/>
+          <g opacity="0.5"><animateTransform attributeName="transform" type="rotate" values="-62 350 336;62 350 336;-62 350 336" dur="11s" repeatCount="indefinite"/>
+            <line x1="350" y1="336" x2="350" y2="94" stroke="url(#swp)" stroke-width="2"/>
+            <circle cx="350" cy="94" r="3" fill="#E1962E" opacity="0.7"/>
           </g>
-          <text x="36" y="104" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="rgba(23,42,45,0.4)">SKIP</text>
-          <text x="36" y="115" font-size="6.8" fill="rgba(23,42,45,0.45)">they ignore these</text>
-          <text x="36" y="196" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="rgba(23,42,45,0.55)">SUPPORT</text>
-          <text x="36" y="207" font-size="6.8" fill="rgba(23,42,45,0.45)">keeps you warm</text>
-          <text x="36" y="296" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="#8A5410">GO HARD</text>
-          <text x="36" y="307" font-size="6.8" fill="rgba(23,42,45,0.45)">where they are</text>
-          <text x="36" y="352" font-size="7.5" fill="rgba(23,42,45,0.5)">re-graded monthly · a channel earns its ring, or it moves</text>
+          <text x="46" y="106" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="rgba(23,42,45,0.4)">SKIP</text>
+          <text x="46" y="117" font-size="6.8" fill="rgba(23,42,45,0.45)">they ignore these</text>
+          <text x="46" y="192" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="rgba(23,42,45,0.55)">SUPPORT</text>
+          <text x="46" y="203" font-size="6.8" fill="rgba(23,42,45,0.45)">keeps you warm</text>
+          <text x="46" y="288" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="#8A5410">GO HARD</text>
+          <text x="46" y="299" font-size="6.8" fill="rgba(23,42,45,0.45)">where they are</text>
+          <text x="46" y="346" font-size="7.5" fill="rgba(23,42,45,0.5)">re-graded monthly · a channel earns its ring, or it moves</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.06s">
           <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.1s" fill="freeze"/>
-          <rect x="82" y="123" width="96" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <g transform="translate(91,130)"><rect x="3.6" y="0.8" width="6.8" height="12.4" rx="1.8" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="6" y1="11" x2="8" y2="11" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" stroke-linecap="round"/></g>
-          <text x="111" y="141" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Cold calls</text>
+          <rect x="80" y="109" width="100" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <g transform="translate(89,116)"><rect x="3.6" y="0.8" width="6.8" height="12.4" rx="1.8" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="6" y1="11" x2="8" y2="11" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" stroke-linecap="round"/></g>
+          <text x="109" y="127" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Cold calls</text>
         </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.18s" fill="freeze"/>
-          <rect x="192" y="95" width="96" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <g transform="translate(201,102)"><rect x="0.7" y="1.4" width="12.6" height="8.6" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="4.5" y1="12.8" x2="9.5" y2="12.8" stroke="rgba(23,42,45,0.45)" stroke-width="1.4" stroke-linecap="round"/></g>
-          <text x="221" y="113" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Broad display</text>
+          <rect x="190" y="81" width="100" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <g transform="translate(199,88)"><rect x="0.7" y="1.4" width="12.6" height="8.6" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="4.5" y1="12.8" x2="9.5" y2="12.8" stroke="rgba(23,42,45,0.45)" stroke-width="1.4" stroke-linecap="round"/></g>
+          <text x="219" y="99" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Broad display</text>
         </g>
-          <rect x="302" y="86" width="96" height="28" rx="9" fill="none" stroke="rgba(23,42,45,0.14)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <text x="350" y="103" text-anchor="middle" font-size="7" font-style="italic" fill="rgba(23,42,45,0.4)">was here</text>
+          <rect x="300" y="72" width="100" height="28" rx="9" fill="none" stroke="rgba(23,42,45,0.14)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <text x="350" y="89" text-anchor="middle" font-size="7" font-style="italic" fill="rgba(23,42,45,0.4)">was here</text>
           <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.26s" fill="freeze"/>
-          <rect x="412" y="95" width="96" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <g transform="translate(421,102)"><rect x="0.7" y="3.4" width="9.6" height="7.6" rx="1.3" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><path d="M1 4.2 L5.5 7.6 L10 4.2" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.2"/><path d="M3.6 1 h9.6 M13.4 2.2 v6.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" opacity="0.6"/></g>
-          <text x="441" y="113" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Email blasts</text>
+          <rect x="410" y="81" width="100" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <g transform="translate(419,88)"><rect x="0.7" y="3.4" width="9.6" height="7.6" rx="1.3" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><path d="M1 4.2 L5.5 7.6 L10 4.2" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.2"/><path d="M3.6 1 h9.6 M13.4 2.2 v6.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" opacity="0.6"/></g>
+          <text x="439" y="99" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Email blasts</text>
         </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.34s" fill="freeze"/>
-          <rect x="522" y="123" width="96" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <g transform="translate(531,130)"><rect x="0.7" y="1" width="12.6" height="12" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="3.2" y1="4.4" x2="10.8" y2="4.4" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><line x1="3.2" y1="7" x2="10.8" y2="7" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/><line x1="3.2" y1="9.6" x2="7.5" y2="9.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/></g>
-          <text x="551" y="141" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Trade print</text>
+          <rect x="520" y="109" width="100" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <g transform="translate(529,116)"><rect x="0.7" y="1" width="12.6" height="12" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="3.2" y1="4.4" x2="10.8" y2="4.4" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><line x1="3.2" y1="7" x2="10.8" y2="7" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/><line x1="3.2" y1="9.6" x2="7.5" y2="9.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/></g>
+          <text x="549" y="127" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Trade print</text>
         </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.3s" fill="freeze"/>
-          <rect x="142" y="209" width="96" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
-          <g transform="translate(151,216)"><circle cx="7" cy="7" r="6.4" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4"/><path d="M5.6 4.6 L9.8 7 L5.6 9.4 Z" fill="rgba(23,42,45,0.72)"/></g>
-          <text x="171" y="227" font-size="8.6" font-weight="700" fill="#172A2D">Webinars</text>
+          <rect x="140" y="195" width="100" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(149,202)"><circle cx="7" cy="7" r="6.4" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4"/><path d="M5.6 4.6 L9.8 7 L5.6 9.4 Z" fill="rgba(23,42,45,0.72)"/></g>
+          <text x="169" y="213" font-size="8.6" font-weight="700" fill="#172A2D">Webinars</text>
         </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.38s" fill="freeze"/>
-          <rect x="248" y="189" width="96" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
-          <g transform="translate(257,196)"><path d="M1 1.5 h12 v8 h-6.5 l-3 3 v-3 H1 Z" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4" stroke-linejoin="round"/></g>
-          <text x="277" y="207" font-size="8.6" font-weight="700" fill="#172A2D">Communities</text>
+          <rect x="246" y="175" width="100" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(255,182)"><path d="M1 1.5 h12 v8 h-6.5 l-3 3 v-3 H1 Z" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4" stroke-linejoin="round"/></g>
+          <text x="275" y="193" font-size="8.6" font-weight="700" fill="#172A2D">Communities</text>
         </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.46s" fill="freeze"/>
-          <rect x="356" y="189" width="96" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
-          <g transform="translate(365,196)"><rect x="0.7" y="2" width="12.6" height="10" rx="1.6" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4"/><path d="M1 3 L7 8 L13 3" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4" stroke-linejoin="round"/></g>
-          <text x="385" y="207" font-size="8.6" font-weight="700" fill="#172A2D">Newsletters</text>
+          <rect x="354" y="175" width="100" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(363,182)"><rect x="0.7" y="2" width="12.6" height="10" rx="1.6" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4"/><path d="M1 3 L7 8 L13 3" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4" stroke-linejoin="round"/></g>
+          <text x="383" y="193" font-size="8.6" font-weight="700" fill="#172A2D">Newsletters</text>
         </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.54s" fill="freeze"/>
-          <rect x="462" y="209" width="96" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
-          <g transform="translate(471,216)"><path d="M5.2 8.6 a3.4 3.4 0 0 1 0 -4.8 l1.8 -1.8 a3.4 3.4 0 0 1 4.8 4.8 l-1 1" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.5" stroke-linecap="round"/><path d="M8.8 5.4 a3.4 3.4 0 0 1 0 4.8 l-1.8 1.8 a3.4 3.4 0 0 1 -4.8 -4.8 l1 -1" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.5" stroke-linecap="round"/></g>
-          <text x="491" y="227" font-size="8.6" font-weight="700" fill="#172A2D">Partnerships</text>
+          <rect x="460" y="195" width="100" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(469,202)"><path d="M5.2 8.6 a3.4 3.4 0 0 1 0 -4.8 l1.8 -1.8 a3.4 3.4 0 0 1 4.8 4.8 l-1 1" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.5" stroke-linecap="round"/><path d="M8.8 5.4 a3.4 3.4 0 0 1 0 4.8 l-1.8 1.8 a3.4 3.4 0 0 1 -4.8 -4.8 l1 -1" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.5" stroke-linecap="round"/></g>
+          <text x="489" y="213" font-size="8.6" font-weight="700" fill="#172A2D">Partnerships</text>
         </g>
         </g>
         <g class="cap-layer" style="animation-delay:0.12s">
-          <path d="M350 116 C 350 148, 322 166, 302 187" fill="none" stroke="rgba(225,150,46,0.55)" stroke-width="1.6" stroke-dasharray="4 4" pathLength="100" stroke-dashoffset="100">
+          <path d="M350 102 C 350 132, 322 147, 300 173" fill="none" stroke="rgba(225,150,46,0.55)" stroke-width="1.6" stroke-dasharray="4 4" pathLength="100" stroke-dashoffset="100">
             <animate attributeName="stroke-dashoffset" from="100" to="0" dur="0.9s" begin="1.1s" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" fill="freeze"/>
           </path>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.9s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 6;0 0" dur="0.45s" begin="1.9s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
-            <rect x="250" y="161" width="72" height="15" rx="7.5" fill="#FAC064"/>
-            <text x="286" y="172" text-anchor="middle" font-size="7" font-weight="800" fill="#172A2D">re-graded ↑</text>
+            <rect x="252" y="149" width="72" height="15" rx="7.5" fill="#FAC064"/>
+            <text x="288" y="160" text-anchor="middle" font-size="7" font-weight="800" fill="#172A2D">re-graded ↑</text>
           </g>
         </g>
         <g class="cap-layer" style="animation-delay:0.12s">
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 0" dur="0.5s" begin="0.5s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
-          <rect x="157" y="299" width="118" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
-          <rect x="166" y="308" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/>${fav('linkedin.com', 170, 312, 16)}
-          <text x="198" y="317" font-size="10" font-weight="700" fill="#172A2D">LinkedIn</text>
-          <text x="198" y="330" font-size="6.8" fill="rgba(23,42,45,0.55)">your committee scrolls it daily</text>
-          <circle cx="267" cy="308" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="0.0s" repeatCount="indefinite"/></circle>
+          <rect x="134" y="290" width="132" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
+          <rect x="143" y="299" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/>${fav('linkedin.com', 147, 303, 16)}
+          <text x="175" y="308" font-size="10" font-weight="700" fill="#172A2D">LinkedIn</text>
+          <text x="175" y="321" font-size="6.8" fill="rgba(23,42,45,0.55)">the committee is here</text>
+          <circle cx="258" cy="299" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="0.0s" repeatCount="indefinite"/></circle>
         </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.62s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 0" dur="0.5s" begin="0.62s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
-          <rect x="291" y="279" width="118" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
-          <rect x="300" y="288" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/><g transform="translate(305,293)"><rect x="0.5" y="2" width="13" height="11" rx="2" fill="none" stroke="#8A5410" stroke-width="1.4"/><line x1="0.5" y1="5.4" x2="13.5" y2="5.4" stroke="#8A5410" stroke-width="1.4"/><line x1="3.6" y1="0.4" x2="3.6" y2="2.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/><line x1="10.4" y1="0.4" x2="10.4" y2="2.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/></g>
-          <text x="332" y="297" font-size="10" font-weight="700" fill="#172A2D">Industry events</text>
-          <text x="332" y="310" font-size="6.8" fill="rgba(23,42,45,0.55)">where the big deals shake hands</text>
-          <circle cx="401" cy="288" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="0.6s" repeatCount="indefinite"/></circle>
+          <rect x="284" y="265" width="132" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
+          <rect x="293" y="274" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/><g transform="translate(298,279)"><rect x="0.5" y="2" width="13" height="11" rx="2" fill="none" stroke="#8A5410" stroke-width="1.4"/><line x1="0.5" y1="5.4" x2="13.5" y2="5.4" stroke="#8A5410" stroke-width="1.4"/><line x1="3.6" y1="0.4" x2="3.6" y2="2.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/><line x1="10.4" y1="0.4" x2="10.4" y2="2.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/></g>
+          <text x="325" y="283" font-size="10" font-weight="700" fill="#172A2D">Industry events</text>
+          <text x="325" y="296" font-size="6.8" fill="rgba(23,42,45,0.55)">deals shake hands here</text>
+          <circle cx="408" cy="274" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="0.6s" repeatCount="indefinite"/></circle>
         </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.74s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 0" dur="0.5s" begin="0.74s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
-          <rect x="425" y="299" width="118" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
-          <rect x="434" y="308" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/>${fav('google.com', 438, 312, 16)}
-          <text x="466" y="317" font-size="10" font-weight="700" fill="#172A2D">Search</text>
-          <text x="466" y="330" font-size="6.8" fill="rgba(23,42,45,0.55)">already typing the problem in</text>
-          <circle cx="535" cy="308" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="1.2s" repeatCount="indefinite"/></circle>
+          <rect x="434" y="290" width="132" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
+          <rect x="443" y="299" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/>${fav('google.com', 447, 303, 16)}
+          <text x="475" y="308" font-size="10" font-weight="700" fill="#172A2D">Search</text>
+          <text x="475" y="321" font-size="6.8" fill="rgba(23,42,45,0.55)">already typing it in</text>
+          <circle cx="558" cy="299" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="1.2s" repeatCount="indefinite"/></circle>
         </g>
         </g>
         <g class="cap-layer" style="animation-delay:0.2s">
-          <rect x="286" y="335" width="128" height="30" rx="15" fill="#172A2D" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.3))"/>
-          <circle cx="306" cy="350" r="10" fill="#EFE9DC"/><image href="assets/brand/wouter.png" x="296" y="340" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
-          <circle cx="320" cy="350" r="10" fill="#EAEFF2" stroke="#172A2D" stroke-width="1.5"/><image href="assets/brand/almaz.png" x="310" y="340" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
-          <text x="340" y="354" font-size="9" font-weight="700" fill="#FFFFFF">your buyers</text>
+          <rect x="286" y="321" width="128" height="30" rx="15" fill="#172A2D" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.3))"/>
+          <circle cx="306" cy="336" r="10" fill="#EFE9DC"/><image href="assets/brand/wouter.png" x="296" y="326" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
+          <circle cx="320" cy="336" r="10" fill="#EAEFF2" stroke="#172A2D" stroke-width="1.5"/><image href="assets/brand/almaz.png" x="310" y="326" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
+          <text x="340" y="340" font-size="9" font-weight="700" fill="#FFFFFF">your buyers</text>
         </g>
         ${STRIP('We map where demand shows, so you never guess where to show up', { w: 92, t: 'the map' })}
       </svg></div>`,
