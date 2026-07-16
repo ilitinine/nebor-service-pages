@@ -27,23 +27,13 @@
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
         <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
         <g transform="translate(27,13) scale(0.92)">
-        <defs><linearGradient id="swp" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="rgba(225,150,46,0)"/><stop offset="1" stop-color="rgba(225,150,46,0.45)"/></linearGradient></defs>
+        <defs><radialGradient id="pedglow" cx="0.5" cy="1" r="1"><stop offset="0" stop-color="rgba(250,192,100,0.4)"/><stop offset="1" stop-color="rgba(250,192,100,0)"/></radialGradient><linearGradient id="swp" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="rgba(225,150,46,0)"/><stop offset="1" stop-color="rgba(225,150,46,0.45)"/></linearGradient></defs>
         <g class="cap-layer">
           <rect x="24" y="20" width="652" height="338" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 16px 34px rgba(23,42,45,0.13)) drop-shadow(0 4px 9px rgba(23,42,45,0.07))"/>
           <text x="46" y="48" font-size="15" font-weight="800" fill="#172A2D">Every channel your buyers could be on, graded</text>
-          <text x="520" y="38" font-size="7.5" font-weight="800" letter-spacing="0.1em" fill="#8A5410">GRADED FROM</text>
-          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.25s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 -6;0 0" dur="0.5s" begin="0.25s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
-          <rect x="520" y="44" width="134" height="22" rx="11" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.09))"/>
-          <g transform="translate(529,48)"><path d="M3.5 1 h7 v3.2 a3.5 3.5 0 0 1 -7 0 Z" fill="none" stroke="#8A5410" stroke-width="1.3"/><path d="M3.5 2.2 H1.6 a2.3 2.3 0 0 0 2.5 2.6 M10.5 2.2 h1.9 a2.3 2.3 0 0 1 -2.5 2.6" fill="none" stroke="#8A5410" stroke-width="1.1"/><line x1="7" y1="7.7" x2="7" y2="9.8" stroke="#8A5410" stroke-width="1.3"/><path d="M4.6 11.3 h4.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/></g>
-          <text x="548" y="58.5" font-size="8.5" font-weight="700" fill="#172A2D">your closed-won deals</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 -6;0 0" dur="0.5s" begin="0.4s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
-          <rect x="520" y="72" width="134" height="22" rx="11" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.09))"/>
-          <g transform="translate(529,76)"><rect x="5" y="0.6" width="4" height="7" rx="2" fill="none" stroke="#8A5410" stroke-width="1.3"/><path d="M2.8 5.4 a4.2 4.2 0 0 0 8.4 0" fill="none" stroke="#8A5410" stroke-width="1.2"/><path d="M7 9.6 v2 M5.2 11.8 h3.6" fill="none" stroke="#8A5410" stroke-width="1.2" stroke-linecap="round"/></g>
-          <text x="548" y="86.5" font-size="8.5" font-weight="700" fill="#172A2D">buyer interviews</text>
-          </g>
-          <path d="M516 88 C 494 98, 476 104, 462 110" fill="none" stroke="rgba(178,111,20,0.45)" stroke-width="1.3" stroke-dasharray="3 4"/>
-          <path d="M468 105 L459 111 L469 113 Z" fill="rgba(178,111,20,0.6)"/>
+          <circle cx="446" cy="43" r="9" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="1.5"/><image href="assets/brand/wouter.png" x="437" y="34" width="18" height="18" clip-path="circle(9px at 9px 9px)" preserveAspectRatio="xMidYMin slice"/>
+          <circle cx="459" cy="43" r="9" fill="#EAEFF2" stroke="#FFFFFF" stroke-width="1.5"/><image href="assets/brand/almaz.png" x="450" y="34" width="18" height="18" clip-path="circle(9px at 9px 9px)" preserveAspectRatio="xMidYMin slice"/>
+          
           <path d="M70 146 A 960 960 0 0 1 660 135" fill="none" stroke="rgba(23,42,45,0.09)" stroke-width="1.4" stroke-dasharray="2 5"/>
           <path d="M84 237 A 870 870 0 0 1 655 228" fill="none" stroke="rgba(23,42,45,0.10)" stroke-width="1.4"/>
           <path d="M112 333 A 770 770 0 0 1 652 333" fill="none" stroke="rgba(225,150,46,0.35)" stroke-width="1.4"/>
@@ -124,10 +114,13 @@
         </g>
         </g>
         <g class="cap-layer" style="animation-delay:0.2s">
-          <rect x="318" y="321" width="128" height="30" rx="15" fill="#172A2D" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.3))"/>
-          <circle cx="338" cy="336" r="10" fill="#EFE9DC"/><image href="assets/brand/wouter.png" x="328" y="326" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
-          <circle cx="352" cy="336" r="10" fill="#EAEFF2" stroke="#172A2D" stroke-width="1.5"/><image href="assets/brand/almaz.png" x="342" y="326" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
-          <text x="372" y="340" font-size="9" font-weight="700" fill="#FFFFFF">your buyers</text>
+          <ellipse cx="382" cy="316" rx="150" ry="42" fill="url(#pedglow)"/>
+          <rect x="249" y="321" width="266" height="30" rx="15" fill="#172A2D" filter="drop-shadow(0 10px 22px rgba(23,42,45,0.32))"/>
+          <text x="263" y="340" font-size="6.5" font-weight="800" letter-spacing="0.1em" fill="rgba(255,255,255,0.55)">GRADED FROM</text>
+          <g transform="translate(320,328)"><path d="M3 1 h6 v2.8 a3 3 0 0 1 -6 0 Z" fill="none" stroke="#FAC064" stroke-width="1.2"/><path d="M3 2 H1.4 a2 2 0 0 0 2.1 2.3 M9 2 h1.6 a2 2 0 0 1 -2.1 2.3" fill="none" stroke="#FAC064" stroke-width="1"/><line x1="6" y1="6.7" x2="6" y2="8.5" stroke="#FAC064" stroke-width="1.2"/><path d="M4 9.9 h4" stroke="#FAC064" stroke-width="1.2" stroke-linecap="round"/></g>
+          <text x="336" y="340" font-size="8.5" font-weight="700" fill="#FFFFFF">closed-won deals</text>
+          <g transform="translate(414,328)"><rect x="4.2" y="0.4" width="3.6" height="6" rx="1.8" fill="none" stroke="#FAC064" stroke-width="1.2"/><path d="M2.4 4.6 a3.6 3.6 0 0 0 7.2 0" fill="none" stroke="#FAC064" stroke-width="1.1"/><path d="M6 8.4 v1.7 M4.4 10.3 h3.2" fill="none" stroke="#FAC064" stroke-width="1.1" stroke-linecap="round"/></g>
+          <text x="430" y="340" font-size="8.5" font-weight="700" fill="#FFFFFF">buyer interviews</text>
         </g>
         </g>
         ${STRIP('We map where demand shows, so you never guess where to show up', { w: 92, t: 'the map' })}
