@@ -354,7 +354,7 @@
       <text x="112" y="82" font-size="13" font-weight="700" fill="${INK}">Dana Wu</text>
       <text x="112" y="97" font-size="8.5" fill="${MUT}">the buyer at Loom</text>
       ${fav("loom.com", 336, 62, 14)}
-      ${crmMarks(64, 300, "")}
+      ${crmMarks(172, 302, "in your CRM")}
       <line x1="64" y1="124" x2="360" y2="124" stroke="rgba(23,42,45,0.07)"/>
       ${field(146, "TITLE", "Head of Design", "VP Design", 80, 0.6)}
       ${field(198, "COMPANY FUNDING", "Series B · 2024", "Series C", 78, 1.0)}
