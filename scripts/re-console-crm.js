@@ -307,7 +307,7 @@
       ${clean(210, "miro.com", "Miro", "miro.com", "Dana", "Apr 2024", 0, 4.3)}
       ${clean(238, "vercel.com", "Vercel", "vercel.com", "Ravi", "May 2024", 0, 4.45)}
       ${clean(266, "airtable.com", "Airtable", "airtable.com", "Sara", "May 2024", 0, 4.6)}
-      <text x="44" y="332" font-size="9" font-weight="600" fill="${INK}">Runs on every record coming in <tspan font-weight="400" fill="${MUT}">· not once a quarter when someone finally notices</tspan></text>
+      <text x="44" y="332" font-size="9" font-weight="600" fill="${INK}">Runs on every record coming in <tspan font-weight="400" fill="${MUT}">· write after write when someone finally notices</tspan></text>
       ${panel(556, 28, 130, 316, CARD, 16)}
       ${lab(572, 56, "ON EVERY WRITE")}
       <line x1="572" y1="66" x2="670" y2="66" stroke="rgba(23,42,45,0.07)"/>
@@ -456,7 +456,7 @@
       ${node(376, 152, 158, 44, "Notify the channel", "the room sees it move")}
       ${wire("M534 58 L562 58 L562 96")}
       ${wire("M534 174 L562 174 L562 140")}
-      ${node(506, 96, 160, 44, "Task to the owner", "due today, not someday")}
+      ${node(506, 96, 160, 44, "Task to the owner", "due today, deadline attached")}
       ${wire("M586 140 L586 184")}
       ${node(506, 184, 160, 44, "Re-roll the forecast", "the Monday number stays true")}
       ${wire("M586 228 L586 252 L300 252 L300 230")}
@@ -511,7 +511,7 @@
       <text x="34" y="334" font-size="7.5" font-style="italic" fill="${MUT}">scored the moment the form hit</text>
       ${lab(326, 50, "2 · ROUTED BY THE RULE THAT MATCHES")}
       ${crmMarks(560, 40, "")}
-      ${lane(64, 52, "0 to 39", "nurture, no rep time", "", 0)}
+      ${lane(64, 52, "0 to 39", "nurture on autopilot", "", 0)}
       ${lane(128, 52, "40 to 74", "the round robin", "", 0)}
       ${lane(192, 72, "75 and up, ICP fit", "a senior AE, directly", "this lead scored 87 · matched", 1)}
       <path d="M300 297 L312 297 L312 228 L326 228" fill="none" stroke="rgba(90,135,168,0.55)" stroke-width="1.6" stroke-dasharray="100" stroke-dashoffset="100"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="0.7s" begin="1.4s" fill="freeze"/></path>
@@ -532,7 +532,7 @@
         <rect x="536" y="286" width="134" height="20" rx="10" fill="${GREENBG}"/>
         <text x="603" y="300" text-anchor="middle" font-size="8" font-weight="700" fill="${GREEN}">task created · call today</text>
       </g>
-      <text x="326" y="330" font-size="8" font-style="italic" fill="${MUT}">same lead, same rule, same outcome, every single time, not whenever someone checks the queue</text>
+      <text x="326" y="330" font-size="8" font-style="italic" fill="${MUT}">same lead, same rule, same outcome, every single time.</text>
       ${strip("Scored on fit and intent, routed by rule", "enforced", 82)}
     </svg></div>`;
   };
@@ -582,7 +582,7 @@
       ${legend(126, BLUE, "Inbound", "28%", 0.65)}
       ${legend(146, TEAL, "Events", "18%", 0.8)}
       ${legend(166, SLATE, "Partners", "12%", 0.95)}
-      <text x="460" y="206" font-size="7.5" font-style="italic" fill="${MUT}">no impressions, no clicks · real pipeline only</text>
+      <text x="460" y="206" font-size="7.5" font-style="italic" fill="${MUT}">real pipeline only · traced deal by deal</text>
       ${panel(34, 158, 396, 132, CARD)}
       ${lab(54, 182, "PIPELINE BY WEEK")}
       <line x1="54" y1="252" x2="414" y2="252" stroke="rgba(23,42,45,0.1)"/>
@@ -594,7 +594,7 @@
       <text x="462" y="280" font-size="8" fill="rgba(255,255,255,0.6)">Q3 commit</text>
       <rect x="462" y="288" width="186" height="10" rx="5" fill="rgba(255,255,255,0.15)"/>
       <rect x="462" y="288" width="0" height="10" rx="5" fill="${GOLD}">${GROW("width", 0, 138, 1, 1)}</rect>
-      <text x="462" y="314" font-size="7.5" fill="rgba(255,255,255,0.55)">built from stamped deals, not from gut feel</text>
+      <text x="462" y="314" font-size="7.5" fill="rgba(255,255,255,0.55)">built deal by deal from stamped records</text>
       <g opacity="0">${IN(1.9, 0.4)}
         <rect x="556" y="250" width="92" height="18" rx="9" fill="${GOLD}"/>
         <text x="602" y="263" text-anchor="middle" font-size="7" font-weight="700" fill="#4A3708">leadership signs it</text>

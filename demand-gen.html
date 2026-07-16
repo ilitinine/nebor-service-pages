@@ -214,7 +214,7 @@
         </div>
         <div class="hero-el-content">
           <span class="hero-el-tag">Account-based marketing</span>
-          <h3 class="hero-el-title">Your best accounts get a coordinated push, not the same ad as everyone.</h3>
+          <h3 class="hero-el-title">Your best accounts get a coordinated push of their own.</h3>
           <p class="hero-el-body">Three well-timed touches, one story: an ad when he searched, a note about his actual Q3 goal, a page answering it. Then he replies to that note, because the timing finally matched his decision. The meeting lands on your AE's calendar with the brief already written.</p>
         </div>
       </a>
@@ -379,7 +379,7 @@
         <h4>Spend goes out. Nobody's sure what came back.</h4>
         <div class="b-compare-row"><span class="ic">✕</span>Leads come in, but nobody acts on them fast enough</div>
         <div class="b-compare-row"><span class="ic">✕</span>"ABM" is a target list nobody actually works</div>
-        <div class="b-compare-row"><span class="ic">✕</span>Paid generates clicks, not pipeline you can attribute</div>
+        <div class="b-compare-row"><span class="ic">✕</span>Paid generates clicks you can never tie to pipeline</div>
         <div class="b-compare-row"><span class="ic">✕</span>Post-event follow-up takes weeks, or never happens</div>
         <div class="b-compare-row"><span class="ic">✕</span>Marketing and sales argue about lead quality</div>
       </div>
@@ -484,11 +484,11 @@
         <div class="numtile">2</div>
         <span class="when">Week 3–6</span>
         <h4>Build</h4>
-        <p>Inside your stack · not on top of it. Workflows, integrations, and AI pieces engineered to your motion.</p>
+        <p>Inside your stack, end to end. Workflows, integrations, and AI pieces engineered to your motion.</p>
         <div class="fold"><div>
           <span class="b-fold-label see">You'll see</span>
           <ul>
-            <li>Workflows going live one-by-one in your CRM, not on a vendor dashboard</li>
+            <li>Workflows going live one-by-one inside your own CRM</li>
             <li>Weekly demo of what shipped + what's next</li>
             <li>The first qualified pipeline come through the new system</li>
           </ul>
@@ -770,7 +770,7 @@
       </details>
       <details open>
         <summary>How do you tie campaigns back to revenue? <span class="tg tg-plus">+</span><span class="tg tg-minus">−</span></summary>
-        <div class="ans">Every touch is stamped with the source, signal, and sequence that produced it, and the CRM is the single source of truth. Paid, organic, and outbound all roll up to the same pipeline number, so you see what actually created pipeline, not impressions and clicks.</div>
+        <div class="ans">Every touch is stamped with the source, signal, and sequence that produced it, and the CRM is the single source of truth. Paid, organic, and outbound all roll up to the same pipeline number, so you see exactly what created pipeline.</div>
       </details>
       <details>
         <summary>What if our website isn't built for this? <span class="tg tg-plus">+</span><span class="tg tg-minus">−</span></summary>
@@ -778,7 +778,7 @@
       </details>
       <details>
         <summary>How fast can inbound leads be routed? <span class="tg tg-plus">+</span><span class="tg tg-minus">−</span></summary>
-        <div class="ans">Form-fill to the rep's Slack is typically under 90 seconds. Enrichment, scoring, and round-robin routing happen on write, not in an overnight batch, so nobody who was interested goes cold waiting.</div>
+        <div class="ans">Form-fill to the rep's Slack is typically under 90 seconds. Enrichment, scoring, and round-robin routing happen on write, the moment the form lands, so nobody who was interested goes cold waiting.</div>
       </details>
       <details>
         <summary>Do you build the creative for paid and ABM ads? <span class="tg tg-plus">+</span><span class="tg tg-minus">−</span></summary>
@@ -856,12 +856,12 @@ window.NEBOR_HUB = [{ sl: 'clay', name: 'Clay' }]; // Clay alone in the middle (
 window.NEBOR_WORKFLOW = [
   {
     phase: "Generate", step: "Attract",
-    desc: "Where does demand come from for this buyer? Paid, content and events create it, and the engine points each channel at the accounts your ICP says matter, not the whole internet.",
+    desc: "Where does demand come from for this buyer? Paid, content and events create it, and the engine points each channel at the accounts your ICP says matter.",
     brief: "Create demand across the channels that matter.",
     tools: ["linkedin", "clay", "hubspot", "n8n"],
     roles: {
       linkedin: "Runs the paid social and organic motion where this committee actually spends time",
-      clay: "Builds the target audiences from your own closed-won data, not broad targeting",
+      clay: "Builds the target audiences straight from your own closed-won data",
       hubspot: "Hosts the landing pages and forms that turn attention into a record",
       n8n: "Orchestrates the channels on one clock so the story stays consistent"
     },
@@ -870,7 +870,7 @@ window.NEBOR_WORKFLOW = [
       { from: "linkedin", to: "hubspot", proto: "webhook", label: "paid.touch" },
       { from: "hubspot", to: "n8n", proto: "event", label: "demand.signal" }
     ],
-    output: "Demand created where your buyers already are · not sprayed"
+    output: "Demand created exactly where your buyers already are"
   },
   {
     phase: "Generate", step: "Capture",
@@ -928,7 +928,7 @@ window.NEBOR_WORKFLOW = [
   },
   {
     phase: "Convert", step: "Nurture",
-    desc: "What about the ones not ready yet? Warm leads are followed up on what they actually do, not a schedule: engaged ones advance, quiet ones re-engage, an intent spike hands straight to sales.",
+    desc: "What about the ones not ready yet? Warm leads are followed up on what they do: engaged ones advance, quiet ones re-engage, an intent spike hands straight to sales.",
     brief: "Keep warm leads warm, branch on behavior.",
     tools: ["hubspot", "anthropic", "n8n", "slack"],
     roles: {
@@ -946,7 +946,7 @@ window.NEBOR_WORKFLOW = [
   },
   {
     phase: "Convert", step: "Attribute",
-    desc: "What did it all produce? Every deal is stamped with the source, signal and sequence behind it, so pipeline is traced, not guessed, and what converts feeds back to sharpen the next round of demand.",
+    desc: "What did it all produce? Every deal is stamped with the source, signal and sequence behind it, so pipeline is traced deal by deal, and what converts feeds back to sharpen the next round of demand.",
     brief: "Stamp pipeline, feed what converts back.",
     tools: ["hubspot", "anthropic", "clay", "ocean"],
     roles: {
@@ -972,7 +972,7 @@ window.NEBOR_RE_CAPS = [
   { id: "workflows", tag: "system", anchor: true, title: "AI-Powered Demand Workflows & Plays",
     desc: "A set of automations that spot interest the moment it happens and act on it instantly, the same engine that runs your outbound, now working to bring demand in. Several plays run at once, each watching for its own trigger and firing without anyone lifting a finger." },
   { id: "paid", tag: "paid", title: "Audience Building & Paid Media Strategy",
-    desc: "We build ad audiences from your own customer data, not random targeting, so your spend reaches the right companies and you see the pipeline it creates, not just clicks. Lookalikes from closed-won, tier-1 ABM lists, and CRM suppression, then spend pointed at accounts that can actually buy." },
+    desc: "We build ad audiences from your own customer data, so your spend reaches the right companies and every click can be traced to the pipeline it created. Lookalikes from closed-won, tier-1 ABM lists, and CRM suppression, then spend pointed at accounts that can buy." },
   { id: "listen", tag: "signals", title: "Social Listening & Competitive Tracking",
     desc: "We watch for the moment a target company complains about a problem you solve or shops a competitor, and catch them while they're looking. Every signal is captured, graded by strength, and turned into a brief your team can act on the same day." },
   { id: "capture", tag: "capture", title: "Inbound Capture & Dynamic Landing Pages",
@@ -980,18 +980,18 @@ window.NEBOR_RE_CAPS = [
   { id: "abm", tag: "abm", title: "Account-Based Marketing & ABM Programs",
     desc: "For the handful of accounts that really matter, we run a coordinated push across email, LinkedIn, ads and your reps, all at once, all saying the same thing, instead of treating them like everyone else. Reps are activated the moment intent crosses the threshold." },
   { id: "nurture", tag: "lifecycle", title: "Nurture & Lifecycle Journeys",
-    desc: "We keep warm leads warm, following up based on what they actually do, not a fixed schedule, so nobody who was interested slips through the cracks. The journey branches on behavior: engaged leads advance, quiet ones get re-engaged, intent spikes hand straight to sales." },
+    desc: "We keep warm leads warm, following up based on what they do, so nobody who was interested slips through the cracks. The journey branches on behavior: engaged leads advance, quiet ones get re-engaged, intent spikes hand straight to sales." },
   { id: "sequences", tag: "outbound", title: "Inbound-Led Outbound Sequences",
     desc: "The second someone shows real interest, we reach out with a personal message while it's still hot, instead of waiting days and losing the moment. A website visit that crosses the intent threshold opens the sequence, and your sales engine picks it up the moment it's ready." },
   { id: "attrib", tag: "metrics", title: "Pipeline & Attribution Reporting",
-    desc: "You can see exactly which campaigns brought in real pipeline and revenue, not vanity numbers like impressions and clicks. Every campaign is stamped with the source and signal that produced it, and the full attribution rolls up on your RevOps backbone." }
+    desc: "You can see exactly which campaigns brought in real pipeline and revenue. Every campaign is stamped with the source and signal that produced it, and the full attribution rolls up on your RevOps backbone." }
 ];
 
 </script>
 
 <script src="scripts/tools.js?v=3"></script>
 <script src="scripts/stepper.js?v=92"></script>
-<script src="scripts/re-console-demand.js?v=27"></script>
+<script src="scripts/re-console-demand.js?v=28"></script>
 <script src="scripts/page-fx.js?v=3"></script>
 
 

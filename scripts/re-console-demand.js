@@ -30,7 +30,7 @@
           <circle cx="42" cy="33" r="3.5" fill="#E0776A"/><circle cx="55" cy="33" r="3.5" fill="#F2CE60"/><circle cx="68" cy="33" r="3.5" fill="#3FCDAD"/>
           <text x="88" y="37" font-size="9" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.55)">your channel map · week 2 deliverable</text>
           <text x="46" y="74" font-size="15" font-weight="800" fill="#172A2D">Every channel your buyers could be on, graded</text>
-          <text x="46" y="90" font-size="9" fill="rgba(23,42,45,0.55)">from your closed-won data and buyer interviews · not habit, not guesswork</text>
+          <text x="46" y="90" font-size="9" fill="rgba(23,42,45,0.55)">straight from your closed-won data and buyer interviews</text>
           <rect x="46" y="104" width="196" height="24" rx="8" fill="#F3E7CC"/>
           <text x="58" y="120" font-size="9.5" font-weight="800" letter-spacing="0.05em" fill="#8A5410">GO HARD</text>
           <text x="234" y="120" text-anchor="end" font-size="8" fill="rgba(138,84,16,0.7)">where they are</text>
@@ -70,7 +70,7 @@
             <text x="494" y="152" font-size="9.5" font-weight="700" fill="rgba(23,42,45,0.6)">Cold calls</text><text x="494" y="162" font-size="7" fill="rgba(23,42,45,0.45)">a committee buys, nobody picks up</text>
             <rect x="458" y="174" width="194" height="32" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.1)" stroke-width="1.2" stroke-dasharray="4 3"/>
             <rect x="466" y="178" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.12)"/><g transform="translate(471,184)"><rect x="0.7" y="0.8" width="13" height="8" rx="1.2" fill="none" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/><line x1="4" y1="9.2" x2="4" y2="13" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/><line x1="10.4" y1="9.2" x2="10.4" y2="13" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/></g>
-            <text x="494" y="190" font-size="9.5" font-weight="700" fill="rgba(23,42,45,0.6)">Broad display</text><text x="494" y="200" font-size="7" fill="rgba(23,42,45,0.45)">eyeballs, not buyers</text>
+            <text x="494" y="190" font-size="9.5" font-weight="700" fill="rgba(23,42,45,0.6)">Broad display</text><text x="494" y="200" font-size="7" fill="rgba(23,42,45,0.45)">eyeballs without buyers</text>
             <rect x="458" y="212" width="194" height="32" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.1)" stroke-width="1.2" stroke-dasharray="4 3"/>
             <rect x="466" y="216" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.12)"/><g transform="translate(471,222)"><rect x="0.7" y="1" width="13.6" height="10.2" rx="1.6" fill="none" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/><path d="M0.7 2.1 L7.5 7 L14.3 2.1" fill="none" stroke="rgba(23,42,45,0.65)" stroke-width="1.4"/><line x1="2.2" y1="13.5" x2="13" y2="1" stroke="rgba(23,42,45,0.65)" stroke-width="1.5"/></g>
             <text x="494" y="228" font-size="9.5" font-weight="700" fill="rgba(23,42,45,0.6)">Mass email blasts</text><text x="494" y="238" font-size="7" fill="rgba(23,42,45,0.45)">straight to the spam folder</text>
@@ -186,7 +186,7 @@
           <rect x="268" y="52" width="192" height="232" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 10px 22px rgba(23,42,45,0.1))"/>
           <circle cx="296" cy="78" r="11" fill="#FAC064"/><text x="296" y="82" text-anchor="middle" font-size="10" font-weight="800" fill="#172A2D">2</text>
           <text x="316" y="75" font-size="13" font-weight="800" fill="#172A2D">The ad they see</text>
-          <text x="316" y="89" font-size="8" fill="rgba(23,42,45,0.55)">personal, not generic</text>
+          <text x="316" y="89" font-size="8" fill="rgba(23,42,45,0.55)">personal to one reader</text>
           <rect x="282" y="100" width="164" height="148" rx="10" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)"/>
           <circle cx="302" cy="120" r="10" fill="#172A2D"/><text x="302" y="124" text-anchor="middle" font-size="9" font-weight="800" fill="#FAC064">N</text>
           <text x="318" y="118" font-size="8.5" font-weight="700" fill="#172A2D">Your company</text>
@@ -218,7 +218,7 @@
           <text x="548" y="186" font-size="7" font-family="ui-monospace, Menlo, monospace" fill="#8A5410">source: search campaign ✓</text>
           <line x1="516" y1="214" x2="670" y2="214" stroke="rgba(23,42,45,0.08)"/>
           <text x="516" y="234" font-size="8.5" fill="rgba(23,42,45,0.6)">clicks and impressions?</text>
-          <text x="516" y="248" font-size="8.5" font-weight="700" fill="#172A2D">footnotes, not the report.</text>
+          <text x="516" y="248" font-size="8.5" font-weight="700" fill="#172A2D">footnotes under the report.</text>
           <text x="516" y="270" font-size="7.5" font-style="italic" fill="rgba(23,42,45,0.45)">a campaign that opens no deals</text>
           <text x="516" y="280" font-size="7.5" font-style="italic" fill="rgba(23,42,45,0.45)">loses its budget. simple.</text>
         </g>
@@ -228,7 +228,7 @@
           <text x="56" y="334" font-size="9" fill="rgba(138,84,16,0.85)">and comes back as traceable deals, so budget decisions stop being arguments.</text>
           <circle cx="662" cy="322" r="4" fill="#E1962E"></circle>
         </g>
-        ${STRIP('You see the pipeline your spend creates, not just the clicks', { w: 104, t: 'influenced pipeline' })}
+        ${STRIP('You see the pipeline your spend creates, traced end to end', { w: 104, t: 'influenced pipeline' })}
       </svg></div>`,
 
     // 04 · Social Listening & Competitive Tracking · REAL PUBLIC SIGNALS become a same-day brief
@@ -427,14 +427,14 @@
           <line x1="526" y1="188" x2="648" y2="188" stroke="rgba(23,42,45,0.08)"/>
           <text x="526" y="210" font-size="8.5" fill="rgba(23,42,45,0.55)">4,188 accounts on the</text>
           <text x="526" y="222" font-size="8.5" fill="rgba(23,42,45,0.55)">standard track: good</text>
-          <text x="526" y="234" font-size="8.5" fill="rgba(23,42,45,0.55)">nurture, no war room</text>
+          <text x="526" y="234" font-size="8.5" fill="rgba(23,42,45,0.55)">nurture on autopilot</text>
           <text x="526" y="262" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">that's the point.</text>
           <text x="526" y="276" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">this treatment is for</text>
           <text x="526" y="290" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">the accounts that can</text>
           <text x="526" y="304" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">change your year</text>
         </g>
         <text x="350" y="358" text-anchor="middle" font-size="10.5" font-style="italic" fill="rgba(23,42,45,0.5)">the same phrase, in the ad, the email and the page. that repetition is the strategy.</text>
-        ${STRIP('The accounts that matter get a coordinated push, not the same ad as everyone', { w: 84, t: 'in lockstep' })}
+        ${STRIP('The accounts that matter get a coordinated push of their own', { w: 84, t: 'in lockstep' })}
       </svg></div>`,
 
     // 07 · Nurture & Lifecycle Journeys · A REAL CRM: dense clean activity list, her journey in the rail
@@ -638,7 +638,7 @@
           <rect x="380" y="352" width="0" height="0" fill="none"/>
           <text x="380" y="358" font-size="10" font-style="italic" fill="rgba(23,42,45,0.5)">ask any deal where it came from. it answers.</text>
         </g>
-        ${STRIP('Real pipeline and revenue, not vanity numbers like impressions', { w: 118, t: 'full attribution' })}
+        ${STRIP('Real pipeline and revenue, traced to the campaign that made them', { w: 118, t: 'full attribution' })}
       </svg></div>`
   };
 
