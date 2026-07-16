@@ -25,6 +25,8 @@
     strategy: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
+        <g transform="translate(27,13) scale(0.92)">
         <defs><linearGradient id="swp" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="rgba(225,150,46,0)"/><stop offset="1" stop-color="rgba(225,150,46,0.45)"/></linearGradient></defs>
         <g class="cap-layer">
           <rect x="24" y="20" width="652" height="338" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 16px 34px rgba(23,42,45,0.13)) drop-shadow(0 4px 9px rgba(23,42,45,0.07))"/>
@@ -43,30 +45,28 @@
           <text x="46" y="203" font-size="6.8" fill="rgba(23,42,45,0.45)">keeps you warm</text>
           <text x="46" y="288" font-size="8.5" font-weight="800" letter-spacing="0.07em" fill="#8A5410">GO HARD</text>
           <text x="46" y="299" font-size="6.8" fill="rgba(23,42,45,0.45)">where they are</text>
-          <text x="46" y="346" font-size="7.5" fill="rgba(23,42,45,0.5)">re-graded monthly · a channel earns its ring, or it moves</text>
+          <text x="46" y="346" font-size="7.5" fill="rgba(23,42,45,0.5)">graded from the data · a channel earns its ring, and holds it</text>
         </g>
         <g class="cap-layer" style="animation-delay:0.06s">
-          <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.1s" fill="freeze"/>
-          <rect x="80" y="109" width="100" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <g transform="translate(89,116)"><rect x="3.6" y="0.8" width="6.8" height="12.4" rx="1.8" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="6" y1="11" x2="8" y2="11" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" stroke-linecap="round"/></g>
-          <text x="109" y="127" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Cold calls</text>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.1s" fill="freeze"/>
+          <rect x="100" y="103" width="100" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(109,110)"><rect x="3.6" y="0.8" width="6.8" height="12.4" rx="1.8" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="6" y1="11" x2="8" y2="11" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" stroke-linecap="round"/></g>
+          <text x="129" y="121" font-size="8.6" font-weight="700" fill="#172A2D">Cold calls</text>
         </g>
-          <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.18s" fill="freeze"/>
-          <rect x="190" y="81" width="100" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <g transform="translate(199,88)"><rect x="0.7" y="1.4" width="12.6" height="8.6" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="4.5" y1="12.8" x2="9.5" y2="12.8" stroke="rgba(23,42,45,0.45)" stroke-width="1.4" stroke-linecap="round"/></g>
-          <text x="219" y="99" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Broad display</text>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.18s" fill="freeze"/>
+          <rect x="233" y="75" width="100" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(242,82)"><rect x="0.7" y="1.4" width="12.6" height="8.6" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="4.5" y1="12.8" x2="9.5" y2="12.8" stroke="rgba(23,42,45,0.45)" stroke-width="1.4" stroke-linecap="round"/></g>
+          <text x="262" y="93" font-size="8.6" font-weight="700" fill="#172A2D">Broad display</text>
         </g>
-          <rect x="300" y="72" width="100" height="28" rx="9" fill="none" stroke="rgba(23,42,45,0.14)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <text x="350" y="89" text-anchor="middle" font-size="7" font-style="italic" fill="rgba(23,42,45,0.4)">was here</text>
-          <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.26s" fill="freeze"/>
-          <rect x="410" y="81" width="100" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <g transform="translate(419,88)"><rect x="0.7" y="3.4" width="9.6" height="7.6" rx="1.3" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><path d="M1 4.2 L5.5 7.6 L10 4.2" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.2"/><path d="M3.6 1 h9.6 M13.4 2.2 v6.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" opacity="0.6"/></g>
-          <text x="439" y="99" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Email blasts</text>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.26s" fill="freeze"/>
+          <rect x="367" y="75" width="100" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(376,82)"><rect x="0.7" y="3.4" width="9.6" height="7.6" rx="1.3" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><path d="M1 4.2 L5.5 7.6 L10 4.2" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.2"/><path d="M3.6 1 h9.6 M13.4 2.2 v6.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.2" opacity="0.6"/></g>
+          <text x="396" y="93" font-size="8.6" font-weight="700" fill="#172A2D">Email blasts</text>
         </g>
-          <g opacity="0"><animate attributeName="opacity" from="0" to="0.8" dur="0.45s" begin="0.34s" fill="freeze"/>
-          <rect x="520" y="109" width="100" height="28" rx="9" fill="#FCFAF7" stroke="rgba(23,42,45,0.12)" stroke-width="1.2" stroke-dasharray="4 3"/>
-          <g transform="translate(529,116)"><rect x="0.7" y="1" width="12.6" height="12" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="3.2" y1="4.4" x2="10.8" y2="4.4" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><line x1="3.2" y1="7" x2="10.8" y2="7" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/><line x1="3.2" y1="9.6" x2="7.5" y2="9.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/></g>
-          <text x="549" y="127" font-size="8.6" font-weight="700" fill="rgba(23,42,45,0.55)">Trade print</text>
+          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.34s" fill="freeze"/>
+          <rect x="500" y="103" width="100" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
+          <g transform="translate(509,110)"><rect x="0.7" y="1" width="12.6" height="12" rx="1.4" fill="none" stroke="rgba(23,42,45,0.45)" stroke-width="1.4"/><line x1="3.2" y1="4.4" x2="10.8" y2="4.4" stroke="rgba(23,42,45,0.45)" stroke-width="1.3"/><line x1="3.2" y1="7" x2="10.8" y2="7" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/><line x1="3.2" y1="9.6" x2="7.5" y2="9.6" stroke="rgba(23,42,45,0.45)" stroke-width="1.1" opacity="0.7"/></g>
+          <text x="529" y="121" font-size="8.6" font-weight="700" fill="#172A2D">Trade print</text>
         </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.3s" fill="freeze"/>
           <rect x="140" y="195" width="100" height="28" rx="9" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
@@ -89,14 +89,6 @@
           <text x="489" y="213" font-size="8.6" font-weight="700" fill="#172A2D">Partnerships</text>
         </g>
         </g>
-        <g class="cap-layer" style="animation-delay:0.12s">
-          <path d="M350 102 C 350 132, 322 147, 300 173" fill="none" stroke="rgba(225,150,46,0.55)" stroke-width="1.6" stroke-dasharray="4 4" pathLength="100" stroke-dashoffset="100">
-            <animate attributeName="stroke-dashoffset" from="100" to="0" dur="0.9s" begin="1.1s" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" fill="freeze"/>
-          </path>
-          <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.9s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 6;0 0" dur="0.45s" begin="1.9s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
-            <rect x="252" y="149" width="72" height="15" rx="7.5" fill="#FAC064"/>
-            <text x="288" y="160" text-anchor="middle" font-size="7" font-weight="800" fill="#172A2D">re-graded ↑</text>
-          </g>
         </g>
         <g class="cap-layer" style="animation-delay:0.12s">
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 0" dur="0.5s" begin="0.5s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
@@ -104,28 +96,26 @@
           <rect x="143" y="299" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/>${fav('linkedin.com', 147, 303, 16)}
           <text x="175" y="308" font-size="10" font-weight="700" fill="#172A2D">LinkedIn</text>
           <text x="175" y="321" font-size="6.8" fill="rgba(23,42,45,0.55)">the committee is here</text>
-          <circle cx="258" cy="299" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="0.0s" repeatCount="indefinite"/></circle>
-        </g>
+                  </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.62s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 0" dur="0.5s" begin="0.62s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
           <rect x="284" y="265" width="132" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
           <rect x="293" y="274" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/><g transform="translate(298,279)"><rect x="0.5" y="2" width="13" height="11" rx="2" fill="none" stroke="#8A5410" stroke-width="1.4"/><line x1="0.5" y1="5.4" x2="13.5" y2="5.4" stroke="#8A5410" stroke-width="1.4"/><line x1="3.6" y1="0.4" x2="3.6" y2="2.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/><line x1="10.4" y1="0.4" x2="10.4" y2="2.8" stroke="#8A5410" stroke-width="1.4" stroke-linecap="round"/></g>
           <text x="325" y="283" font-size="10" font-weight="700" fill="#172A2D">Industry events</text>
           <text x="325" y="296" font-size="6.8" fill="rgba(23,42,45,0.55)">deals shake hands here</text>
-          <circle cx="408" cy="274" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="0.6s" repeatCount="indefinite"/></circle>
-        </g>
+                  </g>
           <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.74s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 8;0 0" dur="0.5s" begin="0.74s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
           <rect x="434" y="290" width="132" height="42" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.14))"/>
           <rect x="443" y="299" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.07)"/>${fav('google.com', 447, 303, 16)}
           <text x="475" y="308" font-size="10" font-weight="700" fill="#172A2D">Search</text>
           <text x="475" y="321" font-size="6.8" fill="rgba(23,42,45,0.55)">already typing it in</text>
-          <circle cx="558" cy="299" r="3" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.9s" begin="1.2s" repeatCount="indefinite"/></circle>
-        </g>
+                  </g>
         </g>
         <g class="cap-layer" style="animation-delay:0.2s">
           <rect x="286" y="321" width="128" height="30" rx="15" fill="#172A2D" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.3))"/>
           <circle cx="306" cy="336" r="10" fill="#EFE9DC"/><image href="assets/brand/wouter.png" x="296" y="326" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
           <circle cx="320" cy="336" r="10" fill="#EAEFF2" stroke="#172A2D" stroke-width="1.5"/><image href="assets/brand/almaz.png" x="310" y="326" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
           <text x="340" y="340" font-size="9" font-weight="700" fill="#FFFFFF">your buyers</text>
+        </g>
         </g>
         ${STRIP('We map where demand shows, so you never guess where to show up', { w: 92, t: 'the map' })}
       </svg></div>`,
@@ -134,6 +124,8 @@
     workflows: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
+        <g transform="translate(27,13) scale(0.92)">
         <text x="36" y="40" font-size="15" font-weight="800" fill="#172A2D">The plays we install</text>
         <text x="222" y="40" font-size="9" fill="rgba(23,42,45,0.55)">spot the buying moment, answer it in minutes · AI writes, your voice stays</text>
         <g class="cap-layer" style="animation-delay:0.00s">
@@ -184,6 +176,7 @@
         <text x="494" y="300" font-size="14.5" font-weight="700" fill="#8A5410">Yours: №6, 7, 8…</text>
         <text x="494" y="319" font-size="9.5" fill="rgba(138,84,16,0.85)">your triggers, your voice, your rules</text>
         </g>
+        </g>
         ${STRIP('The same engine that runs your outbound, now bringing demand in', { w: 78, t: 'always on' })}
       </svg></div>`,
 
@@ -191,6 +184,8 @@
     paid: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
+        <g transform="translate(27,13) scale(0.92)">
         <g class="cap-layer">
           <rect x="36" y="52" width="192" height="232" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 10px 22px rgba(23,42,45,0.1))"/>
           <circle cx="64" cy="78" r="11" fill="#FAC064"/><text x="64" y="82" text-anchor="middle" font-size="10" font-weight="800" fill="#172A2D">1</text>
@@ -259,6 +254,7 @@
           <text x="56" y="334" font-size="9" fill="rgba(138,84,16,0.85)">and comes back as traceable deals, so budget decisions stop being arguments.</text>
           <circle cx="662" cy="322" r="4" fill="#E1962E"></circle>
         </g>
+        </g>
         ${STRIP('You see the pipeline your spend creates, traced end to end', { w: 104, t: 'influenced pipeline' })}
       </svg></div>`,
 
@@ -266,6 +262,8 @@
     listen: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
+        <g transform="translate(27,13) scale(0.92)">
         <defs><clipPath id="lsF1"><circle cx="64" cy="74" r="13"/></clipPath></defs>
         <text x="36" y="36" font-size="10" font-weight="700" letter-spacing="0.07em" fill="rgba(23,42,45,0.45)">POSTED IN PUBLIC, THIS WEEK</text>
         <g class="cap-layer">
@@ -313,6 +311,7 @@
           <rect x="416" y="298" width="270" height="40" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6"/>
           <text x="434" y="322" font-size="10.5" font-weight="700" fill="#8A5410">Your team just acts. The watching is done.</text>
         </g>
+        </g>
         ${STRIP('Catch a target account the moment it complains or shops a rival', null)}
       </svg></div>`,
 
@@ -320,6 +319,8 @@
     capture: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
+        <g transform="translate(27,13) scale(0.92)">
         <defs>
           <clipPath id="cp5a"><circle cx="286" cy="322" r="11"/></clipPath>
           <clipPath id="cp5b"><circle cx="306" cy="322" r="11"/></clipPath>
@@ -392,6 +393,7 @@
           <text x="610" y="325" text-anchor="middle" font-size="9.5" font-weight="700" fill="#FFFFFF">enters pipeline</text>
           <text x="610" y="350" text-anchor="middle" font-size="7.5" fill="rgba(23,42,45,0.45)">Tier 1 · joins the ABM push</text>
         </g>
+        </g>
         ${STRIP('Anonymous traffic becomes named accounts, on a page built for them', { w: 96, t: 'enters pipeline' })}
       </svg></div>`,
 
@@ -399,6 +401,8 @@
     abm: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
+        <g transform="translate(27,13) scale(0.92)">
         <rect x="36" y="24" width="196" height="26" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.4"/>
         ${fav('figma.com', 48, 30, 13)}<text x="68" y="41" font-size="9.5" font-weight="700" fill="#8A5410">Figma · a Tier 1 account</text>
         <text x="244" y="41" font-size="9.5" fill="rgba(23,42,45,0.55)">four fronts, one week, one story</text>
@@ -464,6 +468,7 @@
           <text x="526" y="290" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">the accounts that can</text>
           <text x="526" y="304" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">change your year</text>
         </g>
+        </g>
         ${STRIP('The accounts that matter get a coordinated push of their own', { w: 84, t: 'in lockstep' })}
       </svg></div>`,
 
@@ -471,6 +476,8 @@
     nurture: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
+        <g transform="translate(27,13) scale(0.92)">
         <defs><clipPath id="n7c"><circle cx="97" cy="92" r="20"/></clipPath></defs>
         <g class="cap-layer">
           <rect x="24" y="18" width="652" height="326" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 16px 34px rgba(23,42,45,0.13)) drop-shadow(0 4px 9px rgba(23,42,45,0.06))"/>
@@ -531,6 +538,7 @@
           <text x="250" y="326" font-size="9.5" font-weight="700" fill="#FFFFFF">Handed to a human, the whole story attached</text>
           <text x="640" y="326" text-anchor="end" font-size="7.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(255,255,255,0.6)">today</text>
         </g>
+        </g>
         ${STRIP('Nobody who was interested slips through the cracks', { w: 108, t: 'branches on behavior' })}
       </svg></div>`,
 
@@ -538,6 +546,8 @@
     sequences: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
+        <g transform="translate(27,13) scale(0.92)">
         <text x="36" y="30" font-size="10" font-weight="700" letter-spacing="0.07em" fill="rgba(23,42,45,0.45)">ANY REAL SIGN OF INTEREST CAN OPEN IT</text>
         <g class="cap-layer">
           <rect x="36" y="40" width="152" height="48" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.09))"/>
@@ -596,6 +606,7 @@
           <text x="544" y="284" font-size="8" font-style="italic" fill="rgba(138,84,16,0.8)">never need step 3.</text>
           <text x="544" y="296" font-size="8" font-style="italic" fill="rgba(138,84,16,0.8)">the reply comes first.</text>
         </g>
+        </g>
         ${STRIP('Reach out while interest is still hot, instead of losing the moment', null)}
       </svg></div>`,
 
@@ -603,6 +614,8 @@
     attrib: () => `
       <div class="rec-viz">
       <svg viewBox="0 0 700 412" preserveAspectRatio="xMidYMid meet" aria-hidden="true" font-family="var(--font-sans)">
+        <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
+        <g transform="translate(27,13) scale(0.92)">
         <g class="cap-layer" transform="rotate(-2 200 190)">
           <rect x="66" y="26" width="272" height="322" rx="6" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 12px 26px rgba(23,42,45,0.12))"/>
           <text x="202" y="54" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="0.22em" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.45)">DEAL RECEIPT</text>
@@ -664,6 +677,7 @@
         <defs><clipPath id="atPtr"><circle cx="413" cy="266" r="14"/></clipPath></defs>
         <g class="cap-layer" style="animation-delay:0.3s">
           <rect x="380" y="352" width="0" height="0" fill="none"/>
+        </g>
         </g>
         ${STRIP('Real pipeline and revenue, traced to the campaign that made them', { w: 118, t: 'full attribution' })}
       </svg></div>`

@@ -91,7 +91,7 @@
       ${TRAVEL("M214,124 L252,124 L252,180 L288,180", 3, 1.2, 3, AMB)}
       ${TRAVEL("M214,268 L252,268 L252,216 L288,216", 3, 2, 3, AMB)}
       <text x="46" y="330" font-size="8" fill="${LAB}">a fresh build, or the instance you already have · nothing gets ripped out</text>
-      ${panel(496, 28, 190, 316, CARD, 16)}
+      ${panel(496, 28, 176, 316, CARD, 16)}
       ${lab(512, 52, "THE SPEC")}
       <line x1="512" y1="62" x2="670" y2="62" stroke="rgba(23,42,45,0.1)"/>
       ${note(82, "PIPELINE · SALES", "New 10 · Qualified 30")}
@@ -144,7 +144,7 @@
       ${row(278, "Attachments", "4,878", 1.2)}
       <text x="52" y="306" font-size="8" fill="${LAB}">the legacy tool stays read-only until you sign off · nothing is deleted on our word</text>
       <text x="52" y="322" font-size="8" font-style="italic" fill="${MUT}">owners, timestamps and threads land exactly where they belong</text>
-      ${panel(472, 28, 214, 316, CARD, 16)}
+      ${panel(472, 28, 200, 316, CARD, 16)}
       <g opacity="0">${IN(2, 0.5)}
         <g transform="rotate(-6 578 150)">
           <circle cx="578" cy="150" r="72" fill="${GREENBG}"/>
@@ -308,7 +308,7 @@
       ${clean(238, "vercel.com", "Vercel", "vercel.com", "Ravi", "May 2024", 0, 4.45)}
       ${clean(266, "airtable.com", "Airtable", "airtable.com", "Sara", "May 2024", 0, 4.6)}
       <text x="44" y="332" font-size="9" font-weight="600" fill="${INK}">Runs on every record coming in <tspan font-weight="400" fill="${MUT}">· write after write when someone finally notices</tspan></text>
-      ${panel(556, 28, 130, 316, CARD, 16)}
+      ${panel(556, 28, 116, 316, CARD, 16)}
       ${lab(572, 56, "ON EVERY WRITE")}
       <line x1="572" y1="66" x2="670" y2="66" stroke="rgba(23,42,45,0.07)"/>
       ${gate(96, "Deduped", "no second Figma", 0.4)}

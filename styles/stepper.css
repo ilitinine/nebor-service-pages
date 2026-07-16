@@ -32,14 +32,14 @@
   --tier-c: #E4EFE1;                       /* center wash · pale sage */
   --tier-glow: rgba(79, 142, 88, 0.24);    /* ambient glow · green */
 }
-.workflow.tier-revenue .b-h2 .serif { color: #3E8E58; }
 .workflow.tier-demand {
   --tier-a: #F3CD9E;                       /* top-left wash · soft apricot */
   --tier-b: #F1DBA0;
   --tier-c: #F8E8D2;                       /* center wash · pale peach */
   --tier-glow: rgba(225, 150, 46, 0.24);   /* ambient glow · orange */
 }
-.workflow.tier-demand .b-h2 .serif { color: #B26F14; }
+/* the serif accent word stays the brand lavender on ALL pages (Ibrahim, Jul 16:
+   only the wash differs per page; the purple in the headline comes back) */
 /* Demand console inherits the SAME base console styling as the revenue page:
    the yellow-era .tier-demand accent/console overrides were deleted (Ibrahim, Jul 9). */
 /* Demand hero wears the SAME palette as the revenue engine (Ibrahim's call, 2026-07-06):
@@ -323,30 +323,28 @@
 @media (max-width: 900px) { .pw-spur { position: static; transform: none; margin: 14px auto 0; display: flex; width: fit-content; } }
 
 /* ── CRM & RevOps workflow extras · scoped to .wf-revops, other pages untouched ── */
-/* its own header wash + accent: teal (beats the tier-demand orange it also carries) */
+/* its own header wash: soft blue (clearly apart from the revenue green and demand orange;
+   beats the tier-demand orange this section also carries) */
 .workflow.wf-revops {
-  --tier-a: #B7DBD4;                       /* top-left wash · soft teal */
+  --tier-a: #B9CFEA;                       /* top-left wash · soft blue */
   --tier-b: #F1DBA0;
-  --tier-c: #DFEEEA;                       /* center wash · pale teal */
-  --tier-glow: rgba(47, 160, 147, 0.24);   /* ambient glow · teal */
+  --tier-c: #E2EBF6;                       /* center wash · pale blue */
+  --tier-glow: rgba(90, 135, 168, 0.24);   /* ambient glow · blue */
 }
-.workflow.wf-revops .b-h2 .serif { color: #2FA093; }
+/* the CRM ring cards sit a touch smaller so the wheel breathes */
+.wf-revops .pw-node { width: 194px; padding: 12px 15px 14px; }
+.wf-revops .pw-node.ghost { width: 150px; }
 /* air under the wheel: deeper canvas floor, spur pushed below the wheel square */
 .wf-revops .pw-canvas { padding-bottom: 78px; }
 .wf-revops .pw-spur { bottom: -44px; }
-/* ring cards carry what each step produces (opt-in via NEBOR_RING_OUTPUT) */
-.pw-node-out { font-size: 10px; font-weight: 600; line-height: 1.35; color: #106B60; margin-top: 7px; }
-.pw-node.ghost .pw-node-out { display: none; }
-/* the why-note: answers "why a wheel, if it is built once" in the canvas corner */
-.pw-why {
-  position: absolute; left: 16px; top: 12px; z-index: 7; max-width: 232px;
-  background: #fff; border: 1.5px solid #fff; border-radius: 16px; padding: 12px 15px;
-  box-shadow: 0 10px 22px -12px rgba(23,42,45,0.35);
+/* the why-note: a margin note in the canvas corner, no card box, with a hand-drawn
+   arrow curving toward the wheel. Answers "why a wheel, if it is built once". */
+.pw-why { position: absolute; left: 26px; top: 20px; z-index: 7; max-width: 212px; }
+.pw-why-q {
+  display: block; font-family: "Noto Serif", serif; font-style: italic; font-weight: 500;
+  font-size: 15px; line-height: 1.3; color: var(--ink);
 }
-.pw-why-k {
-  display: block; font-family: var(--font-mono); font-size: 9px; font-weight: 700;
-  letter-spacing: 0.13em; text-transform: uppercase; color: #106B60; margin-bottom: 6px;
-}
-.pw-why-t { display: block; font-size: 11.5px; line-height: 1.5; color: rgba(23,42,45,0.62); }
-@media (max-width: 1150px) { .pw-why { position: static; margin: 0 auto 14px; max-width: 460px; } }
+.pw-why-t { display: block; font-size: 11px; line-height: 1.55; color: rgba(23,42,45,0.55); margin-top: 7px; }
+.pw-why-arrow { display: block; width: 86px; height: 40px; margin: 8px 0 0 58px; }
+@media (max-width: 1150px) { .pw-why { position: static; margin: 0 auto 14px; max-width: 460px; } .pw-why-arrow { display: none; } }
 @media (max-width: 900px) { .wf-revops .pw-canvas { padding-bottom: 36px; } .wf-revops .pw-spur { bottom: auto; } }

@@ -254,7 +254,6 @@ window.neborLogo = window.neborLogo || function (slug, size) {
       '<div class="pw-node-name">' + esc(d.step) + '</div>' +
       '<div class="pw-node-tag">' + esc(TAG[i]) + '</div>' +
       '<p class="pw-node-desc">' + esc(d.brief || d.desc) + '</p>' +
-      (window.NEBOR_RING_OUTPUT && d.output ? '<div class="pw-node-out">' + esc(d.output) + '</div>' : '') +
       '<div class="pw-node-logos">' + logos + '</div>';
     pwNodes.appendChild(el);
     ringEls.push(el);
