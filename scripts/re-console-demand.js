@@ -31,8 +31,6 @@
         <g class="cap-layer">
           <rect x="24" y="20" width="652" height="338" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 16px 34px rgba(23,42,45,0.13)) drop-shadow(0 4px 9px rgba(23,42,45,0.07))"/>
           <text x="46" y="48" font-size="15" font-weight="800" fill="#172A2D">Every channel your buyers could be on, graded</text>
-          <circle cx="446" cy="43" r="9" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="1.5"/><image href="assets/brand/wouter.png" x="437" y="34" width="18" height="18" clip-path="circle(9px at 9px 9px)" preserveAspectRatio="xMidYMin slice"/>
-          <circle cx="459" cy="43" r="9" fill="#EAEFF2" stroke="#FFFFFF" stroke-width="1.5"/><image href="assets/brand/almaz.png" x="450" y="34" width="18" height="18" clip-path="circle(9px at 9px 9px)" preserveAspectRatio="xMidYMin slice"/>
           
           <path d="M70 146 A 960 960 0 0 1 660 135" fill="none" stroke="rgba(23,42,45,0.09)" stroke-width="1.4" stroke-dasharray="2 5"/>
           <path d="M84 237 A 870 870 0 0 1 655 228" fill="none" stroke="rgba(23,42,45,0.10)" stroke-width="1.4"/>
@@ -114,13 +112,20 @@
         </g>
         </g>
         <g class="cap-layer" style="animation-delay:0.2s">
-          <ellipse cx="382" cy="316" rx="150" ry="42" fill="url(#pedglow)"/>
-          <rect x="249" y="321" width="266" height="30" rx="15" fill="#172A2D" filter="drop-shadow(0 10px 22px rgba(23,42,45,0.32))"/>
-          <text x="263" y="340" font-size="6.5" font-weight="800" letter-spacing="0.1em" fill="rgba(255,255,255,0.55)">GRADED FROM</text>
-          <g transform="translate(320,328)"><path d="M3 1 h6 v2.8 a3 3 0 0 1 -6 0 Z" fill="none" stroke="#FAC064" stroke-width="1.2"/><path d="M3 2 H1.4 a2 2 0 0 0 2.1 2.3 M9 2 h1.6 a2 2 0 0 1 -2.1 2.3" fill="none" stroke="#FAC064" stroke-width="1"/><line x1="6" y1="6.7" x2="6" y2="8.5" stroke="#FAC064" stroke-width="1.2"/><path d="M4 9.9 h4" stroke="#FAC064" stroke-width="1.2" stroke-linecap="round"/></g>
-          <text x="336" y="340" font-size="8.5" font-weight="700" fill="#FFFFFF">closed-won deals</text>
-          <g transform="translate(414,328)"><rect x="4.2" y="0.4" width="3.6" height="6" rx="1.8" fill="none" stroke="#FAC064" stroke-width="1.2"/><path d="M2.4 4.6 a3.6 3.6 0 0 0 7.2 0" fill="none" stroke="#FAC064" stroke-width="1.1"/><path d="M6 8.4 v1.7 M4.4 10.3 h3.2" fill="none" stroke="#FAC064" stroke-width="1.1" stroke-linecap="round"/></g>
-          <text x="430" y="340" font-size="8.5" font-weight="700" fill="#FFFFFF">buyer interviews</text>
+          <ellipse cx="382" cy="316" rx="150" ry="42" fill="url(#pedglow)"><animate attributeName="opacity" values="0.75;1;0.75" dur="4s" repeatCount="indefinite"/></ellipse>
+          <g fill="#E1962E">
+            <circle cx="250" r="2.2" cy="316" opacity="0"><animate attributeName="cy" values="316;116" dur="4s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.12;0.7;1" dur="4s" begin="0.5s" repeatCount="indefinite"/></circle>
+            <circle cx="382" r="2.2" cy="316" opacity="0"><animate attributeName="cy" values="316;116" dur="4s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.12;0.7;1" dur="4s" begin="1.8s" repeatCount="indefinite"/></circle>
+            <circle cx="514" r="2.2" cy="316" opacity="0"><animate attributeName="cy" values="316;116" dur="4s" begin="3.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.12;0.7;1" dur="4s" begin="3.1s" repeatCount="indefinite"/></circle>
+          </g>
+          <rect x="250" y="319" width="264" height="34" rx="17" fill="#172A2D" filter="drop-shadow(0 10px 22px rgba(23,42,45,0.32))"/>
+          <line x1="382" y1="327" x2="382" y2="345" stroke="rgba(255,255,255,0.15)"/>
+          <g transform="translate(266,329)"><path d="M3 1 h6 v2.8 a3 3 0 0 1 -6 0 Z" fill="none" stroke="#FAC064" stroke-width="1.2"/><path d="M3 2 H1.4 a2 2 0 0 0 2.1 2.3 M9 2 h1.6 a2 2 0 0 1 -2.1 2.3" fill="none" stroke="#FAC064" stroke-width="1"/><line x1="6" y1="6.7" x2="6" y2="8.5" stroke="#FAC064" stroke-width="1.2"/><path d="M4 9.9 h4" stroke="#FAC064" stroke-width="1.2" stroke-linecap="round"/></g>
+          <text x="284" y="341" font-size="9" font-weight="700" fill="#FFFFFF">closed-won deals</text>
+          <g transform="translate(396,329)"><rect x="4.2" y="0.4" width="3.6" height="6" rx="1.8" fill="none" stroke="#FAC064" stroke-width="1.2"/><path d="M2.4 4.6 a3.6 3.6 0 0 0 7.2 0" fill="none" stroke="#FAC064" stroke-width="1.1"/><path d="M6 8.4 v1.7 M4.4 10.3 h3.2" fill="none" stroke="#FAC064" stroke-width="1.1" stroke-linecap="round"/></g>
+          <text x="412" y="341" font-size="9" font-weight="700" fill="#FFFFFF">buyer interviews</text>
+          <rect x="336" y="312" width="92" height="14" rx="7" fill="#FAC064"/>
+          <text x="382" y="322" text-anchor="middle" font-size="7" font-weight="800" letter-spacing="0.08em" fill="#172A2D">GRADED FROM</text>
         </g>
         </g>
         ${STRIP('We map where demand shows, so you never guess where to show up', { w: 92, t: 'the map' })}
