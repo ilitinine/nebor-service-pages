@@ -270,7 +270,7 @@
         <g class="cap-layer">
           <rect x="36" y="46" width="316" height="82" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.09))"/>
           <circle cx="64" cy="74" r="14" fill="#EFE9DC"/><image href="assets/brand/people/clara-novak.png" x="51" y="61" width="26" height="26" clip-path="url(#lsF1)" preserveAspectRatio="xMidYMin slice"/>
-          <text x="88" y="70" font-size="10.5" font-weight="700" fill="#172A2D">Wouter van D. · VP Ops, Figma</text>
+          <text x="88" y="70" font-size="10.5" font-weight="700" fill="#172A2D">Clara Novak · VP Ops, Figma</text>
           <text x="88" y="83" font-size="8.5" fill="rgba(23,42,45,0.5)">1h ago</text>
           ${fav('linkedin.com', 322, 60, 14)}
           <text x="56" y="108" font-size="11.5" font-weight="600" fill="#172A2D">"Thrilled to share: we're expanding into DACH 🚀"</text>
@@ -304,7 +304,7 @@
           <text x="448" y="158" font-size="10.5" font-weight="700" fill="#172A2D">Figma is expanding into DACH.</text>
           <text x="448" y="176" font-size="9.5" fill="rgba(23,42,45,0.7)">Angle: new market, new pipeline target.</text>
           <text x="448" y="190" font-size="9.5" fill="rgba(23,42,45,0.7)">Their team will need to build coverage.</text>
-          <text x="448" y="212" font-size="9.5" fill="rgba(23,42,45,0.7)">Owner: <tspan font-weight="700" fill="#172A2D">Robin</tspan> · draft attached</text>
+          <text x="448" y="212" font-size="9.5" fill="rgba(23,42,45,0.7)">Owner: <tspan font-weight="700" fill="#172A2D">Matteo</tspan> · draft attached</text>
           <rect x="448" y="220" width="76" height="14" rx="7" fill="#FAC064"/><text x="486" y="230.5" text-anchor="middle" font-size="7.5" font-weight="700" fill="#172A2D">brief · same day</text>
           <text x="434" y="264" font-size="9" fill="rgba(23,42,45,0.5)">🔥 2   👀 3</text>
         </g>
@@ -422,10 +422,10 @@
         <g class="cap-layer" style="animation-delay:0.1s">
           <rect x="270" y="82" width="222" height="126" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 10px 22px rgba(23,42,45,0.1))"/>
           <rect x="284" y="94" width="20" height="20" rx="6" fill="#FFFFFF" stroke="rgba(23,42,45,0.06)"/><image href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" x="288" y="98" width="12" height="12" class="heroviz-favicon"/>
-          <text x="312" y="103" font-size="8" fill="rgba(23,42,45,0.55)">To: <tspan font-weight="700" fill="#172A2D">Wouter · VP Ops</tspan></text>
+          <text x="312" y="103" font-size="8" fill="rgba(23,42,45,0.55)">To: <tspan font-weight="700" fill="#172A2D">Clara · VP Ops</tspan></text>
           <text x="312" y="114" font-size="9" font-weight="700" fill="#172A2D">About your Q3 pipeline goal</text>
           <line x1="284" y1="124" x2="478" y2="124" stroke="rgba(23,42,45,0.08)"/>
-          <text x="284" y="142" font-size="8.5" fill="rgba(23,42,45,0.7)">Hi Wouter, saw the DACH plans.</text>
+          <text x="284" y="142" font-size="8.5" fill="rgba(23,42,45,0.7)">Hi Clara, saw the DACH plans.</text>
           <rect x="284" y="150" width="194" height="20" rx="6" fill="#F5F1EA"/>
           <text x="292" y="163.5" font-size="8.5" font-weight="700" fill="#6B420D">A pipeline plan you can trace end to end.</text>
           <text x="284" y="190" font-size="7.5" fill="rgba(23,42,45,0.5)">Wednesday · written to his goal, same story</text>
@@ -447,7 +447,7 @@
           <rect x="284" y="234" width="24" height="24" rx="7" fill="rgba(255,255,255,0.1)"/>
           <g transform="translate(289,239)"><rect x="0" y="1.6" width="14" height="11" rx="2" fill="none" stroke="#FAC064" stroke-width="1.5"/><line x1="0" y1="5.4" x2="14" y2="5.4" stroke="#FAC064" stroke-width="1.5"/><line x1="3.6" y1="0" x2="3.6" y2="2.6" stroke="#FAC064" stroke-width="1.5"/><line x1="10.4" y1="0" x2="10.4" y2="2.6" stroke="#FAC064" stroke-width="1.5"/></g>
           <text x="318" y="245" font-size="9.5" font-weight="700" fill="#FFFFFF">Thursday · 10:00</text>
-          <text x="318" y="258" font-size="7.5" fill="rgba(255,255,255,0.6)">Robin ↔ the Figma committee</text>
+          <text x="318" y="258" font-size="7.5" fill="rgba(255,255,255,0.6)">Matteo ↔ the Figma committee</text>
           <line x1="284" y1="272" x2="478" y2="272" stroke="rgba(255,255,255,0.12)"/>
           <text x="284" y="292" font-size="9" font-weight="700" fill="#FAC064">they take the call warm:</text>
           <text x="284" y="306" font-size="8.5" fill="rgba(255,255,255,0.75)">by Thursday, every person on it has</text>
@@ -486,8 +486,8 @@
           <text x="88" y="37" font-size="9" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.55)">your CRM · contacts</text>
           ${fav('hubspot.com', 646, 27, 12)}
           <rect x="24" y="48" width="146" height="296" fill="#F7F4EE"/>
-          <circle cx="97" cy="92" r="21" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="2"/><image href="assets/brand/people/clara-novak.png" x="77" y="72" width="40" height="40" clip-path="url(#n7c)" preserveAspectRatio="xMidYMin slice"/>
-          <text x="97" y="128" text-anchor="middle" font-size="12" font-weight="800" fill="#172A2D">Almaz K.</text>
+          <circle cx="97" cy="92" r="21" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="2"/><image href="assets/brand/people/kwame-mensah.png" x="77" y="72" width="40" height="40" clip-path="url(#n7c)" preserveAspectRatio="xMidYMin slice"/>
+          <text x="97" y="128" text-anchor="middle" font-size="12" font-weight="800" fill="#172A2D">Kwame M.</text>
           <text x="97" y="142" text-anchor="middle" font-size="8" fill="rgba(23,42,45,0.55)">Head of Ops</text>
           <rect x="58" y="150" width="78" height="18" rx="9" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)"/>
           ${fav('figma.com', 66, 153, 11)}<text x="82" y="163" font-size="8.5" font-weight="700" fill="#172A2D">Figma</text>
@@ -669,8 +669,8 @@
           <rect x="534" y="208" width="30" height="18" rx="9" fill="none" stroke="rgba(23,42,45,0.15)"/><text x="549" y="220.5" text-anchor="middle" font-size="9" fill="rgba(23,42,45,0.45)">+</text>
           <text x="442" y="240" font-size="8.5" font-weight="600" fill="#B26F14">↳ 1 reply</text>
           <line x1="396" y1="246" x2="670" y2="246" stroke="rgba(23,42,45,0.06)"/>
-          <circle cx="413" cy="266" r="15" fill="#EFE9DC"/><image href="assets/brand/people/omar-al-rashid.png" x="399" y="252" width="28" height="28" clip-path="url(#atPtr)" preserveAspectRatio="xMidYMin slice"/>
-          <text x="442" y="262" font-size="11" font-weight="800" fill="#172A2D">Omar <tspan font-weight="400" font-size="8.5" fill="rgba(23,42,45,0.45)">· CEO · 16:11</tspan></text>
+          <circle cx="413" cy="266" r="15" fill="#EFE9DC"/><image href="assets/brand/people/minjun-seo.png" x="399" y="252" width="28" height="28" clip-path="url(#atPtr)" preserveAspectRatio="xMidYMin slice"/>
+          <text x="442" y="262" font-size="11" font-weight="800" fill="#172A2D">Minjun <tspan font-weight="400" font-size="8.5" fill="rgba(23,42,45,0.45)">· CEO · 16:11</tspan></text>
           <text x="442" y="280" font-size="10.5" fill="#172A2D">love it. double the LinkedIn budget ✅</text>
           <circle cx="666" cy="102" r="3.5" fill="#E1962E"></circle>
         </g>
