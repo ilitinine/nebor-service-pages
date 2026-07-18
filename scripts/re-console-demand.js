@@ -104,8 +104,8 @@
         </g>
         <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.12s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.6s" begin="0.12s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
           <rect x="228" y="356" width="326" height="38" rx="19" fill="#172A2D" filter="drop-shadow(0 10px 22px rgba(23,42,45,0.32))"/>
-          <circle cx="258" cy="375" r="10" fill="#EFE9DC"/><image href="assets/brand/wouter.png" x="248" y="365" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
-          <circle cx="272" cy="375" r="10" fill="#EAEFF2" stroke="#172A2D" stroke-width="1.5"/><image href="assets/brand/almaz.png" x="262" y="365" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
+          <circle cx="258" cy="375" r="10" fill="#EFE9DC"/><image href="assets/brand/people/emma-van-dijk.png" x="248" y="365" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
+          <circle cx="272" cy="375" r="10" fill="#EAEFF2" stroke="#172A2D" stroke-width="1.5"/><image href="assets/brand/people/lucia-fernandez.png" x="262" y="365" width="20" height="20" clip-path="circle(10px at 10px 10px)" preserveAspectRatio="xMidYMin slice"/>
           <text x="290" y="379" font-size="8.5" font-weight="700" fill="#FFFFFF">your buyers</text>
           <line x1="348" y1="364" x2="348" y2="386" stroke="rgba(255,255,255,0.15)"/>
           <g transform="translate(356,367)"><path d="M3 1 h6 v2.8 a3 3 0 0 1 -6 0 Z" fill="none" stroke="#FAC064" stroke-width="1.2"/><path d="M3 2 H1.4 a2 2 0 0 0 2.1 2.3 M9 2 h1.6 a2 2 0 0 1 -2.1 2.3" fill="none" stroke="#FAC064" stroke-width="1"/><line x1="6" y1="6.7" x2="6" y2="8.5" stroke="#FAC064" stroke-width="1.2"/><path d="M4 9.9 h4" stroke="#FAC064" stroke-width="1.2" stroke-linecap="round"/></g>
@@ -269,7 +269,7 @@
         <text x="36" y="36" font-size="10" font-weight="700" letter-spacing="0.07em" fill="rgba(23,42,45,0.45)">POSTED IN PUBLIC, THIS WEEK</text>
         <g class="cap-layer">
           <rect x="36" y="46" width="316" height="82" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.09))"/>
-          <circle cx="64" cy="74" r="14" fill="#EFE9DC"/><image href="assets/brand/wouter.png" x="51" y="61" width="26" height="26" clip-path="url(#lsF1)" preserveAspectRatio="xMidYMin slice"/>
+          <circle cx="64" cy="74" r="14" fill="#EFE9DC"/><image href="assets/brand/people/clara-novak.png" x="51" y="61" width="26" height="26" clip-path="url(#lsF1)" preserveAspectRatio="xMidYMin slice"/>
           <text x="88" y="70" font-size="10.5" font-weight="700" fill="#172A2D">Wouter van D. · VP Ops, Figma</text>
           <text x="88" y="83" font-size="8.5" fill="rgba(23,42,45,0.5)">1h ago</text>
           ${fav('linkedin.com', 322, 60, 14)}
@@ -379,9 +379,9 @@
           <text x="76" y="332" font-size="8.5" fill="rgba(23,42,45,0.5)">design platform · 1,200 people</text>
           <line x1="248" y1="298" x2="248" y2="344" stroke="rgba(23,42,45,0.07)"/>
           <text x="262" y="308" font-size="7.5" font-weight="700" letter-spacing="0.08em" fill="rgba(23,42,45,0.4)">COMMITTEE</text>
-          <circle cx="286" cy="322" r="12" fill="#EFE9DC"/><image href="assets/brand/vincent.png" x="275" y="311" width="22" height="22" clip-path="url(#cp5a)" preserveAspectRatio="xMidYMin slice"/>
-          <circle cx="306" cy="322" r="12" fill="#EFE9DC"/><image href="assets/brand/wouter.png" x="295" y="311" width="22" height="22" clip-path="url(#cp5b)" preserveAspectRatio="xMidYMin slice"/>
-          <circle cx="326" cy="322" r="12" fill="#EFE9DC"/><image href="assets/brand/almaz.png" x="315" y="311" width="22" height="22" clip-path="url(#cp5c)" preserveAspectRatio="xMidYMin slice"/>
+          <circle cx="286" cy="322" r="12" fill="#EFE9DC"/><image href="assets/brand/people/rohan-iyer.png" x="275" y="311" width="22" height="22" clip-path="url(#cp5a)" preserveAspectRatio="xMidYMin slice"/>
+          <circle cx="306" cy="322" r="12" fill="#EFE9DC"/><image href="assets/brand/people/layla-hassan.png" x="295" y="311" width="22" height="22" clip-path="url(#cp5b)" preserveAspectRatio="xMidYMin slice"/>
+          <circle cx="326" cy="322" r="12" fill="#EFE9DC"/><image href="assets/brand/people/lucia-fernandez.png" x="315" y="311" width="22" height="22" clip-path="url(#cp5c)" preserveAspectRatio="xMidYMin slice"/>
           <text x="346" y="326" font-size="8.5" fill="rgba(23,42,45,0.5)">+5</text>
           <line x1="374" y1="298" x2="374" y2="344" stroke="rgba(23,42,45,0.07)"/>
           <text x="388" y="308" font-size="7.5" font-weight="700" letter-spacing="0.08em" fill="rgba(23,42,45,0.4)">INTENT</text>
@@ -486,7 +486,7 @@
           <text x="88" y="37" font-size="9" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.55)">your CRM · contacts</text>
           ${fav('hubspot.com', 646, 27, 12)}
           <rect x="24" y="48" width="146" height="296" fill="#F7F4EE"/>
-          <circle cx="97" cy="92" r="21" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="2"/><image href="assets/brand/almaz.png" x="77" y="72" width="40" height="40" clip-path="url(#n7c)" preserveAspectRatio="xMidYMin slice"/>
+          <circle cx="97" cy="92" r="21" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="2"/><image href="assets/brand/people/clara-novak.png" x="77" y="72" width="40" height="40" clip-path="url(#n7c)" preserveAspectRatio="xMidYMin slice"/>
           <text x="97" y="128" text-anchor="middle" font-size="12" font-weight="800" fill="#172A2D">Almaz K.</text>
           <text x="97" y="142" text-anchor="middle" font-size="8" fill="rgba(23,42,45,0.55)">Head of Ops</text>
           <rect x="58" y="150" width="78" height="18" rx="9" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)"/>
@@ -669,8 +669,8 @@
           <rect x="534" y="208" width="30" height="18" rx="9" fill="none" stroke="rgba(23,42,45,0.15)"/><text x="549" y="220.5" text-anchor="middle" font-size="9" fill="rgba(23,42,45,0.45)">+</text>
           <text x="442" y="240" font-size="8.5" font-weight="600" fill="#B26F14">↳ 1 reply</text>
           <line x1="396" y1="246" x2="670" y2="246" stroke="rgba(23,42,45,0.06)"/>
-          <circle cx="413" cy="266" r="15" fill="#EFE9DC"/><image href="assets/brand/peter.png" x="399" y="252" width="28" height="28" clip-path="url(#atPtr)" preserveAspectRatio="xMidYMin slice"/>
-          <text x="442" y="262" font-size="11" font-weight="800" fill="#172A2D">Peter <tspan font-weight="400" font-size="8.5" fill="rgba(23,42,45,0.45)">· CEO · 16:11</tspan></text>
+          <circle cx="413" cy="266" r="15" fill="#EFE9DC"/><image href="assets/brand/people/omar-al-rashid.png" x="399" y="252" width="28" height="28" clip-path="url(#atPtr)" preserveAspectRatio="xMidYMin slice"/>
+          <text x="442" y="262" font-size="11" font-weight="800" fill="#172A2D">Omar <tspan font-weight="400" font-size="8.5" fill="rgba(23,42,45,0.45)">· CEO · 16:11</tspan></text>
           <text x="442" y="280" font-size="10.5" fill="#172A2D">love it. double the LinkedIn budget ✅</text>
           <circle cx="666" cy="102" r="3.5" fill="#E1962E"></circle>
         </g>

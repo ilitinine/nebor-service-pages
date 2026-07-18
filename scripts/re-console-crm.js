@@ -350,8 +350,8 @@
       ${canvas()}
       ${panel(28, 28, 356, 316, CARD, 16)}
       <circle cx="78" cy="88" r="21" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="1.5"/>
-      <image href="assets/brand/wouter.png" x="58" y="68" width="40" height="40" clip-path="url(#crmDsr)" preserveAspectRatio="xMidYMin slice"/>
-      <text x="112" y="82" font-size="13" font-weight="700" fill="${INK}">Dana Wu</text>
+      <image href="assets/brand/people/amara-diallo.png" x="58" y="68" width="40" height="40" clip-path="url(#crmDsr)" preserveAspectRatio="xMidYMin slice"/>
+      <text x="112" y="82" font-size="13" font-weight="700" fill="${INK}">Amara Diallo</text>
       <text x="112" y="97" font-size="8.5" fill="${MUT}">the buyer at Loom</text>
       ${fav("loom.com", 336, 62, 14)}
       ${crmMarks(172, 302, "in your CRM")}
@@ -366,7 +366,7 @@
       <line x1="408" y1="52" x2="408" y2="308" stroke="rgba(47,160,147,0.25)" stroke-width="1.5"/>
       ${lab(426, 44, "THE WORLD, CHANGING", TEAL)}
       ${clayMark(600, 34, "+ workflows")}
-      ${evt(54, "SPOTTED JUST NOW", "Dana Wu promoted to VP Design", "title updated · she signs the contract now", 0.5)}
+      ${evt(54, "SPOTTED JUST NOW", "Amara Diallo promoted to VP Design", "title updated · she signs the contract now", 0.5)}
       ${evt(110, "SPOTTED THIS MORNING", "Loom announces its Series C", "funding updated · the budget just moved", 0.9)}
       ${evt(166, "SPOTTED THIS WEEK", "12 open roles across design ops", "tier raised · they are scaling the team you sell to", 1.3)}
       ${evt(222, "ALWAYS WATCHING", "job moves · funding · tech · hiring", "flowing in on their own, as they happen", 1.7)}
@@ -521,13 +521,13 @@
       <g opacity="0">${IN(2.3, 0.4)}
         <rect x="560" y="192" width="110" height="72" rx="12" fill="${PAPER}" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
         <circle cx="615" cy="222" r="18" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="1.5"/>
-        <image href="assets/brand/almaz.png" x="598" y="205" width="34" height="34" clip-path="url(#crmRepR)" preserveAspectRatio="xMidYMin slice"/>
-        <text x="615" y="252" text-anchor="middle" font-size="9.5" font-weight="700" fill="${INK}">Almaz</text>
+        <image href="assets/brand/people/priya-nair.png" x="598" y="205" width="34" height="34" clip-path="url(#crmRepR)" preserveAspectRatio="xMidYMin slice"/>
+        <text x="615" y="252" text-anchor="middle" font-size="9.5" font-weight="700" fill="${INK}">Priya</text>
         <text x="615" y="262" text-anchor="middle" font-size="6.5" fill="${MUT}">senior AE · enterprise</text>
       </g>
       <g opacity="0">${IN(2.5, 0.4)}
         <rect x="326" y="286" width="200" height="20" rx="10" fill="${GREENBG}"/>
-        <text x="426" y="300" text-anchor="middle" font-size="8" font-weight="700" fill="${GREEN}">assigned to Almaz in 4 seconds ✓</text>
+        <text x="426" y="300" text-anchor="middle" font-size="8" font-weight="700" fill="${GREEN}">assigned to Priya in 4 seconds ✓</text>
         <rect x="536" y="286" width="134" height="20" rx="10" fill="${GREENBG}"/>
         <text x="603" y="300" text-anchor="middle" font-size="8" font-weight="700" fill="${GREEN}">task created · call today</text>
       </g>
