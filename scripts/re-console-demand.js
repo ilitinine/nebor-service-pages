@@ -486,8 +486,8 @@
           <text x="88" y="37" font-size="9" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.55)">your CRM · contacts</text>
           ${fav('hubspot.com', 646, 27, 12)}
           <rect x="24" y="48" width="146" height="296" fill="#F7F4EE"/>
-          <circle cx="97" cy="92" r="21" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="2"/><image href="assets/brand/people/kwame-mensah.png" x="77" y="72" width="40" height="40" clip-path="url(#n7c)" preserveAspectRatio="xMidYMin slice"/>
-          <text x="97" y="128" text-anchor="middle" font-size="12" font-weight="800" fill="#172A2D">Kwame M.</text>
+          <circle cx="97" cy="92" r="21" fill="#EFE9DC" stroke="#FFFFFF" stroke-width="2"/><image href="assets/brand/people/hana-yoon.png" x="77" y="72" width="40" height="40" clip-path="url(#n7c)" preserveAspectRatio="xMidYMin slice"/>
+          <text x="97" y="128" text-anchor="middle" font-size="12" font-weight="800" fill="#172A2D">Hana Y.</text>
           <text x="97" y="142" text-anchor="middle" font-size="8" fill="rgba(23,42,45,0.55)">Head of Ops</text>
           <rect x="58" y="150" width="78" height="18" rx="9" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)"/>
           ${fav('figma.com', 66, 153, 11)}<text x="82" y="163" font-size="8.5" font-weight="700" fill="#172A2D">Figma</text>
