@@ -467,7 +467,6 @@
       <text x="110" y="219" text-anchor="middle" font-size="7.5" font-weight="600" fill="${GREEN}">nobody touched it</text>
       <line x1="34" y1="272" x2="666" y2="272" stroke="rgba(23,42,45,0.06)"/>
       <text x="34" y="300" font-size="9" font-weight="600" fill="${INK}">One of the workflows we build with you <tspan font-weight="400" fill="${MUT}">· each one wired to a real event in your CRM, each one logged and reversible</tspan></text>
-      <text x="34" y="322" font-size="8" font-style="italic" fill="${MUT}">the shape stays the same whatever the trigger is: something happens, the system checks, the system acts</text>
       ${strip("The manual work, done by the system", "the engine", 84)}
     </svg></div>`;
   };
@@ -532,7 +531,6 @@
         <rect x="536" y="286" width="134" height="20" rx="10" fill="${GREENBG}"/>
         <text x="603" y="300" text-anchor="middle" font-size="8" font-weight="700" fill="${GREEN}">task created · call today</text>
       </g>
-      <text x="326" y="330" font-size="8" font-style="italic" fill="${MUT}">same lead, same rule, same outcome, every single time.</text>
       ${strip("Scored on fit and intent, routed by rule", "enforced", 82)}
     </svg></div>`;
   };
@@ -599,8 +597,6 @@
         <rect x="556" y="250" width="92" height="18" rx="9" fill="${GOLD}"/>
         <text x="602" y="263" text-anchor="middle" font-size="7" font-weight="700" fill="#4A3708">leadership signs it</text>
       </g>
-      <text x="34" y="310" font-size="8.5" fill="rgba(23,42,45,0.5)">your Sales Engine and Demand Gen motions report into this same backbone</text>
-      <text x="34" y="328" font-size="8.5" font-style="italic" fill="${MUT}">so Monday is one number on one screen, and nobody argues with it</text>
       ${strip("The number your leadership trusts", "the backbone", 100)}
     </svg></div>`;
   };
