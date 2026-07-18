@@ -129,7 +129,6 @@
         <rect x="14" y="14" width="672" height="344" rx="18" fill="#F5F1EA" stroke="#FFFFFF" stroke-width="2"/>
         <g transform="translate(27,13) scale(0.92)">
         <text x="36" y="40" font-size="15" font-weight="800" fill="#172A2D">The plays we install</text>
-        <text x="222" y="40" font-size="9" fill="rgba(23,42,45,0.55)">spot the buying moment, answer it in minutes · AI writes, your voice stays</text>
         <g class="cap-layer" style="animation-delay:0.00s">
         <path d="M24 52 h64 q8 0 12 6 l6 8 h-82 z" fill="#E3F1EF"/>
         <rect x="14" y="64" width="214" height="118" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 6px 14px rgba(23,42,45,0.08))"/>
@@ -407,7 +406,6 @@
         <g transform="translate(27,13) scale(0.92)">
         <rect x="36" y="24" width="196" height="26" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.4"/>
         ${fav('figma.com', 48, 30, 13)}<text x="68" y="41" font-size="9.5" font-weight="700" fill="#8A5410">Figma · a Tier 1 account</text>
-        <text x="244" y="41" font-size="9.5" fill="rgba(23,42,45,0.55)">four fronts, one week, one story</text>
         <text x="36" y="72" font-size="8.5" font-weight="700" letter-spacing="0.1em" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.45)">WHAT FIGMA SEES</text>
         <g class="cap-layer">
           <rect x="36" y="82" width="222" height="126" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 10px 22px rgba(23,42,45,0.1))"/>
