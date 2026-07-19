@@ -886,7 +886,7 @@ window.NEBOR_WORKFLOW = [
       { from: "apollo", to: "clay", proto: "api", label: "committee.rows" },
       { from: "clay", to: "hubspot", proto: "webhook", label: "named.account" }
     ],
-    output: "312 anonymous sessions resolved into named, in-market accounts"
+    output: "Anonymous sessions resolved into named, in-market accounts"
   },
   {
     phase: "Concentrate", step: "Score",
@@ -904,7 +904,7 @@ window.NEBOR_WORKFLOW = [
       { from: "g2", to: "clay", proto: "api", label: "compare.views" },
       { from: "clay", to: "hubspot", proto: "api", label: "tier.score" }
     ],
-    output: "24 Tier-1 · 86 Tier-2 · 237 Tier-3, scored and routed"
+    output: "Every account tiered by fit and intent, then routed"
   },
   {
     phase: "Concentrate", step: "Coordinate",
@@ -922,7 +922,7 @@ window.NEBOR_WORKFLOW = [
       { from: "anthropic", to: "instantly", proto: "llm", label: "email.copy" },
       { from: "instantly", to: "slack", proto: "webhook", label: "rep.activate" }
     ],
-    output: "4 channels in lockstep on one account · rep activated at threshold"
+    output: "Every channel in lockstep on one account · the rep steps in at the threshold"
   },
   {
     phase: "Convert", step: "Nurture",
@@ -940,7 +940,7 @@ window.NEBOR_WORKFLOW = [
       { from: "n8n", to: "anthropic", proto: "llm", label: "next.content" },
       { from: "n8n", to: "slack", proto: "api", label: "sales.ready" }
     ],
-    output: "Nobody interested slips · 47 handed to sales, ready"
+    output: "Nobody interested slips · the ready ones are handed to sales"
   },
   {
     phase: "Convert", step: "Attribute",
@@ -958,7 +958,7 @@ window.NEBOR_WORKFLOW = [
       { from: "anthropic", to: "clay", proto: "api", label: "targeting.weights" },
       { from: "anthropic", to: "ocean", proto: "api", label: "new.seeds" }
     ],
-    output: "€514k pipeline traced · what converts sharpens next round",
+    output: "Pipeline traced back to its source · what converts sharpens the next round",
     cycle: { backTo: 0, nextLabel: "What converted this cycle sharpens where you generate demand in the next." }
   }
 ];

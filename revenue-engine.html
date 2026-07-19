@@ -962,7 +962,7 @@ window.NEBOR_WORKFLOW = [
       { from: "anthropic", to: "notion",    proto: "api",     label: "icp.doc" },
       { from: "notion",    to: "clay",      proto: "api",     label: "icp.traits" }
     ],
-    output: "ICP documented · 6,400 ICP-fit accounts mapped"
+    output: "Your ICP written down · the accounts that match it, mapped"
   },
   {
     phase: "Find",
@@ -983,7 +983,7 @@ window.NEBOR_WORKFLOW = [
       { from: "builtwith", to: "clay", proto: "api", label: "stack.lookup" },
       { from: "datanyze",  to: "clay", proto: "api", label: "tech.confirm" }
     ],
-    output: "48,200 universe → 3,200 firmographic fits → 2,800 with a matching stack"
+    output: "The whole market narrowed to the accounts that fit how you sell"
   },
   {
     phase: "Find",
@@ -1004,7 +1004,7 @@ window.NEBOR_WORKFLOW = [
       { from: "linkedin", to: "clay",    proto: "event",   label: "salesnav.alerts" },
       { from: "clay",     to: "hubspot", proto: "api",     label: "fit+intent.scores" }
     ],
-    output: "1,940 accounts show live intent · top 620 scored into the working set"
+    output: "The accounts showing live intent, scored into a working set"
   },
   {
     phase: "Run",
@@ -1046,7 +1046,7 @@ window.NEBOR_WORKFLOW = [
       { from: "clearbit", to: "clay",    proto: "api",     label: "firmo.fill" },
       { from: "clay",     to: "hubspot", proto: "webhook", label: "contact.upsert" }
     ],
-    output: "620 accounts → 2,100 buying-committee contacts, upserted clean"
+    output: "The buying committee found and written onto the record, clean"
   },
   {
     phase: "Reach",
@@ -1124,7 +1124,7 @@ window.NEBOR_WORKFLOW = [
       { from: "anthropic", to: "notion",    proto: "api", label: "icp.delta" },
       { from: "anthropic", to: "clay",      proto: "api", label: "targeting.weights" }
     ],
-    output: "Cycle closed · 214 fresh ICP-fit accounts queued for the next run",
+    output: "The cycle closes · what it learned decides who gets found next",
     cycle: { backTo: 0, nextLabel: "The next cycle starts here: Define runs again with this cycle's wins as its input." }
   }
 ];
