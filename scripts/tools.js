@@ -99,7 +99,7 @@ window.NEBOR_TOOLS = {
   dbt:        { name: "dbt",            color: "#FF694A", icon: "dbt",
     cat: "Transform", desc: "SQL-based data transformation framework. Where we model raw warehouse data into the account-grain marts everything else reads from." },
   retool:     { name: "Retool",         color: "#3D3D3D", icon: "retool",
-    cat: "Internal tools", desc: "Internal-app builder. Used for ops admin surfaces — manual override panels, approval queues, edge-case data correction." },
+    cat: "Internal tools", desc: "Internal-app builder. Used for ops admin surfaces: manual override panels, approval queues, edge-case data correction." },
   typeform:   { name: "Typeform",       color: "#262627", icon: "typeform",
     cat: "Forms", desc: "Conversational forms with branching logic. Captures structured input from inbound leads and enriches on submit." },
   intercom:   { name: "Intercom",       color: "#1F8DED", icon: "intercom",
