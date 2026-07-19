@@ -141,12 +141,13 @@ window.neborLogo = window.neborLogo || function (slug, size) {
       '<defs><filter id="pwGlowF" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8"/></filter></defs>' +
       '<path d="' + sh.d + '" fill="' + lighten(sh.c, 0.55) + '" class="pw-glow-halo" filter="url(#pwGlowF)"/>' +
       '<path d="' + sh.d + '" fill="' + lighten(sh.c, 0.4) + '" class="pw-glow-face"/>' +
-      '<g class="pw-glow-badge" transform="translate(' + sh.ix.toFixed(1) + ',' + sh.iy.toFixed(1) + ')">' +
+      '<g class="pw-glow-badge pw-deco" transform="translate(' + sh.ix.toFixed(1) + ',' + sh.iy.toFixed(1) + ')">' +
         '<circle r="24" fill="none" stroke="' + sh.c + '" stroke-width="2.5" class="pw-glow-ping"/>' +
         '<circle r="24" fill="none" stroke="' + sh.c + '" stroke-width="2.5" class="pw-glow-ping p2"/>' +
         '<g class="pw-glow-disc"><circle r="24" fill="#FFFFFF"/><g class="pw-glow-glyph">' + glyph(sh.ic, sh.c) + '</g></g>' +
       '</g>' +
-      '<text class="pw-glow-lbl" x="' + sh.lx.toFixed(1) + '" y="' + sh.ly.toFixed(1) + '" text-anchor="middle" dominant-baseline="central" fill="#FFFFFF">' + sh.k + '</text>';
+      '<text class="pw-glow-lbl pw-deco" x="' + sh.lx.toFixed(1) + '" y="' + sh.ly.toFixed(1) + '" text-anchor="middle" dominant-baseline="central" fill="#FFFFFF">' + sh.k + '</text>';
+    if (typeof setDecos === 'function') setDecos(wheelAngle);
   }
 
   function drawFlywheel() {
@@ -208,10 +209,11 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     STAGES.forEach((s, i) => {
       const am = start + i * seg + seg / 2;
       const ap = pt(am, rMid);
-      P.push('<g transform="translate(' + ap.x.toFixed(1) + ',' + (ap.y - 25).toFixed(1) + ')"><circle r="24" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>' + glyph(s.ic, col[i]) + '</g>');
+      P.push('<g class="pw-deco"><g transform="translate(' + ap.x.toFixed(1) + ',' + (ap.y - 25).toFixed(1) + ')"><circle r="24" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>' + glyph(s.ic, col[i]) + '</g>');
       P.push('<text class="pw-fw-label" x="' + ap.x.toFixed(1) + '" y="' + (ap.y + 25).toFixed(1) + '" text-anchor="middle" dominant-baseline="central" fill="#202B33">' + s.k + '</text>');
       // optional sub-label under a slab: the CRM build uses it to say the Architect arc happens once
       if (s.sub) P.push('<text class="pw-fw-sub" x="' + ap.x.toFixed(1) + '" y="' + (ap.y + 41).toFixed(1) + '" text-anchor="middle" dominant-baseline="central" fill="rgba(32,43,51,0.55)">' + s.sub + '</text>');
+      P.push('</g>');
     });
     svg.innerHTML = P.join('');
 
@@ -337,19 +339,41 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     }
   }
 
+  // ---- the wheel literally turns (phones) ----
+  // The active step's bar rides around to the bottom of the wheel, arriving
+  // right where its stamp falls onto the card. Badges and labels counter-rotate
+  // so every word stays upright while the wheel moves under them. Desktop never
+  // rotates: the angle variable is pinned to zero there.
+  const wheelBoxEl = document.querySelector('.pw-wheel');
+  const isNarrow = () => window.matchMedia('(max-width: 900px)').matches;
+  let wheelAngle = 0;
+  function setDecos(a) {
+    document.querySelectorAll('.pw-flywheel .pw-deco, .pw-glow .pw-deco').forEach(g => {
+      g.style.transform = 'rotate(' + (-a) + 'deg)';
+    });
+  }
+  function turnWheelTo(k) {
+    if (!wheelBoxEl) return;
+    if (!isNarrow()) { wheelAngle = 0; wheelBoxEl.style.setProperty('--wa', '0deg'); setDecos(0); return; }
+    const target = 180 - k * (360 / STAGES.length);          // slab centre lands at six o'clock
+    const delta = ((target - wheelAngle + 540) % 360) - 180; // shortest way round
+    wheelAngle += delta;
+    wheelBoxEl.style.setProperty('--wa', wheelAngle + 'deg');
+    setDecos(wheelAngle);
+  }
+  window.addEventListener('resize', () => { if (!isNarrow()) turnWheelTo(0); });
+
   function setActive(i) {
     nodesEl.querySelectorAll('.wf-node').forEach((n, k) => n.classList.toggle('active', k === i));
     if (trackFill) trackFill.style.width = (N > 1 ? (i / (N - 1)) * 100 : 0) + '%';
     ringEls.forEach((el, k) => { el.classList.toggle('built', k <= i); el.classList.toggle('ghost', k > i); el.classList.toggle('active', k === i); });
+    turnWheelTo(stageOf(i)); // the bar rides to the bottom as the card changes
     glowStage(stageOf(i));   // set the glow in the SAME style batch as the card toggle, before any reflow renderCenter might force
     drawWires(i);
     renderCenter(i);
     // renderCenter rewrites the class list, so the catch re-arms on every step
     void pwCenter.offsetWidth;
     pwCenter.classList.add('lit');
-    // and the wheel advances a notch (mobile only; the class is inert on desktop)
-    const wheelEl = document.querySelector('.pw-wheel');
-    if (wheelEl) { wheelEl.classList.remove('kick'); void wheelEl.offsetWidth; wheelEl.classList.add('kick'); }
   }
 
   // ---- autoplay: build the play on scroll-in, loop it, hand control to any click ----

@@ -60,6 +60,10 @@
 
 .pw { position: relative; width: min(1100px, 100%); margin: 10px auto 0; aspect-ratio: 1 / 1; }
 
+/* slab badges and labels counter-rotate against the wheel so the words stay
+   upright while the wheel turns under them (the turn only happens on phones) */
+.pw-deco { transform-box: fill-box; transform-origin: center; }
+
 /* wrapper holding the wheel graphic (flywheel + its glow). On desktop it fills .pw exactly
    as before; on mobile it becomes an in-flow square so the detail card can stack beneath it. */
 .pw-wheel { position: absolute; inset: 0; }
@@ -257,16 +261,14 @@
     width: 100%; max-width: 460px; margin: 0 auto; aspect-ratio: 1 / 1;
   }
   /* no ring cards crowding the wheel now, so let it fill its box a little more */
-  .pw-flywheel, .pw-glow { transform: scale(1.12); }  /* the wheel fills its box now that nothing crowds it */
-
-  /* On every step change the wheel advances a notch: a short backswing and
-     settle, so picking a step visibly turns the machine that stamps the card. */
-  .pw-wheel.kick { animation: pwNotch 0.6s cubic-bezier(0.3, 0.7, 0.3, 1.35); }
-  @keyframes pwNotch {
-    0%   { transform: rotate(0deg); }
-    38%  { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
+  /* The wheel literally turns: the active bar rides to six o'clock, right above
+     the card its stamp falls on. The angle comes from the stepper as --wa. */
+  .pw-flywheel, .pw-glow {
+    transform: rotate(var(--wa, 0deg)) scale(1.12);
+    transition: transform 0.7s cubic-bezier(0.3, 0.7, 0.3, 1);
   }
+  .pw-flywheel .pw-deco, .pw-glow .pw-deco { transition: transform 0.7s cubic-bezier(0.3, 0.7, 0.3, 1); }
+
   .pw-wires, .pw-nodes { display: none; }
   /* the hub chip stays: the wheel's centre is empty on a phone */
   .pw-clay { top: 50%; }
@@ -302,7 +304,7 @@
     letter-spacing: 0.16em; text-transform: uppercase; line-height: 1;
     box-shadow: 0 10px 22px -8px rgba(23, 42, 45, 0.38);
     z-index: 3; pointer-events: none;
-    animation: pwStampDrop 0.62s cubic-bezier(0.3, 0.7, 0.25, 1.25) 0.05s both;
+    animation: pwStampDrop 0.62s cubic-bezier(0.3, 0.7, 0.25, 1.25) 0.32s both;
   }
   @keyframes pwStampDrop {
     0%   { transform: translate(-50%, -390%) scale(0.86); opacity: 0; }
@@ -320,10 +322,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* the stamp simply sits in place; nothing drops, dips, orbits or kicks */
+  /* the stamp sits in place and the wheel snaps to its angle; nothing animates */
   .pw-stage-pill { animation: none !important; }
   .pw-center.lit { animation: none !important; }
-  .pw-wheel.kick { animation: none !important; }
+  .pw-flywheel, .pw-glow, .pw-flywheel .pw-deco, .pw-glow .pw-deco { transition: none !important; }
 }
 
 @media (max-width: 900px) {
