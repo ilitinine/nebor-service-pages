@@ -277,8 +277,11 @@ window.neborLogo = window.neborLogo || function (slug, size) {
         flowTool(f.to, roles[f.to]) + '</div>';
     }).join('');
     pwCenter.className = 'pw-center pw-center--' + ph;
+    // the stamp is the wheel bar's own badge: same word, same rendered colour
+    const slab = stageInfo && stageInfo[stageOf(i)];
+    if (slab) pwCenter.style.setProperty('--stage-c', slab.c);
     pwCenter.innerHTML =
-      '<span class="pw-stage-pill" aria-hidden="true">' + esc(d.phase) + '</span>' +
+      '<span class="pw-stage-pill" aria-hidden="true"' + (slab ? ' style="background:' + slab.c + '"' : '') + '>' + esc(slab ? slab.k : d.phase) + '</span>' +
       '<div class="pw-c-head"><h4 class="pw-c-name">' + esc(d.step) + '</h4></div>' +
       '<p class="pw-c-desc">' + esc(d.desc) + '</p>' +
       // The handoff rows repeated what the cards already show and stretched the
@@ -371,6 +374,11 @@ window.neborLogo = window.neborLogo || function (slug, size) {
   }
 
   drawFlywheel();
+  // each step chip wears the colour of the wheel bar its step lights up
+  if (stageInfo) nodesEl.querySelectorAll('.wf-node').forEach((n, i) => {
+    const sh = stageInfo[stageOf(i)];
+    if (sh) n.style.setProperty('--sc', sh.c);
+  });
   setActive(0);
 })();
 
