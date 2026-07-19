@@ -65,7 +65,7 @@
         <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="1.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 14;0 0" dur="0.55s" begin="1.5s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
           <rect x="140" y="215" width="112" height="32" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>
           <g transform="translate(151,224)"><circle cx="7" cy="7" r="6.4" fill="none" stroke="rgba(23,42,45,0.72)" stroke-width="1.4"/><path d="M5.6 4.6 L9.8 7 L5.6 9.4 Z" fill="rgba(23,42,45,0.72)"/></g>
-          <text x="173" y="235" font-size="9.2" font-weight="700" fill="#172A2D">Webinars</text>
+          <text x="173" y="235" font-size="9.2" font-weight="700" fill="#172A2D">Video ads</text>
         </g>
         <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="1.6s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 14;0 0" dur="0.55s" begin="1.6s" calcMode="spline" keySplines="0.2 0.7 0.3 1" fill="freeze" additive="sum"/>
           <rect x="270" y="197" width="112" height="32" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.08))"/>

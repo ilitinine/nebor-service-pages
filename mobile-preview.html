@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mobile preview · Nebor service pages</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet" />
+<style>
+  :root { --ink:#172A2D; --canvas:#F5F1EA; --card:#FCFAF7; --amber:#E1962E; }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--canvas); color:var(--ink);
+    font-family:"Bricolage Grotesque", system-ui, sans-serif;
+    padding:28px 20px 48px;
+  }
+  h1 { font-size:22px; margin:0 0 6px; }
+  .sub { font-size:13.5px; color:rgba(23,42,45,0.6); margin:0 0 18px; max-width:760px; line-height:1.5; }
+  .bar { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:24px; }
+  .bar span { font-size:12px; font-weight:700; letter-spacing:0.06em; color:rgba(23,42,45,0.45); }
+  button {
+    font:inherit; font-size:13px; font-weight:600; cursor:pointer;
+    background:var(--card); color:var(--ink);
+    border:1.5px solid rgba(23,42,45,0.15); border-radius:999px; padding:7px 14px;
+  }
+  button.on { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .rack { display:flex; gap:26px; align-items:flex-start; flex-wrap:wrap; }
+  .phone { display:flex; flex-direction:column; align-items:center; gap:9px; }
+  .label { font-size:13px; font-weight:600; }
+  .label a { color:rgba(23,42,45,0.5); text-decoration:none; font-weight:500; font-size:12px; }
+  .label a:hover { color:var(--ink); }
+  .screen {
+    background:#000; border-radius:34px; padding:10px;
+    box-shadow:0 22px 50px -18px rgba(23,42,45,0.4);
+  }
+  iframe { border:0; display:block; border-radius:25px; background:#fff; }
+</style>
+</head>
+<body>
+  <h1>Mobile preview</h1>
+  <p class="sub">
+    The pages are responsive, so there is no separate mobile build: these are the real pages,
+    rendered at phone width. Scroll inside any screen. To check on an actual device, open the
+    same page on your phone over Wi-Fi.
+  </p>
+
+  <div class="bar">
+    <span>WIDTH</span>
+    <button data-w="320">320 · small</button>
+    <button data-w="390" class="on">390 · iPhone</button>
+    <button data-w="414">414 · large</button>
+    <button data-w="768">768 · tablet</button>
+  </div>
+
+  <div class="rack" id="rack"></div>
+
+<script>
+  var PAGES = [
+    { file: 'revenue-engine.html', name: 'Sales Engine' },
+    { file: 'demand-gen.html',     name: 'Demand Gen'  },
+    { file: 'crm-revops.html',     name: 'CRM & RevOps' }
+  ];
+  var H = 780;
+
+  function render(w) {
+    document.getElementById('rack').innerHTML = PAGES.map(function (p) {
+      return '<div class="phone">' +
+               '<div class="label">' + p.name +
+                 ' &nbsp;<a href="' + p.file + '" target="_blank">open ↗</a></div>' +
+               '<div class="screen">' +
+                 '<iframe src="' + p.file + '" width="' + w + '" height="' + H + '" ' +
+                 'title="' + p.name + ' at ' + w + 'px"></iframe>' +
+               '</div>' +
+             '</div>';
+    }).join('');
+  }
+
+  document.querySelector('.bar').addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    [].forEach.call(document.querySelectorAll('.bar button'), function (x) { x.classList.remove('on'); });
+    b.classList.add('on');
+    render(b.dataset.w);
+  });
+
+  render(390);
+</script>
+</body>
+</html>

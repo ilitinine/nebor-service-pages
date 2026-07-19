@@ -1065,6 +1065,20 @@
   .n-mark.problem-l { width: 150px; left: -55px; }
   .n-mark.work-r    { width: 185px; right: -70px; }
 
+  /* Every section still carried its desktop breathing room: 72 to 96px top AND
+     bottom, so on a phone each join between sections was a ~150px band of empty
+     paper. Same for the hero, which stood 1980px tall before the marquee. Air is
+     good on a wide screen and dead space on a narrow one. */
+  .b-section { padding: 44px 0; }
+  .b-section-sm { padding: 26px 0; }
+  .section { padding: 48px 0; }
+  .b-hero { padding: 56px 0 20px; }
+  .b-hero .b-eyebrow { margin-bottom: 14px; }
+  .b-hero .b-lede { margin-top: 18px; }
+  .brand .hero-elements-wrap { margin-top: 30px; }
+  .b-footer { padding-top: 48px; }
+  .hero-elements-cta { margin-top: 28px; }
+
   /* Tool cards were built at desktop scale: 205px tall with the category
      stretching to push the link to the bottom. Fifteen of those in two columns
      turned the section into an endless scroll, so tighten them up. */
