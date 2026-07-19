@@ -576,7 +576,7 @@
         <g class="cap-layer" style="animation-delay:0.24s">
           <rect x="72" y="148" width="440" height="180" rx="16" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 14px 30px rgba(23,42,45,0.12)) drop-shadow(0 3px 7px rgba(23,42,45,0.06))"/>
           <text x="92" y="174" font-size="9" font-weight="700" letter-spacing="0.1em" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.45)">SEQUENCE · OPENED 14:03</text>
-          <circle cx="488" cy="170" r="4" fill="#E1962E"></circle>
+          
           <line x1="105" y1="196" x2="105" y2="300" stroke="rgba(23,42,45,0.1)"/>
           <circle cx="105" cy="204" r="9" fill="#FAC064"/><text x="105" y="207.5" text-anchor="middle" font-size="8.5" font-weight="800" fill="#172A2D">1</text>
           <rect x="126" y="190" width="24" height="24" rx="7" fill="#FFFFFF" stroke="rgba(23,42,45,0.06)"/><image href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" x="131" y="195" width="14" height="14" class="heroviz-favicon"/>
