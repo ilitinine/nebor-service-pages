@@ -219,6 +219,14 @@
 .n-mark.problem-l { left: -70px; top: 26%; width: 260px; transform: scaleX(-1); opacity: 0.95; }
 .n-mark.work-r { right: -110px; top: -50px; width: 280px; transform: rotate(140deg); opacity: 0.9; }
 
+/* The marks bleed past the page edge on purpose. Nothing was clipping that bleed,
+   so on narrow screens they pushed the document wider than the viewport and the
+   whole page scrolled sideways. Clip the horizontal bleed at the section that owns
+   them. `clip` rather than `hidden`: it leaves overflow-y visible, so card shadows
+   and the hover lift still spill vertically, and it makes no scroll container, so
+   the sticky nav keeps working. */
+.b-hero, .b-section, .b-section-sm, .section { overflow-x: clip; }
+
 /* layered composition · pale ghost behind + real PNG + contrasting outline ring on top */
 .n-wrap { display: block; }
 .n-wrap .nm-main {
@@ -776,6 +784,8 @@
   font-weight: 500;
   color: var(--ink);
   padding-top: 18px;
+  /* the arrow was dropping onto its own line in narrow columns */
+  white-space: nowrap;
 }
 .b-tool:hover .more { color: var(--ink); }
 
@@ -1030,6 +1040,39 @@
   .b-footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .b-tools { grid-template-columns: repeat(2, 1fr); }
   .b-metrics, .b-steps { grid-template-columns: 1fr; }
+  /* logo, copyright and socials sat on one row and ran off the edge on small
+     phones. Let them stack and centre instead. */
+  .b-footer-bottom { flex-wrap: wrap; justify-content: center; gap: 18px; text-align: center; }
+  .b-footer-social { justify-content: center; }
+
+  /* The headline clamp floor was 44px, a desktop number, so on a phone the hero
+     title stayed huge and broke into ragged lines. Scale it with the viewport. */
+  .b-h1 { font-size: clamp(30px, 8.2vw, 44px); line-height: 1.06; }
+  /* The hand-placed line breaks are tuned to the desktop measure and fight the
+     narrow one, so let the words flow and wrap on their own. */
+  .b-h1 br { display: none; }
+
+  /* The wordmark and the call button were meeting at the same pixel, so the
+     button sat on top of the logo. Give both less bulk and a real gap. */
+  .b-nav { padding: 10px 12px; gap: 12px; min-height: 62px; }
+  .b-nav .brand-logo img { height: 26px; }
+  .b-nav .bbtn a { padding: 9px 14px; font-size: 13px; }
+
+  /* Decorative marks were drawn wider than the screen itself and sat over the
+     copy. Keep the bleed, lose the bulk. */
+  .n-mark.hero-tl   { width: 150px; top: -110px; }
+  .n-mark.hero-r    { width: 210px; right: -55px; top: 300px; }
+  .n-mark.problem-l { width: 150px; left: -55px; }
+  .n-mark.work-r    { width: 185px; right: -70px; }
+
+  /* Tool cards were built at desktop scale: 205px tall with the category
+     stretching to push the link to the bottom. Fifteen of those in two columns
+     turned the section into an endless scroll, so tighten them up. */
+  .b-tool { padding: 18px 16px 16px; min-height: 0; }
+  .b-tool img { width: 30px; height: 30px; margin-bottom: 12px; }
+  .b-tool .name { font-size: 15px; }
+  .b-tool .cat { font-size: 13px; flex: 0 0 auto; }
+  .b-tool .more { font-size: 13px; padding-top: 12px; }
 }
 
 /* Capability panels · SVG scene container (hero-quality visuals) */

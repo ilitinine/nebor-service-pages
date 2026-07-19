@@ -829,8 +829,11 @@ p, .text-body { font-family: var(--font-sans); font-size: 14px; line-height: 1.6
 }
 @media (max-width: 760px) {
   .tier-switch-bar { bottom: 16px; max-width: calc(100vw - 32px); }
-  .tier-switcher { flex-wrap: wrap; justify-content: center; }
-  .tier-switcher a { padding: 7px 11px; font-size: 12px; }
+  /* Wrapping turned the switcher into a three-row block sitting over the page.
+     Keep it on one row and shrink it to fit instead. The glass was also too
+     see-through on a phone, so page content read straight through the labels. */
+  .tier-switcher { flex-wrap: nowrap; justify-content: center; background: rgba(255, 255, 255, 0.93); }
+  .tier-switcher a { padding: 6px 10px; font-size: 11.5px; }
 }
 
 /* ====================== FOOTER ====================== */
