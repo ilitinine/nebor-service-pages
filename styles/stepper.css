@@ -54,6 +54,16 @@
 @media (prefers-reduced-motion: reduce) {
   .tier-demand .hero-el { animation: none; }
 }
+/* The link between the step list and the wheel. On a wide screen the cards ride
+   the wheel itself, so nothing needs joining; on a phone the wheel stacks below
+   the steps and this draws the line that ties them together. */
+.wf-connect { display: none; }
+@media (max-width: 900px) {
+  .wf-connect { display: block; position: relative; height: 54px; margin: 0 0 -6px; pointer-events: none; }
+  .wf-connect svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  .wf-connect-path { stroke: rgba(23, 42, 45, 0.22); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 3 6; }
+}
+
 .pw-canvas-cap { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 4px 4px 0; }
 .pw-canvas-eyebrow { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(23,42,45,0.5); }
 .pw-canvas-hint { font-family: var(--font-mono); font-size: 10.5px; color: rgba(23,42,45,0.38); }
