@@ -335,6 +335,9 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     glowStage(stageOf(i));   // set the glow in the SAME style batch as the card toggle, before any reflow renderCenter might force
     drawWires(i);
     renderCenter(i);
+    // renderCenter rewrites the class list, so the light re-arms on every step
+    void pwCenter.offsetWidth;
+    pwCenter.classList.add('lit');
   }
 
   // ---- autoplay: build the play on scroll-in, loop it, hand control to any click ----

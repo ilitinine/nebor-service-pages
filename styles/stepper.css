@@ -266,6 +266,42 @@
   .pw-c-name { font-size: 22px; }
   .pw-c-desc { font-size: 12.5px; }
 
+  /* The wheel and this card are one object that the screen width splits in two.
+     Rather than draw something between them, the card catches the wheel's light:
+     it takes the exact colour of the stage lit above it, a spill of that light
+     reaches down over the gap, and the edge it lands on brightens. Replays on
+     each step change, never loops. */
+  .pw-center { position: relative; }
+  .pw-center--find  { --stage-c: #9F86EC; }
+  .pw-center--reach { --stage-c: #6FA6E9; }
+  .pw-center--run   { --stage-c: #3FCDAD; }
+
+  .pw-center::before {
+    content: ""; position: absolute; left: 50%; top: -34px;
+    width: 268px; height: 96px; transform: translateX(-50%);
+    background: radial-gradient(56% 72% at 50% 0%, var(--stage-c, #9F86EC), transparent 72%);
+    filter: blur(3px); opacity: 0; pointer-events: none; z-index: 0;
+  }
+  .pw-center::after {
+    content: ""; position: absolute; left: 16px; right: 16px; top: 0; height: 2px;
+    border-radius: 2px; transform: scaleX(0.16); opacity: 0; pointer-events: none;
+    background: linear-gradient(90deg, transparent, var(--stage-c, #9F86EC), transparent);
+  }
+  .pw-center > * { position: relative; z-index: 1; }
+  .pw-center.lit::before { animation: pwSpill 1.05s cubic-bezier(0.25, 0.8, 0.3, 1) both; }
+  .pw-center.lit::after  { animation: pwLand 0.85s cubic-bezier(0.25, 0.8, 0.3, 1) both; }
+  @keyframes pwSpill { 0% { opacity: 0; } 26% { opacity: 0.32; } 100% { opacity: 0.12; } }
+  @keyframes pwLand  { 0% { transform: scaleX(0.16); opacity: 0; } 34% { opacity: 1; } 100% { transform: scaleX(1); opacity: 0.72; } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* hold the light still rather than animating it in */
+  .pw-center.lit::before { animation: none !important; opacity: 0.12; }
+  .pw-center.lit::after { animation: none !important; opacity: 0.6; transform: scaleX(1); }
+}
+
+@media (max-width: 900px) {
+
   /* the 3-column handoff table is too wide for a phone → stack each handoff:
      from-tool on top, the data it passes, then the to-tool, as one grouped chip. */
   .pw-flows { display: flex; flex-direction: column; gap: 9px; }
