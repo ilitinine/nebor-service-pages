@@ -275,8 +275,9 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     pwCenter.innerHTML =
       '<div class="pw-c-head"><h4 class="pw-c-name">' + esc(d.step) + '</h4></div>' +
       '<p class="pw-c-desc">' + esc(d.desc) + '</p>' +
-      (flows ? '<div class="pw-c-k"><b>How the data moves</b><span>each row is one handoff: a tool passes data to the next</span></div>' +
-        '<div class="pw-flows">' + flows + '</div>' : '') +
+      // The handoff rows repeated what the cards already show and stretched the
+      // panel, so the step now reads as card, sentence, result.
+
       (d.output ? '<div class="pw-c-out"><span class="pw-c-out-k">Produces</span>' + esc(d.output) + '</div>' : '');
   }
 
