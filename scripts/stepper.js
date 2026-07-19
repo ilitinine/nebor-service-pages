@@ -76,7 +76,8 @@ window.neborLogo = window.neborLogo || function (slug, size) {
   // ---- the explainer line · header stepper ----
   data.forEach((d, i) => {
     const node = document.createElement('div');
-    node.className = 'wf-node' + (i === 0 ? ' active' : '');
+    // the stage class lets the mobile chips wear their wheel-stage colour
+    node.className = 'wf-node wf-node--' + (PHASE[d.phase] || 'find') + (i === 0 ? ' active' : '');
     node.dataset.idx = i;
     node.innerHTML =
       '<span class="step-num">Step ' + String(i + 1).padStart(2, '0') + '</span>' +
@@ -336,9 +337,12 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     glowStage(stageOf(i));   // set the glow in the SAME style batch as the card toggle, before any reflow renderCenter might force
     drawWires(i);
     renderCenter(i);
-    // renderCenter rewrites the class list, so the light re-arms on every step
+    // renderCenter rewrites the class list, so the catch re-arms on every step
     void pwCenter.offsetWidth;
     pwCenter.classList.add('lit');
+    // and the wheel advances a notch (mobile only; the class is inert on desktop)
+    const wheelEl = document.querySelector('.pw-wheel');
+    if (wheelEl) { wheelEl.classList.remove('kick'); void wheelEl.offsetWidth; wheelEl.classList.add('kick'); }
   }
 
   // ---- autoplay: build the play on scroll-in, loop it, hand control to any click ----

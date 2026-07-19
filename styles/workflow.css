@@ -592,23 +592,40 @@
 @media (max-width: 900px) {
   .workflow { padding: 36px 20px; }
   .workflow-track { display: none; }
-  .workflow-nodes {
-    flex-direction: column;
-    gap: 0;
-  }
+  /* The sprawling dot rail read as unfinished: a huge empty left column, rows
+     of dead space, grid lines showing through. The steps are now a tight stack
+     of cards. Each wears its wheel-stage colour on the number chip, so the list
+     and the wheel below it speak the same colour language, and the active step
+     is the one card lit in its stage colour. */
+  .workflow-nodes { flex-direction: column; gap: 9px; }
   .wf-node {
-    flex-direction: row;
-    width: 100%;
-    padding: 16px 0 16px 72px;
-    align-items: flex-start;
-    border-left: 2px solid rgba(20,23,31,0.10);
-    margin-left: 28px;
+    --sc: #9F86EC;
+    flex-direction: row; align-items: center; gap: 12px;
+    width: 100%; margin: 0; padding: 12px 14px;
+    background: #FCFAF7;
+    border: 1.5px solid #FFFFFF; border-radius: 14px;
+    box-shadow: 0 8px 18px -12px rgba(23, 42, 45, 0.18);
     text-align: left;
   }
-  .wf-node .dot-wrap { left: 0; top: 16px; transform: translateX(-50%); }
-  .wf-node .step-num { position: static; transform: none; margin-bottom: 4px; }
-  .wf-node .step-label { text-align: left; margin-top: 0; min-height: 0; }
-  .wf-node .step-tools { justify-content: flex-start; margin-top: 8px; }
+  .wf-node--find  { --sc: #9F86EC; }
+  .wf-node--reach { --sc: #6FA6E9; }
+  .wf-node--run   { --sc: #3FCDAD; }
+  .wf-node .dot-wrap { display: none; }
+  .wf-node .step-num {
+    position: static; transform: none; margin: 0;
+    font-size: 10px; font-weight: 800; letter-spacing: 0.1em; line-height: 1;
+    color: color-mix(in srgb, var(--sc) 72%, var(--ink));
+    background: color-mix(in srgb, var(--sc) 14%, #FFFFFF);
+    border: 1px solid color-mix(in srgb, var(--sc) 30%, #FFFFFF);
+    padding: 7px 9px; border-radius: 9px; white-space: nowrap;
+  }
+  .wf-node .step-label { flex: 1; text-align: left; margin: 0; min-height: 0; font-size: 15px; }
+  .wf-node .step-tools { justify-content: flex-end; margin: 0; }
+  .wf-node.active {
+    border-color: var(--sc);
+    box-shadow: 0 14px 28px -14px color-mix(in srgb, var(--sc) 60%, rgba(23, 42, 45, 0.35));
+  }
+  .wf-node.active .step-num { background: var(--sc); border-color: var(--sc); color: #FFFFFF; }
 
   .flow-row { grid-template-columns: 1fr; }
   .flow-wire { transform: rotate(90deg); margin: 4px 0; }
