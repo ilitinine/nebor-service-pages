@@ -328,71 +328,6 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     }
   }
 
-  // ---- the link between the step list and the wheel ----
-  // On a phone the wheel cannot hold the cards, so it stacks underneath and the
-  // two read as unrelated blocks. Draw the line between them, anchored to
-  // whichever step is active, and run a spark down it on every step change, so
-  // the wheel is visibly the thing the steps are building.
-  const pwCanvasEl = document.querySelector('.pw-canvas');
-  let connWrap = null, connSvg = null, connPath = null;
-  if (pwCanvasEl && pwCanvasEl.parentNode) {
-    connWrap = document.createElement('div');
-    connWrap.className = 'wf-connect';
-    connWrap.setAttribute('aria-hidden', 'true');
-    connSvg = document.createElementNS(NS, 'svg');
-    connPath = document.createElementNS(NS, 'path');
-    connPath.setAttribute('class', 'wf-connect-path');
-    connPath.setAttribute('fill', 'none');
-    connSvg.appendChild(connPath);
-    connWrap.appendChild(connSvg);
-    pwCanvasEl.parentNode.insertBefore(connWrap, pwCanvasEl);
-  }
-  // only live where it is actually shown (the CSS reveals it on narrow screens)
-  function connLive() {
-    return !!connWrap && connWrap.offsetParent !== null && connWrap.getBoundingClientRect().height > 6;
-  }
-  function layoutConnector() {
-    if (!connLive()) return;
-    const box = connWrap.getBoundingClientRect();
-    const active = nodesEl.querySelector('.wf-node.active') || nodesEl.querySelector('.wf-node');
-    const dot = active && active.querySelector('.dot');
-    if (!dot) return;
-    const dr = dot.getBoundingClientRect();
-    const x1 = Math.max(8, Math.min(box.width - 8, dr.left + dr.width / 2 - box.left));
-    const x2 = box.width / 2;
-    const h = box.height;
-    connSvg.setAttribute('width', box.width);
-    connSvg.setAttribute('height', h);
-    connSvg.setAttribute('viewBox', '0 0 ' + box.width + ' ' + h);
-    // ease across from the rail to the wheel's centre rather than cutting a diagonal
-    connPath.setAttribute('d', 'M ' + x1 + ' 0 C ' + x1 + ' ' + (h * 0.62) + ', ' + x2 + ' ' + (h * 0.38) + ', ' + x2 + ' ' + h);
-  }
-  function fireConnector() {
-    if (!connLive() || reduceMotion) return;
-    layoutConnector();
-    const d = connPath.getAttribute('d');
-    if (!d) return;
-    const g = document.createElementNS(NS, 'g');
-    const halo = document.createElementNS(NS, 'circle');
-    halo.setAttribute('r', '9'); halo.setAttribute('fill', '#9F86EC'); halo.setAttribute('opacity', '0.26');
-    const core = document.createElementNS(NS, 'circle');
-    core.setAttribute('r', '3.6'); core.setAttribute('fill', '#9F86EC');
-    const am = document.createElementNS(NS, 'animateMotion');
-    am.setAttribute('dur', '0.72s'); am.setAttribute('begin', 'indefinite');
-    am.setAttribute('fill', 'freeze'); am.setAttribute('path', d);
-    am.setAttribute('calcMode', 'spline');
-    am.setAttribute('keyPoints', '0;1'); am.setAttribute('keyTimes', '0;1');
-    am.setAttribute('keySplines', '0.4 0 0.2 1');
-    const op = document.createElementNS(NS, 'animate');
-    op.setAttribute('attributeName', 'opacity'); op.setAttribute('values', '0;1;1;0');
-    op.setAttribute('dur', '0.72s'); op.setAttribute('begin', 'indefinite'); op.setAttribute('fill', 'freeze');
-    g.appendChild(halo); g.appendChild(core); g.appendChild(am); g.appendChild(op);
-    connSvg.appendChild(g);
-    try { am.beginElement(); op.beginElement(); } catch (e) {}
-    setTimeout(function () { if (g.parentNode) g.parentNode.removeChild(g); }, 840);
-  }
-  window.addEventListener('resize', layoutConnector);
-
   function setActive(i) {
     nodesEl.querySelectorAll('.wf-node').forEach((n, k) => n.classList.toggle('active', k === i));
     if (trackFill) trackFill.style.width = (N > 1 ? (i / (N - 1)) * 100 : 0) + '%';
@@ -400,7 +335,6 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     glowStage(stageOf(i));   // set the glow in the SAME style batch as the card toggle, before any reflow renderCenter might force
     drawWires(i);
     renderCenter(i);
-    fireConnector();         // run the spark from this step down into the wheel
   }
 
   // ---- autoplay: build the play on scroll-in, loop it, hand control to any click ----
