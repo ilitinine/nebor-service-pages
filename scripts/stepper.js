@@ -233,6 +233,10 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     const HUB = window.NEBOR_HUB || [{ sl: 'clay', name: 'Clay' }, { sl: 'n8n', name: 'n8n' }];
     const HUB_TX = window.NEBOR_HUB_TEXT || ('built on ' + HUB.map(h => '<b>' + h.name + '</b>').join(' + '));
     if (clay) clay.innerHTML = HUB.map(h => '<span class="pw-clay-mk">' + window.neborLogo(h.sl, 18) + '</span>').join('') + '<span class="pw-clay-tx">' + HUB_TX + '</span>';
+    // anchor the chip to the wheel box: identical geometry on desktop, and on
+    // mobile it centres in the wheel instead of drifting down the tall stack
+    const wheelBox = document.querySelector('.pw-wheel');
+    if (clay && wheelBox) wheelBox.appendChild(clay);
   }
 
   // ---- the ring step cards (compact tiles, built progressively) ----
