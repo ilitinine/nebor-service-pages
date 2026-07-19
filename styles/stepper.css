@@ -265,9 +265,9 @@
      the card its stamp falls on. The angle comes from the stepper as --wa. */
   .pw-flywheel, .pw-glow {
     transform: rotate(var(--wa, 0deg)) scale(1.12);
-    transition: transform 0.7s cubic-bezier(0.3, 0.7, 0.3, 1);
+    transition: transform 0.85s cubic-bezier(0.3, 0.7, 0.3, 1);
   }
-  .pw-flywheel .pw-deco, .pw-glow .pw-deco { transition: transform 0.7s cubic-bezier(0.3, 0.7, 0.3, 1); }
+  .pw-flywheel .pw-deco, .pw-glow .pw-deco { transition: transform 0.85s cubic-bezier(0.3, 0.7, 0.3, 1); }
 
   .pw-wires, .pw-nodes { display: none; }
   /* the hub chip stays: the wheel's centre is empty on a phone */
@@ -304,7 +304,7 @@
     letter-spacing: 0.16em; text-transform: uppercase; line-height: 1;
     box-shadow: 0 10px 22px -8px rgba(23, 42, 45, 0.38);
     z-index: 3; pointer-events: none;
-    animation: pwStampDrop 0.62s cubic-bezier(0.3, 0.7, 0.25, 1.25) 0.32s both;
+    animation: pwStampDrop 0.62s cubic-bezier(0.3, 0.7, 0.25, 1.25) 0.5s both;
   }
   @keyframes pwStampDrop {
     0%   { transform: translate(-50%, -390%) scale(0.86); opacity: 0; }
