@@ -146,7 +146,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
         '<circle r="24" fill="none" stroke="' + sh.c + '" stroke-width="2.5" class="pw-glow-ping p2"/>' +
         '<g class="pw-glow-disc"><circle r="24" fill="#FFFFFF"/><g class="pw-glow-glyph">' + glyph(sh.ic, sh.c) + '</g></g>' +
       '</g>' +
-      '<text class="pw-glow-lbl" x="' + sh.lx.toFixed(1) + '" y="' + sh.ly.toFixed(1) + '" text-anchor="middle" dominant-baseline="central" fill="#FFFFFF">' + sh.k + '</text>';
+      '<text class="pw-glow-lbl" text-anchor="middle" fill="#FFFFFF"><textPath href="#pwLA' + k + '" startOffset="50%">' + sh.k + '</textPath></text>';
   }
 
   function drawFlywheel() {
@@ -205,14 +205,32 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     // white hub disc framing the centre card · hairline edge instead of a shadow
     P.push('<circle cx="' + CX + '" cy="' + CY + '" r="' + (rIn - RND / 2 - 10) + '" fill="#FDFAF2" stroke="rgba(23,42,45,0.07)" stroke-width="1.5"/>');
     // white icon badges + dark stage labels · icon stacked straight above its label
+    // Words ride the band itself. Each label curves along its own slab on a
+    // textPath, so it can never fall out of the bar, whatever the slab's angle.
+    // Lower-half slabs get a reversed (coin-bottom) arc so their words read
+    // upright; radii keep glyphs on the hub side of the band, icons on the rim
+    // side, at every position.
+    const arcDefs = [];
+    const arcFor = (id, r, am, half, rev) => {
+      const p1 = pt(am - half, r), p2 = pt(am + half, r);
+      const d = rev
+        ? 'M ' + p2.x.toFixed(1) + ' ' + p2.y.toFixed(1) + ' A ' + r + ' ' + r + ' 0 0 0 ' + p1.x.toFixed(1) + ' ' + p1.y.toFixed(1)
+        : 'M ' + p1.x.toFixed(1) + ' ' + p1.y.toFixed(1) + ' A ' + r + ' ' + r + ' 0 0 1 ' + p2.x.toFixed(1) + ' ' + p2.y.toFixed(1);
+      arcDefs.push('<path id="' + id + '" d="' + d + '" fill="none"/>');
+    };
     STAGES.forEach((s, i) => {
       const am = start + i * seg + seg / 2;
-      const ap = pt(am, rMid);
-      P.push('<g transform="translate(' + ap.x.toFixed(1) + ',' + (ap.y - 25).toFixed(1) + ')"><circle r="24" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>' + glyph(s.ic, col[i]) + '</g>');
-      P.push('<text class="pw-fw-label" x="' + ap.x.toFixed(1) + '" y="' + (ap.y + 25).toFixed(1) + '" text-anchor="middle" dominant-baseline="central" fill="#202B33">' + s.k + '</text>');
+      const half = seg / 2 - chevA - 0.08;
+      const rev = Math.sin(am) > 0.3;               // lower-half slab: flip the arc
+      arcFor('pwLA' + i, rev ? rMid - 15 : rMid - 30, am, half, rev);
+      if (s.sub) arcFor('pwSA' + i, rev ? rMid - 31 : rMid - 46, am, half, rev);
+      const ip = pt(am, rMid + 14);
+      P.push('<g transform="translate(' + ip.x.toFixed(1) + ',' + ip.y.toFixed(1) + ')"><circle r="24" fill="#FFFFFF" stroke="rgba(23,42,45,0.08)" stroke-width="1"/>' + glyph(s.ic, col[i]) + '</g>');
+      P.push('<text class="pw-fw-label" text-anchor="middle" fill="#202B33"><textPath href="#pwLA' + i + '" startOffset="50%">' + s.k + '</textPath></text>');
       // optional sub-label under a slab: the CRM build uses it to say the Architect arc happens once
-      if (s.sub) P.push('<text class="pw-fw-sub" x="' + ap.x.toFixed(1) + '" y="' + (ap.y + 41).toFixed(1) + '" text-anchor="middle" dominant-baseline="central" fill="rgba(32,43,51,0.55)">' + s.sub + '</text>');
+      if (s.sub) P.push('<text class="pw-fw-sub" text-anchor="middle" fill="rgba(32,43,51,0.55)"><textPath href="#pwSA' + i + '" startOffset="50%">' + s.sub + '</textPath></text>');
     });
+    P.push('<defs>' + arcDefs.join('') + '</defs>');
     svg.innerHTML = P.join('');
 
     // stash the slab shapes + label spots so the glow overlay can light up the active stage

@@ -72,7 +72,7 @@
 /* the glow flashes in fast (14%) so it fires in lock-step with the card, then settles */
 .pw-glow-face { mix-blend-mode: screen; opacity: 0; animation: pwGlowFace .6s ease both; }
 .pw-glow-halo { opacity: 0; animation: pwGlowHalo 2.4s ease-in-out infinite; }
-.pw-glow-lbl { font-family: var(--font-sans); font-weight: 800; font-size: 16px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0; animation: pwGlowLbl .4s ease both; filter: drop-shadow(0 0 6px rgba(255,255,255,0.95)); }
+.pw-glow-lbl { font-family: var(--font-mono); font-weight: 700; font-size: 21px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0; animation: pwGlowLbl .4s ease both; filter: drop-shadow(0 0 6px rgba(255,255,255,0.95)); }
 @keyframes pwGlowFace { 0% { opacity: 0; } 14% { opacity: 0.72; } 100% { opacity: 0.55; } }
 @keyframes pwGlowLbl  { 0% { opacity: 0; } 30% { opacity: 1; } 100% { opacity: 1; } }
 @keyframes pwGlowHalo { 0% { opacity: 0; } 15% { opacity: 0.55; } 60% { opacity: 0.32; } 100% { opacity: 0.44; } }
@@ -112,7 +112,7 @@
   .pw-glow-glyph > * { stroke-dasharray: none !important; stroke-dashoffset: 0 !important; animation: none !important; }
   .pw-handoff.hit, .pw-fl-live, .pw-fl-arwlive { animation: none !important; }
 }
-.pw-fw-label { font-family: var(--font-sans); font-weight: 800; font-size: 16px; letter-spacing: 0.14em; text-transform: uppercase; }
+.pw-fw-label { font-family: var(--font-mono); font-weight: 700; font-size: 21px; letter-spacing: 0.2em; text-transform: uppercase; }
 /* the Clay + n8n hub badge */
 .pw-clay {
   position: absolute; left: 50%; top: 28.5%; transform: translate(-50%, -50%); z-index: 6;
@@ -370,7 +370,7 @@
 
 
 /* optional slab sub-label · only rendered when a page sets STAGES[i].sub (CRM build) */
-.pw-fw-sub { font-family: var(--font-mono); font-size: 13px; font-weight: 600; letter-spacing: 0.06em; }
+.pw-fw-sub { font-family: var(--font-mono); font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
 
 /* the forward spur · the foundation opens forward into the two demand engines (CRM build) */
 .pw-spur {
