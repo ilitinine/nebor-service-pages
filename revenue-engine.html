@@ -45,8 +45,8 @@
     <span class="b-eyebrow">Tier 01 / Outbound · Sales Engine &amp; GTM Execution</span>
     <h1 class="b-h1">
       A go-to-market engine<br/>
-      that lives and runs<br/>
-      <span class="serif">inside your stack.</span>
+      that turns your market<br/>
+      into <span class="serif">booked meetings.</span>
     </h1>
     <p class="b-lede">AI-powered workflows wired across your full sales funnel, inbound and outbound, built on the tools your team already runs.</p>
     <div class="b-hero-ctas">
@@ -969,37 +969,31 @@ window.NEBOR_WORKFLOW = [
     step: "Identify",
     desc: "Who is in the market right now? The full universe gets pulled and filtered down to the accounts that match the ICP on size, industry, and stack.",
     brief: "Filter the market down to ICP-fit accounts.",
-    tools: ["zoominfo", "apollo", "builtwith", "datanyze", "clay"],
+    tools: ["zoominfo", "builtwith", "clay"],
     roles: {
-      zoominfo:  "Pulls the account universe: firmographics, org charts, headcount",
-      apollo:    "Runs the ICP filters and returns matching organizations",
+      zoominfo:  "Pulls the account universe and filters it to your ICP: firmographics, org charts, headcount",
       builtwith: "Detects the tech stack each account runs",
-      datanyze:  "Confirms stack signals and adds tech-spend context",
       clay:      "Merges every source into one ranked account table"
     },
     flow: [
       { from: "zoominfo",  to: "clay", proto: "api", label: "firmo.page[n]" },
-      { from: "apollo",    to: "clay", proto: "api", label: "orgs.filtered" },
-      { from: "builtwith", to: "clay", proto: "api", label: "stack.lookup" },
-      { from: "datanyze",  to: "clay", proto: "api", label: "tech.confirm" }
+      { from: "builtwith", to: "clay", proto: "api", label: "stack.lookup" }
     ],
     output: "The whole market narrowed to the accounts that fit how you sell"
   },
   {
     phase: "Find",
     step: "Signal",
-    desc: "Which of them are ready now? Live intent from three directions scores every account, and the top of the list becomes this cycle's working set.",
+    desc: "Which of them are ready now? Live intent scores every account, and the top of the list becomes this cycle's working set.",
     brief: "Intent scores accounts into a live shortlist.",
-    tools: ["bombora", "g2", "linkedin", "clay", "hubspot"],
+    tools: ["g2", "linkedin", "clay", "hubspot"],
     roles: {
-      bombora:  "Streams category-surge intent: which accounts research your space this week",
       g2:       "Flags accounts viewing your profile, your category, or your competitors",
       linkedin: "Sales Navigator alerts: job changes, hiring, and funding on target accounts",
       clay:     "Blends fit and intent into one score per account",
       hubspot:  "Receives the scores; reps see the ranked list in the CRM they already run"
     },
     flow: [
-      { from: "bombora",  to: "clay",    proto: "webhook", label: "surge.topics" },
       { from: "g2",       to: "clay",    proto: "api",     label: "category.views" },
       { from: "linkedin", to: "clay",    proto: "event",   label: "salesnav.alerts" },
       { from: "clay",     to: "hubspot", proto: "api",     label: "fit+intent.scores" }
@@ -1032,17 +1026,13 @@ window.NEBOR_WORKFLOW = [
     step: "Enrich",
     desc: "Who do we talk to there? Ready accounts become actual people: the buying committee, with verified coordinates, deduped against your CRM before anything moves.",
     brief: "Accounts become a verified buying committee.",
-    tools: ["apollo", "lusha", "clearbit", "clay", "hubspot"],
+    tools: ["clearbit", "clay", "hubspot"],
     roles: {
-      apollo:   "Pulls the people: titles, seniority, and committee roles per account",
-      lusha:    "Finds direct dials and work emails for each contact",
-      clearbit: "Fills the remaining firmographic gaps per record",
-      clay:     "Waterfalls every provider and dedupes against what your CRM already knows",
+      clearbit: "Fills the firmographic gaps on every record",
+      clay:     "Waterfalls the providers to find the committee and verify contacts, deduped against what your CRM already knows",
       hubspot:  "Receives clean contact records; nothing enters dirty"
     },
     flow: [
-      { from: "apollo",   to: "clay",    proto: "api",     label: "people.page[n]" },
-      { from: "lusha",    to: "clay",    proto: "api",     label: "contact.rows" },
       { from: "clearbit", to: "clay",    proto: "api",     label: "firmo.fill" },
       { from: "clay",     to: "hubspot", proto: "webhook", label: "contact.upsert" }
     ],

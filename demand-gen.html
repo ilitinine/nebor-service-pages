@@ -44,9 +44,9 @@
   <div class="b-container" style="position:relative; z-index:1;">
     <span class="b-eyebrow">Tier 02 / Demand · Demand Generation &amp; ABM</span>
     <h1 class="b-h1">
-      Generate demand,<br/>
-      <span class="serif">concentrate it where it counts,</span><br/>
-      and turn it into pipeline.
+      Create the demand,<br/>
+      capture every signal it sends,<br/>
+      and <span class="serif">prove what it's worth.</span>
     </h1>
     <p class="b-lede">Account-based programs and full-funnel workflows that catch demand the moment it appears, aim it at the accounts worth winning, and turn it into pipeline you can trace, all wired into the tools you already run.</p>
     <div class="b-hero-ctas">
@@ -874,16 +874,14 @@ window.NEBOR_WORKFLOW = [
     phase: "Generate", step: "Capture",
     desc: "Who is on the site right now? Anonymous visitors are matched to companies, enriched, and deduped against your CRM, so traffic becomes named accounts you can act on.",
     brief: "Turn anonymous traffic into named accounts.",
-    tools: ["clearbit", "apollo", "clay", "hubspot"],
+    tools: ["clearbit", "clay", "hubspot"],
     roles: {
       clearbit: "Reverse-IP resolves an anonymous session into a known company",
-      apollo: "Maps the buying committee inside the identified account",
-      clay: "Waterfalls enrichment and dedupes against what the CRM already knows",
+      clay: "Waterfalls enrichment, maps the buying committee, and dedupes against what the CRM already knows",
       hubspot: "Receives the clean, named account record"
     },
     flow: [
       { from: "clearbit", to: "clay", proto: "api", label: "company.match" },
-      { from: "apollo", to: "clay", proto: "api", label: "committee.rows" },
       { from: "clay", to: "hubspot", proto: "webhook", label: "named.account" }
     ],
     output: "Anonymous sessions resolved into named, in-market accounts"
@@ -892,15 +890,13 @@ window.NEBOR_WORKFLOW = [
     phase: "Concentrate", step: "Score",
     desc: "Which of them deserve more than everyone else? Fit and live intent are blended into one readiness score, and accounts fall into tiers that decide how much firepower each one gets.",
     brief: "Rank accounts by fit and intent into tiers.",
-    tools: ["bombora", "g2", "clay", "hubspot"],
+    tools: ["g2", "clay", "hubspot"],
     roles: {
-      bombora: "Streams category-surge intent: who is researching your space this week",
       g2: "Flags accounts comparing you against competitors",
       clay: "Blends fit and intent into one readiness score per account",
       hubspot: "Stores the score and tier on the account record"
     },
     flow: [
-      { from: "bombora", to: "clay", proto: "webhook", label: "surge.intent" },
       { from: "g2", to: "clay", proto: "api", label: "compare.views" },
       { from: "clay", to: "hubspot", proto: "api", label: "tier.score" }
     ],
@@ -946,17 +942,15 @@ window.NEBOR_WORKFLOW = [
     phase: "Convert", step: "Attribute",
     desc: "What did it all produce? Every deal is stamped with the source, signal and sequence behind it, so pipeline is traced deal by deal, and what converts feeds back to sharpen the next round of demand.",
     brief: "Stamp pipeline, feed what converts back.",
-    tools: ["hubspot", "anthropic", "clay", "ocean"],
+    tools: ["hubspot", "anthropic", "clay"],
     roles: {
       hubspot: "Returns every stamped deal: the source and signal that produced it",
       anthropic: "Reads what converted and decides what to generate more of",
-      clay: "Reweights the audiences and targeting toward what paid off",
-      ocean: "Reseeds lookalikes from this cycle's won accounts"
+      clay: "Reweights the audiences and reseeds lookalikes from what paid off"
     },
     flow: [
       { from: "hubspot", to: "anthropic", proto: "llm", label: "stamped.pipeline" },
-      { from: "anthropic", to: "clay", proto: "api", label: "targeting.weights" },
-      { from: "anthropic", to: "ocean", proto: "api", label: "new.seeds" }
+      { from: "anthropic", to: "clay", proto: "api", label: "targeting.weights" }
     ],
     output: "Pipeline traced back to its source · what converts sharpens the next round",
     cycle: { backTo: 0, nextLabel: "What converted this cycle sharpens where you generate demand in the next." }
