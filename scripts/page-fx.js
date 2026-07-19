@@ -49,3 +49,27 @@
     onScroll();
   }
 })();
+
+
+// ---- mobile nav · burger toggles the slide-down menu (absent on desktop) ----
+(function () {
+  var burger = document.querySelector('.b-nav-burger');
+  var menu = document.querySelector('.b-nav-menu');
+  if (!burger || !menu) return;
+  function setOpen(open) {
+    menu.classList.toggle('open', open);
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setOpen(!menu.classList.contains('open'));
+  });
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('click', function (e) {
+    if (menu.classList.contains('open') && !e.target.closest('.b-nav')) setOpen(false);
+  });
+})();

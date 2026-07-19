@@ -194,6 +194,8 @@
   overflow: hidden;
 }
 .pw-center > * { width: 300px; max-width: 100%; }
+/* the stage stamp only exists on narrow screens; desktop's card sits inside the wheel */
+.pw-stage-pill { display: none; }
 /* content cascades in when the active step changes */
 .pw-center > * { animation: pwCIn 0.42s both cubic-bezier(0.2, 0.7, 0.3, 1); }
 .pw-center > *:nth-child(2) { animation-delay: 0.05s; }
@@ -267,37 +269,47 @@
   .pw-c-desc { font-size: 12.5px; }
 
   /* The wheel and this card are one object that the screen width splits in two.
-     Rather than draw something between them, the card catches the wheel's light:
-     it takes the exact colour of the stage lit above it, a spill of that light
-     reaches down over the gap, and the edge it lands on brightens. Replays on
-     each step change, never loops. */
-  .pw-center { position: relative; }
+     So the wheel STAMPS the card: on every step change the active stage's badge
+     (its name, in the exact colour the wheel is lit in) drops out of the wheel
+     and lands on the card's top seam, and the card dips as it catches the
+     weight. The card's top edge wears that stage colour full-time, so even at
+     rest the two read as joined. Plays once per step, never loops. */
+  .pw-center { position: relative; border-top: 3px solid var(--stage-c, #9F86EC); padding-top: 30px; }
   .pw-center--find  { --stage-c: #9F86EC; }
   .pw-center--reach { --stage-c: #6FA6E9; }
   .pw-center--run   { --stage-c: #3FCDAD; }
 
-  .pw-center::before {
-    content: ""; position: absolute; left: 50%; top: -34px;
-    width: 268px; height: 96px; transform: translateX(-50%);
-    background: radial-gradient(56% 72% at 50% 0%, var(--stage-c, #9F86EC), transparent 72%);
-    filter: blur(3px); opacity: 0; pointer-events: none; z-index: 0;
+  .pw-stage-pill {
+    display: inline-block; position: absolute; top: 0; left: 50%;
+    transform: translate(-50%, -58%);
+    width: auto; padding: 8px 18px; border-radius: 999px;
+    background: var(--stage-c, #9F86EC); color: #FFFFFF;
+    border: 2.5px solid #FFFFFF;
+    font-family: var(--font-sans); font-size: 11px; font-weight: 800;
+    letter-spacing: 0.16em; text-transform: uppercase; line-height: 1;
+    box-shadow: 0 10px 22px -8px rgba(23, 42, 45, 0.38);
+    z-index: 3; pointer-events: none;
+    animation: pwStampDrop 0.62s cubic-bezier(0.3, 0.7, 0.25, 1.25) 0.05s both;
   }
-  .pw-center::after {
-    content: ""; position: absolute; left: 16px; right: 16px; top: 0; height: 2px;
-    border-radius: 2px; transform: scaleX(0.16); opacity: 0; pointer-events: none;
-    background: linear-gradient(90deg, transparent, var(--stage-c, #9F86EC), transparent);
+  @keyframes pwStampDrop {
+    0%   { transform: translate(-50%, -390%) scale(0.86); opacity: 0; }
+    45%  { opacity: 1; }
+    72%  { transform: translate(-50%, -44%) scale(1.06); }
+    100% { transform: translate(-50%, -58%) scale(1); }
   }
-  .pw-center > * { position: relative; z-index: 1; }
-  .pw-center.lit::before { animation: pwSpill 1.05s cubic-bezier(0.25, 0.8, 0.3, 1) both; }
-  .pw-center.lit::after  { animation: pwLand 0.85s cubic-bezier(0.25, 0.8, 0.3, 1) both; }
-  @keyframes pwSpill { 0% { opacity: 0; } 26% { opacity: 0.32; } 100% { opacity: 0.12; } }
-  @keyframes pwLand  { 0% { transform: scaleX(0.16); opacity: 0; } 34% { opacity: 1; } 100% { transform: scaleX(1); opacity: 0.72; } }
+  /* the card catches the stamp: a small dip, timed to the landing */
+  .pw-center.lit { animation: pwCardCatch 0.68s cubic-bezier(0.3, 0.7, 0.3, 1) both; }
+  @keyframes pwCardCatch {
+    0%, 42% { transform: none; }
+    62%     { transform: translateY(4px); }
+    100%    { transform: none; }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* hold the light still rather than animating it in */
-  .pw-center.lit::before { animation: none !important; opacity: 0.12; }
-  .pw-center.lit::after { animation: none !important; opacity: 0.6; transform: scaleX(1); }
+  /* the stamp simply sits in place; nothing drops, nothing dips */
+  .pw-stage-pill { animation: none !important; }
+  .pw-center.lit { animation: none !important; }
 }
 
 @media (max-width: 900px) {

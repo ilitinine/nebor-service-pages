@@ -273,6 +273,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     }).join('');
     pwCenter.className = 'pw-center pw-center--' + ph;
     pwCenter.innerHTML =
+      '<span class="pw-stage-pill" aria-hidden="true">' + esc(d.phase) + '</span>' +
       '<div class="pw-c-head"><h4 class="pw-c-name">' + esc(d.step) + '</h4></div>' +
       '<p class="pw-c-desc">' + esc(d.desc) + '</p>' +
       // The handoff rows repeated what the cards already show and stretched the
