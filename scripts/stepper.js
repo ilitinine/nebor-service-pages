@@ -302,9 +302,11 @@ window.neborLogo = window.neborLogo || function (slug, size) {
       '<span class="pw-stage-pill" aria-hidden="true"' + (slab ? ' style="background:' + slab.c + '"' : '') + '>' + esc(slab ? slab.k : d.phase) + '</span>' +
       '<div class="pw-c-head"><h4 class="pw-c-name">' + esc(d.step) + '</h4></div>' +
       '<p class="pw-c-desc">' + esc(d.desc) + '</p>' +
-      // The handoff rows repeated what the cards already show and stretched the
-      // panel, so the step now reads as card, sentence, result.
-
+      // On desktop the handoff rows show tool-to-tool data movement; on phones
+      // they repeated the wheel cards and stretched the panel, so CSS hides
+      // them under 900px.
+      (flows ? '<div class="pw-c-k"><b>How the data moves</b><span>each row is one handoff: a tool passes data to the next</span></div>' +
+        '<div class="pw-flows">' + flows + '</div>' : '') +
       (d.output ? '<div class="pw-c-out"><span class="pw-c-out-k">Produces</span>' + esc(d.output) + '</div>' : '');
   }
 

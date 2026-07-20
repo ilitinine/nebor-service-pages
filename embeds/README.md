@@ -37,8 +37,8 @@ Step clicks, popovers and the wheel all run inside the embed.
 | Framer breakpoint | Embed height |
 | --- | --- |
 | Desktop (1200+)   | 1930 |
-| Tablet (810-1199) | 2060 |
-| Phone (0-809)     | 2160 |
+| Tablet (810-1199) | 2010 |
+| Phone (0-809)     | 2210 |
 
 Heights are measured at the breakpoint edges; if a strip of blank space shows
 at some width, adjust the frame height, the content is height-stable per width.
