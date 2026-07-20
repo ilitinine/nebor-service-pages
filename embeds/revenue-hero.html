@@ -1,0 +1,409 @@
+<meta charset="utf-8">
+<!-- NEBOR EMBED - revenue-hero - source: github.com/ilitinine/nebor-service-pages -->
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Serif:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<style>
+
+.nb-embed { width:100vw; max-width:1500px; margin:0 auto; --font-sans: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --color-base:#FFFFFF; --color-text:#172A2D; --ink:#172A2D; --color-blue-50:#E8EAEA; --color-blue-300:#647072;
+  --color-blue-500:#172A2D; --color-brown-200:#F1EDE7; --color-violet-500:#E0C4FC; --color-orange-500:#FAC064;
+  --page-accent:#F4D77F; --page-accent-strong:#8A6A2A; --page-accent-soft:#FBF3D9;
+  margin:0; font-family:var(--font-sans); color:var(--color-text); }
+.nb-embed * { box-sizing: border-box; }
+.nb-embed .hero-elements-wrap { max-width:1500px; margin:0 auto; padding:0 20px 10px; width:100%; }
+.nb-embed .hero-elements { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px; text-align:left; width:100%; min-width:0; }
+.nb-embed, .nb-embed * { min-width:0; }
+.nb-embed { min-width:min(1500px, 100vw); }
+.nb-embed .hero-el { position:relative; display:block; background:var(--color-base); border-radius:22px; overflow:hidden; padding-top:130%;
+  transition:border-color .26s ease, transform .26s ease, box-shadow .26s ease; text-decoration:none; color:inherit;
+  --page-accent:#E1962E; --page-accent-strong:#B26F14; --page-accent-soft:#FDF1DE; --card-header:#172A2D;
+  border:1.5px solid rgba(23,42,45,0.16); box-shadow:0 16px 38px -22px rgba(23,42,45,0.22);
+  animation: nbFloat 7s ease-in-out infinite; }
+.nb-embed .hero-elements .hero-el:nth-child(2) { animation-delay:1.2s; }
+.nb-embed .hero-elements .hero-el:nth-child(3) { animation-delay:2.4s; }
+@keyframes nbFloat { 0%,100% { transform:translateY(0);} 50% { transform:translateY(-6px);} }
+@media (prefers-reduced-motion: reduce) { .nb-embed .hero-el { animation:none; } }
+.nb-embed .hero-el:hover { transform:translateY(-3px); border-color:rgba(23,42,45,0.28); box-shadow:0 30px 60px -28px rgba(23,42,45,0.3); }
+.nb-embed .hero-el-canvas { position:absolute; inset:0; height:100%; background:#EFEAE3; overflow:hidden; }
+.nb-embed .hero-el-canvas svg { position:relative; z-index:1; display:block; width:100%; height:100%; }
+.nb-embed .hero-el-content { position:absolute; bottom:0; left:0; right:0; z-index:3; padding:24px 24px 26px; display:flex; flex-direction:column; gap:6px;
+  background:linear-gradient(180deg, rgba(239,234,227,0) 0%, #F4F0EA 34%, #F7F4EF 100%); transition:padding .35s cubic-bezier(0.4,0,0.2,1); }
+.nb-embed .hero-el-body { max-height:0; opacity:0; overflow:hidden; margin:0; font-family:var(--font-sans); font-size:13.5px; line-height:1.55; color:var(--color-blue-300);
+  transition:max-height .45s cubic-bezier(0.4,0,0.2,1), opacity .3s ease .05s, margin .3s ease; }
+.nb-embed .hero-el:hover .hero-el-body { max-height:170px; opacity:1; margin:6px 0 0; }
+.nb-embed .hero-el:hover .hero-el-content { padding-top:32px; padding-bottom:30px; }
+.nb-embed .hero-el-tag { display:inline-flex; align-items:center; gap:7px; align-self:flex-start; padding:5px 12px 5px 10px;
+  background:#FBF3E4; border:1.5px solid rgba(23,42,45,0.18); border-radius:999px; font-family:var(--font-sans);
+  font-size:12px; color:var(--ink); font-weight:700; line-height:1; }
+.nb-embed .hero-el-tag::before { content:""; width:6px; height:6px; border-radius:50%; background:#7FA8C9;
+  box-shadow:0 0 0 2.5px color-mix(in srgb, #E1962E 35%, transparent); }
+.nb-embed .hero-el-title { font-family:var(--font-sans); font-size:20px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; color:var(--color-text); margin:4px 0 0; }
+/* aligned to Framer breakpoints: Desktop >=1200 - Tablet 1199-810 - Phone <=809 */
+@media (max-width: 1199px) {
+  .nb-embed .hero-elements { grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+  .nb-embed .hero-el { padding-top:0; min-height:0; height:430px; }
+  .nb-embed .hero-el-canvas { height:100%; }
+}
+@media (max-width: 809px) {
+  .nb-embed .hero-elements { grid-template-columns:1fr; gap:12px; }
+}
+
+</style>
+<div class="nb-embed">
+<div class="hero-elements-wrap">
+    <div class="hero-elements">
+
+      <!-- Card 1 &#183; TAM &#183; Clay-centered tool stack with surrounding TAM data tools -->
+      <div class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+            <!-- header -->            <text x="31" y="28" font-family="var(--font-sans)" font-size="12" font-weight="700" fill="#172A2D">Market map</text>
+            <text x="384" y="28" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.5)">narrowing to who's ready</text>
+            <line x1="16" y1="46" x2="384" y2="46" stroke="rgba(23,42,45,0.08)"/>
+
+            <!-- L1 &#183; TAM -->
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -6;0 0;0 0" keyTimes="0;0.08;0.115;0.15;1" dur="9s" repeatCount="indefinite"/>
+            <rect x="24" y="52" width="352" height="42" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+            <text x="44" y="72" font-family="var(--font-sans)" font-size="8" font-weight="700" letter-spacing="0.09em" fill="rgba(23,42,45,0.42)">TOTAL ADDRESSABLE MARKET</text>
+            <text x="44" y="88" font-family="var(--font-sans)" font-size="17" font-weight="700" fill="#172A2D">48,000</text>
+            <rect x="210" y="63" width="154" height="20" rx="10" fill="#F3EEE7" stroke="#FFFFFF" stroke-width="1.2"/>
+            <text x="287" y="76.5" text-anchor="middle" font-family="var(--font-sans)" font-size="7.2" font-weight="600" fill="rgba(23,42,45,0.62)">every company that could buy</text>
+
+            </g>
+            <path d="M200 94 L200 100" stroke="rgba(23,42,45,0.16)" stroke-width="1.2" stroke-dasharray="2 3"/>
+
+            <!-- L2 &#183; ICP FIT -->
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -6;0 0;0 0" keyTimes="0;0.14;0.175;0.21;1" dur="9s" repeatCount="indefinite"/>
+            <rect x="44" y="100" width="312" height="40" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+            <text x="62" y="119" font-family="var(--font-sans)" font-size="8" font-weight="700" letter-spacing="0.08em" fill="rgba(23,42,45,0.42)">ICP FIT</text>
+            <text x="62" y="135" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="#172A2D">6,400</text>
+            <rect x="214" y="110" width="130" height="20" rx="10" fill="#F3EEE7" stroke="#FFFFFF" stroke-width="1.2"/>
+            <text x="279" y="123.5" text-anchor="middle" font-family="var(--font-sans)" font-size="7.2" font-weight="600" fill="rgba(23,42,45,0.62)">like your closed-won</text>
+
+            </g>
+            <path d="M200 140 L200 146" stroke="rgba(23,42,45,0.16)" stroke-width="1.2" stroke-dasharray="2 3"/>
+
+            <!-- L3 &#183; FIRMOGRAPHIC -->
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -6;0 0;0 0" keyTimes="0;0.2;0.235;0.27;1" dur="9s" repeatCount="indefinite"/>
+            <rect x="62" y="146" width="276" height="40" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+            <text x="80" y="165" font-family="var(--font-sans)" font-size="8" font-weight="700" letter-spacing="0.08em" fill="rgba(23,42,45,0.42)">FIRMOGRAPHIC</text>
+            <text x="80" y="181" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="#172A2D">3,200</text>
+            <rect x="206" y="156" width="120" height="20" rx="10" fill="#F3EEE7" stroke="#FFFFFF" stroke-width="1.2"/>
+            <text x="266" y="169.5" text-anchor="middle" font-family="var(--font-sans)" font-size="7.2" font-weight="600" fill="rgba(23,42,45,0.62)">right size &#183; right industry</text>
+
+            </g>
+            <path d="M200 186 L200 192" stroke="rgba(23,42,45,0.16)" stroke-width="1.2" stroke-dasharray="2 3"/>
+
+            <!-- L4 &#183; TECHNOGRAPHIC -->
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -6;0 0;0 0" keyTimes="0;0.26;0.295;0.33;1" dur="9s" repeatCount="indefinite"/>
+            <rect x="80" y="192" width="240" height="40" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+            <text x="98" y="211" font-family="var(--font-sans)" font-size="8" font-weight="700" letter-spacing="0.08em" fill="rgba(23,42,45,0.42)">TECHNOGRAPHIC</text>
+            <text x="98" y="227" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="#172A2D">2,800</text>
+            <rect x="186" y="202" width="124" height="20" rx="10" fill="#F3EEE7" stroke="#FFFFFF" stroke-width="1.2"/>
+            <text x="248" y="215.5" text-anchor="middle" font-family="var(--font-sans)" font-size="7.2" font-weight="600" fill="rgba(23,42,45,0.62)">runs a stack you fit into</text>
+
+            </g>
+            <path d="M200 232 L200 238" stroke="rgba(23,42,45,0.16)" stroke-width="1.2" stroke-dasharray="2 3"/>
+
+            <!-- L5 &#183; GEOGRAPHIC -->
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -6;0 0;0 0" keyTimes="0;0.32;0.355;0.39;1" dur="9s" repeatCount="indefinite"/>
+            <rect x="96" y="238" width="208" height="40" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.05))"/>
+            <text x="114" y="257" font-family="var(--font-sans)" font-size="8" font-weight="700" letter-spacing="0.08em" fill="rgba(23,42,45,0.42)">GEOGRAPHIC</text>
+            <text x="114" y="273" font-family="var(--font-sans)" font-size="14" font-weight="700" fill="#172A2D">2,300</text>
+            <rect x="186" y="248" width="106" height="20" rx="10" fill="#F3EEE7" stroke="#FFFFFF" stroke-width="1.2"/>
+            <text x="239" y="261.5" text-anchor="middle" font-family="var(--font-sans)" font-size="7.2" font-weight="600" fill="rgba(23,42,45,0.62)">your territories</text>
+
+            </g>
+            <path d="M200 278 L200 284" stroke="rgba(225,150,46,0.6)" stroke-width="1.4" stroke-dasharray="2 3"/>
+
+            <!-- L6 &#183; INTENT &#183; the amber hero moment -->
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -9;0 0;0 0" keyTimes="0;0.39;0.425;0.46;1" dur="9s" repeatCount="indefinite"/>
+            <rect x="104" y="284" width="192" height="60" rx="14" fill="#F3E7CC" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 8px 16px rgba(23,42,45,0.08))"/>
+            <text x="122" y="306" font-family="var(--font-sans)" font-size="8" font-weight="700" letter-spacing="0.09em" fill="#8A5410">INTENT SIGNALS</text>
+            <rect x="208" y="294" width="80" height="16" rx="8" fill="#172A2D"/>
+            <text x="248" y="305" text-anchor="middle" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="#FFFFFF">ready to buy now</text>
+            <text x="122" y="333" font-family="var(--font-sans)" font-size="19" font-weight="700" fill="#172A2D">1,900</text>
+            <text x="180" y="333" font-family="var(--font-sans)" font-size="7.5" font-weight="600" fill="rgba(138,84,16,0.85)">hiring &#183; funding &#183; tech moves</text>
+
+            </g>
+
+            <defs><linearGradient id="c1pass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,255,255,0)"/><stop offset="0.5" stop-color="rgba(255,255,255,0.6)"/><stop offset="1" stop-color="rgba(255,255,255,0)"/></linearGradient></defs>
+            <rect x="18" y="30" width="364" height="54" fill="url(#c1pass)" opacity="0" pointer-events="none">
+              <animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 268;0 268" keyTimes="0;0.05;0.47;1" dur="9s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.05;0.09;0.42;0.47;1" dur="9s" repeatCount="indefinite"/>
+            </rect>
+            <!-- output strip -->
+            <rect x="24" y="356" width="352" height="30" rx="15" fill="#172A2D"/>
+            <rect x="32" y="363" width="16" height="16" rx="4" fill="#FFFFFF"/>
+            <image href="https://www.google.com/s2/favicons?domain=hubspot.com&sz=64" x="33.5" y="364.5" width="13" height="13"/>
+            <text x="56" y="375" font-family="var(--font-sans)" font-size="9.5" font-weight="600" fill="#FFFFFF">1,900 ranked accounts &#8594; your CRM</text>
+            <rect x="304" y="363" width="64" height="16" rx="8" fill="#FAC064"/>
+            <image href="https://www.google.com/s2/favicons?domain=clay.com&sz=64" x="311" y="366" width="10" height="10"/>
+            <text x="325" y="374" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="#172A2D">via Clay</text>
+          </svg>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">TAM mapping &amp; ICP targeting</span>
+          <h3 class="hero-el-title">Map your TAM and reach every account the moment they're ready to buy.</h3>
+          <p class="hero-el-body">You end up with a ranked short list of accounts worth calling today, written straight into your CRM. We get there by narrowing your whole market by fit, company profile, tech stack, and live buying signals, so your reps stop guessing who to chase and start the day knowing who to call first.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 &#183; Deliverability (inbox mockup + infrastructure panel) -->
+      <div class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+            <!-- header -->            <text x="31" y="28" font-family="var(--font-sans)" font-size="12" font-weight="700" fill="#172A2D">Channel strategy</text>
+            <text x="384" y="28" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.5)">matched to how they buy</text>
+            <line x1="16" y1="46" x2="384" y2="46" stroke="rgba(23,42,45,0.08)"/>
+
+            <!-- LEFT &#183; buyer (fills to bottom) -->
+            <rect x="16" y="56" width="164" height="288" rx="14" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 8px 18px rgba(23,42,45,0.05))"/>
+            <defs><clipPath id="buyerAvatar"><circle cx="48" cy="90" r="19"/></clipPath></defs>
+            <circle cx="48" cy="90" r="19" fill="#EFEAE3"/>
+            <image href="https://statuesque-starship-49757d.netlify.app/assets/brand/people/lukas-weber.png" x="29" y="71" width="38" height="38" clip-path="url(#buyerAvatar)" preserveAspectRatio="xMidYMid slice"/>
+            <text x="76" y="84" font-family="var(--font-sans)" font-size="11.5" font-weight="700" fill="#172A2D">Lukas Weber</text>
+            <text x="76" y="97" font-family="var(--font-sans)" font-size="9" fill="rgba(23,42,45,0.55)">VP Supply Chain</text>
+            <text x="76" y="108" font-family="var(--font-sans)" font-size="8" fill="rgba(23,42,45,0.4)">Enterprise 3PL &#183; EU</text>
+            <line x1="30" y1="122" x2="166" y2="122" stroke="rgba(23,42,45,0.08)"/>
+            <text x="30" y="142" font-family="var(--font-sans)" font-size="8" font-weight="700" letter-spacing="0.07em" fill="rgba(23,42,45,0.42)">HOW THEY BUY</text>
+            <circle cx="35" cy="160" r="2.2" fill="#E1962E"/>
+            <text x="45" y="163.5" font-family="var(--font-sans)" font-size="9.5" fill="#172A2D">&#8364;40k+ ACV &#183; considered</text>
+            <circle cx="35" cy="182" r="2.2" fill="#E1962E"/>
+            <text x="45" y="185.5" font-family="var(--font-sans)" font-size="9.5" fill="#172A2D">4-6 month cycle</text>
+            <circle cx="35" cy="204" r="2.2" fill="#E1962E"/>
+            <text x="45" y="207.5" font-family="var(--font-sans)" font-size="9.5" fill="#172A2D">Committee of 5-8</text>
+            <line x1="30" y1="224" x2="166" y2="224" stroke="rgba(23,42,45,0.08)"/>
+            <text x="30" y="244" font-family="var(--font-sans)" font-size="8" font-weight="700" letter-spacing="0.07em" fill="rgba(23,42,45,0.42)">ACTIVE ON</text>
+            <rect x="30" y="254" width="26" height="26" rx="8" fill="#F3EEE7" stroke="#FFFFFF" stroke-width="1.2"/>
+            <image href="https://www.google.com/s2/favicons?domain=linkedin.com&sz=64" x="37" y="261" width="12" height="12" class="heroviz-favicon"/>
+            <rect x="62" y="254" width="26" height="26" rx="8" fill="#F3EEE7" stroke="#FFFFFF" stroke-width="1.2"/>
+            <image href="https://www.google.com/s2/favicons?domain=outlook.com&sz=64" x="69" y="261" width="12" height="12" class="heroviz-favicon"/>
+            <rect x="94" y="254" width="26" height="26" rx="8" fill="#F3EEE7" stroke="#FFFFFF" stroke-width="1.2"/>
+            <g transform="translate(100, 260)" fill="none" stroke="rgba(23,42,45,0.7)" stroke-width="1.2" stroke-linecap="round">
+              <rect x="0" y="1.5" width="12" height="10" rx="2"/>
+              <line x1="0" y1="5" x2="12" y2="5"/>
+              <line x1="3.5" y1="0" x2="3.5" y2="2.5"/>
+              <line x1="8.5" y1="0" x2="8.5" y2="2.5"/>
+            </g>
+            <line x1="30" y1="298" x2="166" y2="298" stroke="rgba(23,42,45,0.08)"/>
+            <text x="30" y="315" font-family="var(--font-sans)" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">We meet buyers on the</text>
+            <text x="30" y="329" font-family="var(--font-sans)" font-size="8.5" font-style="italic" fill="rgba(23,42,45,0.5)">channels they use.</text>
+
+            <!-- RIGHT &#183; channels -->
+            <!-- LinkedIn &#183; PRIMARY -->
+            <rect x="196" y="56" width="188" height="52" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 5px 12px rgba(23,42,45,0.06))"/>
+            <image href="https://www.google.com/s2/favicons?domain=linkedin.com&sz=64" x="210" y="73" width="18" height="18" class="heroviz-favicon"/>
+            <text x="236" y="80" font-family="var(--font-sans)" font-size="11.5" font-weight="700" fill="#172A2D">LinkedIn</text>
+            <text x="236" y="95" font-family="var(--font-sans)" font-size="8" fill="rgba(23,42,45,0.55)">committee mapping &#183; warm intros</text>
+<g transform="translate(354,72)"><g><animateTransform attributeName="transform" type="scale" values="1;1;1.35;1;1" keyTimes="0;0.22;0.26;0.30;1" dur="8s" repeatCount="indefinite"/><g transform="translate(-354,-72)">
+            <rect x="330" y="64" width="48" height="16" rx="8" fill="#172A2D"/>
+            <text x="354" y="75" text-anchor="middle" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="#FFFFFF">PRIMARY</text></g></g></g>
+
+            <!-- Email &#183; PRIMARY -->
+            <rect x="196" y="116" width="188" height="52" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 5px 12px rgba(23,42,45,0.06))"/>
+            <image href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" x="210" y="132" width="13" height="13" class="heroviz-favicon"/>
+            <image href="https://www.google.com/s2/favicons?domain=outlook.com&sz=64" x="225" y="132" width="13" height="13" class="heroviz-favicon"/>
+            <text x="245" y="140" font-family="var(--font-sans)" font-size="11.5" font-weight="700" fill="#172A2D">Email</text>
+            <text x="245" y="155" font-family="var(--font-sans)" font-size="8" fill="rgba(23,42,45,0.55)">signal-triggered sequences</text>
+<g transform="translate(354,132)"><g><animateTransform attributeName="transform" type="scale" values="1;1;1.35;1;1" keyTimes="0;0.40;0.44;0.48;1" dur="8s" repeatCount="indefinite"/><g transform="translate(-354,-132)">
+            <rect x="330" y="124" width="48" height="16" rx="8" fill="#172A2D"/>
+            <text x="354" y="135" text-anchor="middle" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="#FFFFFF">PRIMARY</text></g></g></g>
+
+            <!-- shared sequencing stack -->
+            <rect x="196" y="176" width="188" height="38" rx="11" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5"/>
+            <defs><linearGradient id="c2sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="rgba(225,150,46,0)"/><stop offset="0.5" stop-color="rgba(225,150,46,0.28)"/><stop offset="1" stop-color="rgba(225,150,46,0)"/></linearGradient><clipPath id="c2bar"><rect x="196" y="176" width="188" height="38" rx="11"/></clipPath></defs>
+            <g clip-path="url(#c2bar)"><rect x="110" y="176" width="80" height="38" fill="url(#c2sweep)"><animateTransform attributeName="transform" type="translate" values="0 0;0 0;280 0;280 0" keyTimes="0;0.52;0.64;1" dur="8s" repeatCount="indefinite"/></rect></g>
+            <text x="208" y="190" font-family="var(--font-sans)" font-size="7.5" font-weight="600" letter-spacing="0.05em" fill="rgba(23,42,45,0.45)">LINKEDIN + EMAIL RUN AS ONE</text>
+            <text x="208" y="206" font-family="var(--font-sans)" font-size="8.5" font-weight="600" fill="rgba(23,42,45,0.62)">same sequence &#183; same story &#183; one clock</text>
+
+            <!-- Cold calling &#183; SKIP -->
+            <rect x="196" y="222" width="188" height="44" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 5px 12px rgba(23,42,45,0.06))"><animate attributeName="opacity" values="1;1;0.5;1;1" keyTimes="0;0.68;0.74;0.80;1" dur="8s" repeatCount="indefinite"/></rect>
+            <text x="210" y="240" font-family="var(--font-sans)" font-size="10.5" font-weight="700" fill="#172A2D">Cold calling</text>
+            <text x="210" y="254" font-family="var(--font-sans)" font-size="7.5" fill="rgba(23,42,45,0.55)">committee buys &#183; no single decider</text>
+            <rect x="334" y="234" width="42" height="16" rx="8" fill="none" stroke="rgba(23,42,45,0.3)"/>
+            <text x="355" y="245" text-anchor="middle" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="rgba(23,42,45,0.5)">SKIP</text>
+
+            <!-- Paid ads &#183; SKIP -->
+            <rect x="196" y="274" width="188" height="44" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 5px 12px rgba(23,42,45,0.06))"><animate attributeName="opacity" values="1;1;0.5;1;1" keyTimes="0;0.74;0.80;0.86;1" dur="8s" repeatCount="indefinite"/></rect>
+            <text x="210" y="292" font-family="var(--font-sans)" font-size="10.5" font-weight="700" fill="#172A2D">Paid ads</text>
+            <text x="210" y="306" font-family="var(--font-sans)" font-size="7.5" fill="rgba(23,42,45,0.55)">low intent capture at this ACV</text>
+            <rect x="334" y="286" width="42" height="16" rx="8" fill="none" stroke="rgba(23,42,45,0.3)"/>
+            <text x="355" y="297" text-anchor="middle" font-family="var(--font-sans)" font-size="7.5" font-weight="700" fill="rgba(23,42,45,0.5)">SKIP</text>
+            <text x="200" y="333" class="heroviz-text-mute" style="font-size:8px;">skips are deliberate &#183; fit decides every channel</text>
+
+            <!-- bottom strip -->
+            <rect x="16" y="356" width="368" height="30" rx="13" fill="#172A2D"/>
+            <text x="30" y="375" font-family="var(--font-sans)" font-size="9" fill="rgba(255,255,255,0.72)">Every segment mapped to what converts</text>
+            <rect x="286" y="362" width="88" height="18" rx="9" fill="#FAC064"/>
+            <text x="330" y="374.5" text-anchor="middle" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="#172A2D">we run them too &#8594;</text>
+          </svg>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">Channel strategy &amp; execution</span>
+          <h3 class="hero-el-title">The right channels for how your market buys.</h3>
+          <p class="hero-el-body">You get a clear answer on where to spend your effort: which channels your buyers respond to, and which ones to drop. It comes from how your market really buys, so the plan fits you rather than someone else's playbook. Take it and run it yourself, or hand the outreach to us.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 &#183; AI workflows -->
+      <div class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+            <defs>
+              <linearGradient id="chip3d" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#FFFFFF"/>
+                <stop offset="1" stop-color="#F5F1EA"/>
+              </linearGradient>
+              <linearGradient id="tileCream" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#FBF4E6"/>
+                <stop offset="1" stop-color="#F0E4CE"/>
+              </linearGradient>
+              <linearGradient id="tileAmber" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#DCE9F3"/>
+                <stop offset="1" stop-color="#A9C6E4"/>
+              </linearGradient>
+              <linearGradient id="ink3d" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#22383C"/>
+                <stop offset="1" stop-color="#101E21"/>
+              </linearGradient>
+            </defs>
+            <!-- header -->            <text x="31" y="28" font-family="var(--font-sans)" font-size="12" font-weight="700" fill="#172A2D">Adaptive workflows</text>
+            <text x="384" y="28" text-anchor="end" font-family="var(--font-sans)" font-size="8.5" fill="rgba(23,42,45,0.5)">running daily in your stack</text>
+            <line x1="16" y1="46" x2="384" y2="46" stroke="rgba(23,42,45,0.08)"/>
+
+            <text x="20" y="62" class="heroviz-text-mute" style="font-size:8px;">TRIGGERS</text>
+            <text x="294" y="62" class="heroviz-text-mute" style="font-size:8px;">ACTIONS</text>
+
+            <!-- live connectors &#183; fan into the engine -->
+            <path id="wf-in-1" d="M140 88  C 154 88,  154 168, 166 168" class="heroviz-line"/>
+            <path id="wf-in-2" d="M140 144 C 154 144, 154 182, 166 182" class="heroviz-line"/>
+            <path id="wf-in-3" d="M140 200 C 154 200, 154 196, 166 196" class="heroviz-line"/>
+            <path id="wf-in-4" d="M140 256 C 154 256, 154 210, 166 210" class="heroviz-line"/>
+            <path id="wf-in-5" d="M140 312 C 154 312, 154 224, 166 224" class="heroviz-line"/>
+            <path id="wf-out-1" d="M254 168 C 270 168, 270 88,  284 88"  class="heroviz-line"/>
+            <path id="wf-out-2" d="M254 182 C 270 182, 270 144, 284 144" class="heroviz-line"/>
+            <path id="wf-out-3" d="M254 196 C 270 196, 270 200, 284 200" class="heroviz-line"/>
+            <path id="wf-out-4" d="M254 210 C 270 210, 270 256, 284 256" class="heroviz-line"/>
+            <path id="wf-out-5" d="M254 224 C 270 224, 270 312, 284 312" class="heroviz-line"/>
+
+            <!-- TRIGGERS (cream tiles) -->
+            <g>
+              <rect x="20" y="70" width="120" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="28" y="78" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(32, 82)"><circle cx="6" cy="3" r="2.6" fill="#3D6480"/><path d="M0.5 11 Q6 5.5 11.5 11" fill="none" stroke="#3D6480" stroke-width="1.5" stroke-linecap="round"/></g>
+              <text x="56" y="92" class="heroviz-text" style="font-size:10px; font-weight:600;">New lead</text>
+            </g>
+            <g>
+              <rect x="20" y="126" width="120" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="28" y="134" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(32, 138)"><circle cx="6" cy="8.5" r="1.6" fill="#3D6480"/><path d="M2.5 6 Q6 2.5 9.5 6" fill="none" stroke="#3D6480" stroke-width="1.4" stroke-linecap="round"/><path d="M0.5 3.5 Q6 -1 11.5 3.5" fill="none" stroke="#3D6480" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/></g>
+              <text x="56" y="148" class="heroviz-text" style="font-size:10px; font-weight:600;">Intent signal</text>
+            </g>
+            <g>
+              <rect x="20" y="182" width="120" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="28" y="190" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(32, 194)"><rect x="0.5" y="1.5" width="11" height="9.5" rx="1.5" fill="none" stroke="#3D6480" stroke-width="1.4"/><line x1="0.5" y1="4.5" x2="11.5" y2="4.5" stroke="#3D6480" stroke-width="1.4"/><line x1="3.5" y1="0" x2="3.5" y2="2.5" stroke="#3D6480" stroke-width="1.4" stroke-linecap="round"/><line x1="8.5" y1="0" x2="8.5" y2="2.5" stroke="#3D6480" stroke-width="1.4" stroke-linecap="round"/></g>
+              <text x="56" y="204" class="heroviz-text" style="font-size:10px; font-weight:600;">Meeting booked</text>
+            </g>
+            <g>
+              <rect x="20" y="238" width="120" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="28" y="246" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(32, 250)"><rect x="1.5" y="4" width="2.6" height="7" rx="0.8" fill="#3D6480" opacity="0.55"/><rect x="4.9" y="1.5" width="2.6" height="9.5" rx="0.8" fill="#3D6480" opacity="0.8"/><rect x="8.3" y="5" width="2.6" height="6" rx="0.8" fill="#3D6480"/></g>
+              <text x="56" y="260" class="heroviz-text" style="font-size:10px; font-weight:600;">Deal stage</text>
+            </g>
+            <g>
+              <rect x="20" y="294" width="120" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="28" y="302" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(32, 306)"><rect x="0.5" y="3.5" width="11" height="8" rx="1.5" fill="none" stroke="#3D6480" stroke-width="1.4"/><path d="M4 3.5 L4 2.2 Q4 1.2 5 1.2 L7 1.2 Q8 1.2 8 2.2 L8 3.5" fill="none" stroke="#3D6480" stroke-width="1.4" stroke-linejoin="round"/><line x1="0.5" y1="7" x2="11.5" y2="7" stroke="#3D6480" stroke-width="1.4" opacity="0.5"/></g>
+              <text x="56" y="316" class="heroviz-text" style="font-size:10px; font-weight:600;">Job change</text>
+            </g>
+
+            <!-- THE ENGINE &#183; compact core -->
+            <rect x="166" y="84" width="88" height="224" rx="14" fill="url(#ink3d)" filter="drop-shadow(0 10px 22px rgba(23,42,45,0.26))"/>
+            <rect x="172" y="92" width="76" height="34" rx="8" fill="#FFFFFF"/>
+            <rect x="177" y="98" width="22" height="22" rx="6" fill="#F4F5F4"/>
+            <image href="https://www.google.com/s2/favicons?domain=clay.com&sz=128" x="179" y="100" width="18" height="18"/>
+            <text x="204" y="107" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="#172A2D">Clay</text>
+            <text x="204" y="118" font-family="var(--font-sans)" font-size="5.5" letter-spacing="0.02em" fill="#647072">RUNS IT ALL</text>
+            <g font-family="var(--font-sans)">
+              <rect x="172" y="134" width="76" height="74" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+              <text x="210" y="147" text-anchor="middle" font-size="5.8" font-weight="700" letter-spacing="0.1em" fill="rgba(255,255,255,0.5)">THE THINKING</text>
+              <g>
+                <animate attributeName="opacity" values="1;1;0.4;0.4;1" keyTimes="0;0.44;0.5;0.94;1" dur="9s" repeatCount="indefinite"/>
+                <rect x="181" y="154" width="24" height="24" rx="7" fill="#FFFFFF"/>
+                <image href="https://www.google.com/s2/favicons?domain=claude.ai&sz=64" x="184" y="157" width="18" height="18"/>
+                <text x="193" y="190" text-anchor="middle" font-size="6" font-weight="700" fill="#FFFFFF">Claude</text>
+              </g>
+              <g opacity="0.4">
+                <animate attributeName="opacity" values="0.4;0.4;1;1;0.4" keyTimes="0;0.44;0.5;0.94;1" dur="9s" repeatCount="indefinite"/>
+                <rect x="215" y="154" width="24" height="24" rx="7" fill="#FFFFFF"/>
+                <image href="https://www.google.com/s2/favicons?domain=openai.com&sz=64" x="218" y="157" width="18" height="18"/>
+                <text x="227" y="190" text-anchor="middle" font-size="6" font-weight="700" fill="#FFFFFF">ChatGPT</text>
+              </g>
+              <rect x="181" y="197" width="24" height="2.4" rx="1.2" fill="#DCE9F3"><animate attributeName="x" values="181;181;215;215;181" keyTimes="0;0.44;0.5;0.94;1" dur="9s" repeatCount="indefinite"/></rect>
+              <text x="210" y="216" text-anchor="middle" font-size="6" font-style="italic" fill="rgba(255,255,255,0.6)">same job, either one:</text>
+              <text x="210" y="226" text-anchor="middle" font-size="6" font-style="italic" fill="rgba(255,255,255,0.6)">whichever fits the play</text>
+              <line x1="177" y1="238" x2="243" y2="238" stroke="rgba(255,255,255,0.12)"/>
+              <rect x="172" y="248" width="76" height="20" rx="6" fill="none" stroke="rgba(255,255,255,0.22)" stroke-dasharray="4 4"/>
+              <text x="210" y="261" text-anchor="middle" font-size="6.6" fill="rgba(255,255,255,0.5)">+ the rest of your stack</text>
+              <text x="210" y="284" text-anchor="middle" font-size="6" font-style="italic" fill="rgba(255,255,255,0.5)">docks in as each play</text>
+              <text x="210" y="294" text-anchor="middle" font-size="6" font-style="italic" fill="rgba(255,255,255,0.5)">needs it</text>
+            </g>
+
+
+            <!-- ACTIONS (amber tiles) -->
+            <g>
+              <rect x="284" y="70" width="100" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="292" y="78" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(296, 82)"><circle cx="4.5" cy="4.5" r="3.5" fill="none" stroke="#3D6480" stroke-width="1.3"/><line x1="7.2" y1="7.2" x2="10.5" y2="10.5" stroke="#3D6480" stroke-width="1.3" stroke-linecap="round"/></g>
+              <text x="319" y="92" class="heroviz-text" style="font-size:10px; font-weight:600;">Research</text>
+            </g>
+            <g>
+              <rect x="284" y="126" width="100" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="292" y="134" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(296, 138)"><path d="M6 0.5 L7.1 4.9 L11.5 6 L7.1 7.1 L6 11.5 L4.9 7.1 L0.5 6 L4.9 4.9 Z" fill="#3D6480"/></g>
+              <text x="319" y="148" class="heroviz-text" style="font-size:10px; font-weight:600;">Personalize</text>
+            </g>
+            <g>
+              <rect x="284" y="182" width="100" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="292" y="190" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(296, 194)"><path d="M0.5 6 L11.5 1 L7.5 11 L5.5 6.8 Z" fill="#3D6480"/></g>
+              <text x="319" y="204" class="heroviz-text" style="font-size:10px; font-weight:600;">Reach out</text>
+            </g>
+            <g>
+              <rect x="284" y="238" width="100" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="292" y="246" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(296, 250)"><path d="M0.5 3.5 L8 3.5 M6 1.5 L8 3.5 L6 5.5" fill="none" stroke="#3D6480" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 8.5 L5 8.5 M7 6.5 L5 8.5 L7 10.5" fill="none" stroke="#3D6480" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></g>
+              <text x="319" y="260" class="heroviz-text" style="font-size:10px; font-weight:600;">Hand off</text>
+            </g>
+            <g>
+              <rect x="284" y="294" width="100" height="36" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(23,42,45,0.1))"/>
+              <rect x="292" y="302" width="20" height="20" rx="6" fill="#DCE9F3" stroke="#FFFFFF" stroke-width="1"/>
+              <g transform="translate(296, 306)"><rect x="1.5" y="0.5" width="9" height="11" rx="1.2" fill="none" stroke="#3D6480" stroke-width="1.3"/><line x1="3.5" y1="3.5" x2="8.5" y2="3.5" stroke="#3D6480" stroke-width="1.2"/><line x1="3.5" y1="6" x2="8.5" y2="6" stroke="#3D6480" stroke-width="1.2"/><line x1="3.5" y1="8.5" x2="6.5" y2="8.5" stroke="#3D6480" stroke-width="1.2"/></g>
+              <text x="319" y="316" class="heroviz-text" style="font-size:10px; font-weight:600;">Meeting prep</text>
+            </g>
+
+            <!-- bottom strip -->
+            <rect x="16" y="356" width="368" height="30" rx="13" fill="#172A2D"/>
+            <text x="30" y="375" font-family="var(--font-sans)" font-size="9" fill="rgba(255,255,255,0.72)">Live workflows running alongside your reps</text>
+            <rect x="302" y="362" width="74" height="18" rx="9" fill="#FAC064"/>
+            <text x="339" y="374.5" text-anchor="middle" font-family="var(--font-sans)" font-size="8" font-weight="700" fill="#172A2D">always on &#8594;</text>
+          </svg>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">AI workflows for every funnel stage</span>
+          <h3 class="hero-el-title">Run AI workflows alongside every rep so pipeline stops dying in the gaps.</h3>
+          <p class="hero-el-body">Your reps stop losing deals to the admin work between steps. Research, personalization, and follow-up run in the background, so every conversation reaches them already prepared, and nothing sits waiting for someone to remember it.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-elements-cta">
+      
+    </div>
+  </div>
+</div>

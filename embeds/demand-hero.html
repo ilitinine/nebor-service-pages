@@ -1,0 +1,304 @@
+<meta charset="utf-8">
+<!-- NEBOR EMBED - demand-hero - source: github.com/ilitinine/nebor-service-pages -->
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Serif:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<style>
+
+.nb-embed { width:100vw; max-width:1500px; margin:0 auto; --font-sans: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --color-base:#FFFFFF; --color-text:#172A2D; --ink:#172A2D; --color-blue-50:#E8EAEA; --color-blue-300:#647072;
+  --color-blue-500:#172A2D; --color-brown-200:#F1EDE7; --color-violet-500:#E0C4FC; --color-orange-500:#FAC064;
+  --page-accent:#F4D77F; --page-accent-strong:#8A6A2A; --page-accent-soft:#FBF3D9;
+  margin:0; font-family:var(--font-sans); color:var(--color-text); }
+.nb-embed * { box-sizing: border-box; }
+.nb-embed .hero-elements-wrap { max-width:1500px; margin:0 auto; padding:0 20px 10px; width:100%; }
+.nb-embed .hero-elements { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px; text-align:left; width:100%; min-width:0; }
+.nb-embed, .nb-embed * { min-width:0; }
+.nb-embed { min-width:min(1500px, 100vw); }
+.nb-embed .hero-el { position:relative; display:block; background:var(--color-base); border-radius:22px; overflow:hidden; padding-top:130%;
+  transition:border-color .26s ease, transform .26s ease, box-shadow .26s ease; text-decoration:none; color:inherit;
+  --page-accent:#E1962E; --page-accent-strong:#B26F14; --page-accent-soft:#FDF1DE; --card-header:#172A2D;
+  border:1.5px solid rgba(23,42,45,0.16); box-shadow:0 16px 38px -22px rgba(23,42,45,0.22);
+  animation: nbFloat 7s ease-in-out infinite; }
+.nb-embed .hero-elements .hero-el:nth-child(2) { animation-delay:1.2s; }
+.nb-embed .hero-elements .hero-el:nth-child(3) { animation-delay:2.4s; }
+@keyframes nbFloat { 0%,100% { transform:translateY(0);} 50% { transform:translateY(-6px);} }
+@media (prefers-reduced-motion: reduce) { .nb-embed .hero-el { animation:none; } }
+.nb-embed .hero-el:hover { transform:translateY(-3px); border-color:rgba(23,42,45,0.28); box-shadow:0 30px 60px -28px rgba(23,42,45,0.3); }
+.nb-embed .hero-el-canvas { position:absolute; inset:0; height:100%; background:#EFEAE3; overflow:hidden; }
+.nb-embed .hero-el-canvas svg { position:relative; z-index:1; display:block; width:100%; height:100%; }
+.nb-embed .hero-el-content { position:absolute; bottom:0; left:0; right:0; z-index:3; padding:24px 24px 26px; display:flex; flex-direction:column; gap:6px;
+  background:linear-gradient(180deg, rgba(239,234,227,0) 0%, #F4F0EA 34%, #F7F4EF 100%); transition:padding .35s cubic-bezier(0.4,0,0.2,1); }
+.nb-embed .hero-el-body { max-height:0; opacity:0; overflow:hidden; margin:0; font-family:var(--font-sans); font-size:13.5px; line-height:1.55; color:var(--color-blue-300);
+  transition:max-height .45s cubic-bezier(0.4,0,0.2,1), opacity .3s ease .05s, margin .3s ease; }
+.nb-embed .hero-el:hover .hero-el-body { max-height:170px; opacity:1; margin:6px 0 0; }
+.nb-embed .hero-el:hover .hero-el-content { padding-top:32px; padding-bottom:30px; }
+.nb-embed .hero-el-tag { display:inline-flex; align-items:center; gap:7px; align-self:flex-start; padding:5px 12px 5px 10px;
+  background:#FBF3E4; border:1.5px solid rgba(23,42,45,0.18); border-radius:999px; font-family:var(--font-sans);
+  font-size:12px; color:var(--ink); font-weight:700; line-height:1; }
+.nb-embed .hero-el-tag::before { content:""; width:6px; height:6px; border-radius:50%; background:#7FA8C9;
+  box-shadow:0 0 0 2.5px color-mix(in srgb, #E1962E 35%, transparent); }
+.nb-embed .hero-el-title { font-family:var(--font-sans); font-size:20px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; color:var(--color-text); margin:4px 0 0; }
+/* aligned to Framer breakpoints: Desktop >=1200 - Tablet 1199-810 - Phone <=809 */
+@media (max-width: 1199px) {
+  .nb-embed .hero-elements { grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+  .nb-embed .hero-el { padding-top:0; min-height:0; height:430px; }
+  .nb-embed .hero-el-canvas { height:100%; }
+}
+@media (max-width: 809px) {
+  .nb-embed .hero-elements { grid-template-columns:1fr; gap:12px; }
+}
+
+</style>
+<div class="nb-embed">
+<div class="hero-elements-wrap">
+    <div class="hero-elements">
+
+      <!-- Card 1 &#183; GENERATE + CAPTURE &#183; dashboard: campaigns live, catches landing, freshest row highlighted -->
+      <div class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMin meet" aria-hidden="true" font-family="var(--font-sans)">
+            <text x="20" y="27" font-size="12.5" font-weight="700" fill="#172A2D">Demand generation &amp; capture</text>
+            <text x="384" y="27" text-anchor="end" font-size="8.5" fill="rgba(23,42,45,0.5)">who came in overnight</text>
+            <line x1="16" y1="40" x2="384" y2="40" stroke="rgba(16,24,40,0.08)"/>
+
+            <!-- the generation side &#183; your campaigns, running right now -->
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.05s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.05s" dur="0.5s" fill="freeze"/>
+            <text x="18" y="52" font-size="6.8" font-weight="700" letter-spacing="0.06em" fill="rgba(23,42,45,0.45)">WE RUN THE ADS &#183; THE ENGINE CATCHES WHAT THEY START</text>
+            <rect x="14" y="58" width="126" height="22" rx="11" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.1))"/>
+            <image href="https://www.google.com/s2/favicons?domain=linkedin.com&sz=64" x="43" y="63" width="11" height="11"/>
+            <text x="59" y="72.5" font-size="8" font-weight="700" fill="#172A2D">LinkedIn ABM</text>
+            <rect x="146" y="58" width="116" height="22" rx="11" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.1))"/>
+            <image href="https://www.google.com/s2/favicons?domain=ads.google.com&sz=64" x="174" y="63" width="11" height="11"/>
+            <text x="190" y="72.5" font-size="8" font-weight="700" fill="#172A2D">Search ads</text>
+            <rect x="268" y="58" width="118" height="22" rx="11" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.1))"/>
+            <g transform="translate(304,63)"><path d="M5.5 0 L6.6 4 L10.5 5.5 L6.6 7 L5.5 11 L4.4 7 L0.5 5.5 L4.4 4 Z" fill="#E1962E"/></g>
+            <text x="319" y="72.5" font-size="8" font-weight="700" fill="#172A2D">Retargeting</text>
+            </g>
+
+
+
+            <!-- notification 1 &#183; just landed &#183; highlighted row -->
+            <g transform="translate(0,-24)">
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.3s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.3s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="124" width="372" height="56" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 12px rgba(23,42,45,0.08))"/>
+            <rect x="26" y="134" width="18" height="18" rx="5" fill="#FFFFFF" stroke="rgba(16,24,40,0.08)"/><image href="https://www.google.com/s2/favicons?domain=clay.com&sz=64" x="28.5" y="136.5" width="13" height="13"/>
+            <text x="52" y="142" font-size="6" font-weight="700" letter-spacing="0.08em" fill="rgba(23,42,45,0.45)">DEMAND ENGINE</text>
+            <rect x="306" y="132" width="26" height="12" rx="6" fill="#FAC064"/><text x="319" y="141" text-anchor="middle" font-size="6" font-weight="700" fill="#4A3708">new</text>
+            <text x="52" y="156" font-size="9.5" font-weight="700" fill="#172A2D">Figma is back on your pricing page</text>
+            <text x="52" y="170" font-size="7.5" fill="rgba(23,42,45,0.6)">3rd visit this week &#183; from your LinkedIn ad &#183; scored 94</text>
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.6s" repeatCount="indefinite"/>
+            <rect x="342" y="138" width="28" height="28" rx="8" fill="#FFFFFF" stroke="rgba(16,24,40,0.08)"/><image href="https://www.google.com/s2/favicons?domain=figma.com&sz=64" x="347" y="143" width="18" height="18"/></g>
+            </g>
+            </g>
+
+            <!-- notification 2 -->
+            <g transform="translate(0,-20)">
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.45s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.45s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="186" width="372" height="56" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.1))"/>
+            <rect x="26" y="196" width="18" height="18" rx="5" fill="#FFFFFF" stroke="rgba(16,24,40,0.08)"/><image href="https://www.google.com/s2/favicons?domain=clay.com&sz=64" x="28.5" y="198.5" width="13" height="13"/>
+            <text x="52" y="204" font-size="6" font-weight="700" letter-spacing="0.08em" fill="rgba(23,42,45,0.45)">DEMAND ENGINE</text>
+            <text x="330" y="204" text-anchor="end" font-size="6.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.45)">23m</text>
+            <text x="52" y="218" font-size="9.5" font-weight="700" fill="#172A2D">Stripe booked a demo for Friday</text>
+            <text x="52" y="232" font-size="7.5" fill="rgba(23,42,45,0.55)">found you on Google search &#183; already on your AE's calendar</text>
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.6s" begin="0.9s" repeatCount="indefinite"/>
+            <rect x="342" y="200" width="28" height="28" rx="8" fill="#FFFFFF" stroke="rgba(16,24,40,0.08)"/><image href="https://www.google.com/s2/favicons?domain=stripe.com&sz=64" x="347" y="205" width="18" height="18"/></g>
+            </g>
+            </g>
+
+            <!-- notification 3 -->
+            <g transform="translate(0,-16)">
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.6s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="248" width="372" height="56" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.1))"/>
+            <rect x="26" y="258" width="18" height="18" rx="5" fill="#FFFFFF" stroke="rgba(16,24,40,0.08)"/><image href="https://www.google.com/s2/favicons?domain=clay.com&sz=64" x="28.5" y="260.5" width="13" height="13"/>
+            <text x="52" y="266" font-size="6" font-weight="700" letter-spacing="0.08em" fill="rgba(23,42,45,0.45)">DEMAND ENGINE</text>
+            <text x="330" y="266" text-anchor="end" font-size="6.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.45)">1h</text>
+            <text x="52" y="280" font-size="9.5" font-weight="700" fill="#172A2D">Miro started comparing tools like yours</text>
+            <text x="52" y="294" font-size="7.5" fill="rgba(23,42,45,0.55)">LinkedIn intent picked up &#183; added to your Tier 1 watchlist</text>
+            <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.6s" begin="1.8s" repeatCount="indefinite"/>
+            <rect x="342" y="262" width="28" height="28" rx="8" fill="#FFFFFF" stroke="rgba(16,24,40,0.08)"/><image href="https://www.google.com/s2/favicons?domain=miro.com&sz=64" x="347" y="267" width="18" height="18"/></g>
+            </g>
+            </g>
+
+            <g transform="translate(0,-18)">
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.75s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.75s" dur="0.5s" fill="freeze"/>
+            <text x="200" y="330" text-anchor="middle" font-size="8.5" fill="rgba(23,42,45,0.6)"><tspan font-weight="700" fill="#8A5410">+ 9 more by lunch</tspan> &#183; most arrived anonymous, the engine named them all</text>
+            </g>
+            </g>
+
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.85s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.85s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="356" width="372" height="30" rx="13" fill="#172A2D"/>
+            <text x="28" y="375" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.85)">Wake up to who's in market, every day</text>
+            <rect x="304" y="362" width="72" height="18" rx="9" fill="#FAC064"/><rect x="310" y="365" width="12" height="12" rx="3" fill="#FFFFFF"/><image href="https://www.google.com/s2/favicons?domain=clay.com&sz=64" x="311" y="366" width="10" height="10"/><text x="351" y="374.5" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4A3708">via Clay</text>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">Demand generation &amp; capture</span>
+          <h3 class="hero-el-title">Create demand and catch it, the moment it appears.</h3>
+          <p class="hero-el-body">You get to see who's in market, instead of waiting for someone to fill in a form. Whatever is pulling attention, your campaigns, your ads, your content, we catch the interest it creates: the company behind an anonymous visit gets named, scored against your ICP, and written into your CRM while it's still warm.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 &#183; ABM &#183; dashboard: the touches Rohan saw, his reply, the booked confirmation -->
+      <div class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMin meet" aria-hidden="true" font-family="var(--font-sans)">
+            <defs>
+              <clipPath id="c2v"><circle cx="40" cy="197" r="11"/></clipPath>
+            </defs>
+            <text x="20" y="27" font-size="12.5" font-weight="700" fill="#172A2D">Account-based marketing</text>
+            <text x="384" y="27" text-anchor="end" font-size="8.5" fill="rgba(23,42,45,0.5)">right story, right moment</text>
+            <line x1="16" y1="40" x2="384" y2="40" stroke="rgba(16,24,40,0.08)"/>
+
+            <!-- what Rohan saw &#183; one story, well timed -->
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.05s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.05s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="52" width="372" height="88" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.1))"/>
+            <text x="28" y="68" font-size="6.8" font-weight="700" letter-spacing="0.06em" fill="rgba(23,42,45,0.45)">WHAT ROHAN SAW &#183; VP ENGINEERING AT FIGMA, YOUR TIER 1</text>
+            <g opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" repeatCount="indefinite"/>
+            <image href="https://www.google.com/s2/favicons?domain=linkedin.com&sz=64" x="28" y="76" width="11" height="11"/>
+            <text x="45" y="85.5" font-size="8.8" fill="rgba(23,42,45,0.75)">Your ad, right when he searched</text></g>
+            <g opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="1.2s" repeatCount="indefinite"/>
+            <image href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" x="28" y="96" width="11" height="11"/>
+            <text x="45" y="105.5" font-size="8.8" fill="rgba(23,42,45,0.75)">One note, about his Q3 cost goal</text></g>
+            <g opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="2.4s" repeatCount="indefinite"/>
+            <g transform="translate(28,116)" fill="none" stroke="#B26F14" stroke-width="1.2"><rect x="0.5" y="0.8" width="10" height="9.4" rx="1.4"/><path d="M0.5 3.6 L10.5 3.6"/><circle cx="2.4" cy="2.2" r="0.5" fill="#B26F14" stroke="none"/></g>
+            <text x="45" y="125.5" font-size="8.8" fill="rgba(23,42,45,0.75)">A page answering exactly that</text></g>
+            </g>
+
+            <!-- then, the reply -->
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.25s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.25s" dur="0.5s" fill="freeze"/>
+            <g><animateTransform attributeName="transform" type="translate" values="0 0; 0 3; 0 0" dur="1.6s" repeatCount="indefinite"/>
+            <path d="M200 144 L200 152 M194 147 L200 152 L206 147" fill="none" stroke="#B26F14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+            </g>
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.35s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.35s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="158" width="372" height="126" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.1))"/>
+            <image href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" x="28" y="167" width="12" height="12"/>
+            <text x="46" y="177" font-size="9" font-weight="700" fill="#172A2D">Inbox</text>
+
+            <line x1="28" y1="184" x2="372" y2="184" stroke="rgba(16,24,40,0.08)"/>
+            <circle cx="40" cy="197" r="11" fill="#EFE9DC"/><image href="https://statuesque-starship-49757d.netlify.app/assets/brand/people/rohan-iyer.png" x="29" y="186" width="22" height="22" clip-path="url(#c2v)" preserveAspectRatio="xMidYMin slice"/>
+            <text x="58" y="194" font-size="8.5" font-weight="700" fill="#172A2D">Rohan Iyer</text>
+            <image href="https://www.google.com/s2/favicons?domain=figma.com&sz=64" x="58" y="199" width="9" height="9"/>
+            <text x="71" y="207" font-size="6.8" fill="rgba(23,42,45,0.55)">VP Engineering &#183; Figma</text>
+            <text x="28" y="226" font-size="9.5" font-weight="700" fill="#172A2D">Re: your Q3 cost goal</text>
+            <text x="28" y="242" font-size="9.5" fill="rgba(23,42,45,0.78)">Perfect timing. Your note stuck with me, and we</text>
+            <text x="28" y="256" font-size="9.5" fill="rgba(23,42,45,0.78)">just opened our Q3 evaluation. Thursday?</text>
+            <rect x="28" y="264" width="2" height="12" fill="rgba(23,42,45,0.18)"/>
+            <text x="36" y="273" font-size="7" font-style="italic" fill="rgba(23,42,45,0.45)">You wrote: a quick idea for your Q3 cost goal&#8230;</text>
+            <rect x="286" y="238" width="86" height="22" rx="11" fill="none" stroke="#E1962E"><animate attributeName="stroke-width" values="1;6;1" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0;0.55" dur="2.2s" repeatCount="indefinite"/></rect>
+            <rect x="286" y="238" width="86" height="22" rx="11" fill="#172A2D"/><text x="329" y="252.5" text-anchor="middle" font-size="8" font-weight="700" fill="#FFFFFF">Book Thursday</text>
+            </g>
+
+            <!-- the payoff -->
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.6s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="294" width="372" height="24" rx="12" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 12px rgba(23,42,45,0.08))"/>
+            <text x="64" y="310" font-size="8.5" font-weight="700" fill="#8A5410">&#9989;<animate attributeName="font-size" values="8.5;10.5;8.5" dur="2.6s" repeatCount="indefinite"/></text>
+            <text x="80" y="310" font-size="8.5" font-weight="700" fill="#8A5410">Booked &#183; the brief is already on your AE's desk</text>
+            </g>
+
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.82s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.82s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="356" width="372" height="30" rx="13" fill="#172A2D"/>
+            <text x="28" y="375" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.85)">Your dream accounts start replying</text>
+            <rect x="292" y="362" width="84" height="18" rx="9" fill="#FAC064"/><rect x="298" y="365" width="12" height="12" rx="3" fill="#FFFFFF"/><image href="https://www.google.com/s2/favicons?domain=clay.com&sz=64" x="299" y="366" width="10" height="10"/><text x="345" y="374.5" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4A3708">run on Clay</text>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">Account-based marketing</span>
+          <h3 class="hero-el-title">Your best accounts get a coordinated push of their own.</h3>
+          <p class="hero-el-body">Your best accounts stop getting scattered, generic outreach. Ads, messages, and pages line up behind one story and land while the account is paying attention, so when your rep reaches out, the name is already familiar and the conversation starts warmer.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 &#183; ATTRIBUTION &#183; dashboard: the #wins thread, the stamped answer, the quarter rollup -->
+      <div class="hero-el">
+        <div class="hero-el-canvas">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMin meet" aria-hidden="true" font-family="var(--font-sans)">
+            <defs>
+              <clipPath id="atP1"><circle cx="40" cy="97" r="11"/></clipPath>
+              <clipPath id="atP2"><circle cx="40" cy="254" r="11"/></clipPath>
+            </defs>
+            <text x="20" y="27" font-size="12.5" font-weight="700" fill="#172A2D">Pipeline attribution</text>
+            <text x="384" y="27" text-anchor="end" font-size="8.5" fill="rgba(23,42,45,0.5)">no more guessing</text>
+            <line x1="16" y1="40" x2="384" y2="40" stroke="rgba(16,24,40,0.08)"/>
+
+            <!-- the moment &#183; a Slack thread in #wins -->
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.05s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.05s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="52" width="372" height="236" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 10px rgba(23,42,45,0.1))"/>
+            <image href="https://www.google.com/s2/favicons?domain=slack.com&sz=64" x="28" y="61" width="12" height="12"/>
+            <text x="46" y="71" font-size="9" font-weight="700" fill="#172A2D">#wins</text>
+            <circle cx="80" cy="67" r="2.5" fill="#E1962E"><animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+            <line x1="28" y1="79" x2="372" y2="79" stroke="rgba(16,24,40,0.08)"/>
+            </g>
+
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.2s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.2s" dur="0.5s" fill="freeze"/>
+            <circle cx="40" cy="97" r="11" fill="#EFE9DC"/><image href="https://statuesque-starship-49757d.netlify.app/assets/brand/people/minjun-seo.png" x="29" y="86" width="22" height="22" clip-path="url(#atP1)" preserveAspectRatio="xMidYMin slice"/>
+            <text x="58" y="93" font-size="8.5" font-weight="700" fill="#172A2D">Minjun &#183; CEO</text><text x="112" y="93" font-size="6.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.4)">9:41</text>
+            <text x="58" y="109" font-size="10" fill="#172A2D">Figma just signed <tspan>&#127881;<animate attributeName="font-size" values="10;12.5;10" dur="3.4s" repeatCount="indefinite"/></tspan> what made that happen?</text>
+            </g>
+
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.38s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.38s" dur="0.5s" fill="freeze"/>
+            <rect x="29" y="119" width="22" height="22" rx="6" fill="#FFFFFF" stroke="rgba(16,24,40,0.09)"/><image href="https://www.google.com/s2/favicons?domain=clay.com&sz=64" x="32" y="122" width="16" height="16"/>
+            <text x="58" y="129" font-size="8.5" font-weight="700" fill="#172A2D">Demand Engine</text><rect x="134" y="121" width="24" height="12" rx="3" fill="#F0E9DD"/><text x="146" y="130" text-anchor="middle" font-size="6" font-weight="700" fill="rgba(23,42,45,0.55)">APP</text><text x="166" y="129" font-size="6.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.4)">9:41</text>
+            <text x="58" y="143" font-size="9" fill="#172A2D">It's on the deal record:</text>
+
+            <!-- the attached stamp &#183; highlighted tile -->
+            <rect x="58" y="149" width="314" height="64" rx="10" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 12px rgba(23,42,45,0.08))"/>
+            <rect x="70" y="156" width="17" height="17" rx="4" fill="#FFFFFF" stroke="rgba(16,24,40,0.08)"/><image href="https://www.google.com/s2/favicons?domain=figma.com&sz=64" x="72" y="158" width="13" height="13"/>
+            <text x="95" y="169" font-size="10.5" font-weight="800" fill="#172A2D">Figma &#183; &#8364;180k</text>
+            <text x="360" y="168" text-anchor="end" font-size="7" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.5)">closed Mar 18</text>
+            <g opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.3s" repeatCount="indefinite"/>
+            <rect x="70" y="175" width="14" height="14" rx="4" fill="#FFFFFF" stroke="rgba(16,24,40,0.08)"/><image href="https://www.google.com/s2/favicons?domain=linkedin.com&sz=64" x="72" y="177" width="10" height="10"/>
+            <text x="90" y="185.5" font-size="7.8" font-weight="600" fill="#8A5410">LinkedIn ad &#183; Feb 12</text></g>
+            <text x="170" y="185.5" font-size="8" font-weight="700" fill="#B26F14">&#8594;</text>
+            <g opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.3s" begin="1.1s" repeatCount="indefinite"/>
+            <text x="180" y="185.5" font-size="7.8" font-weight="600" fill="#8A5410">visited pricing &#215;3</text></g>
+            <text x="250" y="185.5" font-size="8" font-weight="700" fill="#B26F14">&#8594;</text>
+            <g opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.3s" begin="2.2s" repeatCount="indefinite"/>
+            <text x="260" y="185.5" font-size="7.8" font-weight="600" fill="#8A5410">AE call &#183; Mar 16</text></g>
+            <text x="70" y="204" font-size="6.6" font-weight="700" letter-spacing="0.07em" fill="rgba(23,42,45,0.45)">SOURCE &#183; SIGNAL &#183; CLOSING TOUCH</text>
+            <rect x="268" y="194" width="13" height="13" rx="3" fill="#FFFFFF" stroke="rgba(16,24,40,0.08)"/><image href="https://www.google.com/s2/favicons?domain=hubspot.com&sz=64" x="270" y="196" width="9" height="9"/><text x="286" y="204" font-size="6.6" font-weight="600" fill="rgba(23,42,45,0.55)">stamped in your CRM</text>
+            </g>
+
+            <!-- reactions &#183; one pops in like it just happened -->
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.58s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.58s" dur="0.5s" fill="freeze"/>
+            <rect x="58" y="219" width="36" height="16" rx="8" fill="#F0E9DD" stroke="#FFFFFF" stroke-width="1.2"/><text x="76" y="230.5" text-anchor="middle" font-size="8">&#128293; 3<animate attributeName="font-size" values="8;10;8" dur="2.2s" repeatCount="indefinite"/></text>
+            <rect x="100" y="219" width="36" height="16" rx="8" fill="#F0E9DD" stroke="#FFFFFF" stroke-width="1.2"/><text x="118" y="230.5" text-anchor="middle" font-size="8">&#128588; 2<animate attributeName="font-size" values="8;10;8" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></text>
+            <g><animate attributeName="opacity" values="0;0;1;1;1;0" keyTimes="0;0.4;0.5;0.85;0.97;1" dur="6s" repeatCount="indefinite"/>
+            <rect x="142" y="219" width="36" height="16" rx="8" fill="#F0E9DD" stroke="#FFFFFF" stroke-width="1.2"/><text x="160" y="230.5" text-anchor="middle" font-size="8">&#128640; 1</text></g>
+            </g>
+
+            <!-- the decision, made in-thread -->
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.72s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.72s" dur="0.5s" fill="freeze"/>
+            <circle cx="40" cy="254" r="11" fill="#EFE9DC"/><image href="https://statuesque-starship-49757d.netlify.app/assets/brand/people/minjun-seo.png" x="29" y="243" width="22" height="22" clip-path="url(#atP2)" preserveAspectRatio="xMidYMin slice"/>
+            <text x="58" y="250" font-size="8.5" font-weight="700" fill="#172A2D">Minjun &#183; CEO</text><text x="112" y="250" font-size="6.5" font-family="ui-monospace, Menlo, monospace" fill="rgba(23,42,45,0.4)">9:42</text>
+            <text x="58" y="266" font-size="10" fill="#172A2D">love it, double the LinkedIn budget &#9989;</text>
+            </g>
+
+            <!-- the quarter adds up -->
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.85s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.85s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="296" width="372" height="48" rx="13" fill="#FCFAF7" stroke="#FFFFFF" stroke-width="1.6" filter="drop-shadow(0 4px 12px rgba(23,42,45,0.08))"/>
+            <text x="30" y="315" font-size="7.5" font-weight="700" letter-spacing="0.06em" fill="rgba(23,42,45,0.45)">AT QUARTER'S END, THE ANSWERS ADD UP</text>
+            <text x="30" y="334" font-size="9" font-weight="700" fill="#172A2D">every deal stamped to its source</text>
+            <text x="370" y="334" text-anchor="end" font-size="8" fill="rgba(23,42,45,0.55)">budget follows the answers</text>
+            </g>
+
+            <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.95s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 12;0 0" calcMode="spline" keySplines="0.2 0.7 0.3 1" keyTimes="0;1" begin="0.95s" dur="0.5s" fill="freeze"/>
+            <rect x="14" y="356" width="372" height="30" rx="13" fill="#172A2D"/>
+            <text x="28" y="375" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.85)">Ask any deal where it came from. It answers.</text>
+            <rect x="288" y="362" width="88" height="18" rx="9" fill="#FAC064"/><rect x="294" y="365" width="12" height="12" rx="3" fill="#FFFFFF"/><image href="https://www.google.com/s2/favicons?domain=clay.com&sz=64" x="295" y="366" width="10" height="10"/><text x="343" y="374.5" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4A3708">traced in Clay</text>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-el-content">
+          <span class="hero-el-tag">Pipeline &amp; attribution</span>
+          <h3 class="hero-el-title">Demand becomes pipeline you can trace back to the source.</h3>
+          <p class="hero-el-body">You can finally answer where a deal came from. Every one carries its source, the signal that started it, and the touches along the way, stamped in your CRM as it moves. So when you decide where next quarter's budget goes, you're reading what worked instead of arguing about it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-elements-cta">
+      
+    </div>
+  </div>
+</div>
