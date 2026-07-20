@@ -418,4 +418,9 @@
 .pw-why-t { display: block; font-size: 11px; line-height: 1.55; color: rgba(23,42,45,0.55); margin-top: 7px; }
 .pw-why-arrow { display: block; width: 86px; height: 40px; margin: 8px 0 0 58px; }
 @media (max-width: 1150px) { .pw-why { position: static; margin: 0 auto 14px; max-width: 460px; } .pw-why-arrow { display: none; } }
-@media (max-width: 900px) { .wf-revops .pw-canvas { padding-bottom: 36px; } .wf-revops .pw-spur { bottom: auto; } }
+@media (max-width: 900px) {
+  .wf-revops .pw-canvas { padding-bottom: 26px; }
+  .wf-revops .pw-spur { bottom: auto; }
+  /* the pill sat flush on the why-note while the card bottom ran empty; spread it out */
+  .wf-revops .pw-why { margin: 22px auto 0; }
+}
