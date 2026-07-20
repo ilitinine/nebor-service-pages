@@ -382,7 +382,16 @@
 }
 .pw-spur b { color: var(--ink); font-weight: 700; }
 .pw-spur-tick { width: 7px; height: 7px; border-radius: 50%; background: #3FCDAD; }
-@media (max-width: 900px) { .pw-spur { position: static; transform: none; margin: 14px auto 0; display: flex; width: fit-content; } }
+@media (max-width: 900px) {
+  /* the pill was one unbreakable line, wider than the phone, so it ran off the
+     right edge mid-sentence. Let it wrap inside the canvas instead. */
+  .pw-spur {
+    position: static; transform: none; margin: 14px auto 0;
+    display: flex; width: fit-content; max-width: 100%;
+    white-space: normal; line-height: 1.4; border-radius: 16px; text-align: left;
+  }
+  .pw-spur-tick { flex-shrink: 0; }
+}
 
 /* ── CRM & RevOps workflow extras · scoped to .wf-revops, other pages untouched ── */
 /* its own header wash: soft blue (clearly apart from the revenue green and demand orange;
