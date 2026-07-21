@@ -29,7 +29,7 @@ a capability in the rail and the view swaps: that all works inside the embed.
 | --- | --- |
 | Desktop (1200+)   | 1090 |
 | Tablet (810-1199) | 1110 |
-| Phone (0-809)     | 1110 |
+| Phone (0-809)     | 1020 |
 
 ## crm-workflow.html · CRM living workflow (interactive flywheel)
 The full section 04: header copy, step rail, flywheel canvas, why-note, spur.
@@ -38,7 +38,7 @@ Step clicks, popovers and the wheel all run inside the embed.
 | --- | --- |
 | Desktop (1200+)   | 1930 |
 | Tablet (810-1199) | 2010 |
-| Phone (0-809)     | 2210 |
+| Phone (0-809)     | 1970 |
 
 ## revenue-hero.html / demand-hero.html · hero cards (3 each)
 Same shell as the CRM hero. "See the full workflow" button stays native.
@@ -54,28 +54,29 @@ Same shell as the CRM hero. "See the full workflow" button stays native.
 | --- | --- |
 | Desktop (1200+)   | 1070 |
 | Tablet (810-1199) | 1140 |
-| Phone (0-809)     | 1090 |
+| Phone (0-809)     | 970 |
 
 ## demand-caps.html · Demand Gen nine-capability console
 | Framer breakpoint | Embed height |
 | --- | --- |
 | Desktop (1200+)   | 1130 |
 | Tablet (810-1199) | 1140 |
-| Phone (0-809)     | 1090 |
+| Phone (0-809)     | 1000 |
 
 ## revenue-workflow.html · Sales Engine living workflow (9 steps)
 | Framer breakpoint | Embed height |
 | --- | --- |
 | Desktop (1200+)   | 1860 |
 | Tablet (810-1199) | 1810 |
-| Phone (0-809)     | 1860 |
+| Phone (0-809)     | 1720 |
 
 ## demand-workflow.html · Demand Gen living workflow (6 steps)
 | Framer breakpoint | Embed height |
 | --- | --- |
 | Desktop (1200+)   | 1860 |
 | Tablet (810-1199) | 1770 |
-| Phone (0-809)     | 1660 |
+| Phone (0-809)     | 1500 |
 
+Phone heights were re-measured at 390px after the viewport meta fix (2026-07-21).
 Heights are measured at the breakpoint edges; if a strip of blank space shows
 at some width, adjust the frame height, the content is height-stable per width.
