@@ -1,0 +1,26 @@
+<!-- Flywheel scroll anchor.
+     Paste this ONCE into each of the three service pages:
+       Page Settings > Custom Code > End of <head> tag  (same box as the JSON-LD).
+     It finds the flywheel embed on the page and gives it id="flywheel" so the
+     "See the entire flywheel" button (linked to #flywheel) scrolls down to it.
+     Identical on all three pages. No embed re-paste needed. -->
+<script>
+(function () {
+  // smooth-scroll for the whole page (nice glide instead of a jump)
+  document.documentElement.style.scrollBehavior = "smooth";
+  function tag() {
+    var canvas = document.querySelector(".pw-canvas"); // only the flywheel embed has this
+    if (!canvas) return false;
+    var root = canvas.closest(".nb-embed") || canvas;
+    root.id = "flywheel";
+    root.style.scrollMarginTop = "96px"; // clears the sticky nav
+    return true;
+  }
+  // the embed can render a moment after load, so retry briefly until it's there
+  if (!tag()) {
+    var n = 0, t = setInterval(function () {
+      if (tag() || ++n > 40) clearInterval(t);
+    }, 250);
+  }
+})();
+</script>
