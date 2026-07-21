@@ -770,13 +770,6 @@
         <div class="fold"><div><span class="desc">Classifies replies by intent so the right ones reach a rep. Same job as Claude, whichever fits the play.</span></div></div>
         <span class="more">Learn more ↗</span>
       </a>
-      <a class="b-tool" href="https://notion.so" target="_blank" rel="noopener">
-        <img src="https://www.google.com/s2/favicons?domain=notion.so&sz=64" alt="Notion">
-        <span class="name">Notion</span>
-        <span class="cat">Docs</span>
-        <div class="fold"><div><span class="desc">Where the ICP, playbooks and voice rules live, so the engine writes in your words.</span></div></div>
-        <span class="more">Learn more ↗</span>
-      </a>
       <a class="b-tool" href="https://instantly.ai" target="_blank" rel="noopener">
         <img src="https://www.google.com/s2/favicons?domain=instantly.ai&sz=64" alt="Instantly">
         <span class="name">Instantly</span>
@@ -991,17 +984,16 @@ window.NEBOR_WORKFLOW = [
     step: "Define",
     desc: "Which customers are worth cloning? Claude reads your win/loss history, writes the ICP with the reasons why, and Clay widens it into a market map from the traits your wins share.",
     brief: "Your wins become an ICP and a market map.",
-    tools: ["anthropic", "notion", "clay", "hubspot"],
+    tools: ["anthropic", "clay", "hubspot"],
     roles: {
-      hubspot:   "Hands over the closed-won and closed-lost records the ICP learns from",
-      anthropic: "Reads the win/loss history and writes the ICP document, with the reasons why",
-      notion:    "Holds the ICP as a living document; every later step reads from it",
+      hubspot:   "Hands over the closed-won and closed-lost records the ICP learns from, and holds the ICP once it is written",
+      anthropic: "Reads the win/loss history and writes the ICP, with the reasons why",
       clay:      "Expands the ICP into a market map from the traits your wins share"
     },
     flow: [
       { from: "hubspot",   to: "anthropic", proto: "llm",     label: "won-lost.records" },
-      { from: "anthropic", to: "notion",    proto: "api",     label: "icp.doc" },
-      { from: "notion",    to: "clay",      proto: "api",     label: "icp.traits" }
+      { from: "anthropic", to: "hubspot",   proto: "api",     label: "icp.doc" },
+      { from: "anthropic", to: "clay",      proto: "api",     label: "icp.traits" }
     ],
     output: "Your ICP written down · the accounts that match it, mapped"
   },
@@ -1084,16 +1076,14 @@ window.NEBOR_WORKFLOW = [
     step: "Personalize",
     desc: "Why would they reply? Claude writes each opening line from the account's live signal, in your voice, checked against your rules before anything is queued.",
     brief: "Openers written from real signals, in your voice.",
-    tools: ["clay", "anthropic", "notion", "n8n"],
+    tools: ["clay", "anthropic", "n8n"],
     roles: {
       clay:      "Packages each account's signals into a prompt payload",
-      anthropic: "Writes the line from the signal, in your voice",
-      notion:    "Supplies the voice rules and the do-not-say list from the step 01 doc",
+      anthropic: "Writes the line from the signal, in your voice, checked against your do-not-say list",
       n8n:       "Queues approved copy into the send lanes"
     },
     flow: [
       { from: "clay",      to: "anthropic", proto: "llm",     label: "signals.payload" },
-      { from: "notion",    to: "anthropic", proto: "api",     label: "voice.rules" },
       { from: "anthropic", to: "n8n",       proto: "webhook", label: "approved.copy" }
     ],
     output: "One specific first line per contact · zero mail-merge"
@@ -1141,16 +1131,15 @@ window.NEBOR_WORKFLOW = [
     step: "Learn",
     desc: "Why does next month beat this one? The stamps come back around: Claude reads what booked, reweights the targeting, and updates the ICP for the next cycle.",
     brief: "What booked reweights targeting and the ICP.",
-    tools: ["hubspot", "anthropic", "notion", "clay"],
+    tools: ["hubspot", "anthropic", "clay"],
     roles: {
-      hubspot:   "Returns every stamped meeting: the source, signal, and sequence that produced it",
+      hubspot:   "Returns every stamped meeting: the source, signal, and sequence that produced it, then takes the updated ICP back",
       anthropic: "Reads the stamps and decides what to find more of next cycle",
-      notion:    "The ICP gets its cycle update; step 01 reads the new version on the next run",
       clay:      "Reweights the sourcing filters and seeds the next map from this cycle's wins"
     },
     flow: [
       { from: "hubspot",   to: "anthropic", proto: "llm", label: "stamped.meetings" },
-      { from: "anthropic", to: "notion",    proto: "api", label: "icp.delta" },
+      { from: "anthropic", to: "hubspot",   proto: "api", label: "icp.delta" },
       { from: "anthropic", to: "clay",      proto: "api", label: "targeting.weights" }
     ],
     output: "The cycle closes · what it learned decides who gets found next",

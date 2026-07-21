@@ -58,7 +58,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
   const TAG = window.NEBOR_TAG || ['win/loss to ICP', 'TAM to matched', 'intent, scored', 'replies, routed', 'accounts to people', 'signal to message', 'email + LinkedIn', 'meeting, stamped', 'wins to next ICP'];
   const HANDOFF = window.NEBOR_HANDOFF || ['market map', 'matched accounts', 'scored set', 'the committee', 'the message', 'live sends', 'qualified reply', 'booked & stamped', 'wins, next run'];
   const PLAIN = {
-    'won-lost.records': 'win/loss records', 'icp.doc': 'the ICP', 'closed-won.seeds': 'closed-won seeds', 'lookalike.expand': 'lookalikes',
+    'won-lost.records': 'win/loss records', 'icp.doc': 'the ICP', 'icp.traits': 'the ICP traits', 'closed-won.seeds': 'closed-won seeds', 'lookalike.expand': 'lookalikes',
     'firmo.page[n]': 'firmographics', 'orgs.filtered': 'matching orgs', 'stack.lookup': 'tech stack', 'tech.confirm': 'stack signals',
     'surge.topics': 'surge intent', 'category.views': 'category views', 'salesnav.alerts': 'Sales Nav alerts', 'fit+intent.scores': 'fit + intent scores',
     'people.page[n]': 'the people', 'contact.rows': 'direct contacts', 'firmo.fill': 'firmographics', 'contact.upsert': 'clean contacts',
