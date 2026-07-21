@@ -1172,6 +1172,13 @@ p, .text-body { font-family: var(--font-sans); font-size: 14px; line-height: 1.6
   .hero-el { padding-top: 0; height: 430px; }
   .hero-el-canvas { height: 340px; }
 }
+@media (max-width: 809px) {
+  /* phone: pin the drawing height so the artwork's bottom strip clears the overlaid
+     title at every phone width, instead of scaling with the card and sliding under it */
+  .hero-el { height: 500px; }
+  .hero-el-canvas { height: 100%; }
+  .hero-el-canvas svg { height: 330px; }
+}
 
 /* ====================== KEY ELEMENTS (3 per page, zigzag rows) ====================== */
 .key-elements {

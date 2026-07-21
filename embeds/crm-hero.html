@@ -50,6 +50,10 @@
 }
 @media (max-width: 809px) {
   .nb-embed .hero-elements { grid-template-columns:1fr; gap:12px; }
+  /* the artwork is square, so letting it scale with card width put its bottom strip
+     under the title on wider phones; pin the drawing height instead of the width */
+  .nb-embed .hero-el { height:500px; }
+  .nb-embed .hero-el-canvas svg { height:330px; }
 }
 .heroviz-text{font-family:var(--font-sans);font-size:11px;font-weight:500;fill:var(--color-text)}.heroviz-text-mute{font-family:var(--font-sans);font-size:10px;fill:var(--color-blue-300);font-weight:500}.heroviz-favicon{filter:drop-shadow(0 1px 2px rgba(23,42,45,.08))}.heroviz-line{stroke:var(--page-accent,var(--color-violet-500));stroke-width:1.2;fill:none;stroke-dasharray:3 5;opacity:.75;animation:heroviz-flow 1.8s linear infinite}@keyframes heroviz-flow{to{stroke-dashoffset:-16}}.hero-el:hover .heroviz-line{animation-duration:.9s;opacity:.95}</style>
 <div class="nb-embed">

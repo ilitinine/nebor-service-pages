@@ -46,6 +46,10 @@
 }
 @media (max-width: 809px) {
   .nb-embed .hero-elements { grid-template-columns:1fr; gap:12px; }
+  /* the artwork is square, so letting it scale with card width put its bottom strip
+     under the title on wider phones; pin the drawing height instead of the width */
+  .nb-embed .hero-el { height:500px; }
+  .nb-embed .hero-el-canvas svg { height:330px; }
 }
 
 </style>

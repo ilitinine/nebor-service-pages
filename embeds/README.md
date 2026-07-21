@@ -16,7 +16,7 @@ inside; images load from the Netlify preview site.
 | Desktop (1440+)   | 630 |
 | Desktop 2 (1200-1439) | 610 |
 | Tablet (810-1199) | 890 |
-| Phone (0-809)     | 1330 |
+| Phone (0-809)     | 1540 |
 
 Cards float, hover-lift and reveal their body text; all card animations play
 on their own. The "See the full workflow" button is NOT in the embed: keep it
@@ -47,7 +47,7 @@ Same shell as the CRM hero. "See the full workflow" button stays native.
 | Desktop (1440+)   | 630 |
 | Desktop 2 (1200-1439) | 610 |
 | Tablet (810-1199) | 890 |
-| Phone (0-809)     | 1330 |
+| Phone (0-809)     | 1540 |
 
 ## revenue-caps.html · Sales Engine nine-capability console
 | Framer breakpoint | Embed height |
