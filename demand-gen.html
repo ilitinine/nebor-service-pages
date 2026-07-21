@@ -916,13 +916,11 @@ window.NEBOR_WORKFLOW = [
     roles: {
       linkedin: "Serves the account-targeted ads to the buying committee",
       instantly: "Runs the 1:1 email track, the same story as the ads",
-      anthropic: "Writes each channel's copy from the account's live signal, in your voice",
-      slack: "Activates the right rep when the intent threshold hits"
+      anthropic: "Writes each channel's copy from the account's live signal, in your voice"
     },
     flow: [
       { from: "anthropic", to: "linkedin", proto: "llm", label: "ad.copy" },
-      { from: "anthropic", to: "instantly", proto: "llm", label: "email.copy" },
-      { from: "instantly", to: "slack", proto: "webhook", label: "rep.activate" }
+      { from: "anthropic", to: "instantly", proto: "llm", label: "email.copy" }
     ],
     output: "Every channel in lockstep on one account · the rep steps in at the threshold"
   },
@@ -934,13 +932,12 @@ window.NEBOR_WORKFLOW = [
     roles: {
       hubspot: "Owns the lifecycle stages and journey enrolment",
       anthropic: "Drafts the next-best content for each behavior branch",
-      n8n: "Runs the branching logic: advance, re-engage, or hand off",
-      slack: "Surfaces sales-ready accounts into the right rep channel"
+      n8n: "Runs the branching logic: advance, re-engage, or hand off"
     },
     flow: [
       { from: "hubspot", to: "n8n", proto: "event", label: "behavior" },
       { from: "n8n", to: "anthropic", proto: "llm", label: "next.content" },
-      { from: "n8n", to: "slack", proto: "api", label: "sales.ready" }
+      { from: "n8n", to: "hubspot", proto: "api", label: "sales.ready" }
     ],
     output: "Nobody interested slips · the ready ones are handed to sales"
   },

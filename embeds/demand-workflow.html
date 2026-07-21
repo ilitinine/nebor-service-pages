@@ -80,14 +80,14 @@ window.NEBOR_WORKFLOW = [
     phase: "Generate", step: "Capture",
     desc: "Who is on the site right now? Anonymous visitors are matched to companies, enriched, and deduped against your CRM, so traffic becomes named accounts you can act on.",
     brief: "Turn anonymous traffic into named accounts.",
-    tools: ["clearbit", "clay", "hubspot"],
+    tools: ["rb2b", "clay", "hubspot"],
     roles: {
-      clearbit: "Reverse-IP resolves an anonymous session into a known company",
+      rb2b: "Resolves an anonymous session into a named person and the company behind them",
       clay: "Waterfalls enrichment, maps the buying committee, and dedupes against what the CRM already knows",
       hubspot: "Receives the clean, named account record"
     },
     flow: [
-      { from: "clearbit", to: "clay", proto: "api", label: "company.match" },
+      { from: "rb2b",     to: "clay", proto: "api", label: "visitor.named" },
       { from: "clay", to: "hubspot", proto: "webhook", label: "named.account" }
     ],
     output: "Anonymous sessions resolved into named, in-market accounts"
@@ -112,17 +112,15 @@ window.NEBOR_WORKFLOW = [
     phase: "Concentrate", step: "Coordinate",
     desc: "How does the firepower fire? For the accounts that matter, LinkedIn, email, ads and a rep move in concert, all telling one story, and a rep is activated the moment intent crosses the line.",
     brief: "Fire every channel in concert on one account.",
-    tools: ["linkedin", "instantly", "anthropic", "slack"],
+    tools: ["linkedin", "instantly", "anthropic"],
     roles: {
       linkedin: "Serves the account-targeted ads to the buying committee",
       instantly: "Runs the 1:1 email track, the same story as the ads",
-      anthropic: "Writes each channel's copy from the account's live signal, in your voice",
-      slack: "Activates the right rep when the intent threshold hits"
+      anthropic: "Writes each channel's copy from the account's live signal, in your voice"
     },
     flow: [
       { from: "anthropic", to: "linkedin", proto: "llm", label: "ad.copy" },
-      { from: "anthropic", to: "instantly", proto: "llm", label: "email.copy" },
-      { from: "instantly", to: "slack", proto: "webhook", label: "rep.activate" }
+      { from: "anthropic", to: "instantly", proto: "llm", label: "email.copy" }
     ],
     output: "Every channel in lockstep on one account \u00b7 the rep steps in at the threshold"
   },
@@ -130,17 +128,16 @@ window.NEBOR_WORKFLOW = [
     phase: "Convert", step: "Nurture",
     desc: "What about the ones not ready yet? Warm leads are followed up on what they do: engaged ones advance, quiet ones re-engage, an intent spike hands straight to sales.",
     brief: "Keep warm leads warm, branch on behavior.",
-    tools: ["hubspot", "anthropic", "n8n", "slack"],
+    tools: ["hubspot", "anthropic", "n8n"],
     roles: {
       hubspot: "Owns the lifecycle stages and journey enrolment",
       anthropic: "Drafts the next-best content for each behavior branch",
-      n8n: "Runs the branching logic: advance, re-engage, or hand off",
-      slack: "Surfaces sales-ready accounts into the right rep channel"
+      n8n: "Runs the branching logic: advance, re-engage, or hand off"
     },
     flow: [
       { from: "hubspot", to: "n8n", proto: "event", label: "behavior" },
       { from: "n8n", to: "anthropic", proto: "llm", label: "next.content" },
-      { from: "n8n", to: "slack", proto: "api", label: "sales.ready" }
+      { from: "n8n", to: "hubspot", proto: "api", label: "sales.ready" }
     ],
     output: "Nobody interested slips \u00b7 the ready ones are handed to sales"
   },
@@ -292,6 +289,10 @@ window.NEBOR_TOOLS = {
     cat: "Forms", desc: "Conversational forms with branching logic. Captures structured input from inbound leads and enriches on submit." },
   intercom:   { name: "Intercom",       color: "#1F8DED", icon: "intercom",
     cat: "Support", desc: "Chat + messaging on the website. Wired in for high-intent visitor capture and to surface qualified conversations into the CRM." },
+  rb2b:       { name: "RB2B",           color: "#0F9D58", domain: "rb2b.com", fb: "Rb",
+    cat: "Visitor ID", desc: "Identifies the people visiting your site, so an anonymous session becomes a named person you can act on." },
+  snitcher:   { name: "Snitcher",       color: "#2D6CDF", domain: "snitcher.com", fb: "Sn",
+    cat: "Visitor ID", desc: "Resolves anonymous website traffic to the company behind it, with the pages they read." },
   clearbit:   { name: "Clearbit",       color: "#091135", domain: "clearbit.com", fb: "Cb",
     cat: "Enrichment", desc: "B2B enrichment that turns partial records into complete ones." },
   census:     { name: "Census",         color: "#5F1E69", domain: "getcensus.com", fb: "Ce",
@@ -390,6 +391,9 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     ocean:     { name: 'Ocean.io',   what: 'Finds lookalike companies based on your best customers.' },
     discolike: { name: 'Discolike',  what: 'AI lookalike discovery from how companies describe themselves.' },
     lusha:     { name: 'Lusha',      what: 'Contact enrichment with verified emails and direct dials.' },
+    rb2b:      { name: 'RB2B',       what: 'Identifies the people visiting your site, turning an anonymous session into a named person.' },
+    snitcher:  { name: 'Snitcher',   what: 'Resolves anonymous website traffic to the company behind it.' },
+    pipedrive: { name: 'Pipedrive',  what: 'A CRM built around the sales pipeline, common in leaner sales teams.' },
     clearbit:  { name: 'Clearbit',   what: 'B2B enrichment that completes each company record.' },
     notion:    { name: 'Notion',     what: 'The workspace where the ICP, playbooks, and voice rules live.' },
     instantly: { name: 'Instantly',  what: 'A cold-email platform that runs automated outreach sequences.' },
