@@ -59,14 +59,14 @@ window.NEBOR_WORKFLOW = [
     phase: "Generate", step: "Capture",
     desc: "Who is on the site right now? Anonymous visitors are matched to companies, enriched, and deduped against your CRM, so traffic becomes named accounts you can act on.",
     brief: "Turn anonymous traffic into named accounts.",
-    tools: ["clearbit", "clay", "hubspot"],
+    tools: ["rb2b", "clay", "hubspot"],
     roles: {
-      clearbit: "Reverse-IP resolves an anonymous session into a known company",
+      rb2b: "Resolves an anonymous session into a named person and the company behind them",
       clay: "Waterfalls enrichment, maps the buying committee, and dedupes against what the CRM already knows",
       hubspot: "Receives the clean, named account record"
     },
     flow: [
-      { from: "clearbit", to: "clay", proto: "api", label: "company.match" },
+      { from: "rb2b",     to: "clay", proto: "api", label: "visitor.named" },
       { from: "clay", to: "hubspot", proto: "webhook", label: "named.account" }
     ],
     output: "Anonymous sessions resolved into named, in-market accounts"
@@ -91,17 +91,15 @@ window.NEBOR_WORKFLOW = [
     phase: "Concentrate", step: "Coordinate",
     desc: "How does the firepower fire? For the accounts that matter, LinkedIn, email, ads and a rep move in concert, all telling one story, and a rep is activated the moment intent crosses the line.",
     brief: "Fire every channel in concert on one account.",
-    tools: ["linkedin", "instantly", "anthropic", "slack"],
+    tools: ["linkedin", "instantly", "anthropic"],
     roles: {
       linkedin: "Serves the account-targeted ads to the buying committee",
       instantly: "Runs the 1:1 email track, the same story as the ads",
-      anthropic: "Writes each channel's copy from the account's live signal, in your voice",
-      slack: "Activates the right rep when the intent threshold hits"
+      anthropic: "Writes each channel's copy from the account's live signal, in your voice"
     },
     flow: [
       { from: "anthropic", to: "linkedin", proto: "llm", label: "ad.copy" },
-      { from: "anthropic", to: "instantly", proto: "llm", label: "email.copy" },
-      { from: "instantly", to: "slack", proto: "webhook", label: "rep.activate" }
+      { from: "anthropic", to: "instantly", proto: "llm", label: "email.copy" }
     ],
     output: "Every channel in lockstep on one account \u00b7 the rep steps in at the threshold"
   },
@@ -109,17 +107,16 @@ window.NEBOR_WORKFLOW = [
     phase: "Convert", step: "Nurture",
     desc: "What about the ones not ready yet? Warm leads are followed up on what they do: engaged ones advance, quiet ones re-engage, an intent spike hands straight to sales.",
     brief: "Keep warm leads warm, branch on behavior.",
-    tools: ["hubspot", "anthropic", "n8n", "slack"],
+    tools: ["hubspot", "anthropic", "n8n"],
     roles: {
       hubspot: "Owns the lifecycle stages and journey enrolment",
       anthropic: "Drafts the next-best content for each behavior branch",
-      n8n: "Runs the branching logic: advance, re-engage, or hand off",
-      slack: "Surfaces sales-ready accounts into the right rep channel"
+      n8n: "Runs the branching logic: advance, re-engage, or hand off"
     },
     flow: [
       { from: "hubspot", to: "n8n", proto: "event", label: "behavior" },
       { from: "n8n", to: "anthropic", proto: "llm", label: "next.content" },
-      { from: "n8n", to: "slack", proto: "api", label: "sales.ready" }
+      { from: "n8n", to: "hubspot", proto: "api", label: "sales.ready" }
     ],
     output: "Nobody interested slips \u00b7 the ready ones are handed to sales"
   },
