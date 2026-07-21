@@ -1,0 +1,51 @@
+<!-- JSON-LD for /gtm-revenue-engine
+     Paste into Framer: Page settings > Custom Code > End of <head> tag.
+     Replace REPLACE_LOGO_URL and the sameAs entries before publishing. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nebor.ai/#organization",
+      "name": "Nebor",
+      "url": "https://nebor.ai/",
+      "logo": "REPLACE_LOGO_URL",
+      "sameAs": ["REPLACE_LINKEDIN_URL"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nebor.ai/gtm-revenue-engine#webpage",
+      "url": "https://nebor.ai/gtm-revenue-engine",
+      "name": "GTM Revenue Engine & AI Workflow Services | Nebor",
+      "description": "A GTM revenue engine built to run your whole sales motion: AI workflows carry every step, from account mapping to booked meetings, in the stack you already run.",
+      "isPartOf": { "@id": "https://nebor.ai/#organization" },
+      "about": { "@id": "https://nebor.ai/gtm-revenue-engine#service" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://nebor.ai/gtm-revenue-engine#service",
+      "name": "GTM Revenue Engine & AI Workflow Services",
+      "serviceType": "Go-to-market revenue engine and AI workflow implementation",
+      "description": "A GTM revenue engine built to run your whole sales motion: AI workflows carry every step, from account mapping to booked meetings, in the stack you already run.",
+      "url": "https://nebor.ai/gtm-revenue-engine",
+      "provider": { "@id": "https://nebor.ai/#organization" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "What we build",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GTM Strategy, ICP Definition & TAM Mapping" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI-Powered GTM Workflows Built Around You" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Account Scoring & Prioritization" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Channel Strategy" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Signal-Based Personalization" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sales Enablement & Playbook Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Meeting Intelligence Automation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mid-Funnel Orchestration" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance Reporting" } }
+        ]
+      }
+    }
+  ]
+}
+</script>

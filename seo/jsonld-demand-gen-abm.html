@@ -1,0 +1,51 @@
+<!-- JSON-LD for /demand-gen-abm
+     Paste into Framer: Page settings > Custom Code > End of <head> tag.
+     Replace REPLACE_LOGO_URL and the sameAs entries before publishing. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nebor.ai/#organization",
+      "name": "Nebor",
+      "url": "https://nebor.ai/",
+      "logo": "REPLACE_LOGO_URL",
+      "sameAs": ["REPLACE_LINKEDIN_URL"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nebor.ai/demand-gen-abm#webpage",
+      "url": "https://nebor.ai/demand-gen-abm",
+      "name": "B2B Demand Generation & ABM Services | Nebor",
+      "description": "Demand generation and account-based marketing that turns anonymous interest into named, scored accounts and pipeline you can trace back to its source.",
+      "isPartOf": { "@id": "https://nebor.ai/#organization" },
+      "about": { "@id": "https://nebor.ai/demand-gen-abm#service" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://nebor.ai/demand-gen-abm#service",
+      "name": "B2B Demand Generation & ABM Services",
+      "serviceType": "B2B demand generation and account-based marketing",
+      "description": "Demand generation and account-based marketing that turns anonymous interest into named, scored accounts and pipeline you can trace back to its source.",
+      "url": "https://nebor.ai/demand-gen-abm",
+      "provider": { "@id": "https://nebor.ai/#organization" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "What we build",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Demand Strategy & Channel Mapping" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI-Powered Demand Workflows & Plays" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audience Building & Paid Media Strategy" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Listening & Competitive Tracking" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Inbound Capture & Dynamic Landing Pages" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Account-Based Marketing & ABM Programs" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nurture & Lifecycle Journeys" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Inbound-Led Outbound Sequences" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pipeline & Attribution Reporting" } }
+        ]
+      }
+    }
+  ]
+}
+</script>

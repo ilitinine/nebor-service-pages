@@ -1,0 +1,51 @@
+<!-- JSON-LD for /crm-revops
+     Paste into Framer: Page settings > Custom Code > End of <head> tag.
+     Replace REPLACE_LOGO_URL and the sameAs entries before publishing. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nebor.ai/#organization",
+      "name": "Nebor",
+      "url": "https://nebor.ai/",
+      "logo": "REPLACE_LOGO_URL",
+      "sameAs": ["REPLACE_LINKEDIN_URL"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nebor.ai/crm-revops#webpage",
+      "url": "https://nebor.ai/crm-revops",
+      "name": "CRM Implementation & RevOps Services | Nebor",
+      "description": "CRM architecture and RevOps automation in whatever CRM you run: one clean record, routing and scoring on autopilot, and forecasts your business can build on.",
+      "isPartOf": { "@id": "https://nebor.ai/#organization" },
+      "about": { "@id": "https://nebor.ai/crm-revops#service" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://nebor.ai/crm-revops#service",
+      "name": "CRM Implementation & RevOps Services",
+      "serviceType": "CRM implementation and revenue operations",
+      "description": "CRM architecture and RevOps automation in whatever CRM you run: one clean record, routing and scoring on autopilot, and forecasts your business can build on.",
+      "url": "https://nebor.ai/crm-revops",
+      "provider": { "@id": "https://nebor.ai/#organization" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "What we build",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CRM Implementation & Configuration" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Migration & Consolidation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CRM Optimization & Performance Tuning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data Hygiene & Cleanup" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dynamic Enrichment & Live Data" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Integration & Data Flow" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workflow Automation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lead Scoring & Routing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Attribution & Pipeline Reporting" } }
+        ]
+      }
+    }
+  ]
+}
+</script>
