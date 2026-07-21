@@ -924,6 +924,13 @@
         <div class="fold"><div><span class="desc">The same architecture when Salesforce is home: object models, territory rules, and permissions built around how you sell.</span></div></div>
         <span class="more">Learn more ↗</span>
       </a>
+      <a class="b-tool" href="https://pipedrive.com" target="_blank" rel="noopener">
+        <img src="https://www.google.com/s2/favicons?domain=pipedrive.com&sz=64" alt="Pipedrive">
+        <span class="name">Pipedrive</span>
+        <span class="cat">CRM</span>
+        <div class="fold"><div><span class="desc">The same build when Pipedrive is home: pipelines, automation and reporting shaped around how your team actually sells.</span></div></div>
+        <span class="more">Learn more ↗</span>
+      </a>
       <a class="b-tool" href="https://clay.com" target="_blank" rel="noopener">
         <img src="https://www.google.com/s2/favicons?domain=clay.com&sz=64" alt="Clay">
         <span class="name">Clay</span>
@@ -931,32 +938,11 @@
         <div class="fold"><div><span class="desc">The data workbench: waterfall enrichment across dozens of providers, validated before anything writes to the CRM.</span></div></div>
         <span class="more">Learn more ↗</span>
       </a>
-      <a class="b-tool" href="https://clearbit.com" target="_blank" rel="noopener">
-        <img src="https://www.google.com/s2/favicons?domain=clearbit.com&sz=64" alt="Clearbit">
-        <span class="name">Clearbit</span>
-        <span class="cat">Enrichment</span>
-        <div class="fold"><div><span class="desc">Firmographics on every record: size, industry, location, kept current instead of typed once.</span></div></div>
-        <span class="more">Learn more ↗</span>
-      </a>
-      <a class="b-tool" href="https://zoominfo.com" target="_blank" rel="noopener">
-        <img src="https://www.google.com/s2/favicons?domain=zoominfo.com&sz=64" alt="ZoomInfo">
-        <span class="name">ZoomInfo</span>
+      <a class="b-tool" href="https://apollo.io" target="_blank" rel="noopener">
+        <img src="https://www.google.com/s2/favicons?domain=apollo.io&sz=64" alt="Apollo">
+        <span class="name">Apollo</span>
         <span class="cat">Data</span>
-        <div class="fold"><div><span class="desc">The people layer: org charts, job moves, and direct dials feeding the record on their own.</span></div></div>
-        <span class="more">Learn more ↗</span>
-      </a>
-      <a class="b-tool" href="https://builtwith.com" target="_blank" rel="noopener">
-        <img src="https://www.google.com/s2/favicons?domain=builtwith.com&sz=64" alt="BuiltWith">
-        <span class="name">BuiltWith</span>
-        <span class="cat">Technographics</span>
-        <div class="fold"><div><span class="desc">What they run under the hood, so a change in your fit reaches the record without a rep touching it.</span></div></div>
-        <span class="more">Learn more ↗</span>
-      </a>
-      <a class="b-tool" href="https://chilipiper.com" target="_blank" rel="noopener">
-        <img src="https://www.google.com/s2/favicons?domain=chilipiper.com&sz=64" alt="Chili Piper">
-        <span class="name">Chili Piper</span>
-        <span class="cat">Routing</span>
-        <div class="fold"><div><span class="desc">Scored leads land on the right rep's calendar in seconds, with no email tennis.</span></div></div>
+        <div class="fold"><div><span class="desc">The account and contact universe: firmographics, org charts and verified contact detail, filtered down to the accounts that fit.</span></div></div>
         <span class="more">Learn more ↗</span>
       </a>
       <a class="b-tool" href="https://claude.ai" target="_blank" rel="noopener">
@@ -1205,7 +1191,7 @@ window.NEBOR_WORKFLOW = [
     phase: "Architect", step: "Configure",
     desc: "Objects, pipelines, lifecycle stages and the properties your reporting depends on, designed around how your business runs and signed off before a single record moves into it.",
     brief: "The structure, designed around how you sell.",
-    tools: ["hubspot", "salesforce"],
+    tools: ["hubspot", "salesforce", "pipedrive"],
     roles: {
       hubspot: "Where we build it, if HubSpot is what you run",
       salesforce: "Or here, if Salesforce is your system of record"
@@ -1216,7 +1202,7 @@ window.NEBOR_WORKFLOW = [
     phase: "Architect", step: "Migrate",
     desc: "Legacy tools and separate instances come into one clean system, reconciled row by row on both sides, so not a single record or deal goes missing in the cutover.",
     brief: "Everything you have, moved with nothing lost.",
-    tools: ["hubspot", "salesforce"],
+    tools: ["hubspot", "salesforce", "pipedrive"],
     roles: {
       hubspot: "The destination: every note, owner and timestamp lands where it belongs",
       salesforce: "Or the destination is here, if Salesforce is what you run"
@@ -1227,7 +1213,7 @@ window.NEBOR_WORKFLOW = [
     phase: "Architect", step: "Tune",
     desc: "The rules that contradict each other, the automations firing twice, the fields nobody fills: all of it surfaced, graded, and rebuilt into one clean path with one owner per lead.",
     brief: "The tangle, rebuilt into one clean path.",
-    tools: ["hubspot", "salesforce"],
+    tools: ["hubspot", "salesforce", "pipedrive"],
     roles: {
       hubspot: "We read what is live today, then rebuild it into one chain your team can name",
       salesforce: "The same audit and rebuild when Salesforce is your system: one chain, one owner per lead"
@@ -1238,7 +1224,7 @@ window.NEBOR_WORKFLOW = [
     phase: "Unify", step: "Clean",
     desc: "Dedupe, normalize and validate on every write, so one company means one record and the next import cannot quietly undo the cleanup you just paid for.",
     brief: "One company, one record, on every write.",
-    tools: ["clay", "hubspot", "salesforce"],
+    tools: ["clay", "hubspot", "salesforce", "pipedrive"],
     roles: {
       clay: "Checks each record on the way in, against the rules we write with you",
       hubspot: "Only clean, deduped, normalized records ever land here",
@@ -1253,19 +1239,16 @@ window.NEBOR_WORKFLOW = [
     phase: "Unify", step: "Enrich",
     desc: "Job moves, promotions, funding rounds and tech shifts land on the record on their own, so what your rep opens on Thursday is true on Thursday.",
     brief: "The record keeps itself current.",
-    tools: ["clay", "clearbit", "builtwith", "zoominfo", "anthropic", "hubspot", "salesforce"],
+    tools: ["clay", "apollo", "anthropic", "hubspot", "salesforce", "pipedrive"],
     roles: {
       clay: "Orchestrates it: which source to ask, in what order, and when to go back and re-check",
-      clearbit: "Firmographics: size, industry, location, kept current instead of typed once",
-      builtwith: "What they run, so you hear about it when your fit changes",
-      zoominfo: "The people: who moved, who got promoted, who just joined",
+      apollo: "Firmographics and the people behind them: size, industry, who moved, who just joined",
       anthropic: "Claude reads what no vendor returns: their site, their posts, their hiring, and writes the tier and the reason for it",
       hubspot: "The fresh fields land on the record your reps already have open",
       salesforce: "The refreshed fields write to Salesforce the same way, ready when a rep opens the record"
     },
     flow: [
-      { from: "clearbit", to: "clay", proto: "api", label: "firmographics" },
-      { from: "zoominfo", to: "clay", proto: "api", label: "people.moves" },
+      { from: "apollo", to: "clay", proto: "api", label: "firmo + people" },
       { from: "clay", to: "anthropic", proto: "api", label: "raw.signals" },
       { from: "anthropic", to: "hubspot", proto: "api", label: "fields.refreshed" }
     ],
@@ -1275,7 +1258,7 @@ window.NEBOR_WORKFLOW = [
     phase: "Unify", step: "Connect",
     desc: "Marketing, sales, product and success all write into the same record and read back from it in real time, so no two tools can quietly disagree about the same company.",
     brief: "Every team, one source of truth.",
-    tools: ["hubspot", "salesforce"],
+    tools: ["hubspot", "salesforce", "pipedrive"],
     roles: {
       hubspot: "The hub every other system syncs into, both directions",
       salesforce: "Same job, if Salesforce is your system of record"
@@ -1286,7 +1269,7 @@ window.NEBOR_WORKFLOW = [
     phase: "Activate", step: "Automate",
     desc: "Something happens, the system checks, the system acts. Field updates, held deals, tasks and notifications fire off real CRM events instead of waiting for someone to remember.",
     brief: "The manual work, done by the system.",
-    tools: ["hubspot", "salesforce", "anthropic", "openai"],
+    tools: ["hubspot", "salesforce", "pipedrive", "anthropic", "openai"],
     roles: {
       hubspot: "Where the workflows live, and where every run gets logged and can be undone",
       salesforce: "The same workflows run when Salesforce is home, logged and reversible there too",
@@ -1303,16 +1286,16 @@ window.NEBOR_WORKFLOW = [
     phase: "Activate", step: "Route",
     desc: "Leads are scored on fit and intent, then handed to the right rep by the rule that matches, in seconds. The same lead gets the same outcome on a Tuesday morning or a Friday night.",
     brief: "Scored, then routed by rule, every time.",
-    tools: ["clay", "hubspot", "salesforce", "chilipiper"],
+    tools: ["clay", "hubspot", "salesforce", "pipedrive"],
     roles: {
       clay: "Supplies the fit data the score is built on, kept fresh",
       hubspot: "Scores the lead and enforces the rule that assigns it, every time",
       salesforce: "Scoring and assignment enforce the same way in Salesforce, in seconds",
-      chilipiper: "Hands the meeting straight to the rep who owns it, with no email tennis"
+      pipedrive: "Same rules hold if Pipedrive is your system: the routing lives in the CRM, not a bolt-on"
     },
     flow: [
       { from: "clay", to: "hubspot", proto: "api", label: "fit.score" },
-      { from: "hubspot", to: "chilipiper", proto: "api", label: "owner.assigned" }
+      { from: "clay", to: "hubspot", proto: "api", label: "owner.assigned" }
     ],
     output: "The right rep, in seconds · every single time"
   },
@@ -1320,7 +1303,7 @@ window.NEBOR_WORKFLOW = [
     phase: "Activate", step: "Report",
     desc: "Every deal carries the source that made it, so pipeline and forecast roll up from stamped records. Monday stops being a debate about whose numbers are right.",
     brief: "One number your leadership trusts.",
-    tools: ["hubspot", "salesforce"],
+    tools: ["hubspot", "salesforce", "pipedrive"],
     roles: {
       hubspot: "Every deal carries the source that made it, and the dashboards read off that stamp",
       salesforce: "Or here: same stamp, same numbers, same backbone"
@@ -1329,9 +1312,9 @@ window.NEBOR_WORKFLOW = [
   }
 ];
 </script>
-<script src="scripts/tools.js?v=12"></script>
+<script src="scripts/tools.js?v=13"></script>
 <script src="scripts/re-console-crm.js?v=13"></script>
-<script src="scripts/stepper.js?v=125"></script>
+<script src="scripts/stepper.js?v=126"></script>
 <script src="scripts/page-fx.js?v=4"></script>
 
 

@@ -721,11 +721,11 @@
         <div class="fold"><div><span class="desc">The CRM the engine writes into: every account, score and booked meeting lands here.</span></div></div>
         <span class="more">Learn more ↗</span>
       </a>
-      <a class="b-tool" href="https://zoominfo.com" target="_blank" rel="noopener">
-        <img src="https://www.google.com/s2/favicons?domain=zoominfo.com&sz=64" alt="ZoomInfo">
-        <span class="name">ZoomInfo</span>
+      <a class="b-tool" href="https://apollo.io" target="_blank" rel="noopener">
+        <img src="https://www.google.com/s2/favicons?domain=apollo.io&sz=64" alt="Apollo">
+        <span class="name">Apollo</span>
         <span class="cat">Data</span>
-        <div class="fold"><div><span class="desc">Pulls the account universe and filters it to your ICP: firmographics, org charts, headcount.</span></div></div>
+        <div class="fold"><div><span class="desc">The account and contact universe: firmographics, org charts and verified contact detail, filtered down to the accounts that fit.</span></div></div>
         <span class="more">Learn more ↗</span>
       </a>
       <a class="b-tool" href="https://builtwith.com" target="_blank" rel="noopener">
@@ -747,13 +747,6 @@
         <span class="name">LinkedIn</span>
         <span class="cat">Channel</span>
         <div class="fold"><div><span class="desc">Sales Navigator signals: job changes, hiring and funding on your target accounts.</span></div></div>
-        <span class="more">Learn more ↗</span>
-      </a>
-      <a class="b-tool" href="https://clearbit.com" target="_blank" rel="noopener">
-        <img src="https://www.google.com/s2/favicons?domain=clearbit.com&sz=64" alt="Clearbit">
-        <span class="name">Clearbit</span>
-        <span class="cat">Enrichment</span>
-        <div class="fold"><div><span class="desc">Fills the firmographic gaps on every record before it moves.</span></div></div>
         <span class="more">Learn more ↗</span>
       </a>
       <a class="b-tool" href="https://clay.com" target="_blank" rel="noopener">
@@ -796,13 +789,6 @@
         <span class="name">HeyReach</span>
         <span class="cat">LinkedIn</span>
         <div class="fold"><div><span class="desc">Runs the LinkedIn track on the same clock as the email.</span></div></div>
-        <span class="more">Learn more ↗</span>
-      </a>
-      <a class="b-tool" href="https://chilipiper.com" target="_blank" rel="noopener">
-        <img src="https://www.google.com/s2/favicons?domain=chilipiper.com&sz=64" alt="Chili Piper">
-        <span class="name">Chili Piper</span>
-        <span class="cat">Routing</span>
-        <div class="fold"><div><span class="desc">Books the meeting on the right rep's calendar the moment a reply lands.</span></div></div>
         <span class="more">Learn more ↗</span>
       </a>
       <a class="b-tool" href="https://n8n.io" target="_blank" rel="noopener">
@@ -1024,14 +1010,14 @@ window.NEBOR_WORKFLOW = [
     step: "Identify",
     desc: "Who is in the market right now? The full universe gets pulled and filtered down to the accounts that match the ICP on size, industry, and stack.",
     brief: "Filter the market down to ICP-fit accounts.",
-    tools: ["zoominfo", "builtwith", "clay"],
+    tools: ["apollo", "builtwith", "clay"],
     roles: {
-      zoominfo:  "Pulls the account universe and filters it to your ICP: firmographics, org charts, headcount",
+      apollo:    "Pulls the account universe and filters it to your ICP: firmographics, org charts, headcount",
       builtwith: "Detects the tech stack each account runs",
       clay:      "Merges every source into one ranked account table"
     },
     flow: [
-      { from: "zoominfo",  to: "clay", proto: "api", label: "firmo.page[n]" },
+      { from: "apollo",    to: "clay", proto: "api", label: "firmo.page[n]" },
       { from: "builtwith", to: "clay", proto: "api", label: "stack.lookup" }
     ],
     output: "The whole market narrowed to the accounts that fit how you sell"
@@ -1081,14 +1067,14 @@ window.NEBOR_WORKFLOW = [
     step: "Enrich",
     desc: "Who do we talk to there? Ready accounts become actual people: the buying committee, with verified coordinates, deduped against your CRM before anything moves.",
     brief: "Accounts become a verified buying committee.",
-    tools: ["clearbit", "clay", "hubspot"],
+    tools: ["apollo", "clay", "hubspot"],
     roles: {
-      clearbit: "Fills the firmographic gaps on every record",
+      apollo: "Turns the account into the actual buying committee, with verified contact detail",
       clay:     "Waterfalls the providers to find the committee and verify contacts, deduped against what your CRM already knows",
       hubspot:  "Receives clean contact records; nothing enters dirty"
     },
     flow: [
-      { from: "clearbit", to: "clay",    proto: "api",     label: "firmo.fill" },
+      { from: "apollo",   to: "clay",    proto: "api",     label: "committee.pull" },
       { from: "clay",     to: "hubspot", proto: "webhook", label: "contact.upsert" }
     ],
     output: "The buying committee found and written onto the record, clean"
@@ -1137,18 +1123,16 @@ window.NEBOR_WORKFLOW = [
     step: "Book",
     desc: "How does it become a meeting? Routing books the right rep's calendar, Claude drafts the pre-meeting brief, and the record is stamped with the source, signal, and sequence that produced it.",
     brief: "Meetings routed, booked, and briefed.",
-    tools: ["chilipiper", "anthropic", "slack", "hubspot"],
+    tools: ["anthropic", "slack", "hubspot"],
     roles: {
       hubspot:    "Hands the qualified contact to routing, then receives the stamped meeting record",
-      chilipiper: "Books the right rep's calendar on round-robin and territory rules",
       anthropic:  "Claude drafts the pre-meeting brief before the invite is even accepted",
       slack:      "Delivers the brief into the rep's hands"
     },
     flow: [
-      { from: "hubspot",    to: "chilipiper", proto: "webhook", label: "qualified.contact" },
-      { from: "chilipiper", to: "anthropic",  proto: "llm",     label: "brief.prompt" },
+      { from: "hubspot",    to: "anthropic",  proto: "llm",     label: "brief.prompt" },
       { from: "anthropic",  to: "slack",      proto: "api",     label: "brief.md" },
-      { from: "chilipiper", to: "hubspot",    proto: "api",     label: "meeting.stamped" }
+      { from: "anthropic",  to: "hubspot",    proto: "api",     label: "meeting.stamped" }
     ],
     output: "Meeting booked, briefed, and stamped · lands in your live pipeline"
   },
@@ -1197,8 +1181,8 @@ window.NEBOR_RE_CAPS = [
 ];
 </script>
 
-<script src="scripts/tools.js?v=12"></script>
-<script src="scripts/stepper.js?v=125"></script>
+<script src="scripts/tools.js?v=13"></script>
+<script src="scripts/stepper.js?v=126"></script>
 <script src="scripts/re-console-v2.js?v=50"></script>
 <script src="scripts/page-fx.js?v=4"></script>
 
