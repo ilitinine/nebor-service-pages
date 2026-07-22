@@ -74,11 +74,12 @@
   });
 })();
 
-/* Hero cards on touch: tap toggles the reveal (hover has no un-hover on touch).
+/* Hover-reveal cards on touch (hero cards, how-we-work steps, tool folds):
+   tap toggles the reveal (hover has no un-hover on touch).
    First tap opens, second tap closes, tapping another card switches. */
 (function () {
   if (window.matchMedia && window.matchMedia('(hover: hover)').matches) return;
-  var cards = Array.prototype.slice.call(document.querySelectorAll('.hero-el'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.hero-el, .b-step, .b-tool'));
   if (!cards.length) return;
   cards.forEach(function (card) {
     card.addEventListener('click', function (e) {

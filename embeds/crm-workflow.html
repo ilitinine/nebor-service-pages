@@ -797,7 +797,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
   document.addEventListener('mouseout', function (e) { const el = e.target.closest && e.target.closest('[data-tip-name]'); if (!el) return; const to = e.relatedTarget; if (to && (el.contains(to) || tip.contains(to))) return; scheduleHide(); });
   tip.addEventListener('mouseenter', function () { if (hideT) { clearTimeout(hideT); hideT = null; } });
   tip.addEventListener('mouseleave', function () { scheduleHide(); });
-  document.addEventListener('click', function (e) { if (tip.contains(e.target)) return; const el = e.target.closest && e.target.closest('[data-tip-name]'); if (el) { pinned = false; open(el); pinned = true; e.stopPropagation(); } else hideNow(); });
+  document.addEventListener('click', function (e) { if (tip.contains(e.target)) return; const el = e.target.closest && e.target.closest('[data-tip-name]'); if (el) { if (pinned && el === curEl && tip.classList.contains('show')) { hideNow(); e.stopPropagation(); return; } pinned = false; open(el); pinned = true; e.stopPropagation(); } else hideNow(); });
 })();
 
 </script>

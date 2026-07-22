@@ -1510,3 +1510,29 @@
   border-radius: 999px;
   padding: 5px 15px;
 }
+
+/* Touch devices: hover folds toggle via .is-open (page-fx.js). Sticky tap-hover
+   and focus-within are neutralized so a second tap can close the card. */
+@media (hover: none) {
+  .b-step:hover:not(.is-open), .b-step:focus-within:not(.is-open) {
+    border-radius: 18px; border-bottom-color: var(--card-border); z-index: 1;
+  }
+  .b-step:hover:not(.is-open) .fold, .b-step:focus-within:not(.is-open) .fold {
+    opacity: 0; visibility: hidden; transform: translateY(-8px);
+  }
+  .b-step.is-open { border-radius: 18px 18px 0 0; border-bottom-color: transparent; z-index: 20; }
+  .b-step.is-open .fold { opacity: 1; visibility: visible; transform: none; }
+
+  .b-tool:hover:not(.is-open) {
+    border-color: var(--card-border); border-radius: 16px; border-bottom-color: var(--card-border); z-index: 1;
+  }
+  .b-tool:hover:not(.is-open) .fold { opacity: 0; visibility: hidden; transform: translateY(-8px); }
+  .b-tool.is-open {
+    border-color: color-mix(in srgb, var(--lav) 70%, var(--card-border));
+    border-radius: 16px 16px 0 0; border-bottom-color: transparent; z-index: 20;
+  }
+  .b-tool.is-open .fold { opacity: 1; visibility: visible; transform: none; }
+
+  .brand .hero-el:hover:not(.is-open) .hero-el-body { max-height: 0; }
+  .brand .hero-el.is-open .hero-el-body { max-height: 170px; }
+}
