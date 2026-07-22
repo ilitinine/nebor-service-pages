@@ -13,7 +13,7 @@
 .nb-embed .hero-elements-wrap { max-width:1400px; margin:0 auto; padding:16px 20px 10px; width:100%; }
 .nb-embed .hero-elements { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px; text-align:left; width:100%; min-width:0; }
 .nb-embed, .nb-embed * { min-width:0; }
-@media (min-width: 1100px) { .nb-embed { min-width:1440px; } }
+.nb-embed { container-type:inline-size; }
 .nb-embed .hero-el { position:relative; display:block; background:var(--color-base); border-radius:22px; overflow:hidden; padding-top:130%;
   transition:border-color .26s ease, transform .26s ease, box-shadow .26s ease; text-decoration:none; color:inherit;
   --page-accent:#E1962E; --page-accent-strong:#B26F14; --page-accent-soft:#FDF1DE; --card-header:#172A2D;
@@ -38,6 +38,11 @@
   .nb-embed .hero-el.is-open .hero-el-body { max-height:170px; opacity:1; margin:6px 0 0; }
   .nb-embed .hero-el.is-open .hero-el-content { padding-top:32px; padding-bottom:30px; }
 }
+@container (min-width: 1020px) {
+  .nb-embed .hero-elements { grid-template-columns:repeat(3, minmax(0,1fr)); }
+  .nb-embed .hero-el { padding-top:0; height:556px; }
+  .nb-embed .hero-el-canvas { height:100%; }
+}
 .nb-embed .hero-el-tag { display:inline-flex; align-items:center; gap:7px; align-self:flex-start; padding:5px 12px 5px 10px;
   background:#FBF3E4; border:1.5px solid rgba(23,42,45,0.18); border-radius:999px; font-family:var(--font-sans);
   font-size:12px; color:var(--ink); font-weight:700; line-height:1; }
@@ -45,13 +50,13 @@
   box-shadow:0 0 0 2.5px color-mix(in srgb, #E1962E 35%, transparent); }
 .nb-embed .hero-el-title { font-family:var(--font-sans); font-size:20px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; color:var(--color-text); margin:4px 0 0; }
 /* aligned to Framer breakpoints: Desktop >=1200 - Tablet 1199-810 - Phone <=809 */
-@media (max-width: 1099px) {
+@container (max-width: 1019px) {
   .nb-embed .hero-elements-wrap { padding-top:0; }
   .nb-embed .hero-elements { grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
   .nb-embed .hero-el { padding-top:0; min-height:0; height:430px; }
   .nb-embed .hero-el-canvas { height:100%; }
 }
-@media (max-width: 700px) {
+@container (max-width: 479px) {
   .nb-embed .hero-elements { grid-template-columns:1fr; gap:12px; }
   /* the artwork is square, so letting it scale with card width put its bottom strip
      under the title on wider phones; pin the drawing height instead of the width */
