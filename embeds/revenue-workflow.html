@@ -640,8 +640,8 @@ window.neborLogo = window.neborLogo || function (slug, size) {
 
     // stash the slab shapes + label spots so the glow overlay can light up the active stage
     stageInfo = bounds.map((b, i) => {
-      const am = start + i * seg + seg / 2, lp = pt(am, rMid);
-      return { d: b.d, c: col[i], lx: lp.x, ly: lp.y + 25, ix: lp.x, iy: lp.y - 25, ic: STAGES[i].ic, k: STAGES[i].k };
+      const am = start + i * seg + seg / 2, bp = pt(am, rMid + 14); // same spot as the slab's own badge, so the glow disc covers it instead of doubling it
+      return { d: b.d, c: col[i], ix: bp.x, iy: bp.y, ic: STAGES[i].ic, k: STAGES[i].k };
     });
     if (!glowEl) {
       glowEl = document.createElementNS(NS, 'svg');
