@@ -56,7 +56,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
   // Per-page config: each page can supply its own phases/wheel via window globals; defaults = Sales Engine.
   const PHASE = window.NEBOR_PHASE || { Find: 'find', Reach: 'reach', Run: 'run' };
   const TAG = window.NEBOR_TAG || ['win/loss to ICP', 'TAM to matched', 'intent, scored', 'replies, routed', 'accounts to people', 'signal to message', 'lanes on one clock', 'meeting, stamped', 'wins to next ICP'];
-  const HANDOFF = window.NEBOR_HANDOFF || ['market map', 'matched accounts', 'scored set', 'the committee', 'the message', 'live sends', 'qualified reply', 'booked & stamped', 'wins, next run'];
+  const HANDOFF = window.NEBOR_HANDOFF || ['market map', 'matched accounts', 'scored set', 'the committee', 'the message', 'live lanes', 'qualified reply', 'booked & stamped', 'wins, next run'];
   const PLAIN = {
     'won-lost.records': 'win/loss records', 'icp.doc': 'the ICP', 'icp.traits': 'the ICP traits', 'closed-won.seeds': 'closed-won seeds', 'lookalike.expand': 'lookalikes',
     'firmo.page[n]': 'firmographics', 'orgs.filtered': 'matching orgs', 'stack.lookup': 'tech stack', 'tech.confirm': 'stack signals',

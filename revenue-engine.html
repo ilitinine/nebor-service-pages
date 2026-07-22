@@ -1022,12 +1022,12 @@ window.NEBOR_WORKFLOW = [
   {
     phase: "Run",
     step: "Qualify",
-    desc: "What happens when they reply? Every response is classified in seconds and routed by the rules: replied gets routed, six quiet days switches channel, booked stops everything.",
-    brief: "Every reply classified and routed in seconds.",
+    desc: "What happens when they respond? A LinkedIn reply, an email answer, an ad click, an event conversation: every response is classified in seconds and routed by the same rules, and a booked meeting stops everything.",
+    brief: "Every response classified and routed in seconds.",
     tools: ["instantly", "openai", "n8n", "slack", "hubspot"],
     roles: {
-      instantly: "Relays replies from every lane into the classifier",
-      openai:    "ChatGPT classifies reply intent: positive, objection, referral, or later",
+      instantly: "Relays responses from every lane into the classifier",
+      openai:    "ChatGPT classifies response intent: positive, objection, referral, or later",
       n8n:       "Runs the branch rules: route it, switch the channel, or stop the sequence",
       slack:     "Pings the right rep with the thread and a one-click claim",
       hubspot:   "Keeps deal stages in sync with your live pipeline"
@@ -1038,7 +1038,7 @@ window.NEBOR_WORKFLOW = [
       { from: "n8n",       to: "slack",   proto: "api",     label: "rep.ping" },
       { from: "n8n",       to: "hubspot", proto: "api",     label: "stage.sync" }
     ],
-    output: "Replies routed with full context · no lead stalls mid-conversation"
+    output: "Responses routed with full context · no lead stalls mid-conversation"
   },
   {
     phase: "Find",
@@ -1059,8 +1059,8 @@ window.NEBOR_WORKFLOW = [
   },
   {
     phase: "Reach",
-    step: "Personalize",
-    desc: "Why would they reply? Claude writes each message from the account's live signal, in your voice: an email opener, a LinkedIn note, or the talking points for a call, checked against your rules before anything is queued.",
+    step: "Craft",
+    desc: "Why would they reply? Claude writes each message from the account's live signal, in your voice: an email opener, a LinkedIn note, an ad, or a call script, checked against your rules before anything is queued.",
     brief: "Messages written from real signals, in your voice.",
     tools: ["clay", "anthropic", "n8n"],
     roles: {
@@ -1076,7 +1076,7 @@ window.NEBOR_WORKFLOW = [
   },
   {
     phase: "Reach",
-    step: "Send",
+    step: "Engage",
     desc: "Where do they respond? One conversation per account across the lanes your buyers use: LinkedIn and email run on one clock, a rep calls when a buyer wants one, and accounts that are not ready move into nurture.",
     brief: "Every lane on one clock, one thread per account.",
     tools: ["n8n", "instantly", "heyreach", "hubspot"],
