@@ -73,3 +73,18 @@
     if (menu.classList.contains('open') && !e.target.closest('.b-nav')) setOpen(false);
   });
 })();
+
+/* Hero cards on touch: tap toggles the reveal (hover has no un-hover on touch).
+   First tap opens, second tap closes, tapping another card switches. */
+(function () {
+  if (window.matchMedia && window.matchMedia('(hover: hover)').matches) return;
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.hero-el'));
+  if (!cards.length) return;
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      var wasOpen = card.classList.contains('is-open');
+      cards.forEach(function (c) { c.classList.remove('is-open'); });
+      if (!wasOpen) card.classList.add('is-open');
+    });
+  });
+})();

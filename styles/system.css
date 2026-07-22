@@ -995,6 +995,28 @@ p, .text-body { font-family: var(--font-sans); font-size: 14px; line-height: 1.6
   padding-top: 32px;
   padding-bottom: 30px;
 }
+/* Touch devices: hover sticks after a tap, so the reveal is driven by .is-open
+   (toggled in page-fx.js) and the sticky :hover state is neutralized */
+@media (hover: none) {
+  .hero-el:hover .hero-el-body {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+  }
+  .hero-el:hover .hero-el-content {
+    padding-top: 24px;
+    padding-bottom: 26px;
+  }
+  .hero-el.is-open .hero-el-body {
+    max-height: 100px;
+    opacity: 1;
+    margin: 6px 0 0;
+  }
+  .hero-el.is-open .hero-el-content {
+    padding-top: 32px;
+    padding-bottom: 30px;
+  }
+}
 .hero-el-tag {
   display: inline-flex;
   align-items: center;
