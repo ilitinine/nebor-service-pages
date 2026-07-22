@@ -48,14 +48,14 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     pipedrive: { name: 'Pipedrive',  what: 'A CRM built around the sales pipeline, common in leaner sales teams.' },
     clearbit:  { name: 'Clearbit',   what: 'B2B enrichment that completes each company record.' },
     notion:    { name: 'Notion',     what: 'The workspace where the ICP, playbooks, and voice rules live.' },
-    instantly: { name: 'Instantly',  what: 'A cold-email platform that runs automated outreach sequences.' },
+    instantly: { name: 'Instantly',  what: 'An email outreach platform that runs automated sequences.' },
     heyreach:  { name: 'HeyReach',   what: 'A LinkedIn outreach platform that runs multi-sender sequences.' },
     slack:     { name: 'Slack',      what: 'Team messaging where reps get real-time alerts and pre-meeting briefs.' },
     chilipiper:{ name: 'Chili Piper',what: 'A scheduling tool that routes and books meetings in real time.' }
   };
   // Per-page config: each page can supply its own phases/wheel via window globals; defaults = Sales Engine.
   const PHASE = window.NEBOR_PHASE || { Find: 'find', Reach: 'reach', Run: 'run' };
-  const TAG = window.NEBOR_TAG || ['win/loss to ICP', 'TAM to matched', 'intent, scored', 'replies, routed', 'accounts to people', 'signal to message', 'email + LinkedIn', 'meeting, stamped', 'wins to next ICP'];
+  const TAG = window.NEBOR_TAG || ['win/loss to ICP', 'TAM to matched', 'intent, scored', 'replies, routed', 'accounts to people', 'signal to message', 'lanes on one clock', 'meeting, stamped', 'wins to next ICP'];
   const HANDOFF = window.NEBOR_HANDOFF || ['market map', 'matched accounts', 'scored set', 'the committee', 'the message', 'live sends', 'qualified reply', 'booked & stamped', 'wins, next run'];
   const PLAIN = {
     'won-lost.records': 'win/loss records', 'icp.doc': 'the ICP', 'icp.traits': 'the ICP traits', 'closed-won.seeds': 'closed-won seeds', 'lookalike.expand': 'lookalikes',
@@ -63,7 +63,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     'surge.topics': 'surge intent', 'category.views': 'category views', 'salesnav.alerts': 'Sales Nav alerts', 'fit+intent.scores': 'fit + intent scores',
     'people.page[n]': 'the people', 'contact.rows': 'direct contacts', 'firmo.fill': 'firmographics', 'contact.upsert': 'clean contacts',
     'signals.payload': 'the live signal', 'voice.rules': 'your voice rules', 'approved.copy': 'approved copy',
-    'seq.release[n]': 'email sequence', 'li.release[n]': 'LinkedIn steps', 'email.activity': 'email activity', 'li.activity': 'LinkedIn activity',
+    'email.release[n]': 'the email lane', 'li.release[n]': 'the LinkedIn lane', 'email.activity': 'email activity', 'li.activity': 'LinkedIn activity',
     'replies.json': 'the replies', 'intent.class': 'reply intent', 'rep.ping': 'a rep alert', 'stage.sync': 'stage update',
     'qualified.contact': 'qualified lead', 'brief.prompt': 'account context', 'brief.md': 'the brief', 'meeting.stamped': 'stamped meeting',
     'stamped.meetings': 'booked stamps', 'icp.delta': 'ICP updates', 'targeting.weights': 'new targeting', 'new.seeds': 'new seeds'

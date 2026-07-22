@@ -104,11 +104,11 @@ window.NEBOR_WORKFLOW = [
   {
     phase: "Run",
     step: "Qualify",
-    desc: "What happens when they reply? Every response is classified in seconds and routed by the rules: replied gets routed, six quiet days switches channel, booked stops the sequence.",
+    desc: "What happens when they reply? Every response is classified in seconds and routed by the rules: replied gets routed, six quiet days switches channel, booked stops everything.",
     brief: "Every reply classified and routed in seconds.",
     tools: ["instantly", "openai", "n8n", "slack", "hubspot"],
     roles: {
-      instantly: "Relays replies from both channels into the classifier",
+      instantly: "Relays replies from every lane into the classifier",
       openai:    "ChatGPT classifies reply intent: positive, objection, referral, or later",
       n8n:       "Runs the branch rules: route it, switch the channel, or stop the sequence",
       slack:     "Pings the right rep with the thread and a one-click claim",
@@ -142,44 +142,44 @@ window.NEBOR_WORKFLOW = [
   {
     phase: "Reach",
     step: "Personalize",
-    desc: "Why would they reply? Claude writes each opening line from the account's live signal, in your voice, checked against your rules before anything is queued.",
-    brief: "Openers written from real signals, in your voice.",
+    desc: "Why would they reply? Claude writes each message from the account's live signal, in your voice: an email opener, a LinkedIn note, or the talking points for a call, checked against your rules before anything is queued.",
+    brief: "Messages written from real signals, in your voice.",
     tools: ["clay", "anthropic", "n8n"],
     roles: {
       clay:      "Packages each account's signals into a prompt payload",
-      anthropic: "Writes the line from the signal, in your voice, checked against your do-not-say list",
+      anthropic: "Writes the message for whichever lane the buyer is in, in your voice, checked against your do-not-say list",
       n8n:       "Queues approved copy into the send lanes"
     },
     flow: [
       { from: "clay",      to: "anthropic", proto: "llm",     label: "signals.payload" },
       { from: "anthropic", to: "n8n",       proto: "webhook", label: "approved.copy" }
     ],
-    output: "One specific first line per contact \u00b7 zero mail-merge"
+    output: "One specific message per contact \u00b7 zero mail-merge"
   },
   {
     phase: "Reach",
     step: "Send",
-    desc: "Where do they respond? One story across the channels chosen for how your buyers buy: email and LinkedIn on the same clock, one conversation per account.",
-    brief: "Email and LinkedIn, one thread per account.",
+    desc: "Where do they respond? One conversation per account across the lanes your buyers use: LinkedIn and email run on one clock, a rep calls when a buyer wants one, and accounts that are not ready move into nurture.",
+    brief: "Every lane on one clock, one thread per account.",
     tools: ["n8n", "instantly", "heyreach", "hubspot"],
     roles: {
-      n8n:       "Releases both channels on one clock, one conversation per account",
-      instantly: "Runs the email sequences",
-      heyreach:  "Runs the LinkedIn motion, synchronized with email",
-      hubspot:   "Logs every open, click, reply, and touch as it happens"
+      n8n:       "Releases every lane on one clock, one conversation per account",
+      instantly: "Carries the email lane",
+      heyreach:  "Carries the LinkedIn lane, on the same clock as email",
+      hubspot:   "Logs every touch as it happens and moves not-ready accounts into nurture"
     },
     flow: [
-      { from: "n8n",       to: "instantly", proto: "api",     label: "seq.release[n]" },
+      { from: "n8n",       to: "instantly", proto: "api",     label: "email.release[n]" },
       { from: "n8n",       to: "heyreach",  proto: "api",     label: "li.release[n]" },
       { from: "instantly", to: "hubspot",   proto: "webhook", label: "email.activity" },
       { from: "heyreach",  to: "hubspot",   proto: "webhook", label: "li.activity" }
     ],
-    output: "Sequences live on two channels \u00b7 every touch logged to the CRM"
+    output: "Every lane live on one clock \u00b7 every touch logged to the CRM"
   },
   {
     phase: "Run",
     step: "Book",
-    desc: "How does it become a meeting? Routing books the right rep's calendar, Claude drafts the pre-meeting brief, and the record is stamped with the source, signal, and sequence that produced it.",
+    desc: "How does it become a meeting? Routing books the right rep's calendar, Claude drafts the pre-meeting brief, and the record is stamped with the source, signal, and play that produced it.",
     brief: "Meetings routed, booked, and briefed.",
     tools: ["anthropic", "slack", "hubspot"],
     roles: {
@@ -201,7 +201,7 @@ window.NEBOR_WORKFLOW = [
     brief: "What booked reweights targeting and the ICP.",
     tools: ["hubspot", "anthropic", "clay"],
     roles: {
-      hubspot:   "Returns every stamped meeting: the source, signal, and sequence that produced it, then takes the updated ICP back",
+      hubspot:   "Returns every stamped meeting: the source, signal, and play that produced it, then takes the updated ICP back",
       anthropic: "Reads the stamps and decides what to find more of next cycle",
       clay:      "Reweights the sourcing filters and seeds the next map from this cycle's wins"
     },
@@ -262,7 +262,7 @@ window.NEBOR_TOOLS = {
   smartlead:  { name: "Smartlead",      color: "#6E58F1", domain: "smartlead.ai", fb: "Sm",
     cat: "Sending", desc: "Cold-email infrastructure with multi-domain rotation, warm-up, and reply detection. Our usual choice for high-volume outbound at scale." },
   instantly:  { name: "Instantly",      color: "#4580F7", domain: "instantly.ai", fb: "In",
-    cat: "Sending", desc: "A cold-email platform that runs automated outreach sequences." },
+    cat: "Sending", desc: "An email outreach platform that runs automated sequences." },
   lemlist:    { name: "Lemlist",        color: "#DD637F", domain: "lemlist.com", fb: "Lm",
     cat: "Sending", desc: "Outbound platform with strong personalization features (variable images, video). Picked when creative-led, high-touch sequences matter most." },
   linkedin:   { name: "LinkedIn",       color: "#0A66C2", icon: "linkedin",
@@ -450,14 +450,14 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     pipedrive: { name: 'Pipedrive',  what: 'A CRM built around the sales pipeline, common in leaner sales teams.' },
     clearbit:  { name: 'Clearbit',   what: 'B2B enrichment that completes each company record.' },
     notion:    { name: 'Notion',     what: 'The workspace where the ICP, playbooks, and voice rules live.' },
-    instantly: { name: 'Instantly',  what: 'A cold-email platform that runs automated outreach sequences.' },
+    instantly: { name: 'Instantly',  what: 'An email outreach platform that runs automated sequences.' },
     heyreach:  { name: 'HeyReach',   what: 'A LinkedIn outreach platform that runs multi-sender sequences.' },
     slack:     { name: 'Slack',      what: 'Team messaging where reps get real-time alerts and pre-meeting briefs.' },
     chilipiper:{ name: 'Chili Piper',what: 'A scheduling tool that routes and books meetings in real time.' }
   };
   // Per-page config: each page can supply its own phases/wheel via window globals; defaults = Sales Engine.
   const PHASE = window.NEBOR_PHASE || { Find: 'find', Reach: 'reach', Run: 'run' };
-  const TAG = window.NEBOR_TAG || ['win/loss to ICP', 'TAM to matched', 'intent, scored', 'replies, routed', 'accounts to people', 'signal to message', 'email + LinkedIn', 'meeting, stamped', 'wins to next ICP'];
+  const TAG = window.NEBOR_TAG || ['win/loss to ICP', 'TAM to matched', 'intent, scored', 'replies, routed', 'accounts to people', 'signal to message', 'lanes on one clock', 'meeting, stamped', 'wins to next ICP'];
   const HANDOFF = window.NEBOR_HANDOFF || ['market map', 'matched accounts', 'scored set', 'the committee', 'the message', 'live sends', 'qualified reply', 'booked & stamped', 'wins, next run'];
   const PLAIN = {
     'won-lost.records': 'win/loss records', 'icp.doc': 'the ICP', 'icp.traits': 'the ICP traits', 'closed-won.seeds': 'closed-won seeds', 'lookalike.expand': 'lookalikes',
@@ -465,7 +465,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     'surge.topics': 'surge intent', 'category.views': 'category views', 'salesnav.alerts': 'Sales Nav alerts', 'fit+intent.scores': 'fit + intent scores',
     'people.page[n]': 'the people', 'contact.rows': 'direct contacts', 'firmo.fill': 'firmographics', 'contact.upsert': 'clean contacts',
     'signals.payload': 'the live signal', 'voice.rules': 'your voice rules', 'approved.copy': 'approved copy',
-    'seq.release[n]': 'email sequence', 'li.release[n]': 'LinkedIn steps', 'email.activity': 'email activity', 'li.activity': 'LinkedIn activity',
+    'email.release[n]': 'the email lane', 'li.release[n]': 'the LinkedIn lane', 'email.activity': 'email activity', 'li.activity': 'LinkedIn activity',
     'replies.json': 'the replies', 'intent.class': 'reply intent', 'rep.ping': 'a rep alert', 'stage.sync': 'stage update',
     'qualified.contact': 'qualified lead', 'brief.prompt': 'account context', 'brief.md': 'the brief', 'meeting.stamped': 'stamped meeting',
     'stamped.meetings': 'booked stamps', 'icp.delta': 'ICP updates', 'targeting.weights': 'new targeting', 'new.seeds': 'new seeds'

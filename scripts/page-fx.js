@@ -81,7 +81,8 @@
   var cards = Array.prototype.slice.call(document.querySelectorAll('.hero-el'));
   if (!cards.length) return;
   cards.forEach(function (card) {
-    card.addEventListener('click', function () {
+    card.addEventListener('click', function (e) {
+      e.preventDefault(); // sandbox cards are anchors; on touch the tap toggles instead of navigating
       var wasOpen = card.classList.contains('is-open');
       cards.forEach(function (c) { c.classList.remove('is-open'); });
       if (!wasOpen) card.classList.add('is-open');

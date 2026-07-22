@@ -23,7 +23,7 @@ window.NEBOR_TOOLS = {
   smartlead:  { name: "Smartlead",      color: "#6E58F1", domain: "smartlead.ai", fb: "Sm",
     cat: "Sending", desc: "Cold-email infrastructure with multi-domain rotation, warm-up, and reply detection. Our usual choice for high-volume outbound at scale." },
   instantly:  { name: "Instantly",      color: "#4580F7", domain: "instantly.ai", fb: "In",
-    cat: "Sending", desc: "A cold-email platform that runs automated outreach sequences." },
+    cat: "Sending", desc: "An email outreach platform that runs automated sequences." },
   lemlist:    { name: "Lemlist",        color: "#DD637F", domain: "lemlist.com", fb: "Lm",
     cat: "Sending", desc: "Outbound platform with strong personalization features (variable images, video). Picked when creative-led, high-touch sequences matter most." },
   linkedin:   { name: "LinkedIn",       color: "#0A66C2", icon: "linkedin",
