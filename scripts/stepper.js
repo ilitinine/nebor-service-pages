@@ -412,6 +412,8 @@ window.neborLogo = window.neborLogo || function (slug, size) {
   tip.className = 'fc2-tooltip';
   document.body.appendChild(tip);
   const TOOL_URL_BASE = 'https://www.nebor.ai/tools/';
+  // live /tools pages use product names, not vendor slugs
+  const TOOL_URL_SLUG = { anthropic: 'claude', openai: 'chatgpt' };
   let curEl = null, hideT = null, pinned = false;
   function build(el) {
     const slug = el.getAttribute('data-tip-tool');
@@ -420,7 +422,7 @@ window.neborLogo = window.neborLogo || function (slug, size) {
     let html = '<div class="tt-name">' + (slug && window.neborLogo ? '<span class="t-logo">' + window.neborLogo(slug, 13) + '</span>' : '') + esc(el.getAttribute('data-tip-name')) + '</div>';
     if (what) html += '<div class="tt-what">' + esc(what) + '</div>';
     if (role) html += '<div class="tt-role"><b>In this workflow:</b> ' + esc(role) + '</div>';
-    if (slug) html += '<a class="tt-more" href="' + TOOL_URL_BASE + encodeURIComponent(slug) + '" target="_blank" rel="noopener">Learn more about ' + esc(el.getAttribute('data-tip-name')) + ' <span class="tt-arw">&rarr;</span></a>';
+    if (slug) html += '<a class="tt-more" href="' + TOOL_URL_BASE + encodeURIComponent(TOOL_URL_SLUG[slug] || slug) + '" target="_blank" rel="noopener">Learn more about ' + esc(el.getAttribute('data-tip-name')) + ' <span class="tt-arw">&rarr;</span></a>';
     tip.innerHTML = html;
   }
   function place(el) {
